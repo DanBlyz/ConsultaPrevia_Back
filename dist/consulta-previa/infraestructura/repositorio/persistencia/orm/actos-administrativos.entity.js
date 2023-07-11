@@ -1,0 +1,68 @@
+"use strict";
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActoAdministrativoEntity = void 0;
+const typeorm_1 = require("typeorm");
+const classes_1 = require("@automapper/classes");
+const auditoria_entity_1 = require("./base/auditoria.entity");
+const tramite_entity_1 = require("./tramite.entity");
+const pago_cpt_entity_1 = require("./pago-cpt.entity");
+const viaje_entity_1 = require("./viaje.entity");
+let ActoAdministrativoEntity = class ActoAdministrativoEntity extends auditoria_entity_1.AuditoriaEntity {
+};
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, typeorm_1.PrimaryGeneratedColumn)({ name: 'idactos' }),
+    __metadata("design:type", Number)
+], ActoAdministrativoEntity.prototype, "id", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, typeorm_1.Column)({ name: 'fk_idtramite' }),
+    __metadata("design:type", Number)
+], ActoAdministrativoEntity.prototype, "fk_idTramite", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, typeorm_1.Column)({ name: 'viajerealizado', default: false }),
+    __metadata("design:type", Boolean)
+], ActoAdministrativoEntity.prototype, "viajeRealizado", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, typeorm_1.Column)({ name: 'flujo' }),
+    __metadata("design:type", String)
+], ActoAdministrativoEntity.prototype, "flujo", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, typeorm_1.Column)({ name: 'encargado' }),
+    __metadata("design:type", String)
+], ActoAdministrativoEntity.prototype, "encargado", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, typeorm_1.Column)({ name: 'pagorealizado' }),
+    __metadata("design:type", Boolean)
+], ActoAdministrativoEntity.prototype, "pagoRealizado", void 0);
+__decorate([
+    (0, typeorm_1.ManyToOne)(() => tramite_entity_1.TramiteEntity, (tramite) => tramite.listaActoAdministrativo),
+    (0, typeorm_1.JoinColumn)({ name: 'fk_idtramite' }),
+    __metadata("design:type", tramite_entity_1.TramiteEntity)
+], ActoAdministrativoEntity.prototype, "tramite", void 0);
+__decorate([
+    (0, typeorm_1.OneToOne)(() => pago_cpt_entity_1.PagoCptEntity, (pagoCpt) => pagoCpt.actoAdministrativo),
+    __metadata("design:type", pago_cpt_entity_1.PagoCptEntity)
+], ActoAdministrativoEntity.prototype, "pagoCpt", void 0);
+__decorate([
+    (0, typeorm_1.OneToOne)(() => viaje_entity_1.ViajeEntity, (viaje) => viaje.actoAdministrativo),
+    __metadata("design:type", viaje_entity_1.ViajeEntity)
+], ActoAdministrativoEntity.prototype, "viaje", void 0);
+ActoAdministrativoEntity = __decorate([
+    (0, typeorm_1.Entity)('actosadministrativos', { schema: 'consulta-previa' })
+], ActoAdministrativoEntity);
+exports.ActoAdministrativoEntity = ActoAdministrativoEntity;
+//# sourceMappingURL=actos-administrativos.entity.js.map
