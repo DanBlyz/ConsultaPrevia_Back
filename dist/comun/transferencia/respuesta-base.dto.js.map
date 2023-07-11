@@ -1,0 +1,1 @@
+{"version":3,"file":"respuesta-base.dto.js","sourceRoot":"","sources":["../../../src/comun/transferencia/respuesta-base.dto.ts"],"names":[],"mappings":";;;AAEA,MAAsB,gBAAgB;IAGpC,YAAmB,aAA4B,EAAS,OAAe;QAApD,kBAAa,GAAb,aAAa,CAAe;QAAS,YAAO,GAAP,OAAO,CAAQ;QACrE,IAAI,CAAC,KAAK,GAAG,IAAI,CAAC,aAAa,KAAK,OAAO,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,KAAK,CAAC;IAC7D,CAAC;CACF;AAND,4CAMC"}
