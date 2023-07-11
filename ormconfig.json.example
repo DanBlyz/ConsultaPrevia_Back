@@ -1,0 +1,19 @@
+{
+  "type": "postgres",
+  "host": "SERVIDOR",
+  "port": "5432",
+  "username": "USUARIO",
+  "password": "CONTRASENIA",
+  "database": "BASE_DE_DATOS",
+  "synchronize": false,
+  "logging": true,
+  "entities": [
+    "dist/**/*{.entity,.schema}{.ts,.js}"
+  ],
+  "migrations": [
+    "dist/**/infraestructura/repositorio/persistencia/migraciones/*{.ts,.js}"
+  ],
+  "cli": {
+    "migrationsDir": "tmp/migraciones"
+  }
+}
