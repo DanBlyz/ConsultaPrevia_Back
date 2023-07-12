@@ -72,7 +72,7 @@ export class PagoCptRepository implements IPagoCptRepositorio {
       criterioUtilizado = true;
     }
     if (filtro.montoTotal && filtro.montoTotal !== 0) {
-      consulta = consulta.andWhere('pagoCpt.montoTotal ILIKE :montoTotal', {
+      consulta = consulta.andWhere('pagoCpt.montoTotal = :montoTotal', {
         montoTotal: filtro.montoTotal,
       });
       criterioUtilizado = true;
