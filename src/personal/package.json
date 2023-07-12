@@ -1,0 +1,13 @@
+{
+  "name": "@ajam/personal",
+  "version": "1.0.0",
+  "description": "Módulo de gestión de personal (administración básica)",
+  "author": "AJAM",
+  "contributors": [
+    {
+      "name": "Carizon Campuzano",
+      "email": "carizon.campuzano@autoridadminera.gob.bo"
+    }
+  ],
+  "license": "LPG-Bolivia"
+}
