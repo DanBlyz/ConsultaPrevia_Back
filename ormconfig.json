@@ -8,7 +8,7 @@
   "entities": [
     "dist/**/*{.entity,.schema}{.ts,.js}"
   ],
-  "synchronize": true,
+  "synchronize": false,
   "logging": true,
   "migrations": [
     "dist/**/infraestructura/persistencia/migraciones/*{.ts,.js}"

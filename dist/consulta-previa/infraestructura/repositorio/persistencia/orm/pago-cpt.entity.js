@@ -23,6 +23,11 @@ __decorate([
 ], PagoCptEntity.prototype, "id", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
+    (0, typeorm_1.Column)({ name: 'fk_idactos' }),
+    __metadata("design:type", Number)
+], PagoCptEntity.prototype, "fk_idActos", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
     (0, typeorm_1.Column)({ name: 'pagorealizado', default: false }),
     __metadata("design:type", Boolean)
 ], PagoCptEntity.prototype, "pagoRealizado", void 0);
@@ -58,7 +63,7 @@ __decorate([
 ], PagoCptEntity.prototype, "apm", void 0);
 __decorate([
     (0, typeorm_1.OneToOne)(() => actos_administrativos_entity_1.ActoAdministrativoEntity, (actoAdministrativo) => actoAdministrativo.pagoCpt),
-    (0, typeorm_1.JoinColumn)({ name: 'fk_idactos' }),
+    (0, typeorm_1.JoinColumn)({ name: 'fk_idActos' }),
     __metadata("design:type", actos_administrativos_entity_1.ActoAdministrativoEntity)
 ], PagoCptEntity.prototype, "actoAdministrativo", void 0);
 PagoCptEntity = __decorate([

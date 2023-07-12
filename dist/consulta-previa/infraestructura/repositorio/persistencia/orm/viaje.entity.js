@@ -23,6 +23,11 @@ __decorate([
 ], ViajeEntity.prototype, "id", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
+    (0, typeorm_1.Column)({ name: 'fk_idactos' }),
+    __metadata("design:type", Number)
+], ViajeEntity.prototype, "fk_idActos", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
     (0, typeorm_1.Column)({ name: 'fechainicio' }),
     __metadata("design:type", Date)
 ], ViajeEntity.prototype, "fechaInicio", void 0);
