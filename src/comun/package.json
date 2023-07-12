@@ -1,0 +1,13 @@
+{
+  "name": "@ajam/comun",
+  "version": "1.0.0",
+  "description": "Módulo de clases y funciones transversales para proyectos sobre NestJS",
+  "author": "AJAM",
+  "contributors": [
+    {
+      "name": "Carizon Campuzano",
+      "email": "carizon.campuzano@autoridadminera.gob.bo"
+    }
+  ],
+  "license": "LPG-Bolivia"
+}
