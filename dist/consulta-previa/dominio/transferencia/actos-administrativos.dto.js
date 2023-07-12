@@ -12,6 +12,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ActoAdministrativoModificacionDto = exports.ActoAdministrativoCreacionDto = exports.ActoAdministrativoDto = void 0;
 const classes_1 = require("@automapper/classes");
 const class_validator_1 = require("class-validator");
+const class_transformer_1 = require("class-transformer");
+const tramite_dto_1 = require("./tramite.dto");
 class ActoAdministrativoDto {
 }
 __decorate([
@@ -46,6 +48,12 @@ __decorate([
     (0, class_validator_1.IsBoolean)(),
     __metadata("design:type", Boolean)
 ], ActoAdministrativoDto.prototype, "pagoRealizado", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(() => [tramite_dto_1.TramiteDto]),
+    (0, class_transformer_1.Type)(() => tramite_dto_1.TramiteDto),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Array)
+], ActoAdministrativoDto.prototype, "tramite", void 0);
 exports.ActoAdministrativoDto = ActoAdministrativoDto;
 class ActoAdministrativoCreacionDto {
 }

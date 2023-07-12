@@ -63,7 +63,7 @@ __decorate([
 ], PagoCptEntity.prototype, "apm", void 0);
 __decorate([
     (0, typeorm_1.OneToOne)(() => actos_administrativos_entity_1.ActoAdministrativoEntity, (actoAdministrativo) => actoAdministrativo.pagoCpt),
-    (0, typeorm_1.JoinColumn)({ name: 'fk_idActos' }),
+    (0, typeorm_1.JoinColumn)({ name: 'fk_idactos' }),
     __metadata("design:type", actos_administrativos_entity_1.ActoAdministrativoEntity)
 ], PagoCptEntity.prototype, "actoAdministrativo", void 0);
 PagoCptEntity = __decorate([

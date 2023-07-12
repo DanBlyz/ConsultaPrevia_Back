@@ -49,6 +49,7 @@ __decorate([
     __metadata("design:type", Boolean)
 ], ActoAdministrativoEntity.prototype, "pagoRealizado", void 0);
 __decorate([
+    (0, classes_1.AutoMap)(() => [tramite_entity_1.TramiteEntity]),
     (0, typeorm_1.ManyToOne)(() => tramite_entity_1.TramiteEntity, (tramite) => tramite.listaActoAdministrativo),
     (0, typeorm_1.JoinColumn)({ name: 'fk_idtramite' }),
     __metadata("design:type", tramite_entity_1.TramiteEntity)

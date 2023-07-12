@@ -70,7 +70,7 @@ export class ActoAdministrativoRepository implements IActoAdministrativoReposito
   async obtenerPorId(id: number): Promise<ActoAdministrativo> {
     let consulta = this.repositorio
       .createQueryBuilder('ActoAdministrativo')
-      //.leftJoinAndSelect('ActoAdministrativo.hojaRuta', 'hojaRuta')
+      .leftJoinAndSelect('ActoAdministrativo.tramite', 'tramite')
       .andWhere('ActoAdministrativo.id = :id', { id });
     consulta = consulta.orderBy('ActoAdministrativo.id', 'DESC');
     const respuesta = await consulta.getOne();
@@ -89,7 +89,7 @@ export class ActoAdministrativoRepository implements IActoAdministrativoReposito
     }
     let consulta = this.repositorio
       .createQueryBuilder('ActoAdministrativo')
-      //.leftJoinAndSelect('documento.hojaRuta', 'hojaRuta')
+      .leftJoinAndSelect('ActoAdministrativo.tramite', 'tramite')
 
     consulta = this.evaluarCriterios(consulta, filtro, false, true);
     if (!consulta) {
@@ -112,7 +112,7 @@ export class ActoAdministrativoRepository implements IActoAdministrativoReposito
   ): Promise<ListaPaginada<ActoAdministrativo>> {
     let consulta = this.repositorio
       .createQueryBuilder('ActoAdministrativo')
-      //.leftJoinAndSelect('ActoAdministrativo.hojaRuta', 'hojaRuta')
+      .leftJoinAndSelect('ActoAdministrativo.tramite', 'tramite')
 
     consulta = this.evaluarCriterios(consulta, filtro, true, false);
     if (!consulta) {

@@ -6,6 +6,10 @@ import {
   IsPositive,
   IsString,
 } from 'class-validator';
+import { TramiteEntity } from 'src/consulta-previa/infraestructura/repositorio/persistencia/orm';
+import { Type } from 'class-transformer';
+import { TramiteDto } from './tramite.dto';
+import { Tramite } from '../entidades';
 
 export class ActoAdministrativoDto {
   @AutoMap()
@@ -33,7 +37,17 @@ export class ActoAdministrativoDto {
   @AutoMap()
   @IsBoolean()
   pagoRealizado: boolean;
-  
+
+  /*@AutoMap()
+  @Type(() => Tramite)
+  @IsOptional()
+  tramite?: Tramite;*/
+
+  @AutoMap(() => [TramiteDto])
+  @Type(() => TramiteDto)
+  @IsOptional()
+  tramite?: TramiteDto[];
+
 }
 
 export class ActoAdministrativoCreacionDto {

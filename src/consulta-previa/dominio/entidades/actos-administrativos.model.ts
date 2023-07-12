@@ -1,4 +1,5 @@
 import { AutoMap } from '@automapper/classes';
+import { Tramite } from './tramite.model';
 
 export class ActoAdministrativo {
     @AutoMap()
@@ -18,5 +19,7 @@ export class ActoAdministrativo {
 
     @AutoMap()
     pagoRealizado: boolean;
-  
+
+    @AutoMap(() => [Tramite])
+    tramite?: Tramite;
 }

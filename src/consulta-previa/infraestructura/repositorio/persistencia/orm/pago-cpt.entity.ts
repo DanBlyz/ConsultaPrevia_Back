@@ -53,7 +53,7 @@ import { ViajeEntity } from './viaje.entity';
     apm: string;
 
     @OneToOne(() => ActoAdministrativoEntity, (actoAdministrativo) => actoAdministrativo.pagoCpt)
-    @JoinColumn({ name: 'fk_idActos' })
+    @JoinColumn({ name: 'fk_idactos' })
     actoAdministrativo: ActoAdministrativoEntity;
 
 

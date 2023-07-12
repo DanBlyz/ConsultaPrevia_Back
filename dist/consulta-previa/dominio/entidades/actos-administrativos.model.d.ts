@@ -1,3 +1,4 @@
+import { Tramite } from './tramite.model';
 export declare class ActoAdministrativo {
     id: number;
     fk_idTramite: number;
@@ -5,4 +6,5 @@ export declare class ActoAdministrativo {
     flujo: string;
     encargado: string;
     pagoRealizado: boolean;
+    tramite?: Tramite;
 }
