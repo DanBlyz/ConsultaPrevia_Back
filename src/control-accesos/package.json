@@ -1,0 +1,13 @@
+{
+  "name": "@ajam/control-accesos",
+  "version": "1.0.0",
+  "description": "Módulo de gestión y control de accesos de usuarios",
+  "author": "AJAM",
+  "contributors": [
+    {
+      "name": "Carizon Campuzano",
+      "email": "carizon.campuzano@autoridadminera.gob.bo"
+    }
+  ],
+  "license": "LPG-Bolivia"
+}
