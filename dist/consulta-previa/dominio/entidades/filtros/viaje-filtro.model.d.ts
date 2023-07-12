@@ -1,6 +1,6 @@
 export declare class ViajeFiltro {
     id?: number;
-    fk_idPago?: number;
+    fk_idActos?: number;
     fechaInicio?: Date;
     fechaFin?: Date;
     descripcion?: string;

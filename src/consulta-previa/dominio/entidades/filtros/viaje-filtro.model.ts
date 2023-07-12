@@ -6,7 +6,7 @@ export class ViajeFiltro {
   id?: number;
 
   @AutoMap()
-  fk_idPago?: number;
+  fk_idActos?: number;
 
   @AutoMap()
   fechaInicio?: Date;

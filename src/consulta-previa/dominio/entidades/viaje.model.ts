@@ -5,7 +5,7 @@ export class Viaje {
     id: number;
   
     @AutoMap()
-    fk_idPago: number;
+    fk_idActos: number;
   
     @AutoMap()
     fechaInicio: Date;

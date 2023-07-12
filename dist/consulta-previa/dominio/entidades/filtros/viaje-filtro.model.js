@@ -20,7 +20,7 @@ __decorate([
 __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", Number)
-], ViajeFiltro.prototype, "fk_idPago", void 0);
+], ViajeFiltro.prototype, "fk_idActos", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", Date)

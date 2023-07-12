@@ -31,7 +31,7 @@ let ViajeService = class ViajeService {
         switch (operacion) {
             case 'guardar': {
                 const filtro = new filtros_1.ViajeFiltro();
-                filtro.fk_idPago = objetoDto.fk_idPago;
+                filtro.fk_idActos = objetoDto.fk_idActos;
                 filtro.fechaInicio = objetoDto.fechaInicio;
                 filtro.fechaFin = objetoDto.fechaFin;
                 filtro.descripcion = objetoDto.descripcion;

@@ -1,6 +1,6 @@
 export declare class ViajeDto {
     id: number;
-    fk_idPago: number;
+    fk_idActos: number;
     fechaInicio: Date;
     fechaFin: Date;
     descripcion: string;
@@ -8,7 +8,7 @@ export declare class ViajeDto {
     formularioPdf: string;
 }
 export declare class ViajeCreacionDto {
-    fk_idPago: number;
+    fk_idActos: number;
     fechaInicio: Date;
     fechaFin: Date;
     descripcion: string;

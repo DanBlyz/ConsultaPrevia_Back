@@ -12,7 +12,7 @@ export class ViajeFiltroDto extends FiltroBaseDto {
   @AutoMap()
   @IsNumber()
   @IsOptional()
-  fk_idPago?: number;
+  fk_idActos?: number;
 
   @AutoMap()
   @IsDateString()

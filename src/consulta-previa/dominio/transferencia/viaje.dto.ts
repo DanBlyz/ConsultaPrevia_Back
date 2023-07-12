@@ -17,7 +17,7 @@ export class ViajeDto {
   @AutoMap()
   @IsNumber()
   @IsPositive()
-  fk_idPago: number;
+  fk_idActos: number;
 
   @AutoMap()
   @IsDateString()
@@ -46,7 +46,7 @@ export class ViajeCreacionDto {
     @AutoMap()
     @IsNumber()
     @IsPositive()
-    fk_idPago: number;
+    fk_idActos: number;
   
     @AutoMap()
     @IsDateString()

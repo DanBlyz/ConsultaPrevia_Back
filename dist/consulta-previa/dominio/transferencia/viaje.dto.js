@@ -25,7 +25,7 @@ __decorate([
     (0, class_validator_1.IsNumber)(),
     (0, class_validator_1.IsPositive)(),
     __metadata("design:type", Number)
-], ViajeDto.prototype, "fk_idPago", void 0);
+], ViajeDto.prototype, "fk_idActos", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsDateString)(),
@@ -59,7 +59,7 @@ __decorate([
     (0, class_validator_1.IsNumber)(),
     (0, class_validator_1.IsPositive)(),
     __metadata("design:type", Number)
-], ViajeCreacionDto.prototype, "fk_idPago", void 0);
+], ViajeCreacionDto.prototype, "fk_idActos", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsDateString)(),

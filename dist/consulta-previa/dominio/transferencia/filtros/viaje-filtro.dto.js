@@ -26,7 +26,7 @@ __decorate([
     (0, class_validator_1.IsNumber)(),
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", Number)
-], ViajeFiltroDto.prototype, "fk_idPago", void 0);
+], ViajeFiltroDto.prototype, "fk_idActos", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsDateString)(),
