@@ -4,5 +4,4 @@ export declare class ActoAdministrativoFiltro {
     viajeRealizado?: boolean;
     flujo?: string;
     encargado?: string;
-    pagoRealizado?: boolean;
 }

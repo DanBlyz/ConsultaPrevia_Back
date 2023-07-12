@@ -37,9 +37,9 @@ export class ActoAdministrativoEntity extends AuditoriaEntity{
   @Column({ name: 'encargado' })
   encargado: string;
 
-  @AutoMap()
+  /*@AutoMap()
   @Column({ name: 'pagorealizado' })
-  pagoRealizado: boolean;
+  pagoRealizado: boolean;*/
 
   @AutoMap(() => [TramiteEntity])
   @ManyToOne(() => TramiteEntity, (tramite) => tramite.listaActoAdministrativo)

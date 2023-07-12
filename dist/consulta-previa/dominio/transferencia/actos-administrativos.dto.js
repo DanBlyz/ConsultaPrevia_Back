@@ -45,11 +45,6 @@ __decorate([
     __metadata("design:type", String)
 ], ActoAdministrativoDto.prototype, "encargado", void 0);
 __decorate([
-    (0, classes_1.AutoMap)(),
-    (0, class_validator_1.IsBoolean)(),
-    __metadata("design:type", Boolean)
-], ActoAdministrativoDto.prototype, "pagoRealizado", void 0);
-__decorate([
     (0, classes_1.AutoMap)(() => [tramite_dto_1.TramiteDto]),
     (0, class_transformer_1.Type)(() => tramite_dto_1.TramiteDto),
     (0, class_validator_1.IsOptional)(),

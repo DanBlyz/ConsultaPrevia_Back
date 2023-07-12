@@ -35,10 +35,10 @@ export class ActoAdministrativoDto {
   @IsString()
   encargado: string;
 
-  @AutoMap()
+/*  @AutoMap()
   @IsBoolean()
   pagoRealizado: boolean;
-
+*/
   /*@AutoMap()
   @Type(() => Tramite)
   @IsOptional()

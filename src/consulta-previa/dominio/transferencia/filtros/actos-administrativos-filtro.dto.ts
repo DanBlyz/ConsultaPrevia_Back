@@ -29,9 +29,9 @@ export class ActoAdministrativoFiltroDto extends FiltroBaseDto {
   @IsOptional()
   encargado?: string;
 
-  @AutoMap()
+  /*@AutoMap()
   @IsBoolean()
   @IsOptional()
-  pagoRealizado?: boolean;
+  pagoRealizado?: boolean;*/
 
 }

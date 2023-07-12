@@ -6,7 +6,6 @@ export declare class ActoAdministrativoDto {
     viajeRealizado: boolean;
     flujo: string;
     encargado: string;
-    pagoRealizado: boolean;
     tramite?: TramiteDto[];
     pagoCpt?: PagoCptDto[];
 }

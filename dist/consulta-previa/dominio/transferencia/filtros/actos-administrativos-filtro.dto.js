@@ -45,11 +45,5 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], ActoAdministrativoFiltroDto.prototype, "encargado", void 0);
-__decorate([
-    (0, classes_1.AutoMap)(),
-    (0, class_validator_1.IsBoolean)(),
-    (0, class_validator_1.IsOptional)(),
-    __metadata("design:type", Boolean)
-], ActoAdministrativoFiltroDto.prototype, "pagoRealizado", void 0);
 exports.ActoAdministrativoFiltroDto = ActoAdministrativoFiltroDto;
 //# sourceMappingURL=actos-administrativos-filtro.dto.js.map

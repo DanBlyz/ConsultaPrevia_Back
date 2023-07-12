@@ -8,7 +8,6 @@ export declare class ActoAdministrativoEntity extends AuditoriaEntity {
     viajeRealizado: boolean;
     flujo: string;
     encargado: string;
-    pagoRealizado: boolean;
     tramite: TramiteEntity;
     pagoCpt: PagoCptEntity;
     viaje: ViajeEntity;
