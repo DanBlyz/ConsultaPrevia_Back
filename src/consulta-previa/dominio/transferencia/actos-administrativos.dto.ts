@@ -10,6 +10,7 @@ import { TramiteEntity } from 'src/consulta-previa/infraestructura/repositorio/p
 import { Type } from 'class-transformer';
 import { TramiteDto } from './tramite.dto';
 import { Tramite } from '../entidades';
+import { PagoCptDto } from './pago-cpt.dto';
 
 export class ActoAdministrativoDto {
   @AutoMap()
@@ -48,6 +49,10 @@ export class ActoAdministrativoDto {
   @IsOptional()
   tramite?: TramiteDto[];
 
+  @AutoMap(() => [PagoCptDto])
+  @Type(() => PagoCptDto)
+  @IsOptional()
+  pagoCpt?: PagoCptDto[];
 }
 
 export class ActoAdministrativoCreacionDto {

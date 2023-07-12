@@ -46,6 +46,7 @@ export class ActoAdministrativoEntity extends AuditoriaEntity{
   @JoinColumn({ name: 'fk_idtramite' })
   tramite: TramiteEntity;
 
+  @AutoMap(() => [PagoCptEntity])
   @OneToOne(() => PagoCptEntity, (pagoCpt) => pagoCpt.actoAdministrativo)
   pagoCpt: PagoCptEntity;
 

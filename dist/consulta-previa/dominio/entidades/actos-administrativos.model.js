@@ -12,6 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ActoAdministrativo = void 0;
 const classes_1 = require("@automapper/classes");
 const tramite_model_1 = require("./tramite.model");
+const pago_cpt_model_1 = require("./pago-cpt.model");
 class ActoAdministrativo {
 }
 __decorate([
@@ -42,5 +43,9 @@ __decorate([
     (0, classes_1.AutoMap)(() => [tramite_model_1.Tramite]),
     __metadata("design:type", tramite_model_1.Tramite)
 ], ActoAdministrativo.prototype, "tramite", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(() => [pago_cpt_model_1.PagoCpt]),
+    __metadata("design:type", pago_cpt_model_1.PagoCpt)
+], ActoAdministrativo.prototype, "pagoCpt", void 0);
 exports.ActoAdministrativo = ActoAdministrativo;
 //# sourceMappingURL=actos-administrativos.model.js.map
