@@ -16,7 +16,7 @@ export class SujetoIdentificadoDto {
 
   @AutoMap()
   @IsNumber()
-  fk_idinforme: number;
+  fk_idInforme: number;
 
   @AutoMap()
   @IsString()
@@ -32,7 +32,7 @@ export class SujetoIdentificadoCreacionDto {
    
     @AutoMap()
     @IsNumber()
-    fk_idinforme: number;
+    fk_idInforme: number;
 
     @AutoMap()
     @IsString()

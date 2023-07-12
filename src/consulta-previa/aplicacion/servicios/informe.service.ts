@@ -17,12 +17,13 @@ import {
   IInformeServicio,
   INFORME_SERVICIO,
 } from '../../dominio/contratos/aplicacion/servicios';
-import { Informe, Resolucion } from '../../dominio/entidades';
+import { Informe, Resolucion, SujetoIdentificado } from '../../dominio/entidades';
 import { InformeFiltro } from '../../dominio/entidades/filtros';
 import {
   InformeCreacionDto,
   InformeDto,
   InformeModificacionDto,
+  SujetoIdentificadoDto,
 } from '../../dominio/transferencia';
 import { InformeFiltroDto } from '../../dominio/transferencia/filtros';
 
@@ -36,7 +37,7 @@ export class InformeService implements IInformeServicio {
 
   private async validar(
     operacion: string,
-    objetoDto: Partial<Informe>,
+    objetoDto: Partial<Informe> | any,
     errores = [],
   ): Promise<any> {
     switch (operacion) {
@@ -110,6 +111,7 @@ export class InformeService implements IInformeServicio {
   async guardar(
     objetoDto: InformeCreacionDto,
   ): Promise<RespuestaObjetoDto<InformeDto>> {
+    console.log("asdasd");
     const errores = [];
     const validacion = await this.validar('guardar', objetoDto, errores);
     if (!validacion) {
@@ -122,10 +124,25 @@ export class InformeService implements IInformeServicio {
         InformeCreacionDto,
         Informe,
       );
+
+      const informeId =
       await this.repositorioFactory.informeRepositorio.guardar(
         objeto,
         transaccion,
       );
+       
+
+     /* if (objeto.listaSujetoIdentificado && objeto.listaSujetoIdentificado.length > 0) {
+        objeto.listaSujetoIdentificado.forEach(async (sujetoIdentificado) => {
+          sujetoIdentificado.fk_idInforme = informeId;
+          await this.repositorioFactory.sujetoIdentificadoRepositorio.guardar(
+            sujetoIdentificado,
+            transaccion,
+          );
+        });
+      } */
+
+
       const resolucion = new Resolucion();
       if(objeto.flujo === 'Identificacion'){
         resolucion.fk_idTramite = objeto.fk_idTramite;

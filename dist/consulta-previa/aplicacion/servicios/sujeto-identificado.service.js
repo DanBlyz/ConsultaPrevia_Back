@@ -31,7 +31,7 @@ let SujetoIdentificadoService = class SujetoIdentificadoService {
         switch (operacion) {
             case 'guardar': {
                 const filtro = new filtros_1.SujetoIdentificadoFiltro();
-                filtro.fk_idTramite = objetoDto.fk_idTramite;
+                filtro.fk_idInforme = objetoDto.fk_idInforme;
                 filtro.comunidad = objetoDto.comunidad;
                 filtro.representante = objetoDto.representante;
                 const sujetoIdentificadoBD = await this.repositorioFactory.sujetoIdentificadoRepositorio.obtenerObjetoPor(filtro);

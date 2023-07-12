@@ -21,7 +21,7 @@ import { InformeEntity } from './informe.entity';
   
     @AutoMap()
     @Column({ name: 'fk_idinforme' })
-    fk_idinforme: number;
+    fk_idInforme: number;
   
     @AutoMap()
     @Column({ name: 'comunidad' })

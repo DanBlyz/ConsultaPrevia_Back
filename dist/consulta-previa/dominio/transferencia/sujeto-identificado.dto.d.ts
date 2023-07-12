@@ -1,11 +1,11 @@
 export declare class SujetoIdentificadoDto {
     id: number;
-    fk_idinforme: number;
+    fk_idInforme: number;
     comunidad: string;
     representante: number;
 }
 export declare class SujetoIdentificadoCreacionDto {
-    fk_idinforme: number;
+    fk_idInforme: number;
     comunidad: string;
     representante: string;
 }

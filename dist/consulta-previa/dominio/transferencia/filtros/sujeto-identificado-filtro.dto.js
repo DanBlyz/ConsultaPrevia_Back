@@ -26,7 +26,7 @@ __decorate([
     (0, class_validator_1.IsNumber)(),
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", Number)
-], SujetoIdentificadoFiltroDto.prototype, "fk_idinforme", void 0);
+], SujetoIdentificadoFiltroDto.prototype, "fk_idInforme", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsString)(),

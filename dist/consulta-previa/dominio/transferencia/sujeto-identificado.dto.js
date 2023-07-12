@@ -24,7 +24,7 @@ __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsNumber)(),
     __metadata("design:type", Number)
-], SujetoIdentificadoDto.prototype, "fk_idinforme", void 0);
+], SujetoIdentificadoDto.prototype, "fk_idInforme", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsString)(),
@@ -42,7 +42,7 @@ __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsNumber)(),
     __metadata("design:type", Number)
-], SujetoIdentificadoCreacionDto.prototype, "fk_idinforme", void 0);
+], SujetoIdentificadoCreacionDto.prototype, "fk_idInforme", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsString)(),

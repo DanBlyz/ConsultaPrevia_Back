@@ -20,7 +20,7 @@ __decorate([
 __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", Number)
-], SujetoIdentificadoFiltro.prototype, "fk_idTramite", void 0);
+], SujetoIdentificadoFiltro.prototype, "fk_idInforme", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", String)

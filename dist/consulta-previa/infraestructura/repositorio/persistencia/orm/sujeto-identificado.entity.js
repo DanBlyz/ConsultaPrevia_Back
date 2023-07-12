@@ -25,7 +25,7 @@ __decorate([
     (0, classes_1.AutoMap)(),
     (0, typeorm_1.Column)({ name: 'fk_idinforme' }),
     __metadata("design:type", Number)
-], SujetoIdentificadoEntity.prototype, "fk_idinforme", void 0);
+], SujetoIdentificadoEntity.prototype, "fk_idInforme", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, typeorm_1.Column)({ name: 'comunidad' }),

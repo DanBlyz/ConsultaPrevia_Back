@@ -65,6 +65,7 @@ let InformeService = class InformeService {
         return this.mapper.map(objeto, entidades_1.Informe, transferencia_2.InformeDto);
     }
     async guardar(objetoDto) {
+        console.log("asdasd");
         const errores = [];
         const validacion = await this.validar('guardar', objetoDto, errores);
         if (!validacion) {
@@ -73,7 +74,7 @@ let InformeService = class InformeService {
         const transaccion = await this.repositorioFactory.iniciarTransaccion();
         try {
             const objeto = this.mapper.map(objetoDto, transferencia_2.InformeCreacionDto, entidades_1.Informe);
-            await this.repositorioFactory.informeRepositorio.guardar(objeto, transaccion);
+            const informeId = await this.repositorioFactory.informeRepositorio.guardar(objeto, transaccion);
             const resolucion = new entidades_1.Resolucion();
             if (objeto.flujo === 'Identificacion') {
                 resolucion.fk_idTramite = objeto.fk_idTramite;
