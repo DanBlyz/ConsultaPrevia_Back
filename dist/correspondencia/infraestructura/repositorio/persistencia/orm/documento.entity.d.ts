@@ -1,0 +1,31 @@
+import { AuditoriaEntity } from './base/auditoria.entity';
+import { AdjuntoEntity, ClasificacionEntity, ContenidoEntity, DocumentoDetalleEntity, DocumentoSeguimientoEntity, EtiquetaEntity, HojaRutaEntity, NotaEntity, ParticipanteEntity, SeguimientoEntity, TipoDocumentoEntity } from '.';
+export declare class DocumentoEntity extends AuditoriaEntity {
+    id: number;
+    numero: number;
+    gestion: number;
+    cite: string;
+    citeExterno: string;
+    instRegistro: Date;
+    fecha: Date;
+    referencia: string;
+    numHojas: number;
+    prioridad: string;
+    observacion: string;
+    esBorrador: boolean;
+    estaImpreso: boolean;
+    hojaRutaId: number;
+    tipoDocumentoId: number;
+    clasificacionId: number;
+    contenido: ContenidoEntity;
+    listaParticipante: ParticipanteEntity[];
+    listaNota: NotaEntity[];
+    listaEtiqueta: EtiquetaEntity[];
+    listaDocumentoSeguimiento: DocumentoSeguimientoEntity[];
+    listaDocumentoDetalle: DocumentoDetalleEntity[];
+    listaAdjunto: AdjuntoEntity[];
+    hojaRuta: HojaRutaEntity;
+    tipoDocumento: TipoDocumentoEntity;
+    clasificacion: ClasificacionEntity;
+    listaSeguimiento: SeguimientoEntity[];
+}
