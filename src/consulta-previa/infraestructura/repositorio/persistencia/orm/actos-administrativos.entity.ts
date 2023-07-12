@@ -50,6 +50,7 @@ export class ActoAdministrativoEntity extends AuditoriaEntity{
   @OneToOne(() => PagoCptEntity, (pagoCpt) => pagoCpt.actoAdministrativo)
   pagoCpt: PagoCptEntity;
 
+  @AutoMap(() => [ViajeEntity])
   @OneToOne(() => ViajeEntity, (viaje) => viaje.actoAdministrativo)
   viaje: ViajeEntity;
 

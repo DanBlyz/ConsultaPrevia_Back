@@ -62,6 +62,7 @@ let ActoAdministrativoRepository = ActoAdministrativoRepository_1 = class ActoAd
             .createQueryBuilder('ActoAdministrativo')
             .leftJoinAndSelect('ActoAdministrativo.tramite', 'tramite')
             .leftJoinAndSelect('ActoAdministrativo.pagoCpt', 'pagoCpt')
+            .leftJoinAndSelect('ActoAdministrativo.viaje', 'viaje')
             .andWhere('ActoAdministrativo.id = :id', { id });
         consulta = consulta.orderBy('ActoAdministrativo.id', 'DESC');
         const respuesta = await consulta.getOne();
@@ -76,7 +77,8 @@ let ActoAdministrativoRepository = ActoAdministrativoRepository_1 = class ActoAd
         let consulta = this.repositorio
             .createQueryBuilder('ActoAdministrativo')
             .leftJoinAndSelect('ActoAdministrativo.tramite', 'tramite')
-            .leftJoinAndSelect('ActoAdministrativo.pagoCpt', 'pagoCpt');
+            .leftJoinAndSelect('ActoAdministrativo.pagoCpt', 'pagoCpt')
+            .leftJoinAndSelect('ActoAdministrativo.viaje', 'viaje');
         consulta = this.evaluarCriterios(consulta, filtro, false, true);
         if (!consulta) {
             return null;
@@ -91,7 +93,8 @@ let ActoAdministrativoRepository = ActoAdministrativoRepository_1 = class ActoAd
         let consulta = this.repositorio
             .createQueryBuilder('ActoAdministrativo')
             .leftJoinAndSelect('ActoAdministrativo.tramite', 'tramite')
-            .leftJoinAndSelect('ActoAdministrativo.pagoCpt', 'pagoCpt');
+            .leftJoinAndSelect('ActoAdministrativo.pagoCpt', 'pagoCpt')
+            .leftJoinAndSelect('ActoAdministrativo.viaje', 'viaje');
         consulta = this.evaluarCriterios(consulta, filtro, true, false);
         if (!consulta) {
             return null;

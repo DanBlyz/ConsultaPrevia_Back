@@ -15,6 +15,7 @@ const class_validator_1 = require("class-validator");
 const class_transformer_1 = require("class-transformer");
 const tramite_dto_1 = require("./tramite.dto");
 const pago_cpt_dto_1 = require("./pago-cpt.dto");
+const viaje_dto_1 = require("./viaje.dto");
 class ActoAdministrativoDto {
 }
 __decorate([
@@ -56,6 +57,12 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", Array)
 ], ActoAdministrativoDto.prototype, "pagoCpt", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(() => [viaje_dto_1.ViajeDto]),
+    (0, class_transformer_1.Type)(() => viaje_dto_1.ViajeDto),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Array)
+], ActoAdministrativoDto.prototype, "viaje", void 0);
 exports.ActoAdministrativoDto = ActoAdministrativoDto;
 class ActoAdministrativoCreacionDto {
 }

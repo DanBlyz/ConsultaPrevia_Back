@@ -55,6 +55,7 @@ __decorate([
     __metadata("design:type", pago_cpt_entity_1.PagoCptEntity)
 ], ActoAdministrativoEntity.prototype, "pagoCpt", void 0);
 __decorate([
+    (0, classes_1.AutoMap)(() => [viaje_entity_1.ViajeEntity]),
     (0, typeorm_1.OneToOne)(() => viaje_entity_1.ViajeEntity, (viaje) => viaje.actoAdministrativo),
     __metadata("design:type", viaje_entity_1.ViajeEntity)
 ], ActoAdministrativoEntity.prototype, "viaje", void 0);

@@ -72,6 +72,7 @@ export class ActoAdministrativoRepository implements IActoAdministrativoReposito
       .createQueryBuilder('ActoAdministrativo')
       .leftJoinAndSelect('ActoAdministrativo.tramite', 'tramite')
       .leftJoinAndSelect('ActoAdministrativo.pagoCpt', 'pagoCpt')
+      .leftJoinAndSelect('ActoAdministrativo.viaje', 'viaje')
       .andWhere('ActoAdministrativo.id = :id', { id });
     consulta = consulta.orderBy('ActoAdministrativo.id', 'DESC');
     const respuesta = await consulta.getOne();
@@ -92,6 +93,7 @@ export class ActoAdministrativoRepository implements IActoAdministrativoReposito
       .createQueryBuilder('ActoAdministrativo')
       .leftJoinAndSelect('ActoAdministrativo.tramite', 'tramite')
       .leftJoinAndSelect('ActoAdministrativo.pagoCpt', 'pagoCpt')
+      .leftJoinAndSelect('ActoAdministrativo.viaje', 'viaje')
 
     consulta = this.evaluarCriterios(consulta, filtro, false, true);
     if (!consulta) {
@@ -116,7 +118,7 @@ export class ActoAdministrativoRepository implements IActoAdministrativoReposito
       .createQueryBuilder('ActoAdministrativo')
       .leftJoinAndSelect('ActoAdministrativo.tramite', 'tramite')
       .leftJoinAndSelect('ActoAdministrativo.pagoCpt', 'pagoCpt')
-
+      .leftJoinAndSelect('ActoAdministrativo.viaje', 'viaje')
     consulta = this.evaluarCriterios(consulta, filtro, true, false);
     if (!consulta) {
       return null;

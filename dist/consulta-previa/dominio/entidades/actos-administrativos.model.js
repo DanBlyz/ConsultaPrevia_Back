@@ -13,6 +13,7 @@ exports.ActoAdministrativo = void 0;
 const classes_1 = require("@automapper/classes");
 const tramite_model_1 = require("./tramite.model");
 const pago_cpt_model_1 = require("./pago-cpt.model");
+const viaje_model_1 = require("./viaje.model");
 class ActoAdministrativo {
 }
 __decorate([
@@ -43,5 +44,9 @@ __decorate([
     (0, classes_1.AutoMap)(() => [pago_cpt_model_1.PagoCpt]),
     __metadata("design:type", pago_cpt_model_1.PagoCpt)
 ], ActoAdministrativo.prototype, "pagoCpt", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(() => [viaje_model_1.Viaje]),
+    __metadata("design:type", viaje_model_1.Viaje)
+], ActoAdministrativo.prototype, "viaje", void 0);
 exports.ActoAdministrativo = ActoAdministrativo;
 //# sourceMappingURL=actos-administrativos.model.js.map

@@ -11,6 +11,7 @@ import { Type } from 'class-transformer';
 import { TramiteDto } from './tramite.dto';
 import { Tramite } from '../entidades';
 import { PagoCptDto } from './pago-cpt.dto';
+import { ViajeDto } from './viaje.dto';
 
 export class ActoAdministrativoDto {
   @AutoMap()
@@ -53,6 +54,11 @@ export class ActoAdministrativoDto {
   @Type(() => PagoCptDto)
   @IsOptional()
   pagoCpt?: PagoCptDto[];
+
+  @AutoMap(() => [ViajeDto])
+  @Type(() => ViajeDto)
+  @IsOptional()
+  viaje?: ViajeDto[];
 }
 
 export class ActoAdministrativoCreacionDto {

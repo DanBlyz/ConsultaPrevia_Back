@@ -1,6 +1,7 @@
 import { AutoMap } from '@automapper/classes';
 import { Tramite } from './tramite.model';
 import { PagoCpt } from './pago-cpt.model';
+import { Viaje } from './viaje.model';
 
 export class ActoAdministrativo {
     @AutoMap()
@@ -26,4 +27,7 @@ export class ActoAdministrativo {
 
     @AutoMap(() => [PagoCpt])
     pagoCpt?: PagoCpt;
+
+    @AutoMap(() => [Viaje])
+    viaje?: Viaje;
 }

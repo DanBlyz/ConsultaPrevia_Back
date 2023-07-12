@@ -1,5 +1,6 @@
 import { TramiteDto } from './tramite.dto';
 import { PagoCptDto } from './pago-cpt.dto';
+import { ViajeDto } from './viaje.dto';
 export declare class ActoAdministrativoDto {
     id: number;
     fk_idTramite: number;
@@ -8,6 +9,7 @@ export declare class ActoAdministrativoDto {
     encargado: string;
     tramite?: TramiteDto[];
     pagoCpt?: PagoCptDto[];
+    viaje?: ViajeDto[];
 }
 export declare class ActoAdministrativoCreacionDto {
     fk_idTramite: number;
