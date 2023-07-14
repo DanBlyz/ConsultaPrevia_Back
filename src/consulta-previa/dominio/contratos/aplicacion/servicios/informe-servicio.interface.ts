@@ -23,7 +23,7 @@ import {
     ): Promise<ListaPaginadaDto<InformeDto>>;
     obtenerPorId(id: number): Promise<InformeDto>;
     guardar(
-      objetoDto: InformeCreacionDto,
+      objetoDto: InformeCreacionDto | any,
     ): Promise<RespuestaObjetoDto<InformeDto>>;
     modificar(
       id: number,

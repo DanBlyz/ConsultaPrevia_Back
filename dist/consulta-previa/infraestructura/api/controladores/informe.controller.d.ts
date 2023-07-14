@@ -7,7 +7,7 @@ export declare class InformeController {
     constructor(servicioFactory: IServicioFactory);
     buscar(filtroDto: InformeFiltroDto): Promise<RespuestaListaDto<InformeDto>>;
     obtenerPorId(id: number): Promise<RespuestaObjetoDto<InformeDto>>;
-    guardar(objetoDto: InformeCreacionDto): Promise<RespuestaObjetoDto<InformeDto>>;
+    guardar(objetoDto: InformeCreacionDto | any): Promise<RespuestaObjetoDto<InformeDto>>;
     modificar(id: number, objetoDto: InformeModificacionDto): Promise<RespuestaObjetoDto<InformeDto>>;
     eliminar(id: number): Promise<import("../../../../comun/transferencia").RespuestaDto>;
 }

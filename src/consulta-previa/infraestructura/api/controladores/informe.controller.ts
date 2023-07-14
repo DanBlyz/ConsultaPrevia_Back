@@ -73,7 +73,7 @@ import {
     }
   
     @Post()
-    async guardar(@Body() objetoDto: InformeCreacionDto) {
+    async guardar(@Body() objetoDto: InformeCreacionDto | any) {
       return await this.servicioFactory.informeServicio.guardar(objetoDto);
     }
   

@@ -111,7 +111,7 @@ export class InformeService implements IInformeServicio {
   async guardar(
     objetoDto: InformeCreacionDto,
   ): Promise<RespuestaObjetoDto<InformeDto>> {
-    console.log("asdasd");
+    console.log(objetoDto);
     const errores = [];
     const validacion = await this.validar('guardar', objetoDto, errores);
     if (!validacion) {
@@ -124,14 +124,24 @@ export class InformeService implements IInformeServicio {
         InformeCreacionDto,
         Informe,
       );
-
       const informeId =
       await this.repositorioFactory.informeRepositorio.guardar(
         objeto,
         transaccion,
       );
-       
+       const sujeto =  new SujetoIdentificado();
+      for (let index = 0; index < objetoDto.listaSujetoIdentificado.length; index++) {
+        console.log(index);
+        sujeto.fk_idInforme = informeId;
+        sujeto.comunidad = objetoDto.listaSujetoIdentificado[index].comunidad;
+        sujeto.representante = objetoDto.listaSujetoIdentificado[index].representante;
 
+          await this.repositorioFactory.sujetoIdentificadoRepositorio.guardar(
+            sujeto,
+            transaccion,
+          );
+        
+      }
      /* if (objeto.listaSujetoIdentificado && objeto.listaSujetoIdentificado.length > 0) {
         objeto.listaSujetoIdentificado.forEach(async (sujetoIdentificado) => {
           sujetoIdentificado.fk_idInforme = informeId;

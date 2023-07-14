@@ -8,7 +8,7 @@ import {
   IsArray
 } from 'class-validator';
 import { Type } from 'class-transformer';
-import { SujetoIdentificadoCreacionDto, SujetoIdentificadoDto } from './sujeto-identificado.dto';
+import { SujetoIdentificadoCreacionDto, SujetoIdentificadoDto, SujetoIdentificadoModificacionDto } from './sujeto-identificado.dto';
 
 export class InformeDto {
   @AutoMap()
@@ -127,4 +127,10 @@ export class InformeModificacionDto {
     @IsString()
     @IsOptional()
     flujo?: string;
+
+    @AutoMap()
+    @IsArray({ each: true })
+    @Type(() => SujetoIdentificadoDto)
+    @IsOptional()
+    listaSujetoIdentificado?: SujetoIdentificadoModificacionDto[];
 }

@@ -157,5 +157,12 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], InformeModificacionDto.prototype, "flujo", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsArray)({ each: true }),
+    (0, class_transformer_1.Type)(() => sujeto_identificado_dto_1.SujetoIdentificadoDto),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Array)
+], InformeModificacionDto.prototype, "listaSujetoIdentificado", void 0);
 exports.InformeModificacionDto = InformeModificacionDto;
 //# sourceMappingURL=informe.dto.js.map
