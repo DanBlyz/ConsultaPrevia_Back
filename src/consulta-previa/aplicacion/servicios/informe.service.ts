@@ -129,7 +129,7 @@ export class InformeService implements IInformeServicio {
         objeto,
         transaccion,
       );
-       const sujeto =  new SujetoIdentificado();
+      const sujeto =  new SujetoIdentificado();
       for (let index = 0; index < objetoDto.listaSujetoIdentificado.length; index++) {
         console.log(index);
         sujeto.fk_idInforme = informeId;
