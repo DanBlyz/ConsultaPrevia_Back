@@ -57,6 +57,11 @@ __decorate([
     __metadata("design:type", String)
 ], ResolucionEntity.prototype, "flujo", void 0);
 __decorate([
+    (0, classes_1.AutoMap)(),
+    (0, typeorm_1.Column)({ name: 'asunto' }),
+    __metadata("design:type", String)
+], ResolucionEntity.prototype, "asunto", void 0);
+__decorate([
     (0, typeorm_1.ManyToOne)(() => tramite_entity_1.TramiteEntity, (tramite) => tramite.listaResolucion),
     (0, typeorm_1.JoinColumn)({ name: 'fk_idtramite' }),
     __metadata("design:type", tramite_entity_1.TramiteEntity)

@@ -56,6 +56,11 @@ __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], ResolucionDto.prototype, "flujo", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], ResolucionDto.prototype, "asunto", void 0);
 exports.ResolucionDto = ResolucionDto;
 class ResolucionCreacionDto {
 }
@@ -95,6 +100,11 @@ __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], ResolucionCreacionDto.prototype, "flujo", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], ResolucionCreacionDto.prototype, "asunto", void 0);
 exports.ResolucionCreacionDto = ResolucionCreacionDto;
 class ResolucionModificacionDto {
 }
@@ -134,5 +144,11 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], ResolucionModificacionDto.prototype, "flujo", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], ResolucionModificacionDto.prototype, "asunto", void 0);
 exports.ResolucionModificacionDto = ResolucionModificacionDto;
 //# sourceMappingURL=resolucion.dto.js.map

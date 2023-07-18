@@ -56,6 +56,12 @@ let ResolucionRepository = ResolucionRepository_1 = class ResolucionRepository {
             });
             criterioUtilizado = true;
         }
+        if (filtro.asunto && filtro.asunto !== '') {
+            consulta = consulta.andWhere('resolucion.asunto ILIKE :asunto', {
+                asunto: `%${filtro.asunto}%`,
+            });
+            criterioUtilizado = true;
+        }
         if (obligatorio) {
             return criterioUtilizado ? consulta : null;
         }

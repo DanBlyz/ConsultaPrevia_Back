@@ -47,6 +47,10 @@ import { TramiteEntity } from './tramite.entity';
     @Column({ name: 'flujo' })
     flujo: string;
 
+    @AutoMap()
+    @Column({ name: 'asunto' })
+    asunto: string;
+
     @ManyToOne(() => TramiteEntity, (tramite) => tramite.listaResolucion)
     @JoinColumn({ name: 'fk_idtramite' })
     tramite: TramiteEntity;

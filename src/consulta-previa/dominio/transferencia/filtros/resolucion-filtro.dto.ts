@@ -43,4 +43,9 @@ export class ResolucionFiltroDto extends FiltroBaseDto {
   @IsString()
   @IsOptional()
   flujo?: string;
+
+  @AutoMap()
+  @IsString()
+  @IsOptional()
+  asunto?: string;
 }

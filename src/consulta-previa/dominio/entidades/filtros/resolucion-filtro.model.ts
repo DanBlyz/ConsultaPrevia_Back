@@ -25,4 +25,7 @@ export class ResolucionFiltro {
 
   @AutoMap()
   flujo?: string;
+
+  @AutoMap()
+  asunto?: string;
 }

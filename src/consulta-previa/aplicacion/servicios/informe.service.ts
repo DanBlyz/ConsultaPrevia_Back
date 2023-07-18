@@ -130,17 +130,19 @@ export class InformeService implements IInformeServicio {
         transaccion,
       );
       const sujeto =  new SujetoIdentificado();
-      for (let index = 0; index < objetoDto.listaSujetoIdentificado.length; index++) {
-        console.log(index);
-        sujeto.fk_idInforme = informeId;
-        sujeto.comunidad = objetoDto.listaSujetoIdentificado[index].comunidad;
-        sujeto.representante = objetoDto.listaSujetoIdentificado[index].representante;
-
-          await this.repositorioFactory.sujetoIdentificadoRepositorio.guardar(
-            sujeto,
-            transaccion,
-          );
-        
+      if(objetoDto.listaSujetoIdentificado && objetoDto.listaSujetoIdentificado.length > 0){
+        for (let index = 0; index < objetoDto.listaSujetoIdentificado.length; index++) {
+          console.log(index);
+          sujeto.fk_idInforme = informeId;
+          sujeto.comunidad = objetoDto.listaSujetoIdentificado[index].comunidad;
+          sujeto.representante = objetoDto.listaSujetoIdentificado[index].representante;
+  
+            await this.repositorioFactory.sujetoIdentificadoRepositorio.guardar(
+              sujeto,
+              transaccion,
+            );
+          
+        }
       }
      /* if (objeto.listaSujetoIdentificado && objeto.listaSujetoIdentificado.length > 0) {
         objeto.listaSujetoIdentificado.forEach(async (sujetoIdentificado) => {
@@ -162,6 +164,7 @@ export class InformeService implements IInformeServicio {
         resolucion.actoAdministrativo = false;
         resolucion.resolucionPdf = null;
         resolucion.flujo = 'Deliberacion';
+        resolucion.asunto = null;
         await this.repositorioFactory.resolucionRepositorio.guardar(
           resolucion,
           transaccion,
@@ -177,6 +180,7 @@ export class InformeService implements IInformeServicio {
           resolucion.actoAdministrativo = false;
           resolucion.resolucionPdf = null;
           resolucion.flujo = 'Mediacion';
+          resolucion.asunto = null;
           await this.repositorioFactory.resolucionRepositorio.guardar(
             resolucion,
             transaccion,

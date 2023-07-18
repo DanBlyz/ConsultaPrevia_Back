@@ -9,5 +9,6 @@ export declare class ResolucionEntity extends AuditoriaEntity {
     actosAdministrativos: boolean;
     resolucionPdf: string;
     flujo: string;
+    asunto: string;
     tramite: TramiteEntity;
 }

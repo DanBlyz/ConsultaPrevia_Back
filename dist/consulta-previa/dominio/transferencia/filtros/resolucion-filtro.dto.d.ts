@@ -8,4 +8,5 @@ export declare class ResolucionFiltroDto extends FiltroBaseDto {
     ActoAdministrativo?: boolean;
     resolucionPdf?: string;
     flujo?: string;
+    asunto?: string;
 }

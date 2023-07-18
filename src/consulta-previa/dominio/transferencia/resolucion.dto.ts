@@ -43,6 +43,10 @@ export class ResolucionDto {
   @IsString()
   flujo: string;
 
+  @AutoMap()
+  @IsString()
+  asunto: string;
+
 }
 
 export class ResolucionCreacionDto {
@@ -75,6 +79,10 @@ export class ResolucionCreacionDto {
     @AutoMap()
     @IsString()
     flujo: string;
+
+    @AutoMap()
+    @IsString()
+    asunto: string;
 }
 
 export class ResolucionModificacionDto {
@@ -108,4 +116,9 @@ export class ResolucionModificacionDto {
   @IsString()
   @IsOptional()
   flujo?: string;
+
+  @AutoMap()
+  @IsString()
+  @IsOptional()
+  asunto?: string;
 }
