@@ -4,7 +4,7 @@ export declare class ResolucionDto {
     informe: string;
     resolucion: string;
     informeAprobado: boolean;
-    ActoAdministrativo: boolean;
+    actoAdministrativo: boolean;
     resolucionPdf: string;
     flujo: string;
     asunto: string;
@@ -14,7 +14,7 @@ export declare class ResolucionCreacionDto {
     informe: string;
     resolucion: string;
     informeAprobado: boolean;
-    ActoAdministrativo: boolean;
+    actoAdministrativo: boolean;
     resolucionPdf: string;
     flujo: string;
     asunto: string;
@@ -23,7 +23,7 @@ export declare class ResolucionModificacionDto {
     informe?: string;
     resolucion?: string;
     informeAprobado?: boolean;
-    ActoAdministrativo?: boolean;
+    actoAdministrativo?: boolean;
     resolucionPdf?: string;
     flujo?: string;
     asunto?: string;

@@ -45,7 +45,7 @@ __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsBoolean)(),
     __metadata("design:type", Boolean)
-], ResolucionDto.prototype, "ActoAdministrativo", void 0);
+], ResolucionDto.prototype, "actoAdministrativo", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsString)(),
@@ -89,7 +89,7 @@ __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsBoolean)(),
     __metadata("design:type", Boolean)
-], ResolucionCreacionDto.prototype, "ActoAdministrativo", void 0);
+], ResolucionCreacionDto.prototype, "actoAdministrativo", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsString)(),
@@ -131,7 +131,7 @@ __decorate([
     (0, class_validator_1.IsBoolean)(),
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", Boolean)
-], ResolucionModificacionDto.prototype, "ActoAdministrativo", void 0);
+], ResolucionModificacionDto.prototype, "actoAdministrativo", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsString)(),

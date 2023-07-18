@@ -5,7 +5,7 @@ export declare class ResolucionFiltroDto extends FiltroBaseDto {
     informe?: string;
     resolucion?: string;
     informeAprobado?: boolean;
-    ActoAdministrativo?: boolean;
+    actoAdministrativo?: boolean;
     resolucionPdf?: string;
     flujo?: string;
     asunto?: string;

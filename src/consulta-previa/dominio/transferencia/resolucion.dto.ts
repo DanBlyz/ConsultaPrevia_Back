@@ -33,7 +33,7 @@ export class ResolucionDto {
 
   @AutoMap()
   @IsBoolean()
-  ActoAdministrativo: boolean;
+  actoAdministrativo: boolean;
 
   @AutoMap()
   @IsString()
@@ -70,7 +70,7 @@ export class ResolucionCreacionDto {
   
     @AutoMap()
     @IsBoolean()
-    ActoAdministrativo: boolean;
+    actoAdministrativo: boolean;
   
     @AutoMap()
     @IsString()
@@ -105,7 +105,7 @@ export class ResolucionModificacionDto {
   @AutoMap()
   @IsBoolean()
   @IsOptional()
-  ActoAdministrativo?: boolean;
+  actoAdministrativo?: boolean;
 
   @AutoMap()
   @IsString()

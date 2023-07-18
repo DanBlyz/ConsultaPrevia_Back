@@ -32,7 +32,7 @@ export class ResolucionFiltroDto extends FiltroBaseDto {
   @AutoMap()
   @IsBoolean()
   @IsOptional()
-  ActoAdministrativo?: boolean;
+  actoAdministrativo?: boolean;
 
   @AutoMap()
   @IsString()

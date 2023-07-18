@@ -50,7 +50,7 @@ __decorate([
     (0, class_validator_1.IsBoolean)(),
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", Boolean)
-], ResolucionFiltroDto.prototype, "ActoAdministrativo", void 0);
+], ResolucionFiltroDto.prototype, "actoAdministrativo", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsString)(),

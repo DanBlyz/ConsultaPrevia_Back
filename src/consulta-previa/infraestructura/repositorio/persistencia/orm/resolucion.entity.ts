@@ -37,7 +37,7 @@ import { TramiteEntity } from './tramite.entity';
   
     @AutoMap()
     @Column({ name: 'actosadministrativos' })
-    actosAdministrativos: boolean;
+    actoAdministrativo: boolean;
   
     @AutoMap()
     @Column({ name: 'resolucionpdf' })

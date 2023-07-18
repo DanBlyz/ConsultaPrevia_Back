@@ -45,7 +45,7 @@ __decorate([
     (0, classes_1.AutoMap)(),
     (0, typeorm_1.Column)({ name: 'actosadministrativos' }),
     __metadata("design:type", Boolean)
-], ResolucionEntity.prototype, "actosAdministrativos", void 0);
+], ResolucionEntity.prototype, "actoAdministrativo", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, typeorm_1.Column)({ name: 'resolucionpdf' }),
