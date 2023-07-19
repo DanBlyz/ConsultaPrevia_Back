@@ -23,6 +23,11 @@ __decorate([
 ], ReunionEntity.prototype, "id", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
+    (0, typeorm_1.Column)({ name: 'fk_idnotificacion' }),
+    __metadata("design:type", Number)
+], ReunionEntity.prototype, "fk_idNotificacion", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
     (0, typeorm_1.Column)({ name: 'nroreunion' }),
     __metadata("design:type", String)
 ], ReunionEntity.prototype, "nroReunion", void 0);
@@ -53,6 +58,7 @@ __decorate([
 ], ReunionEntity.prototype, "encargado", void 0);
 __decorate([
     (0, typeorm_1.OneToOne)(() => notificacion_entity_1.NotificacionEntity, (notificacion) => notificacion.reunion),
+    (0, typeorm_1.JoinColumn)({ name: 'fk_idnotificacion' }),
     __metadata("design:type", notificacion_entity_1.NotificacionEntity)
 ], ReunionEntity.prototype, "notificacion", void 0);
 ReunionEntity = __decorate([

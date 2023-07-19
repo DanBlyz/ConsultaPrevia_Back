@@ -71,6 +71,7 @@ let NotificacionService = class NotificacionService {
         try {
             const objeto = this.mapper.map(objetoDto, transferencia_2.NotificacionCreacionDto, entidades_1.Notificacion);
             const NotificacionId = await this.repositorioFactory.notificacionRepositorio.guardar(objeto, transaccion);
+            console.log(NotificacionId);
             if (objeto.flujo === 'Identificacion') {
                 const actoAdministrativo = new entidades_1.ActoAdministrativo();
                 actoAdministrativo.fk_idTramite = objeto.fk_idTramite;

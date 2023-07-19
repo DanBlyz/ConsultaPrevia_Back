@@ -44,8 +44,11 @@ import { ReunionEntity } from './reunion.entity';
     @JoinColumn({ name: 'fk_idtramite' })
     tramite: TramiteEntity;
    
-    @OneToOne(() => ReunionEntity, (reunion) => reunion.notificacion)
+   /* @OneToOne(() => ReunionEntity, (reunion) => reunion.notificacion)
     @JoinColumn({ name: 'idnotificacion' })
+    reunion: ReunionEntity;*/
+
+    @OneToOne(() => ReunionEntity, (reunion) => reunion.notificacion)
     reunion: ReunionEntity;
   
   /*

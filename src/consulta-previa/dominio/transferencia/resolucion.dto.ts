@@ -88,6 +88,12 @@ export class ResolucionCreacionDto {
 export class ResolucionModificacionDto {
 
   @AutoMap()
+  @IsNumber()
+  @IsPositive()
+  @IsOptional()
+  fk_idTramite?: number;
+
+  @AutoMap()
   @IsString()
   @IsOptional()
   informe?: string;

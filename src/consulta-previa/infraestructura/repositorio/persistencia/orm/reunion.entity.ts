@@ -18,11 +18,11 @@ import { NotificacionEntity } from './notificacion.entity';
     @AutoMap()
     @PrimaryGeneratedColumn({ name: 'idreunion' })
     id: number;
-/*
+
     @AutoMap()
     @Column({ name: 'fk_idnotificacion' })
     fk_idNotificacion: number;
- */ 
+ 
     @AutoMap()
     @Column({ name: 'nroreunion' })
     nroReunion: string;
@@ -48,6 +48,7 @@ import { NotificacionEntity } from './notificacion.entity';
     encargado: string;
 
     @OneToOne(() => NotificacionEntity, (notificacion) => notificacion.reunion)
+    @JoinColumn({ name: 'fk_idnotificacion' })
     notificacion: NotificacionEntity;
   
   

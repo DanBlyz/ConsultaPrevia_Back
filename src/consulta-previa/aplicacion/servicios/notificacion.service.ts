@@ -124,6 +124,7 @@ export class NotificacionService implements INotificacionServicio {
         objeto,
         transaccion,
       );
+      console.log(NotificacionId);
       if(objeto.flujo === 'Identificacion'){
         const actoAdministrativo = new ActoAdministrativo();
         actoAdministrativo.fk_idTramite = objeto.fk_idTramite;

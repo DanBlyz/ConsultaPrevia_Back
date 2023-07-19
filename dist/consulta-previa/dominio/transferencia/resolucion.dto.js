@@ -110,6 +110,13 @@ class ResolucionModificacionDto {
 }
 __decorate([
     (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.IsPositive)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Number)
+], ResolucionModificacionDto.prototype, "fk_idTramite", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)

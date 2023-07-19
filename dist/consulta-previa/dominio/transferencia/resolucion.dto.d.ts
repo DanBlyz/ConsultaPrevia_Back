@@ -20,6 +20,7 @@ export declare class ResolucionCreacionDto {
     asunto: string;
 }
 export declare class ResolucionModificacionDto {
+    fk_idTramite?: number;
     informe?: string;
     resolucion?: string;
     informeAprobado?: boolean;

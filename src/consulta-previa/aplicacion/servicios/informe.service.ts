@@ -158,7 +158,7 @@ export class InformeService implements IInformeServicio {
       const resolucion = new Resolucion();
       if(objeto.flujo === 'Identificacion'){
         resolucion.fk_idTramite = objeto.fk_idTramite;
-        resolucion.informe = null;
+        resolucion.informe = objeto.correlativo;
         resolucion.resolucion = null;
         resolucion.informeAprobado = false;
         resolucion.actoAdministrativo = false;
@@ -174,7 +174,7 @@ export class InformeService implements IInformeServicio {
       else{
         if(objeto.flujo === 'Deliberacion'){
           resolucion.fk_idTramite = objeto.fk_idTramite;
-          resolucion.informe = null;
+          resolucion.informe = objeto.correlativo;
           resolucion.resolucion = null;
           resolucion.informeAprobado = false;
           resolucion.actoAdministrativo = false;

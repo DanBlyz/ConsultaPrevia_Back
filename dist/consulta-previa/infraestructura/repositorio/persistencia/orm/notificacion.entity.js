@@ -54,7 +54,6 @@ __decorate([
 ], NotificacionEntity.prototype, "tramite", void 0);
 __decorate([
     (0, typeorm_1.OneToOne)(() => reunion_entity_1.ReunionEntity, (reunion) => reunion.notificacion),
-    (0, typeorm_1.JoinColumn)({ name: 'idnotificacion' }),
     __metadata("design:type", reunion_entity_1.ReunionEntity)
 ], NotificacionEntity.prototype, "reunion", void 0);
 NotificacionEntity = __decorate([

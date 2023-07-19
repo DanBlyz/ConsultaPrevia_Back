@@ -31,7 +31,6 @@ let ResolucionService = class ResolucionService {
         switch (operacion) {
             case 'guardar': {
                 const filtro = new filtros_1.ResolucionFiltro();
-                filtro.fk_idTramite = objetoDto.fk_idTramite;
                 filtro.informe = objetoDto.informe;
                 filtro.resolucion = objetoDto.resolucion;
                 filtro.informeAprobado = objetoDto.informeAprobado;
@@ -74,24 +73,6 @@ let ResolucionService = class ResolucionService {
         try {
             const objeto = this.mapper.map(objetoDto, transferencia_2.ResolucionCreacionDto, entidades_1.Resolucion);
             await this.repositorioFactory.resolucionRepositorio.guardar(objeto, transaccion);
-            if (objeto.flujo == 'DELIBERACION') {
-                const actoAdministrativo = new entidades_1.ActoAdministrativo();
-                actoAdministrativo.fk_idTramite = objeto.fk_idTramite;
-                actoAdministrativo.viajeRealizado = false;
-                actoAdministrativo.flujo = 'DELIBERACION';
-                actoAdministrativo.encargado = null;
-                await this.repositorioFactory.actoAdministrativoRepositorio.guardar(actoAdministrativo, transaccion);
-            }
-            else {
-                if (objeto.flujo === 'MEDIACION') {
-                    const actoAdministrativo = new entidades_1.ActoAdministrativo();
-                    actoAdministrativo.fk_idTramite = objeto.fk_idTramite;
-                    actoAdministrativo.viajeRealizado = false;
-                    actoAdministrativo.flujo = 'MEDIACION';
-                    actoAdministrativo.encargado = null;
-                    await this.repositorioFactory.actoAdministrativoRepositorio.guardar(actoAdministrativo, transaccion);
-                }
-            }
             await this.repositorioFactory.confirmar(transaccion);
             return new transferencia_1.RespuestaObjetoDto(transferencia_1.TipoRespuesta.Exito, 'El registro se ha guardado con éxito.', this.mapper.map(objeto, entidades_1.Resolucion, transferencia_2.ResolucionDto));
         }
@@ -113,6 +94,28 @@ let ResolucionService = class ResolucionService {
         try {
             const objeto = this.mapper.map(objetoDto, transferencia_2.ResolucionModificacionDto, entidades_1.Resolucion);
             await this.repositorioFactory.resolucionRepositorio.modificar(id, objeto, transaccion);
+            console.log(objeto.flujo === 'Deliberacion');
+            console.log(objetoDto.flujo);
+            console.log(objeto.fk_idTramite);
+            if (objeto.flujo === 'Deliberacion') {
+                console.log('aqui deli');
+                const actoAdministrativo = new entidades_1.ActoAdministrativo();
+                actoAdministrativo.fk_idTramite = objeto.fk_idTramite;
+                actoAdministrativo.viajeRealizado = false;
+                actoAdministrativo.flujo = 'Deliberacion';
+                actoAdministrativo.encargado = null;
+                await this.repositorioFactory.actoAdministrativoRepositorio.guardar(actoAdministrativo, transaccion);
+            }
+            else {
+                if (objeto.flujo === 'Mediacion') {
+                    const actoAdministrativo = new entidades_1.ActoAdministrativo();
+                    actoAdministrativo.fk_idTramite = objeto.fk_idTramite;
+                    actoAdministrativo.viajeRealizado = false;
+                    actoAdministrativo.flujo = 'Mediacion';
+                    actoAdministrativo.encargado = null;
+                    await this.repositorioFactory.actoAdministrativoRepositorio.guardar(actoAdministrativo, transaccion);
+                }
+            }
             await this.repositorioFactory.confirmar(transaccion);
             return new transferencia_1.RespuestaObjetoDto(transferencia_1.TipoRespuesta.Exito, 'El registro se ha modificado con éxito.', this.mapper.map(objeto, entidades_1.Resolucion, transferencia_2.ResolucionDto));
         }
