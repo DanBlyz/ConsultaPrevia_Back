@@ -1,3 +1,4 @@
+import { Notificacion } from './notificacion.model';
 export declare class Reunion {
     id: number;
     fk_idNotificacion: number;
@@ -7,4 +8,5 @@ export declare class Reunion {
     reunionRealizada: boolean;
     actaReunionPdf: string;
     encargado: string;
+    notificacion?: Notificacion;
 }

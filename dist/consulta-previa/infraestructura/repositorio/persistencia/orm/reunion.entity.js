@@ -57,6 +57,7 @@ __decorate([
     __metadata("design:type", String)
 ], ReunionEntity.prototype, "encargado", void 0);
 __decorate([
+    (0, classes_1.AutoMap)(() => [notificacion_entity_1.NotificacionEntity]),
     (0, typeorm_1.OneToOne)(() => notificacion_entity_1.NotificacionEntity, (notificacion) => notificacion.reunion),
     (0, typeorm_1.JoinColumn)({ name: 'fk_idnotificacion' }),
     __metadata("design:type", notificacion_entity_1.NotificacionEntity)

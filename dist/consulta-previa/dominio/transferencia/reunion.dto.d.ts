@@ -1,3 +1,4 @@
+import { NotificacionDto } from './notificacion.dto';
 export declare class ReunionDto {
     id: number;
     fk_idNotificacion: number;
@@ -7,6 +8,7 @@ export declare class ReunionDto {
     reunionRealizada: boolean;
     actaReunionPdf: string;
     encargado: string;
+    notificacion?: NotificacionDto[];
 }
 export declare class ReunionCreacionDto {
     fk_idNotificacion: number;

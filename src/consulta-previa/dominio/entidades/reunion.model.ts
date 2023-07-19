@@ -1,4 +1,5 @@
 import { AutoMap } from '@automapper/classes';
+import { Notificacion } from './notificacion.model';
 
 export class Reunion {
     @AutoMap()
@@ -24,4 +25,7 @@ export class Reunion {
 
     @AutoMap()
     encargado: string;
+
+    @AutoMap(() => [Notificacion])
+    notificacion?: Notificacion;
 }

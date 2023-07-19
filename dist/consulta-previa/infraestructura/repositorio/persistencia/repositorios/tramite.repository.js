@@ -90,6 +90,11 @@ let TramiteRepository = TramiteRepository_1 = class TramiteRepository {
     async obtenerPorId(id) {
         let consulta = this.repositorio
             .createQueryBuilder('tramite')
+            .leftJoinAndSelect('tramite.listaResolucion', 'tramiteResolucion')
+            .leftJoinAndSelect('tramite.listaProvidencia', 'tramiteProvidencia')
+            .leftJoinAndSelect('tramite.listaInforme', 'tramiteInforme')
+            .leftJoinAndSelect('tramite.listaNotificacion', 'tramiteNotificacion')
+            .leftJoinAndSelect('tramite.listaActoAdministrativo', 'tramiteActoAdministrativo')
             .andWhere('tramite.id = :id', { id });
         consulta = consulta.orderBy('tramite.id', 'DESC');
         const respuesta = await consulta.getOne();

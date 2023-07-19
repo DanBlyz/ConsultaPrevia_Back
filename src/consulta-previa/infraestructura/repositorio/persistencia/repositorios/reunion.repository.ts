@@ -82,7 +82,7 @@ export class ReunionRepository implements IReunionRepositorio {
   async obtenerPorId(id: number): Promise<Reunion> {
     let consulta = this.repositorio
       .createQueryBuilder('reunion')
-      //.leftJoinAndSelect('Reunion.hojaRuta', 'hojaRuta')
+      .leftJoinAndSelect('reunion.notificacion', 'notificacion')
       .andWhere('reunion.id = :id', { id });
     consulta = consulta.orderBy('reunion.id', 'DESC');
     const respuesta = await consulta.getOne();
@@ -101,7 +101,7 @@ export class ReunionRepository implements IReunionRepositorio {
     }
     let consulta = this.repositorio
       .createQueryBuilder('reunion')
-      //.leftJoinAndSelect('documento.hojaRuta', 'hojaRuta')
+      .leftJoinAndSelect('reunion.notificacion', 'notificacion')
 
     consulta = this.evaluarCriterios(consulta, filtro, false, true);
     if (!consulta) {
@@ -124,7 +124,7 @@ export class ReunionRepository implements IReunionRepositorio {
   ): Promise<ListaPaginada<Reunion>> {
     let consulta = this.repositorio
       .createQueryBuilder('reunion')
-      //.leftJoinAndSelect('Reunion.hojaRuta', 'hojaRuta')
+      .leftJoinAndSelect('reunion.notificacion', 'notificacion')
 
     consulta = this.evaluarCriterios(consulta, filtro, true, false);
     if (!consulta) {

@@ -7,7 +7,8 @@ import {
   IsPositive,
   IsString,
 } from 'class-validator';
-
+import { Type } from 'class-transformer';
+import { NotificacionDto } from './notificacion.dto';
 export class ReunionDto {
   @AutoMap()
   @IsNumber()
@@ -42,6 +43,11 @@ export class ReunionDto {
   @AutoMap()
   @IsString()
   encargado: string;
+
+  @AutoMap(() => [NotificacionDto])
+  @Type(() => NotificacionDto)
+  @IsOptional()
+  notificacion?: NotificacionDto[];
 
 }
 

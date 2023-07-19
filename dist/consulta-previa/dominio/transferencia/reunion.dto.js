@@ -12,6 +12,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ReunionModificacionDto = exports.ReunionCreacionDto = exports.ReunionDto = void 0;
 const classes_1 = require("@automapper/classes");
 const class_validator_1 = require("class-validator");
+const class_transformer_1 = require("class-transformer");
+const notificacion_dto_1 = require("./notificacion.dto");
 class ReunionDto {
 }
 __decorate([
@@ -56,6 +58,12 @@ __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], ReunionDto.prototype, "encargado", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(() => [notificacion_dto_1.NotificacionDto]),
+    (0, class_transformer_1.Type)(() => notificacion_dto_1.NotificacionDto),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Array)
+], ReunionDto.prototype, "notificacion", void 0);
 exports.ReunionDto = ReunionDto;
 class ReunionCreacionDto {
 }
