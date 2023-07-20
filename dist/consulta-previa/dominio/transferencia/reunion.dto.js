@@ -59,6 +59,16 @@ __decorate([
     __metadata("design:type", String)
 ], ReunionDto.prototype, "encargado", void 0);
 __decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], ReunionDto.prototype, "estado", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], ReunionDto.prototype, "flujo", void 0);
+__decorate([
     (0, classes_1.AutoMap)(() => [notificacion_dto_1.NotificacionDto]),
     (0, class_transformer_1.Type)(() => notificacion_dto_1.NotificacionDto),
     (0, class_validator_1.IsOptional)(),
@@ -103,9 +113,26 @@ __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], ReunionCreacionDto.prototype, "encargado", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], ReunionCreacionDto.prototype, "estado", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], ReunionCreacionDto.prototype, "flujo", void 0);
 exports.ReunionCreacionDto = ReunionCreacionDto;
 class ReunionModificacionDto {
 }
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.IsPositive)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Number)
+], ReunionModificacionDto.prototype, "fk_idNotificacion", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsString)(),
@@ -142,5 +169,23 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], ReunionModificacionDto.prototype, "encargado", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], ReunionModificacionDto.prototype, "estado", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], ReunionModificacionDto.prototype, "flujo", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_transformer_1.Type)(() => notificacion_dto_1.NotificacionDto),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Array)
+], ReunionModificacionDto.prototype, "notificacion", void 0);
 exports.ReunionModificacionDto = ReunionModificacionDto;
 //# sourceMappingURL=reunion.dto.js.map

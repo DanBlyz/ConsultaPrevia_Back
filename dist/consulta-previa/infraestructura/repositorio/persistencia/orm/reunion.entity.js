@@ -57,6 +57,16 @@ __decorate([
     __metadata("design:type", String)
 ], ReunionEntity.prototype, "encargado", void 0);
 __decorate([
+    (0, classes_1.AutoMap)(),
+    (0, typeorm_1.Column)({ name: 'estado' }),
+    __metadata("design:type", String)
+], ReunionEntity.prototype, "estado", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, typeorm_1.Column)({ name: 'flujo' }),
+    __metadata("design:type", String)
+], ReunionEntity.prototype, "flujo", void 0);
+__decorate([
     (0, classes_1.AutoMap)(() => [notificacion_entity_1.NotificacionEntity]),
     (0, typeorm_1.OneToOne)(() => notificacion_entity_1.NotificacionEntity, (notificacion) => notificacion.reunion),
     (0, typeorm_1.JoinColumn)({ name: 'fk_idnotificacion' }),

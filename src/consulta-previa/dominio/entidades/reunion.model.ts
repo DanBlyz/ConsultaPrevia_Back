@@ -26,6 +26,12 @@ export class Reunion {
     @AutoMap()
     encargado: string;
 
+    @AutoMap()
+    estado: string;
+
+    @AutoMap()
+    flujo: string;
+
     @AutoMap(() => [Notificacion])
     notificacion?: Notificacion;
 }

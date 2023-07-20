@@ -5,4 +5,5 @@ export declare class ActoAdministrativoFiltroDto extends FiltroBaseDto {
     viajeRealizado?: boolean;
     flujo?: string;
     encargado?: string;
+    estado?: string;
 }

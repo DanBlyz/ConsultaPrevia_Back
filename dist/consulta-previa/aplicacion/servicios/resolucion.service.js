@@ -98,7 +98,6 @@ let ResolucionService = class ResolucionService {
             console.log(objetoDto.flujo);
             console.log(objeto.fk_idTramite);
             if (objeto.flujo === 'Deliberacion') {
-                console.log('aqui deli');
                 const actoAdministrativo = new entidades_1.ActoAdministrativo();
                 actoAdministrativo.fk_idTramite = objeto.fk_idTramite;
                 actoAdministrativo.viajeRealizado = false;

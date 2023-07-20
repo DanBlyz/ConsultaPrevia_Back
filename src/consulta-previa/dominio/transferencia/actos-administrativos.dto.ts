@@ -36,14 +36,9 @@ export class ActoAdministrativoDto {
   @IsString()
   encargado: string;
 
-/*  @AutoMap()
-  @IsBoolean()
-  pagoRealizado: boolean;
-*/
-  /*@AutoMap()
-  @Type(() => Tramite)
-  @IsOptional()
-  tramite?: Tramite;*/
+  @AutoMap()
+  @IsString()
+  estado: string;
 
   @AutoMap(() => [TramiteDto])
   @Type(() => TramiteDto)
@@ -104,7 +99,8 @@ export class ActoAdministrativoModificacionDto {
     encargado?: string;
 
     @AutoMap()
-    @IsBoolean()
+    @IsString()
+    @IsString()
     @IsOptional()
-    pagoRealizado?: boolean;
+    estado?: string;
 }

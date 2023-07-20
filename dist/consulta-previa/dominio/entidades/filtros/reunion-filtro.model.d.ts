@@ -7,4 +7,6 @@ export declare class ReunionFiltro {
     reunionRealizada?: boolean;
     actaReunionPdf?: string;
     encargado?: string;
+    estado?: string;
+    flujo?: string;
 }

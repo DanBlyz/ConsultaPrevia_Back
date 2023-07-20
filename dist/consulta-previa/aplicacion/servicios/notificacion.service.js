@@ -81,7 +81,7 @@ let NotificacionService = class NotificacionService {
                 await this.repositorioFactory.actoAdministrativoRepositorio.guardar(actoAdministrativo, transaccion);
             }
             else {
-                if (objeto.flujo === 'Deliberacion') {
+                if (objeto.flujo === 'Deliberacion' || objeto.flujo === 'Mediacion') {
                     const reunion = new entidades_1.Reunion();
                     reunion.fk_idNotificacion = NotificacionId;
                     reunion.nroReunion = null;
@@ -90,6 +90,12 @@ let NotificacionService = class NotificacionService {
                     reunion.reunionRealizada = false;
                     reunion.actaReunionPdf = null;
                     reunion.encargado = null;
+                    if (objeto.flujo === 'Deliberacion') {
+                        reunion.flujo = 'Deliberacion';
+                    }
+                    else {
+                        reunion.flujo = 'Mediacion';
+                    }
                     await this.repositorioFactory.reunionRepositorio.guardar(reunion, transaccion);
                 }
             }

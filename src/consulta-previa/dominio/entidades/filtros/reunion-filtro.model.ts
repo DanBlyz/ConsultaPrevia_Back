@@ -26,4 +26,10 @@ export class ReunionFiltro {
   @AutoMap()
   encargado?: string;
 
+  @AutoMap()
+  estado?: string;
+
+  @AutoMap()
+  flujo?: string;
+
 }

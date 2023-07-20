@@ -8,5 +8,7 @@ export declare class Reunion {
     reunionRealizada: boolean;
     actaReunionPdf: string;
     encargado: string;
+    estado: string;
+    flujo: string;
     notificacion?: Notificacion;
 }

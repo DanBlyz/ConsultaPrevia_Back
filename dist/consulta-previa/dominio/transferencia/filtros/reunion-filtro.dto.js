@@ -63,5 +63,17 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], ReunionFiltroDto.prototype, "encargado", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], ReunionFiltroDto.prototype, "estado", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], ReunionFiltroDto.prototype, "flujo", void 0);
 exports.ReunionFiltroDto = ReunionFiltroDto;
 //# sourceMappingURL=reunion-filtro.dto.js.map

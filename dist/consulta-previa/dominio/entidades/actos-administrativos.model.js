@@ -37,6 +37,10 @@ __decorate([
     __metadata("design:type", String)
 ], ActoAdministrativo.prototype, "encargado", void 0);
 __decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", String)
+], ActoAdministrativo.prototype, "estado", void 0);
+__decorate([
     (0, classes_1.AutoMap)(() => [tramite_model_1.Tramite]),
     __metadata("design:type", tramite_model_1.Tramite)
 ], ActoAdministrativo.prototype, "tramite", void 0);

@@ -47,6 +47,14 @@ import { NotificacionEntity } from './notificacion.entity';
     @Column({ name: 'encargado' })
     encargado: string;
 
+    @AutoMap()
+    @Column({ name: 'estado' })
+    estado: string;
+
+    @AutoMap()
+    @Column({ name: 'flujo' })
+    flujo: string;
+
     @AutoMap(() => [NotificacionEntity])
     @OneToOne(() => NotificacionEntity, (notificacion) => notificacion.reunion)
     @JoinColumn({ name: 'fk_idnotificacion' })

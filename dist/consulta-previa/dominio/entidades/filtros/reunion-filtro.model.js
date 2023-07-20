@@ -45,5 +45,13 @@ __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", String)
 ], ReunionFiltro.prototype, "encargado", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", String)
+], ReunionFiltro.prototype, "estado", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", String)
+], ReunionFiltro.prototype, "flujo", void 0);
 exports.ReunionFiltro = ReunionFiltro;
 //# sourceMappingURL=reunion-filtro.model.js.map

@@ -96,7 +96,7 @@ export class InformeModificacionDto {
     @IsNumber()
     @IsPositive()
     @IsOptional()
-    fk_idTramite: number;
+    fk_idTramite?: number;
   
     @AutoMap()
     @IsString()

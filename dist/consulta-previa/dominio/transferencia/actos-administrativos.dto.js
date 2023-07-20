@@ -46,6 +46,11 @@ __decorate([
     __metadata("design:type", String)
 ], ActoAdministrativoDto.prototype, "encargado", void 0);
 __decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], ActoAdministrativoDto.prototype, "estado", void 0);
+__decorate([
     (0, classes_1.AutoMap)(() => [tramite_dto_1.TramiteDto]),
     (0, class_transformer_1.Type)(() => tramite_dto_1.TramiteDto),
     (0, class_validator_1.IsOptional)(),
@@ -117,9 +122,10 @@ __decorate([
 ], ActoAdministrativoModificacionDto.prototype, "encargado", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
-    (0, class_validator_1.IsBoolean)(),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)(),
-    __metadata("design:type", Boolean)
-], ActoAdministrativoModificacionDto.prototype, "pagoRealizado", void 0);
+    __metadata("design:type", String)
+], ActoAdministrativoModificacionDto.prototype, "estado", void 0);
 exports.ActoAdministrativoModificacionDto = ActoAdministrativoModificacionDto;
 //# sourceMappingURL=actos-administrativos.dto.js.map

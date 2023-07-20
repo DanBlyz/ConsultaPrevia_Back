@@ -9,5 +9,7 @@ export declare class ReunionEntity extends AuditoriaEntity {
     reunionRealizada: boolean;
     actaReunionPdf: string;
     encargado: string;
+    estado: string;
+    flujo: string;
     notificacion: NotificacionEntity;
 }

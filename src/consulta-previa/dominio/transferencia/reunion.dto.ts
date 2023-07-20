@@ -8,7 +8,7 @@ import {
   IsString,
 } from 'class-validator';
 import { Type } from 'class-transformer';
-import { NotificacionDto } from './notificacion.dto';
+import { NotificacionDto, NotificacionModificacionDto } from './notificacion.dto';
 export class ReunionDto {
   @AutoMap()
   @IsNumber()
@@ -43,6 +43,14 @@ export class ReunionDto {
   @AutoMap()
   @IsString()
   encargado: string;
+
+  @AutoMap()
+  @IsString()
+  estado: string;
+
+  @AutoMap()
+  @IsString()
+  flujo: string;
 
   @AutoMap(() => [NotificacionDto])
   @Type(() => NotificacionDto)
@@ -81,9 +89,23 @@ export class ReunionCreacionDto {
     @AutoMap()
     @IsString()
     encargado: string;
+
+    @AutoMap()
+    @IsString()
+    estado: string;
+
+    @AutoMap()
+    @IsString()
+    flujo: string;
 }
 
 export class ReunionModificacionDto {
+  
+    @AutoMap()
+    @IsNumber()
+    @IsPositive()
+    @IsOptional()
+    fk_idNotificacion: number;
 
     @AutoMap()
     @IsString()
@@ -114,4 +136,21 @@ export class ReunionModificacionDto {
     @IsString()
     @IsOptional()
     encargado?: string;
+
+    @AutoMap()
+    @IsString()
+    @IsOptional()
+    estado?: string;
+
+    @AutoMap()
+    @IsString()
+    @IsOptional()
+    flujo?: string;
+
+    @AutoMap()
+    @Type(() => NotificacionDto)
+    @IsOptional()
+    notificacion?: NotificacionModificacionDto[];
+
+    
 }

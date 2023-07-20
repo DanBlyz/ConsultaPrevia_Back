@@ -21,7 +21,7 @@ export declare class InformeCreacionDto {
     listaSujetoIdentificado?: SujetoIdentificadoCreacionDto[];
 }
 export declare class InformeModificacionDto {
-    fk_idTramite: number;
+    fk_idTramite?: number;
     correlativo?: string;
     referencia?: string;
     informePdf?: string;

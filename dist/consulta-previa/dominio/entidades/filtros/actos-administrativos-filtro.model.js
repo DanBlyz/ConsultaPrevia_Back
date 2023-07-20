@@ -33,5 +33,9 @@ __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", String)
 ], ActoAdministrativoFiltro.prototype, "encargado", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", String)
+], ActoAdministrativoFiltro.prototype, "estado", void 0);
 exports.ActoAdministrativoFiltro = ActoAdministrativoFiltro;
 //# sourceMappingURL=actos-administrativos-filtro.model.js.map

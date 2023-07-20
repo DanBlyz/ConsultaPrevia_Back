@@ -7,6 +7,7 @@ export declare class ActoAdministrativoDto {
     viajeRealizado: boolean;
     flujo: string;
     encargado: string;
+    estado: string;
     tramite?: TramiteDto[];
     pagoCpt?: PagoCptDto[];
     viaje?: ViajeDto[];
@@ -22,5 +23,5 @@ export declare class ActoAdministrativoModificacionDto {
     viajeRealizado?: boolean;
     flujo?: string;
     encargado?: string;
-    pagoRealizado?: boolean;
+    estado?: string;
 }

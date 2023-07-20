@@ -147,7 +147,7 @@ export class ReunionService implements IReunionServicio {
 
   async modificar(
     id: number,
-    objetoDto: ReunionModificacionDto,
+    objetoDto: ReunionModificacionDto | any,
   ): Promise<RespuestaObjetoDto<ReunionDto>> {
     const errores = [];
     const validacion = await this.validar('modificar', objetoDto, errores);

@@ -47,6 +47,14 @@ __decorate([
     __metadata("design:type", String)
 ], Reunion.prototype, "encargado", void 0);
 __decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", String)
+], Reunion.prototype, "estado", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", String)
+], Reunion.prototype, "flujo", void 0);
+__decorate([
     (0, classes_1.AutoMap)(() => [notificacion_model_1.Notificacion]),
     __metadata("design:type", notificacion_model_1.Notificacion)
 ], Reunion.prototype, "notificacion", void 0);

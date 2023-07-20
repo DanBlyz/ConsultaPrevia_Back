@@ -43,4 +43,14 @@ export class ReunionFiltroDto extends FiltroBaseDto {
   @IsString()
   @IsOptional()
   encargado?: string;
+
+  @AutoMap()
+  @IsString()
+  @IsOptional()
+  estado?: string;
+
+  @AutoMap()
+  @IsString()
+  @IsOptional()
+  flujo?: string;
 }

@@ -17,7 +17,7 @@ export class ActoAdministrativoFiltro {
   @AutoMap()
   encargado?: string;
 
-  /*@AutoMap()
-  pagoRealizado?: boolean;*/
+  @AutoMap()
+  estado?: string;
 
 }

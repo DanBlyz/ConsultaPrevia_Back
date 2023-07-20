@@ -19,8 +19,8 @@ export class ActoAdministrativo {
     @AutoMap()
     encargado: string;
 
-   /* @AutoMap()
-    pagoRealizado: boolean;*/
+    @AutoMap()
+    estado: string;
 
     @AutoMap(() => [Tramite])
     tramite?: Tramite;
