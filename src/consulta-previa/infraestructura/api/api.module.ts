@@ -18,6 +18,7 @@ import {
   PagoCptController,
   ViajeController,
   ProvidenciaController,
+  FilesController
 } from './controladores';
 
 @Module({
@@ -30,7 +31,7 @@ import {
     ]),
     ComunModule,
     DominioModule,
-    forwardRef(() => AplicacionModule),
+    forwardRef(() => AplicacionModule)
   ],
   providers: [JwtStrategy],
   controllers: [
@@ -45,6 +46,7 @@ import {
     PagoCptController,
     ViajeController,
     ProvidenciaController,
+    FilesController
   ],
 })
 export class ApiModule {}

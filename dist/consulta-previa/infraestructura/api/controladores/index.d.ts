@@ -9,3 +9,4 @@ export * from './actos-administrativos.controller';
 export * from './pago-cpt.controller';
 export * from './viaje.controller';
 export * from './providencia.controller';
+export * from './files.controller';

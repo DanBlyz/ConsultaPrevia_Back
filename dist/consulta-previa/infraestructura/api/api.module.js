@@ -28,7 +28,7 @@ ApiModule = ApiModule_1 = __decorate([
             ]),
             comun_1.ComunModule,
             dominio_1.DominioModule,
-            (0, common_1.forwardRef)(() => aplicacion_1.AplicacionModule),
+            (0, common_1.forwardRef)(() => aplicacion_1.AplicacionModule)
         ],
         providers: [jwt_1.JwtStrategy],
         controllers: [
@@ -43,6 +43,7 @@ ApiModule = ApiModule_1 = __decorate([
             controladores_1.PagoCptController,
             controladores_1.ViajeController,
             controladores_1.ProvidenciaController,
+            controladores_1.FilesController
         ],
     })
 ], ApiModule);
