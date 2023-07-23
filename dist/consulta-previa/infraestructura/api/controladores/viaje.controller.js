@@ -18,6 +18,11 @@ const transferencia_1 = require("../../../../comun/transferencia");
 const aplicacion_1 = require("../../../dominio/contratos/aplicacion");
 const filtros_1 = require("../../../dominio/transferencia/filtros");
 const transferencia_2 = require("../../../dominio/transferencia");
+const common_2 = require("@nestjs/common");
+const platform_express_1 = require("@nestjs/platform-express");
+const multer_1 = require("multer");
+const common_3 = require("@nestjs/common");
+const path_1 = require("path");
 let ViajeController = class ViajeController {
     constructor(servicioFactory) {
         this.servicioFactory = servicioFactory;
@@ -42,6 +47,15 @@ let ViajeController = class ViajeController {
     }
     async eliminar(id) {
         return await this.servicioFactory.viajeServicio.eliminar(id);
+    }
+    async uploadFile(file) {
+        console.log(file);
+        console.log(file.destination);
+        return { message: 'Archivo subido correctamente' };
+    }
+    async downloadFile(filename, res) {
+        const path = (0, path_1.join)('..', 'ConsultaPrevia_Back/consulta-previa/viaje', filename);
+        return res.download(path);
     }
 };
 __decorate([
@@ -80,6 +94,29 @@ __decorate([
     __metadata("design:paramtypes", [Number]),
     __metadata("design:returntype", Promise)
 ], ViajeController.prototype, "eliminar", null);
+__decorate([
+    (0, common_1.Post)('subir-archivo'),
+    (0, common_2.UseInterceptors)((0, platform_express_1.FileInterceptor)('file', {
+        storage: (0, multer_1.diskStorage)({
+            destination: './consulta-previa/viaje',
+            filename: (req, file, cb) => {
+                cb(null, ("viaje-" + file.originalname));
+            },
+        }),
+    })),
+    __param(0, (0, common_2.UploadedFile)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", Promise)
+], ViajeController.prototype, "uploadFile", null);
+__decorate([
+    (0, common_1.Get)('bajar-archivo/:filename'),
+    __param(0, (0, common_1.Param)('filename')),
+    __param(1, (0, common_3.Res)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String, Object]),
+    __metadata("design:returntype", Promise)
+], ViajeController.prototype, "downloadFile", null);
 ViajeController = __decorate([
     (0, common_1.Controller)('viajes'),
     __param(0, (0, common_1.Inject)(aplicacion_1.SERVICIO_FACTORY)),

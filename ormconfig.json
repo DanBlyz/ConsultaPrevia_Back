@@ -3,8 +3,8 @@
   "host": "localhost",
   "port": "5432",
   "username": "postgres",
-  "password": "123",
-  "database": "ConsultaPrevia2",
+  "password": "12345678",
+  "database": "ConsultaPrevia1",
   "entities": [
     "dist/**/*{.entity,.schema}{.ts,.js}"
   ],

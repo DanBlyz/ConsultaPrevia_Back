@@ -16,12 +16,17 @@ exports.FilesController = void 0;
 const common_1 = require("@nestjs/common");
 const platform_express_1 = require("@nestjs/platform-express");
 const multer_1 = require("multer");
+const common_2 = require("@nestjs/common");
 const path_1 = require("path");
 let FilesController = class FilesController {
     async uploadFile(file) {
         console.log(file);
         console.log(file.destination);
         return { message: 'Archivo subido correctamente' };
+    }
+    async downloadFile(filename, res) {
+        const path = (0, path_1.join)('..', 'ConsultaPrevia_Back/uploads', filename);
+        return res.download(path);
     }
 };
 __decorate([
@@ -30,8 +35,7 @@ __decorate([
         storage: (0, multer_1.diskStorage)({
             destination: './uploads',
             filename: (req, file, cb) => {
-                const randomName = +Array(32).fill(null).map(() => (Math.round(Math.random() * 16)).toString(16)).join('');
-                cb(null, `${randomName}${(0, path_1.extname)(file.originalname)}`);
+                cb(null, ("providencia-" + file.originalname));
             },
         }),
     })),
@@ -40,6 +44,14 @@ __decorate([
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
 ], FilesController.prototype, "uploadFile", null);
+__decorate([
+    (0, common_2.Get)('download/:filename'),
+    __param(0, (0, common_2.Param)('filename')),
+    __param(1, (0, common_2.Res)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String, Object]),
+    __metadata("design:returntype", Promise)
+], FilesController.prototype, "downloadFile", null);
 FilesController = __decorate([
     (0, common_1.Controller)('files')
 ], FilesController);
