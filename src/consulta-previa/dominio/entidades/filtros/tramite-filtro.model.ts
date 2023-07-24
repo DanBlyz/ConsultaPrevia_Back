@@ -18,6 +18,9 @@ export class TramiteFiltro {
   clasificacion?: string;
 
   @AutoMap()
+  nroCuadricula?: number;
+
+  @AutoMap()
   departamento?: string;
 
   @AutoMap()

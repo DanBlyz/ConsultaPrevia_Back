@@ -4,6 +4,7 @@ export declare class TramiteFiltro {
     codigoUnico?: number;
     areaMinera?: string;
     clasificacion?: string;
+    nroCuadricula?: number;
     departamento?: string;
     provincia?: string;
     municipio?: string;

@@ -47,6 +47,11 @@ __decorate([
 ], TramiteEntity.prototype, "clasificacion", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
+    (0, typeorm_1.Column)({ name: 'nrocuadricula' }),
+    __metadata("design:type", Number)
+], TramiteEntity.prototype, "nroCuadricula", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
     (0, typeorm_1.Column)({ name: 'departamento' }),
     __metadata("design:type", String)
 ], TramiteEntity.prototype, "departamento", void 0);

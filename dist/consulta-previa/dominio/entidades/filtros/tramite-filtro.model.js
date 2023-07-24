@@ -35,6 +35,10 @@ __decorate([
 ], TramiteFiltro.prototype, "clasificacion", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
+    __metadata("design:type", Number)
+], TramiteFiltro.prototype, "nroCuadricula", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
     __metadata("design:type", String)
 ], TramiteFiltro.prototype, "departamento", void 0);
 __decorate([

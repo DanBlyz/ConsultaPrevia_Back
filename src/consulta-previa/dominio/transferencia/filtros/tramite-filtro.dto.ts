@@ -30,6 +30,11 @@ export class TramiteFiltroDto extends FiltroBaseDto {
   clasificacion?: string;
 
   @AutoMap()
+  @IsNumber()
+  @IsOptional()
+  nroCuadricula?: number;
+
+  @AutoMap()
   @IsString()
   @IsOptional()
   departamento?: string;

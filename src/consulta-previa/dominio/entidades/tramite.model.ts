@@ -22,6 +22,9 @@ export class Tramite {
   clasificacion: string;
 
   @AutoMap()
+  nroCuadricula: number;
+
+  @AutoMap()
   departamento: string;
 
   @AutoMap()

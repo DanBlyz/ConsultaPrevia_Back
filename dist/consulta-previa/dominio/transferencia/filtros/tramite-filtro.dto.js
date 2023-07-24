@@ -47,6 +47,12 @@ __decorate([
 ], TramiteFiltroDto.prototype, "clasificacion", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Number)
+], TramiteFiltroDto.prototype, "nroCuadricula", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)

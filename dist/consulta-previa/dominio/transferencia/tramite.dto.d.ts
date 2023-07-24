@@ -9,6 +9,7 @@ export declare class TramiteDto {
     codigoUnico: number;
     areaMinera: string;
     clasificacion: string;
+    nroCuadricula: number;
     departamento: string;
     provincia: string;
     municipio: string;
@@ -23,6 +24,7 @@ export declare class TramiteCreacionDto {
     codigoUnico: number;
     areaMinera: string;
     clasificacion: string;
+    nroCuadricula: number;
     departamento: string;
     provincia: string;
     municipio: string;
@@ -32,6 +34,7 @@ export declare class TramiteModificacionDto {
     codigoUnico?: number;
     areaMinera?: string;
     clasificacion?: string;
+    nroCuadricula?: number;
     departamento?: string;
     provincia?: string;
     municipio?: string;

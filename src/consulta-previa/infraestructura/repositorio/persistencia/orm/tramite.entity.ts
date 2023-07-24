@@ -38,6 +38,10 @@ import { ActoAdministrativoEntity } from './actos-administrativos.entity';
     @AutoMap()
     @Column({ name: 'clasificacion' })
     clasificacion: string;
+
+    @AutoMap()
+    @Column({ name: 'nrocuadricula' })
+    nroCuadricula: number;
   
     @AutoMap()
     @Column({ name: 'departamento' })

@@ -48,6 +48,11 @@ __decorate([
 ], TramiteDto.prototype, "clasificacion", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsNumber)(),
+    __metadata("design:type", Number)
+], TramiteDto.prototype, "nroCuadricula", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], TramiteDto.prototype, "departamento", void 0);
@@ -121,6 +126,11 @@ __decorate([
 ], TramiteCreacionDto.prototype, "clasificacion", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsNumber)(),
+    __metadata("design:type", Number)
+], TramiteCreacionDto.prototype, "nroCuadricula", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], TramiteCreacionDto.prototype, "departamento", void 0);
@@ -161,6 +171,12 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], TramiteModificacionDto.prototype, "clasificacion", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Number)
+], TramiteModificacionDto.prototype, "nroCuadricula", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsString)(),

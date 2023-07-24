@@ -37,6 +37,10 @@ export class TramiteDto {
   clasificacion: string;
 
   @AutoMap()
+  @IsNumber()
+  nroCuadricula: number;
+
+  @AutoMap()
   @IsString()
   departamento: string;
 
@@ -96,6 +100,10 @@ export class TramiteCreacionDto {
     @AutoMap()
     @IsString()
     clasificacion: string;
+
+    @AutoMap()
+    @IsNumber()
+    nroCuadricula: number;
   
     @AutoMap()
     @IsString()
@@ -130,6 +138,11 @@ export class TramiteModificacionDto {
     @IsString()
     @IsOptional()
     clasificacion?: string;
+
+    @AutoMap()
+    @IsNumber()
+    @IsOptional()
+    nroCuadricula?: number;
   
     @AutoMap()
     @IsString()
