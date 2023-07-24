@@ -16,6 +16,7 @@ exports.FilesController = void 0;
 const common_1 = require("@nestjs/common");
 const platform_express_1 = require("@nestjs/platform-express");
 const multer_1 = require("multer");
+const common_2 = require("@nestjs/common");
 const path_1 = require("path");
 const common_2 = require("@nestjs/common");
 const path_2 = require("path");
@@ -26,7 +27,11 @@ let FilesController = class FilesController {
         return { message: 'Archivo subido correctamente' };
     }
     async downloadFile(filename, res) {
+<<<<<<< HEAD
         const path = (0, path_2.join)(__dirname, '..', 'uploads', filename);
+=======
+        const path = (0, path_1.join)('..', 'ConsultaPrevia_Back/uploads', filename);
+>>>>>>> 59e45bad2e953fc0131b406fcc7367326f7168df
         return res.download(path);
     }
 };
@@ -36,8 +41,7 @@ __decorate([
         storage: (0, multer_1.diskStorage)({
             destination: './uploads',
             filename: (req, file, cb) => {
-                const randomName = +Array(32).fill(null).map(() => (Math.round(Math.random() * 16)).toString(16)).join('');
-                cb(null, `${randomName}${(0, path_1.extname)(file.originalname)}`);
+                cb(null, ("providencia-" + file.originalname));
             },
         }),
     })),

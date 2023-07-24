@@ -31,6 +31,14 @@ import {
     ReunionDto,
     ReunionModificacionDto,
   } from '../../../dominio/transferencia';
+  import { UploadedFile, UseInterceptors } from '@nestjs/common';
+  import { FileInterceptor } from '@nestjs/platform-express';
+  import { diskStorage } from 'multer';
+  import { extname } from 'path';
+  
+  import { Res } from '@nestjs/common';
+  import { join } from 'path';
+  import { Response } from 'express';
   
   //@UseGuards(JwtAuthGuard)
   @Controller('reuniones')
@@ -91,6 +99,28 @@ import {
     @Delete(':id')
     async eliminar(@Param('id', ParseIntPipe) id: number) {
       return await this.servicioFactory.reunionServicio.eliminar(id);
+    }
+
+    @Post('subir-archivo')
+    @UseInterceptors(FileInterceptor('file', {
+      storage: diskStorage({
+        destination: './consulta-previa/reunion', // Directorio donde se guardarán los archivos
+        filename: (req, file, cb) => {
+          
+          cb(null, ("reunion-"+file.originalname));
+        },
+      }),
+    }))
+    async uploadFile(@UploadedFile() file: Express.Multer.File) {
+      console.log(file); // Puedes hacer lo que necesites con el archivo aquí
+      console.log(file.destination);
+      return { message: 'Archivo subido correctamente' };
+    }
+    
+    @Get('bajar-archivo/:filename')
+    async downloadFile(@Param('filename') filename: string, @Res() res: Response) {
+      const path = join('..', 'ConsultaPrevia_Back/consulta-previa/reunion', filename);
+      return res.download(path);
     }
   
   }

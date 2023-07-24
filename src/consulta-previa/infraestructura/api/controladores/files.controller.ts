@@ -13,8 +13,7 @@ export class FilesController {
     storage: diskStorage({
       destination: './uploads', // Directorio donde se guardarán los archivos
       filename: (req, file, cb) => {
-        const randomName = +Array(32).fill(null).map(() => (Math.round(Math.random() * 16)).toString(16)).join('');
-        cb(null, `${randomName}${extname(file.originalname)}`);
+        cb(null, ("providencia-"+file.originalname));
       },
     }),
   }))
@@ -26,7 +25,11 @@ export class FilesController {
 
   @Get('download/:filename')
   async downloadFile(@Param('filename') filename: string, @Res() res: Response) {
+<<<<<<< HEAD
     const path = join(__dirname, '..', 'uploads', filename);
+=======
+    const path = join('..', 'ConsultaPrevia_Back/uploads', filename);
+>>>>>>> 59e45bad2e953fc0131b406fcc7367326f7168df
     return res.download(path);
   }
 }
