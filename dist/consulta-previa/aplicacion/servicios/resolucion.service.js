@@ -94,9 +94,6 @@ let ResolucionService = class ResolucionService {
         try {
             const objeto = this.mapper.map(objetoDto, transferencia_2.ResolucionModificacionDto, entidades_1.Resolucion);
             await this.repositorioFactory.resolucionRepositorio.modificar(id, objeto, transaccion);
-            console.log(objeto.flujo === 'Deliberacion');
-            console.log(objetoDto.flujo);
-            console.log(objeto.fk_idTramite);
             if (objeto.flujo === 'Deliberacion') {
                 const actoAdministrativo = new entidades_1.ActoAdministrativo();
                 actoAdministrativo.fk_idTramite = objeto.fk_idTramite;

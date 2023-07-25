@@ -39,6 +39,22 @@ __decorate([
     __metadata("design:type", String)
 ], Notificacion.prototype, "flujo", void 0);
 __decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", Boolean)
+], Notificacion.prototype, "representanteMinero", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", Boolean)
+], Notificacion.prototype, "representanteComunidad", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", Boolean)
+], Notificacion.prototype, "sifde", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", String)
+], Notificacion.prototype, "comunidad", void 0);
+__decorate([
     (0, classes_1.AutoMap)(() => [reunion_model_1.Reunion]),
     __metadata("design:type", Array)
 ], Notificacion.prototype, "listaReunion", void 0);

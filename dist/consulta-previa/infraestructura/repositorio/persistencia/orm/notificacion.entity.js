@@ -48,6 +48,26 @@ __decorate([
     __metadata("design:type", String)
 ], NotificacionEntity.prototype, "flujo", void 0);
 __decorate([
+    (0, classes_1.AutoMap)(),
+    (0, typeorm_1.Column)({ name: 'representanteminero' }),
+    __metadata("design:type", Boolean)
+], NotificacionEntity.prototype, "representanteMinero", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, typeorm_1.Column)({ name: 'representantecomunidad' }),
+    __metadata("design:type", Boolean)
+], NotificacionEntity.prototype, "representanteComunidad", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, typeorm_1.Column)({ name: 'sifde' }),
+    __metadata("design:type", Boolean)
+], NotificacionEntity.prototype, "sifde", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, typeorm_1.Column)({ name: 'comunidad' }),
+    __metadata("design:type", String)
+], NotificacionEntity.prototype, "comunidad", void 0);
+__decorate([
     (0, typeorm_1.ManyToOne)(() => tramite_entity_1.TramiteEntity, (tramite) => tramite.listaNotificacion),
     (0, typeorm_1.JoinColumn)({ name: 'fk_idtramite' }),
     __metadata("design:type", tramite_entity_1.TramiteEntity)

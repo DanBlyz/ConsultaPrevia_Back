@@ -8,6 +8,10 @@ export declare class NotificacionEntity extends AuditoriaEntity {
     direccionDpto: string;
     notificacionPdf: string;
     flujo: string;
+    representanteMinero: boolean;
+    representanteComunidad: boolean;
+    sifde: boolean;
+    comunidad: string;
     tramite: TramiteEntity;
     reunion: ReunionEntity;
 }

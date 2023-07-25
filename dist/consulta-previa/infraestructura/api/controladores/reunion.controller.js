@@ -99,7 +99,7 @@ __decorate([
         storage: (0, multer_1.diskStorage)({
             destination: './consulta-previa/reunion',
             filename: (req, file, cb) => {
-                cb(null, ("reunion-" + file.originalname));
+                cb(null, (file.originalname));
             },
         }),
     })),

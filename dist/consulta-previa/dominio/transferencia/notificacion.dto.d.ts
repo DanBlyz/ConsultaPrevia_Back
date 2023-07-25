@@ -6,6 +6,10 @@ export declare class NotificacionDto {
     direccionDpto: string;
     notificacionPdf: string;
     flujo: string;
+    representanteMinero: boolean;
+    representanteComunidad: boolean;
+    sifde: boolean;
+    comunidad?: string;
     listaReunion?: ReunionDto[];
 }
 export declare class NotificacionCreacionDto {
@@ -14,10 +18,18 @@ export declare class NotificacionCreacionDto {
     direccionDpto: string;
     notificacionPdf: string;
     flujo: string;
+    representanteMinero: boolean;
+    representanteComunidad: boolean;
+    sifde: boolean;
+    comunidad?: string;
 }
 export declare class NotificacionModificacionDto {
     notificado?: string;
     direccionDpto?: string;
     notificacionPdf?: string;
     flujo?: string;
+    representanteMinero?: boolean;
+    representanteComunidad?: boolean;
+    sifde?: boolean;
+    comunidad?: string;
 }

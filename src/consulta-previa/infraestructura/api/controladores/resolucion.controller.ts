@@ -103,7 +103,7 @@ import {
       storage: diskStorage({
         destination: './consulta-previa/resolucion', // Directorio donde se guardarán los archivos
         filename: (req, file, cb) => {
-          cb(null, ("resolucion-"+file.originalname));
+          cb(null, (file.originalname));
         },
       }),
     }))

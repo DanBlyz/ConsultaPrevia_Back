@@ -37,5 +37,21 @@ __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", String)
 ], NotificacionFiltro.prototype, "flujo", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", Boolean)
+], NotificacionFiltro.prototype, "representanteMinero", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", Boolean)
+], NotificacionFiltro.prototype, "representanteComunidad", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", Boolean)
+], NotificacionFiltro.prototype, "sifde", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", String)
+], NotificacionFiltro.prototype, "comunidad", void 0);
 exports.NotificacionFiltro = NotificacionFiltro;
 //# sourceMappingURL=notificacion-filtro.model.js.map

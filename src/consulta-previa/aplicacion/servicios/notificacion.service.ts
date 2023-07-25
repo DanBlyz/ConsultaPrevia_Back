@@ -124,7 +124,7 @@ export class NotificacionService implements INotificacionServicio {
         objeto,
         transaccion,
       );
-      console.log(NotificacionId);
+     //console.log(NotificacionId);
       if(objeto.flujo === 'Identificacion'){
         const actoAdministrativo = new ActoAdministrativo();
         actoAdministrativo.fk_idTramite = objeto.fk_idTramite;
@@ -137,25 +137,27 @@ export class NotificacionService implements INotificacionServicio {
         );
       }
       else{
-        if(objeto.flujo === 'Deliberacion' || objeto.flujo === 'Mediacion'){
-          const reunion = new Reunion();
-          reunion.fk_idNotificacion = NotificacionId;
-          reunion.nroReunion = null;
-          reunion.acuerdo = false;
-          reunion.motivo = null;
-          reunion.reunionRealizada = false;
-          reunion.actaReunionPdf = null;
-          reunion.encargado = null;
-          if(objeto.flujo === 'Deliberacion'){
-            reunion.flujo = 'Deliberacion';
+        if(objeto.representanteComunidad){
+          if(objeto.flujo === 'Deliberacion' || objeto.flujo === 'Mediacion'){
+            const reunion = new Reunion();
+            reunion.fk_idNotificacion = NotificacionId;
+            reunion.nroReunion = null;
+            reunion.acuerdo = false;
+            reunion.motivo = null;
+            reunion.reunionRealizada = false;
+            reunion.actaReunionPdf = null;
+            reunion.encargado = null;
+            if(objeto.flujo === 'Deliberacion'){
+              reunion.flujo = 'Deliberacion';
+            }
+            else{
+              reunion.flujo = 'Mediacion';
+            }
+            await this.repositorioFactory.reunionRepositorio.guardar(
+              reunion,
+              transaccion,
+            );
           }
-          else{
-            reunion.flujo = 'Mediacion';
-          }
-          await this.repositorioFactory.reunionRepositorio.guardar(
-            reunion,
-            transaccion,
-          );
         }
       }
 

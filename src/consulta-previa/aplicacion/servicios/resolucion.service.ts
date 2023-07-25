@@ -166,33 +166,32 @@ export class ResolucionService implements IResolucionServicio {
         objeto,
         transaccion,
       );
-      console.log(objeto.flujo === 'Deliberacion');
-      console.log(objetoDto.flujo);
-      console.log(objeto.fk_idTramite);
-      if(objeto.flujo === 'Deliberacion'){
-        const actoAdministrativo = new ActoAdministrativo();
-        actoAdministrativo.fk_idTramite = objeto.fk_idTramite;
-        actoAdministrativo.viajeRealizado = false;
-        actoAdministrativo.flujo = 'Deliberacion';
-        actoAdministrativo.encargado = null;
-        await this.repositorioFactory.actoAdministrativoRepositorio.guardar(
-          actoAdministrativo,
-          transaccion,
-        );
-      }
-      else{
-        if(objeto.flujo === 'Mediacion'){
+      
+        if(objeto.flujo === 'Deliberacion'){
           const actoAdministrativo = new ActoAdministrativo();
           actoAdministrativo.fk_idTramite = objeto.fk_idTramite;
           actoAdministrativo.viajeRealizado = false;
-          actoAdministrativo.flujo = 'Mediacion';
+          actoAdministrativo.flujo = 'Deliberacion';
           actoAdministrativo.encargado = null;
           await this.repositorioFactory.actoAdministrativoRepositorio.guardar(
             actoAdministrativo,
             transaccion,
           );
         }
-      }
+        else{
+          if(objeto.flujo === 'Mediacion'){
+            const actoAdministrativo = new ActoAdministrativo();
+            actoAdministrativo.fk_idTramite = objeto.fk_idTramite;
+            actoAdministrativo.viajeRealizado = false;
+            actoAdministrativo.flujo = 'Mediacion';
+            actoAdministrativo.encargado = null;
+            await this.repositorioFactory.actoAdministrativoRepositorio.guardar(
+              actoAdministrativo,
+              transaccion,
+            );
+          }
+        }
+     
       
       await this.repositorioFactory.confirmar(transaccion);
       return new RespuestaObjetoDto(

@@ -37,6 +37,23 @@ export class NotificacionDto {
   @IsString()
   flujo: string
 
+  @AutoMap()
+  @IsBoolean()
+  representanteMinero: boolean;
+
+  @AutoMap()
+  @IsBoolean()
+  representanteComunidad: boolean;
+
+  @AutoMap()
+  @IsBoolean()
+  sifde: boolean;
+
+  @AutoMap()
+  @IsString()
+  @IsOptional()
+  comunidad?: string
+
   @AutoMap(() => [ReunionDto])
   @IsArray({ each: true })
   @Type(() => ReunionDto)
@@ -62,11 +79,28 @@ export class NotificacionCreacionDto {
 
   @AutoMap()
   @IsString()
-  notificacionPdf: string
+  notificacionPdf: string;
 
   @AutoMap()
   @IsString()
-  flujo: string
+  flujo: string;
+
+  @AutoMap()
+  @IsBoolean()
+  representanteMinero: boolean;
+
+  @AutoMap()
+  @IsBoolean()
+  representanteComunidad: boolean;
+
+  @AutoMap()
+  @IsBoolean()
+  sifde: boolean;
+
+  @AutoMap()
+  @IsString()
+  @IsOptional()
+  comunidad?: string;
 }
 
 export class NotificacionModificacionDto {
@@ -84,10 +118,32 @@ export class NotificacionModificacionDto {
     @AutoMap()
     @IsString()
     @IsOptional()
-    notificacionPdf?: string
+    notificacionPdf?: string;
 
     @AutoMap()
     @IsString()
     @IsOptional()
-    flujo?: string
+    flujo?: string;
+
+    @AutoMap()
+    @IsBoolean()
+    @IsOptional()
+    representanteMinero?:boolean;
+
+    @AutoMap()
+    @IsBoolean()
+    @IsOptional()
+    representanteComunidad?:boolean;
+
+    @AutoMap()
+    @IsBoolean()
+    @IsOptional()
+    sifde?:boolean;
+
+    @AutoMap()
+    @IsString()
+    @IsOptional()
+    comunidad?: string;
+
+    
 }
