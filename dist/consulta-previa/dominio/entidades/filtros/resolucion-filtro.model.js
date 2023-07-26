@@ -48,6 +48,6 @@ __decorate([
 __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", String)
-], ResolucionFiltro.prototype, "asunto", void 0);
+], ResolucionFiltro.prototype, "referencia", void 0);
 exports.ResolucionFiltro = ResolucionFiltro;
 //# sourceMappingURL=resolucion-filtro.model.js.map

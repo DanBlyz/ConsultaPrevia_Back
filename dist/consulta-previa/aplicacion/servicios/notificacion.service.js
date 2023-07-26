@@ -35,10 +35,6 @@ let NotificacionService = class NotificacionService {
                 filtro.direccionDpto = objetoDto.direccionDpto;
                 filtro.notificacionPdf = objetoDto.notificacionPdf;
                 const notificacionBD = await this.repositorioFactory.notificacionRepositorio.obtenerObjetoPor(filtro);
-                if (notificacionBD) {
-                    errores.push('El número de documento detalle ya existe.');
-                    return false;
-                }
             }
             case 'modificar': {
                 if (!objetoDto) {

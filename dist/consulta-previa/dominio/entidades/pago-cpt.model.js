@@ -49,5 +49,9 @@ __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", String)
 ], PagoCpt.prototype, "apm", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", String)
+], PagoCpt.prototype, "descripcion", void 0);
 exports.PagoCpt = PagoCpt;
 //# sourceMappingURL=pago-cpt.model.js.map

@@ -52,10 +52,10 @@ export class ViajeService implements IViajeServicio {
           await this.repositorioFactory.viajeRepositorio.obtenerObjetoPor(
             filtro,
           );
-        if (ViajeBD) {
+        /*if (ViajeBD) {
           errores.push('El número de documento detalle ya existe.');
           return false;
-        }
+        }*/
       }
       case 'modificar': {
         if (!objetoDto) {

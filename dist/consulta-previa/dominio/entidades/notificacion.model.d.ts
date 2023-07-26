@@ -10,5 +10,5 @@ export declare class Notificacion {
     representanteComunidad: boolean;
     sifde: boolean;
     comunidad?: string;
-    listaReunion?: Reunion[];
+    reunion?: Reunion;
 }

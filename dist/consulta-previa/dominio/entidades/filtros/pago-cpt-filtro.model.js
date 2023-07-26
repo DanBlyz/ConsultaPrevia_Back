@@ -49,5 +49,9 @@ __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", String)
 ], PagoCptFiltro.prototype, "apm", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", String)
+], PagoCptFiltro.prototype, "descripcion", void 0);
 exports.PagoCptFiltro = PagoCptFiltro;
 //# sourceMappingURL=pago-cpt-filtro.model.js.map

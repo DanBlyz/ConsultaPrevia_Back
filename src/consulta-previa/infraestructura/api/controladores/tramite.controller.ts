@@ -80,7 +80,7 @@ import {
     @Patch(':id')
     async modificar(
       @Param('id', ParseIntPipe) id: number,
-      @Body() objetoDto: TramiteModificacionDto,
+      @Body() objetoDto: TramiteModificacionDto | any,
     ) {
       return await this.servicioFactory.tramiteServicio.modificar(
         id,

@@ -39,7 +39,7 @@ let InformeService = class InformeService {
                 filtro.encargado = objetoDto.encargado;
                 const informeBD = await this.repositorioFactory.informeRepositorio.obtenerObjetoPor(filtro);
                 if (informeBD) {
-                    errores.push('El número de documento detalle ya existe.');
+                    errores.push('El correlativo de Informe ya existe.');
                     return false;
                 }
             }
@@ -81,7 +81,8 @@ let InformeService = class InformeService {
                     console.log(index);
                     sujeto.fk_idInforme = informeId;
                     sujeto.comunidad = objetoDto.listaSujetoIdentificado[index].comunidad;
-                    sujeto.representante = objetoDto.listaSujetoIdentificado[index].representante;
+                    sujeto.autoridad = objetoDto.listaSujetoIdentificado[index].autoridad;
+                    sujeto.telefono = objetoDto.listaSujetoIdentificado[index].telefono;
                     await this.repositorioFactory.sujetoIdentificadoRepositorio.guardar(sujeto, transaccion);
                 }
             }
@@ -94,7 +95,7 @@ let InformeService = class InformeService {
                 resolucion.actoAdministrativo = false;
                 resolucion.resolucionPdf = null;
                 resolucion.flujo = 'Deliberacion';
-                resolucion.asunto = null;
+                resolucion.referencia = null;
                 await this.repositorioFactory.resolucionRepositorio.guardar(resolucion, transaccion);
             }
             else {
@@ -106,7 +107,7 @@ let InformeService = class InformeService {
                     resolucion.actoAdministrativo = false;
                     resolucion.resolucionPdf = null;
                     resolucion.flujo = 'Mediacion';
-                    resolucion.asunto = null;
+                    resolucion.referencia = null;
                     await this.repositorioFactory.resolucionRepositorio.guardar(resolucion, transaccion);
                 }
             }

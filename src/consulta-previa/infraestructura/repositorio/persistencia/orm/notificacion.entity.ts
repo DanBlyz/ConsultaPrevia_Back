@@ -56,6 +56,10 @@ import { ReunionEntity } from './reunion.entity';
     @Column({ name: 'comunidad' })
     comunidad : string;
 
+    @AutoMap(() => [ReunionEntity])
+    @OneToOne(() => ReunionEntity, (reunion) => reunion.notificacion)
+    reunion: ReunionEntity;
+
     @ManyToOne(() => TramiteEntity, (tramite) => tramite.listaNotificacion)
     @JoinColumn({ name: 'fk_idtramite' })
     tramite: TramiteEntity;
@@ -64,8 +68,6 @@ import { ReunionEntity } from './reunion.entity';
     @JoinColumn({ name: 'idnotificacion' })
     reunion: ReunionEntity;*/
 
-    @OneToOne(() => ReunionEntity, (reunion) => reunion.notificacion)
-    reunion: ReunionEntity;
   
   /*
     @OneToOne(() => ContenidoEntity, (contenido) => contenido.documento)

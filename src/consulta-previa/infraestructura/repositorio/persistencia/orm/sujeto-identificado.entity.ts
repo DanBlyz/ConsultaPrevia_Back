@@ -28,9 +28,14 @@ import { InformeEntity } from './informe.entity';
     comunidad: string;
   
     @AutoMap()
-    @Column({ name: 'representante' })
-    representante: string;
+    @Column({ name: 'autoridad' })
+    autoridad: string;
 
+    @AutoMap()
+    @Column({ name: 'telefono' })
+    telefono: number;
+
+    @AutoMap(() => [InformeEntity])
     @ManyToOne(() => InformeEntity, (informe) => informe.listaSujetoIdentificado)
     @JoinColumn({ name: 'fk_idinforme' })
     informe: InformeEntity;

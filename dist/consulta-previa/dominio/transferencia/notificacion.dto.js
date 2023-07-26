@@ -71,11 +71,10 @@ __decorate([
 ], NotificacionDto.prototype, "comunidad", void 0);
 __decorate([
     (0, classes_1.AutoMap)(() => [reunion_dto_1.ReunionDto]),
-    (0, class_validator_1.IsArray)({ each: true }),
     (0, class_transformer_1.Type)(() => reunion_dto_1.ReunionDto),
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", Array)
-], NotificacionDto.prototype, "listaReunion", void 0);
+], NotificacionDto.prototype, "reunion", void 0);
 exports.NotificacionDto = NotificacionDto;
 class NotificacionCreacionDto {
 }

@@ -27,4 +27,7 @@ export class PagoCpt {
 
     @AutoMap()
     apm: string;
+
+    @AutoMap()
+    descripcion: string;
 }

@@ -57,6 +57,8 @@ export class ReunionDto {
   @IsOptional()
   notificacion?: NotificacionDto[];
 
+  
+
 }
 
 export class ReunionCreacionDto {

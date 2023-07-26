@@ -52,6 +52,11 @@ import { ViajeEntity } from './viaje.entity';
     @Column({ name: 'apm' })
     apm: string;
 
+    @AutoMap()
+    @Column({ name: 'descripcion' })
+    descripcion: string;
+
+
     @OneToOne(() => ActoAdministrativoEntity, (actoAdministrativo) => actoAdministrativo.pagoCpt)
     @JoinColumn({ name: 'fk_idactos' })
     actoAdministrativo: ActoAdministrativoEntity;

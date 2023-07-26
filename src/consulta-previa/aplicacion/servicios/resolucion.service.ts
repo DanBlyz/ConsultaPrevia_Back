@@ -52,7 +52,7 @@ export class ResolucionService implements IResolucionServicio {
             filtro,
           );
         if (resolucionBD) {
-          errores.push('El número de documento detalle ya existe.');
+          errores.push('El correlativo de resolucion ya existe.');
           return false;
         }
       }

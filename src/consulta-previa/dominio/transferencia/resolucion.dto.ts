@@ -45,7 +45,7 @@ export class ResolucionDto {
 
   @AutoMap()
   @IsString()
-  asunto: string;
+  referencia: string;
 
 }
 
@@ -82,7 +82,7 @@ export class ResolucionCreacionDto {
 
     @AutoMap()
     @IsString()
-    asunto: string;
+    referencia: string;
 }
 
 export class ResolucionModificacionDto {
@@ -126,5 +126,5 @@ export class ResolucionModificacionDto {
   @AutoMap()
   @IsString()
   @IsOptional()
-  asunto?: string;
+  referencia?: string;
 }

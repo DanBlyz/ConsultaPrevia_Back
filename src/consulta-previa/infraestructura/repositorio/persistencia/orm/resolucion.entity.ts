@@ -48,8 +48,8 @@ import { TramiteEntity } from './tramite.entity';
     flujo: string;
 
     @AutoMap()
-    @Column({ name: 'asunto' })
-    asunto: string;
+    @Column({ name: 'referencia' })
+    referencia: string;
 
     @ManyToOne(() => TramiteEntity, (tramite) => tramite.listaResolucion)
     @JoinColumn({ name: 'fk_idtramite' })

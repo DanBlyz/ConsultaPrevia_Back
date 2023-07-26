@@ -38,7 +38,7 @@ let ResolucionService = class ResolucionService {
                 filtro.resolucionPdf = objetoDto.resolucionPdf;
                 const resolucionBD = await this.repositorioFactory.resolucionRepositorio.obtenerObjetoPor(filtro);
                 if (resolucionBD) {
-                    errores.push('El número de documento detalle ya existe.');
+                    errores.push('El correlativo de resolucion ya existe.');
                     return false;
                 }
             }

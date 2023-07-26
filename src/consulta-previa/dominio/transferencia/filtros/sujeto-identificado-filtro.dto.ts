@@ -22,6 +22,11 @@ export class SujetoIdentificadoFiltroDto extends FiltroBaseDto {
   @AutoMap()
   @IsString()
   @IsOptional()
-  representante?: string;
+  autoridad?: string;
+
+  @AutoMap()
+  @IsNumber()
+  @IsOptional()
+  telefono?: number;
 
 }

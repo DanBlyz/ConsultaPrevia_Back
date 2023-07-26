@@ -29,5 +29,8 @@ export class PagoCptFiltro {
   @AutoMap()
   apm?: string;
 
+  @AutoMap()
+  descripcion?: string;
+
 
 }

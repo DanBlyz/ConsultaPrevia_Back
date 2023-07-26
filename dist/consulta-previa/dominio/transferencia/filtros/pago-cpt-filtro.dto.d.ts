@@ -9,4 +9,5 @@ export declare class PagoCptFiltroDto extends FiltroBaseDto {
     tipoViaje?: string;
     montoTotal?: number;
     apm?: string;
+    descripcion?: string;
 }

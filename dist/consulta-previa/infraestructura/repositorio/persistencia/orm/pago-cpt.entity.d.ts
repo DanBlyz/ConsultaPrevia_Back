@@ -10,5 +10,6 @@ export declare class PagoCptEntity extends AuditoriaEntity {
     tipoViaje: string;
     montoTotal: number;
     apm: string;
+    descripcion: string;
     actoAdministrativo: ActoAdministrativoEntity;
 }

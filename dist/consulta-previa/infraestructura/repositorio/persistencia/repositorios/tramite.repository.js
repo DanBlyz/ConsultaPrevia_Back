@@ -90,11 +90,15 @@ let TramiteRepository = TramiteRepository_1 = class TramiteRepository {
     async obtenerPorId(id) {
         let consulta = this.repositorio
             .createQueryBuilder('tramite')
-            .leftJoinAndSelect('tramite.listaResolucion', 'tramiteResolucion')
-            .leftJoinAndSelect('tramite.listaProvidencia', 'tramiteProvidencia')
-            .leftJoinAndSelect('tramite.listaInforme', 'tramiteInforme')
-            .leftJoinAndSelect('tramite.listaNotificacion', 'tramiteNotificacion')
-            .leftJoinAndSelect('tramite.listaActoAdministrativo', 'tramiteActoAdministrativo')
+            .leftJoinAndSelect('tramite.listaResolucion', 'Resolucion')
+            .leftJoinAndSelect('tramite.listaProvidencia', 'Providencia')
+            .leftJoinAndSelect('tramite.listaInforme', 'Informe')
+            .leftJoinAndSelect('Informe.listaSujetoIdentificado', 'SujetoIdentificado')
+            .leftJoinAndSelect('tramite.listaNotificacion', 'Notificacion')
+            .leftJoinAndSelect('Notificacion.reunion', 'Reunion')
+            .leftJoinAndSelect('tramite.listaActoAdministrativo', 'ActoAdministrativo')
+            .leftJoinAndSelect('ActoAdministrativo.pagoCpt', 'PagoCpt')
+            .leftJoinAndSelect('ActoAdministrativo.viaje', 'Viaje')
             .andWhere('tramite.id = :id', { id });
         consulta = consulta.orderBy('tramite.id', 'DESC');
         const respuesta = await consulta.getOne();
@@ -108,11 +112,15 @@ let TramiteRepository = TramiteRepository_1 = class TramiteRepository {
         }
         let consulta = this.repositorio
             .createQueryBuilder('tramite')
-            .leftJoinAndSelect('tramite.listaResolucion', 'tramiteResolucion')
-            .leftJoinAndSelect('tramite.listaProvidencia', 'tramiteProvidencia')
-            .leftJoinAndSelect('tramite.listaInforme', 'tramiteInforme')
-            .leftJoinAndSelect('tramite.listaNotificacion', 'tramiteNotificacion')
-            .leftJoinAndSelect('tramite.listaActoAdministrativo', 'tramiteActoAdministrativo');
+            .leftJoinAndSelect('tramite.listaResolucion', 'Resolucion')
+            .leftJoinAndSelect('tramite.listaProvidencia', 'Providencia')
+            .leftJoinAndSelect('tramite.listaInforme', 'Informe')
+            .leftJoinAndSelect('Informe.listaSujetoIdentificado', 'SujetoIdentificado')
+            .leftJoinAndSelect('tramite.listaNotificacion', 'Notificacion')
+            .leftJoinAndSelect('Notificacion.reunion', 'Reunion')
+            .leftJoinAndSelect('tramite.listaActoAdministrativo', 'ActoAdministrativo')
+            .leftJoinAndSelect('ActoAdministrativo.pagoCpt', 'PagoCpt')
+            .leftJoinAndSelect('ActoAdministrativo.viaje', 'Viaje');
         consulta = this.evaluarCriterios(consulta, filtro, false, true);
         if (!consulta) {
             return null;
@@ -126,11 +134,15 @@ let TramiteRepository = TramiteRepository_1 = class TramiteRepository {
     async obtenerPor(filtro, pagina, cantidad, ordenarPor = 'id', orden = 'DESC') {
         let consulta = this.repositorio
             .createQueryBuilder('tramite')
-            .leftJoinAndSelect('tramite.listaResolucion', 'tramiteResolucion')
-            .leftJoinAndSelect('tramite.listaProvidencia', 'tramiteProvidencia')
-            .leftJoinAndSelect('tramite.listaInforme', 'tramiteInforme')
-            .leftJoinAndSelect('tramite.listaNotificacion', 'tramiteNotificacion')
-            .leftJoinAndSelect('tramite.listaActoAdministrativo', 'tramiteActoAdministrativo');
+            .leftJoinAndSelect('tramite.listaResolucion', 'Resolucion')
+            .leftJoinAndSelect('tramite.listaProvidencia', 'Providencia')
+            .leftJoinAndSelect('tramite.listaInforme', 'Informe')
+            .leftJoinAndSelect('Informe.listaSujetoIdentificado', 'SujetoIdentificado')
+            .leftJoinAndSelect('tramite.listaNotificacion', 'Notificacion')
+            .leftJoinAndSelect('Notificacion.reunion', 'Reunion')
+            .leftJoinAndSelect('tramite.listaActoAdministrativo', 'ActoAdministrativo')
+            .leftJoinAndSelect('ActoAdministrativo.pagoCpt', 'PagoCpt')
+            .leftJoinAndSelect('ActoAdministrativo.viaje', 'Viaje');
         consulta = this.evaluarCriterios(consulta, filtro, true, false);
         if (!consulta) {
             return null;

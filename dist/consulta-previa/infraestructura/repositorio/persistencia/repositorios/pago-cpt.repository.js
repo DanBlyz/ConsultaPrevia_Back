@@ -74,6 +74,12 @@ let PagoCptRepository = PagoCptRepository_1 = class PagoCptRepository {
             });
             criterioUtilizado = true;
         }
+        if (filtro.descripcion && filtro.descripcion !== '') {
+            consulta = consulta.andWhere('pagoCpt.descripcion ILIKE :descripcion', {
+                descripcion: `%${filtro.descripcion}%`,
+            });
+            criterioUtilizado = true;
+        }
         if (obligatorio) {
             return criterioUtilizado ? consulta : null;
         }

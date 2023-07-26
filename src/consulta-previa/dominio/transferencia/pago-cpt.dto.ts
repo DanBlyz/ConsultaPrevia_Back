@@ -47,6 +47,10 @@ export class PagoCptDto {
   @IsString()
   apm: string;
 
+  @AutoMap()
+  @IsString()
+  descripcion: string;
+
 }
 
 export class PagoCptCreacionDto {
@@ -83,6 +87,10 @@ export class PagoCptCreacionDto {
     @AutoMap()
     @IsString()
     apm: string;
+
+    @AutoMap()
+    @IsString()
+    descripcion: string;
 }
 
 export class PagoCptModificacionDto {
@@ -121,4 +129,9 @@ export class PagoCptModificacionDto {
     @IsString()
     @IsOptional()
     apm?: string;
+
+    @AutoMap()
+    @IsString()
+    @IsOptional()
+    descripcion?: string;
 }

@@ -26,5 +26,5 @@ export class Resolucion {
     flujo : string;
 
     @AutoMap()
-    asunto : string;
+    referencia : string;
 }

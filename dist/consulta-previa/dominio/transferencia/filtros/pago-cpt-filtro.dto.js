@@ -69,5 +69,11 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], PagoCptFiltroDto.prototype, "apm", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], PagoCptFiltroDto.prototype, "descripcion", void 0);
 exports.PagoCptFiltroDto = PagoCptFiltroDto;
 //# sourceMappingURL=pago-cpt-filtro.dto.js.map

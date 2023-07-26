@@ -12,6 +12,6 @@ export declare class NotificacionEntity extends AuditoriaEntity {
     representanteComunidad: boolean;
     sifde: boolean;
     comunidad: string;
-    tramite: TramiteEntity;
     reunion: ReunionEntity;
+    tramite: TramiteEntity;
 }

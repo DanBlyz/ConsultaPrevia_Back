@@ -61,6 +61,11 @@ __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], PagoCptDto.prototype, "apm", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], PagoCptDto.prototype, "descripcion", void 0);
 exports.PagoCptDto = PagoCptDto;
 class PagoCptCreacionDto {
 }
@@ -105,6 +110,11 @@ __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], PagoCptCreacionDto.prototype, "apm", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], PagoCptCreacionDto.prototype, "descripcion", void 0);
 exports.PagoCptCreacionDto = PagoCptCreacionDto;
 class PagoCptModificacionDto {
 }
@@ -150,5 +160,11 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], PagoCptModificacionDto.prototype, "apm", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], PagoCptModificacionDto.prototype, "descripcion", void 0);
 exports.PagoCptModificacionDto = PagoCptModificacionDto;
 //# sourceMappingURL=pago-cpt.dto.js.map

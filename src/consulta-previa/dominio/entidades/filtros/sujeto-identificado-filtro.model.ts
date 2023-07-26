@@ -12,6 +12,9 @@ export class SujetoIdentificadoFiltro {
   comunidad?: string;
   
   @AutoMap()
-  representante?: string;
+  autoridad?: string;
+
+  @AutoMap()
+  telefono?: number;
 
 }

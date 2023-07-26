@@ -55,10 +55,9 @@ export class NotificacionDto {
   comunidad?: string
 
   @AutoMap(() => [ReunionDto])
-  @IsArray({ each: true })
   @Type(() => ReunionDto)
   @IsOptional()
-  listaReunion?: ReunionDto[];
+  reunion?: ReunionDto[];
 
 }
 

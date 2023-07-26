@@ -49,10 +49,6 @@ export class NotificacionService implements INotificacionServicio {
           await this.repositorioFactory.notificacionRepositorio.obtenerObjetoPor(
             filtro,
           );
-        if (notificacionBD) {
-          errores.push('El número de documento detalle ya existe.');
-          return false;
-        }
       }
       case 'modificar': {
         if (!objetoDto) {

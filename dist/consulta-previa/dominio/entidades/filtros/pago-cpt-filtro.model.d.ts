@@ -8,4 +8,5 @@ export declare class PagoCptFiltro {
     tipoViaje?: string;
     montoTotal?: number;
     apm?: string;
+    descripcion?: string;
 }

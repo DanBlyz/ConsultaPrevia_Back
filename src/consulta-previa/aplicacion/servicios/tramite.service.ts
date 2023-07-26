@@ -54,7 +54,7 @@ export class TramiteService implements ITramiteServicio {
             filtro,
           );
         if (tramiteBD) {
-          errores.push('El número de documento detalle ya existe.');
+          errores.push('El correlativo de tramite ya existe.');
           return false;
         }
       }
@@ -147,7 +147,7 @@ export class TramiteService implements ITramiteServicio {
 
   async modificar(
     id: number,
-    objetoDto: TramiteModificacionDto,
+    objetoDto: TramiteModificacionDto | any,
   ): Promise<RespuestaObjetoDto<TramiteDto>> {
     const errores = [];
     const validacion = await this.validar('modificar', objetoDto, errores);

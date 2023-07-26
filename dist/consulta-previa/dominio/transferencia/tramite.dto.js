@@ -195,5 +195,33 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], TramiteModificacionDto.prototype, "municipio", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsArray)({ each: true }),
+    (0, class_transformer_1.Type)(() => resolucion_dto_1.ResolucionDto),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Array)
+], TramiteModificacionDto.prototype, "listaResolucion", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsArray)({ each: true }),
+    (0, class_transformer_1.Type)(() => providencia_dto_1.ProvidenciaDto),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Array)
+], TramiteModificacionDto.prototype, "listaProvidencia", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsArray)({ each: true }),
+    (0, class_transformer_1.Type)(() => notificacion_dto_1.NotificacionDto),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Array)
+], TramiteModificacionDto.prototype, "listaNotificacion", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsArray)({ each: true }),
+    (0, class_transformer_1.Type)(() => actos_administrativos_dto_1.ActoAdministrativoDto),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Array)
+], TramiteModificacionDto.prototype, "listaActoAdministrativo", void 0);
 exports.TramiteModificacionDto = TramiteModificacionDto;
 //# sourceMappingURL=tramite.dto.js.map

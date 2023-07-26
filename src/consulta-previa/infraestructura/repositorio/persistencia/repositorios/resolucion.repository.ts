@@ -65,9 +65,9 @@ export class ResolucionRepository implements IResolucionRepositorio {
       });
       criterioUtilizado = true;
     }
-    if (filtro.asunto && filtro.asunto !== '') {
-      consulta = consulta.andWhere('resolucion.asunto ILIKE :asunto', {
-        asunto: `%${filtro.asunto}%`,
+    if (filtro.referencia && filtro.referencia !== '') {
+      consulta = consulta.andWhere('resolucion.referencia ILIKE :referencia', {
+        referencia: `%${filtro.referencia}%`,
       });
       criterioUtilizado = true;
     }

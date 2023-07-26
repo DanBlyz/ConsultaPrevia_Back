@@ -27,5 +27,5 @@ export class ResolucionFiltro {
   flujo?: string;
 
   @AutoMap()
-  asunto?: string;
+  referencia?: string;
 }

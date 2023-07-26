@@ -7,6 +7,8 @@ import {
   IsString,
   isString,
 } from 'class-validator';
+import { InformeDto } from './informe.dto';
+import { Type } from 'class-transformer';
 
 export class SujetoIdentificadoDto {
   @AutoMap()
@@ -23,8 +25,17 @@ export class SujetoIdentificadoDto {
   comunidad: string;
 
   @AutoMap()
+  @IsString()
+  autoridad: string;
+
+  @AutoMap()
   @IsNumber()
-  representante: number;
+  telefono: number;
+
+  @AutoMap(() => [InformeDto])
+  @Type(() => InformeDto)
+  @IsOptional()
+  informe?: InformeDto[];
 
 }
 
@@ -40,7 +51,11 @@ export class SujetoIdentificadoCreacionDto {
   
     @AutoMap()
     @IsString()
-    representante: string;
+    autoridad: string;
+
+    @AutoMap()
+    @IsNumber()
+    telefono: number
   
 }
 
@@ -53,6 +68,10 @@ export class SujetoIdentificadoModificacionDto {
     @AutoMap()
     @IsString()
     @IsOptional()
-    representante?: string;
+    autoridad?: string;
+
+    @AutoMap()
+    @IsNumber()
+    telefono?: number
 
 }

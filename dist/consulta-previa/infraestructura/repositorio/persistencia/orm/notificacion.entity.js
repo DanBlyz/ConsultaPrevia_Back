@@ -68,14 +68,15 @@ __decorate([
     __metadata("design:type", String)
 ], NotificacionEntity.prototype, "comunidad", void 0);
 __decorate([
+    (0, classes_1.AutoMap)(() => [reunion_entity_1.ReunionEntity]),
+    (0, typeorm_1.OneToOne)(() => reunion_entity_1.ReunionEntity, (reunion) => reunion.notificacion),
+    __metadata("design:type", reunion_entity_1.ReunionEntity)
+], NotificacionEntity.prototype, "reunion", void 0);
+__decorate([
     (0, typeorm_1.ManyToOne)(() => tramite_entity_1.TramiteEntity, (tramite) => tramite.listaNotificacion),
     (0, typeorm_1.JoinColumn)({ name: 'fk_idtramite' }),
     __metadata("design:type", tramite_entity_1.TramiteEntity)
 ], NotificacionEntity.prototype, "tramite", void 0);
-__decorate([
-    (0, typeorm_1.OneToOne)(() => reunion_entity_1.ReunionEntity, (reunion) => reunion.notificacion),
-    __metadata("design:type", reunion_entity_1.ReunionEntity)
-], NotificacionEntity.prototype, "reunion", void 0);
 NotificacionEntity = __decorate([
     (0, typeorm_1.Entity)('notificacion', { schema: 'consulta-previa' })
 ], NotificacionEntity);

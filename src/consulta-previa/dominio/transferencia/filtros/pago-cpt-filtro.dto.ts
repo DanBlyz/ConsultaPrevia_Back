@@ -48,4 +48,9 @@ export class PagoCptFiltroDto extends FiltroBaseDto {
   @IsString()
   @IsOptional()
   apm?: string;
+
+  @AutoMap()
+  @IsString()
+  @IsOptional()
+  descripcion?: string;
 }

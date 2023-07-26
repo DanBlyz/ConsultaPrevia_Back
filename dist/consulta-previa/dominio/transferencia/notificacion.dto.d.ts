@@ -10,7 +10,7 @@ export declare class NotificacionDto {
     representanteComunidad: boolean;
     sifde: boolean;
     comunidad?: string;
-    listaReunion?: ReunionDto[];
+    reunion?: ReunionDto[];
 }
 export declare class NotificacionCreacionDto {
     fk_idTramite: number;

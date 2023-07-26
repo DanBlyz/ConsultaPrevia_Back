@@ -7,12 +7,12 @@ import {
   IsString,
   IsArray
 } from 'class-validator';
-import { ResolucionDto } from './resolucion.dto';
+import { ResolucionDto, ResolucionModificacionDto } from './resolucion.dto';
 import { Type } from 'class-transformer';
-import { ProvidenciaDto } from './providencia.dto';
+import { ProvidenciaDto, ProvidenciaModificacionDto } from './providencia.dto';
 import { InformeDto } from './informe.dto';
-import { NotificacionDto } from './notificacion.dto';
-import { ActoAdministrativoDto } from './actos-administrativos.dto';
+import { NotificacionDto, NotificacionModificacionDto } from './notificacion.dto';
+import { ActoAdministrativoDto, ActoAdministrativoModificacionDto } from './actos-administrativos.dto';
 
 export class TramiteDto {
   @AutoMap()
@@ -158,4 +158,28 @@ export class TramiteModificacionDto {
     @IsString()
     @IsOptional()
     municipio?: string;
+
+    @AutoMap()
+    @IsArray({ each: true })
+    @Type(() => ResolucionDto)
+    @IsOptional()
+    listaResolucion?: ResolucionModificacionDto[];
+
+    @AutoMap()
+    @IsArray({ each: true })
+    @Type(() => ProvidenciaDto)
+    @IsOptional()
+    listaProvidencia?: ProvidenciaModificacionDto[];
+
+    @AutoMap()
+    @IsArray({ each: true })
+    @Type(() => NotificacionDto)
+    @IsOptional()
+    listaNotificacion?: NotificacionModificacionDto[];
+
+    @AutoMap()
+    @IsArray({ each: true })
+    @Type(() => ActoAdministrativoDto)
+    @IsOptional()
+    listaActoAdministrativo?: ActoAdministrativoModificacionDto[];
 }

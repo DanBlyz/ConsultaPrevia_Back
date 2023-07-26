@@ -8,6 +8,7 @@ export declare class PagoCptDto {
     tipoViaje: string;
     montoTotal: number;
     apm: string;
+    descripcion: string;
 }
 export declare class PagoCptCreacionDto {
     fk_idActos: number;
@@ -18,6 +19,7 @@ export declare class PagoCptCreacionDto {
     tipoViaje: string;
     montoTotal: number;
     apm: string;
+    descripcion: string;
 }
 export declare class PagoCptModificacionDto {
     pagoRealizado?: boolean;
@@ -27,4 +29,5 @@ export declare class PagoCptModificacionDto {
     tipoViaje?: string;
     montoTotal?: number;
     apm?: string;
+    descripcion?: string;
 }
