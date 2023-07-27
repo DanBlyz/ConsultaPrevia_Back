@@ -18,8 +18,6 @@ const platform_express_1 = require("@nestjs/platform-express");
 const multer_1 = require("multer");
 const common_2 = require("@nestjs/common");
 const path_1 = require("path");
-const common_2 = require("@nestjs/common");
-const path_2 = require("path");
 let FilesController = class FilesController {
     async uploadFile(file) {
         console.log(file);
@@ -27,11 +25,7 @@ let FilesController = class FilesController {
         return { message: 'Archivo subido correctamente' };
     }
     async downloadFile(filename, res) {
-<<<<<<< HEAD
-        const path = (0, path_2.join)(__dirname, '..', 'uploads', filename);
-=======
-        const path = (0, path_1.join)('..', 'ConsultaPrevia_Back/uploads', filename);
->>>>>>> 59e45bad2e953fc0131b406fcc7367326f7168df
+        const path = (0, path_1.join)(__dirname, '..', 'uploads', filename);
         return res.download(path);
     }
 };

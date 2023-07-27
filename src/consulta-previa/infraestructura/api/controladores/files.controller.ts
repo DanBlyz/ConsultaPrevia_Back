@@ -25,11 +25,7 @@ export class FilesController {
 
   @Get('download/:filename')
   async downloadFile(@Param('filename') filename: string, @Res() res: Response) {
-<<<<<<< HEAD
     const path = join(__dirname, '..', 'uploads', filename);
-=======
-    const path = join('..', 'ConsultaPrevia_Back/uploads', filename);
->>>>>>> 59e45bad2e953fc0131b406fcc7367326f7168df
     return res.download(path);
   }
 }

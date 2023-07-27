@@ -31,7 +31,6 @@ import {
     ViajeDto,
     ViajeModificacionDto,
   } from '../../../dominio/transferencia';
-<<<<<<< HEAD
   import { UploadedFile, UseInterceptors } from '@nestjs/common';
   import { FileInterceptor } from '@nestjs/platform-express';
   import { diskStorage } from 'multer';
@@ -41,14 +40,6 @@ import {
   import { join } from 'path';
   import { Response } from 'express';
   
-=======
-  import { Res, UploadedFile, UseInterceptors } from '@nestjs/common';
-  import { FileInterceptor } from '@nestjs/platform-express';
-  import { diskStorage } from 'multer';
-  import { extname } from 'path';
-  import { join } from 'path';
-  import { Response } from 'express';
->>>>>>> yery
   //@UseGuards(JwtAuthGuard)
   @Controller('viajes')
   export class ViajeController {
@@ -109,20 +100,12 @@ import {
     async eliminar(@Param('id', ParseIntPipe) id: number) {
       return await this.servicioFactory.viajeServicio.eliminar(id);
     }
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> yery
     @Post('subir-archivo')
     @UseInterceptors(FileInterceptor('file', {
       storage: diskStorage({
         destination: './consulta-previa/viaje', // Directorio donde se guardarán los archivos
         filename: (req, file, cb) => {
-<<<<<<< HEAD
           
-=======
->>>>>>> yery
           cb(null, ("viaje-"+file.originalname));
         },
       }),
@@ -132,11 +115,7 @@ import {
       console.log(file.destination);
       return { message: 'Archivo subido correctamente' };
     }
-<<<<<<< HEAD
     
-=======
-
->>>>>>> yery
     @Get('bajar-archivo/:filename')
     async downloadFile(@Param('filename') filename: string, @Res() res: Response) {
       const path = join('..', 'ConsultaPrevia_Back/consulta-previa/viaje', filename);
