@@ -47,5 +47,5 @@ export class ResolucionFiltroDto extends FiltroBaseDto {
   @AutoMap()
   @IsString()
   @IsOptional()
-  asunto?: string;
+  referencia?: string;
 }

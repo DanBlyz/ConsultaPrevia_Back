@@ -7,5 +7,5 @@ export declare class ResolucionFiltro {
     actoAdministrativo?: boolean;
     resolucionPdf?: string;
     flujo?: string;
-    asunto?: string;
+    referencia?: string;
 }

@@ -6,4 +6,9 @@ export declare class NotificacionFiltroDto extends FiltroBaseDto {
     direccionDpto?: string;
     notificacionPdf?: string;
     flujo?: string;
+    representanteMinero?: boolean;
+    representanteComunidad?: boolean;
+    sifde?: boolean;
+    comunidad?: string;
+    nroReunion?: string;
 }

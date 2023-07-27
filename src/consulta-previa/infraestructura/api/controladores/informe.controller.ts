@@ -31,12 +31,19 @@ import {
     InformeDto,
     InformeModificacionDto,
   } from '../../../dominio/transferencia';
+<<<<<<< HEAD
   import { UploadedFile, UseInterceptors } from '@nestjs/common';
   import { FileInterceptor } from '@nestjs/platform-express';
   import { diskStorage } from 'multer';
   import { extname } from 'path';
   
   import { Res } from '@nestjs/common';
+=======
+  import { Res, UploadedFile, UseInterceptors } from '@nestjs/common';
+  import { FileInterceptor } from '@nestjs/platform-express';
+  import { diskStorage } from 'multer';
+  import { extname } from 'path';
+>>>>>>> yery
   import { join } from 'path';
   import { Response } from 'express';
   //@UseGuards(JwtAuthGuard)
@@ -105,7 +112,10 @@ import {
       storage: diskStorage({
         destination: './consulta-previa/informe', // Directorio donde se guardarán los archivos
         filename: (req, file, cb) => {
+<<<<<<< HEAD
           
+=======
+>>>>>>> yery
           cb(null, ("informe-"+file.originalname));
         },
       }),
@@ -115,7 +125,11 @@ import {
       console.log(file.destination);
       return { message: 'Archivo subido correctamente' };
     }
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> yery
     @Get('bajar-archivo/:filename')
     async downloadFile(@Param('filename') filename: string, @Res() res: Response) {
       const path = join('..', 'ConsultaPrevia_Back/consulta-previa/informe', filename);

@@ -14,6 +14,7 @@ const typeorm_1 = require("typeorm");
 const classes_1 = require("@automapper/classes");
 const auditoria_entity_1 = require("./base/auditoria.entity");
 const tramite_entity_1 = require("./tramite.entity");
+const actos_administrativos_entity_1 = require("./actos-administrativos.entity");
 let ResolucionEntity = class ResolucionEntity extends auditoria_entity_1.AuditoriaEntity {
 };
 __decorate([
@@ -58,14 +59,20 @@ __decorate([
 ], ResolucionEntity.prototype, "flujo", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
-    (0, typeorm_1.Column)({ name: 'asunto' }),
+    (0, typeorm_1.Column)({ name: 'referencia' }),
     __metadata("design:type", String)
-], ResolucionEntity.prototype, "asunto", void 0);
+], ResolucionEntity.prototype, "referencia", void 0);
 __decorate([
     (0, typeorm_1.ManyToOne)(() => tramite_entity_1.TramiteEntity, (tramite) => tramite.listaResolucion),
     (0, typeorm_1.JoinColumn)({ name: 'fk_idtramite' }),
     __metadata("design:type", tramite_entity_1.TramiteEntity)
 ], ResolucionEntity.prototype, "tramite", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(() => [actos_administrativos_entity_1.ActoAdministrativoEntity]),
+    (0, typeorm_1.OneToMany)(() => actos_administrativos_entity_1.ActoAdministrativoEntity, (actoAdministrativo) => actoAdministrativo.resolucion),
+    (0, typeorm_1.JoinColumn)({ name: 'idresolucion' }),
+    __metadata("design:type", Array)
+], ResolucionEntity.prototype, "listaActoAdministrativo", void 0);
 ResolucionEntity = __decorate([
     (0, typeorm_1.Entity)('resolucion', { schema: 'consulta-previa' })
 ], ResolucionEntity);

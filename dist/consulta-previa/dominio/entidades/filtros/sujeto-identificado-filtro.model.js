@@ -28,6 +28,10 @@ __decorate([
 __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", String)
-], SujetoIdentificadoFiltro.prototype, "representante", void 0);
+], SujetoIdentificadoFiltro.prototype, "autoridad", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", Number)
+], SujetoIdentificadoFiltro.prototype, "telefono", void 0);
 exports.SujetoIdentificadoFiltro = SujetoIdentificadoFiltro;
 //# sourceMappingURL=sujeto-identificado-filtro.model.js.map

@@ -16,6 +16,7 @@ const class_transformer_1 = require("class-transformer");
 const tramite_dto_1 = require("./tramite.dto");
 const pago_cpt_dto_1 = require("./pago-cpt.dto");
 const viaje_dto_1 = require("./viaje.dto");
+const resolucion_dto_1 = require("./resolucion.dto");
 class ActoAdministrativoDto {
 }
 __decorate([
@@ -32,6 +33,12 @@ __decorate([
 ], ActoAdministrativoDto.prototype, "fk_idTramite", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.IsPositive)(),
+    __metadata("design:type", Number)
+], ActoAdministrativoDto.prototype, "fk_idResolucion", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsBoolean)(),
     __metadata("design:type", Boolean)
 ], ActoAdministrativoDto.prototype, "viajeRealizado", void 0);
@@ -44,11 +51,6 @@ __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
-], ActoAdministrativoDto.prototype, "encargado", void 0);
-__decorate([
-    (0, classes_1.AutoMap)(),
-    (0, class_validator_1.IsString)(),
-    __metadata("design:type", String)
 ], ActoAdministrativoDto.prototype, "estado", void 0);
 __decorate([
     (0, classes_1.AutoMap)(() => [tramite_dto_1.TramiteDto]),
@@ -56,6 +58,12 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", Array)
 ], ActoAdministrativoDto.prototype, "tramite", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(() => [resolucion_dto_1.ResolucionDto]),
+    (0, class_transformer_1.Type)(() => resolucion_dto_1.ResolucionDto),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Array)
+], ActoAdministrativoDto.prototype, "resolucion", void 0);
 __decorate([
     (0, classes_1.AutoMap)(() => [pago_cpt_dto_1.PagoCptDto]),
     (0, class_transformer_1.Type)(() => pago_cpt_dto_1.PagoCptDto),
@@ -75,8 +83,16 @@ __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsNumber)(),
     (0, class_validator_1.IsPositive)(),
+    (0, class_validator_1.IsOptional)(),
     __metadata("design:type", Number)
 ], ActoAdministrativoCreacionDto.prototype, "fk_idTramite", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.IsPositive)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Number)
+], ActoAdministrativoCreacionDto.prototype, "fk_idResolucion", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsBoolean)(),
@@ -87,11 +103,6 @@ __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], ActoAdministrativoCreacionDto.prototype, "flujo", void 0);
-__decorate([
-    (0, classes_1.AutoMap)(),
-    (0, class_validator_1.IsString)(),
-    __metadata("design:type", String)
-], ActoAdministrativoCreacionDto.prototype, "encargado", void 0);
 exports.ActoAdministrativoCreacionDto = ActoAdministrativoCreacionDto;
 class ActoAdministrativoModificacionDto {
 }
@@ -104,6 +115,13 @@ __decorate([
 ], ActoAdministrativoModificacionDto.prototype, "fk_idTramite", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.IsPositive)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Number)
+], ActoAdministrativoModificacionDto.prototype, "fk_idResolucion", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsBoolean)(),
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", Boolean)
@@ -114,12 +132,6 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], ActoAdministrativoModificacionDto.prototype, "flujo", void 0);
-__decorate([
-    (0, classes_1.AutoMap)(),
-    (0, class_validator_1.IsString)(),
-    (0, class_validator_1.IsOptional)(),
-    __metadata("design:type", String)
-], ActoAdministrativoModificacionDto.prototype, "encargado", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsString)(),

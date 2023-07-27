@@ -1,14 +1,15 @@
-import { ResolucionDto } from './resolucion.dto';
-import { ProvidenciaDto } from './providencia.dto';
+import { ResolucionDto, ResolucionModificacionDto } from './resolucion.dto';
+import { ProvidenciaDto, ProvidenciaModificacionDto } from './providencia.dto';
 import { InformeDto } from './informe.dto';
-import { NotificacionDto } from './notificacion.dto';
-import { ActoAdministrativoDto } from './actos-administrativos.dto';
+import { NotificacionDto, NotificacionModificacionDto } from './notificacion.dto';
+import { ActoAdministrativoDto, ActoAdministrativoModificacionDto } from './actos-administrativos.dto';
 export declare class TramiteDto {
     id: number;
     correlativo: string;
     codigoUnico: number;
     areaMinera: string;
     clasificacion: string;
+    nroCuadricula: number;
     departamento: string;
     provincia: string;
     municipio: string;
@@ -23,6 +24,7 @@ export declare class TramiteCreacionDto {
     codigoUnico: number;
     areaMinera: string;
     clasificacion: string;
+    nroCuadricula: number;
     departamento: string;
     provincia: string;
     municipio: string;
@@ -32,7 +34,12 @@ export declare class TramiteModificacionDto {
     codigoUnico?: number;
     areaMinera?: string;
     clasificacion?: string;
+    nroCuadricula?: number;
     departamento?: string;
     provincia?: string;
     municipio?: string;
+    listaResolucion?: ResolucionModificacionDto[];
+    listaProvidencia?: ProvidenciaModificacionDto[];
+    listaNotificacion?: NotificacionModificacionDto[];
+    listaActoAdministrativo?: ActoAdministrativoModificacionDto[];
 }

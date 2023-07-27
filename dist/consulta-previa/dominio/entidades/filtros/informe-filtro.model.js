@@ -40,10 +40,6 @@ __decorate([
 __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", String)
-], InformeFiltro.prototype, "encargado", void 0);
-__decorate([
-    (0, classes_1.AutoMap)(),
-    __metadata("design:type", String)
 ], InformeFiltro.prototype, "flujo", void 0);
 exports.InformeFiltro = InformeFiltro;
 //# sourceMappingURL=informe-filtro.model.js.map

@@ -7,7 +7,6 @@ export declare class ReunionDto {
     motivo: string;
     reunionRealizada: boolean;
     actaReunionPdf: string;
-    encargado: string;
     estado: string;
     flujo: string;
     notificacion?: NotificacionDto[];
@@ -15,12 +14,11 @@ export declare class ReunionDto {
 export declare class ReunionCreacionDto {
     fk_idNotificacion: number;
     nroReunion: string;
-    acuerdo: boolean;
-    motivo: string;
-    reunionRealizada: boolean;
-    actaReunionPdf: string;
-    encargado: string;
-    estado: string;
+    acuerdo?: boolean;
+    motivo?: string;
+    reunionRealizada?: boolean;
+    actaReunionPdf?: string;
+    estado?: string;
     flujo: string;
 }
 export declare class ReunionModificacionDto {
@@ -30,7 +28,6 @@ export declare class ReunionModificacionDto {
     motivo?: string;
     reunionRealizada?: boolean;
     actaReunionPdf?: string;
-    encargado?: string;
     estado?: string;
     flujo?: string;
     notificacion?: NotificacionModificacionDto[];

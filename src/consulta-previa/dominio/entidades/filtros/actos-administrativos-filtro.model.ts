@@ -9,13 +9,13 @@ export class ActoAdministrativoFiltro {
   fk_idTramite?: number;
 
   @AutoMap()
+  fk_idResolucion?: number;
+
+  @AutoMap()
   viajeRealizado?: boolean;
   
   @AutoMap()
   flujo?: string;
-
-  @AutoMap()
-  encargado?: string;
 
   @AutoMap()
   estado?: string;

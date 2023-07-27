@@ -20,7 +20,22 @@ export class Notificacion {
     @AutoMap()
     flujo: string;
 
+    @AutoMap()
+    representanteMinero: boolean;
+
+    @AutoMap()
+    representanteComunidad: boolean;
+
+    @AutoMap()
+    sifde: boolean;
+    
+    @AutoMap()
+    comunidad?: string;
+
+    @AutoMap()
+    nroReunion?: string;
+
     @AutoMap(() => [Reunion])
-    listaReunion?: Reunion[];
-  
+    reunion?: Reunion;
+
 }

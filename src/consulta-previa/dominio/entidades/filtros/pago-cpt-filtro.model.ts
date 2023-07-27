@@ -15,9 +15,6 @@ export class PagoCptFiltro {
   flujo?: string;
 
   @AutoMap()
-  encargado?: string;
-
-  @AutoMap()
   diasViaje?: number;
 
   @AutoMap()
@@ -28,6 +25,9 @@ export class PagoCptFiltro {
   
   @AutoMap()
   apm?: string;
+
+  @AutoMap()
+  descripcion?: string;
 
 
 }

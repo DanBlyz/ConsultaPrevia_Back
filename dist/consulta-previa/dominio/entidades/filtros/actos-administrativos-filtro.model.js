@@ -23,16 +23,16 @@ __decorate([
 ], ActoAdministrativoFiltro.prototype, "fk_idTramite", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
+    __metadata("design:type", Number)
+], ActoAdministrativoFiltro.prototype, "fk_idResolucion", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
     __metadata("design:type", Boolean)
 ], ActoAdministrativoFiltro.prototype, "viajeRealizado", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", String)
 ], ActoAdministrativoFiltro.prototype, "flujo", void 0);
-__decorate([
-    (0, classes_1.AutoMap)(),
-    __metadata("design:type", String)
-], ActoAdministrativoFiltro.prototype, "encargado", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", String)

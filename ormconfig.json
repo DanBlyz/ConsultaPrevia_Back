@@ -3,8 +3,13 @@
   "host": "localhost",
   "port": "5432",
   "username": "postgres",
+<<<<<<< HEAD
   "password": "12345678",
   "database": "ConsultaPrevia1",
+=======
+  "password": "123",
+  "database": "ConsultaPrevia3",
+>>>>>>> yery
   "entities": [
     "dist/**/*{.entity,.schema}{.ts,.js}"
   ],

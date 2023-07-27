@@ -68,6 +68,6 @@ __decorate([
     (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
-], ResolucionFiltroDto.prototype, "asunto", void 0);
+], ResolucionFiltroDto.prototype, "referencia", void 0);
 exports.ResolucionFiltroDto = ResolucionFiltroDto;
 //# sourceMappingURL=resolucion-filtro.dto.js.map

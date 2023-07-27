@@ -44,12 +44,6 @@ let PagoCptRepository = PagoCptRepository_1 = class PagoCptRepository {
             });
             criterioUtilizado = true;
         }
-        if (filtro.encargado && filtro.encargado !== '') {
-            consulta = consulta.andWhere('pagoCpt.encargado ILIKE :encargado', {
-                encargado: `%${filtro.encargado}%`,
-            });
-            criterioUtilizado = true;
-        }
         if (filtro.diasViaje && filtro.diasViaje !== 0) {
             consulta = consulta.andWhere('pagoCpt.diasViaje = :diasViaje', {
                 diasViaje: filtro.diasViaje,
@@ -71,6 +65,12 @@ let PagoCptRepository = PagoCptRepository_1 = class PagoCptRepository {
         if (filtro.apm && filtro.apm !== '') {
             consulta = consulta.andWhere('pagoCpt.apm ILIKE :apm', {
                 apm: `%${filtro.apm}%`,
+            });
+            criterioUtilizado = true;
+        }
+        if (filtro.descripcion && filtro.descripcion !== '') {
+            consulta = consulta.andWhere('pagoCpt.descripcion ILIKE :descripcion', {
+                descripcion: `%${filtro.descripcion}%`,
             });
             criterioUtilizado = true;
         }

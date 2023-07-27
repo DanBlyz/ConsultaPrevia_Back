@@ -48,7 +48,6 @@ export class ReunionService implements IReunionServicio {
         filtro.motivo = objetoDto.motivo;
         filtro.reunionRealizada = objetoDto.reunionRealizada;
         filtro.actaReunionPdf = objetoDto.actaReunionPdf;
-        filtro.encargado = objetoDto.encargado;
         const ReunionBD =
           await this.repositorioFactory.reunionRepositorio.obtenerObjetoPor(
             filtro,

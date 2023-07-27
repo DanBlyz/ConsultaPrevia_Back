@@ -38,11 +38,6 @@ __decorate([
 ], PagoCptEntity.prototype, "flujo", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
-    (0, typeorm_1.Column)({ name: 'encargado' }),
-    __metadata("design:type", String)
-], PagoCptEntity.prototype, "encargado", void 0);
-__decorate([
-    (0, classes_1.AutoMap)(),
     (0, typeorm_1.Column)({ name: 'diasviaje' }),
     __metadata("design:type", Number)
 ], PagoCptEntity.prototype, "diasViaje", void 0);
@@ -61,6 +56,11 @@ __decorate([
     (0, typeorm_1.Column)({ name: 'apm' }),
     __metadata("design:type", String)
 ], PagoCptEntity.prototype, "apm", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, typeorm_1.Column)({ name: 'descripcion' }),
+    __metadata("design:type", String)
+], PagoCptEntity.prototype, "descripcion", void 0);
 __decorate([
     (0, typeorm_1.OneToOne)(() => actos_administrativos_entity_1.ActoAdministrativoEntity, (actoAdministrativo) => actoAdministrativo.pagoCpt),
     (0, typeorm_1.JoinColumn)({ name: 'fk_idactos' }),

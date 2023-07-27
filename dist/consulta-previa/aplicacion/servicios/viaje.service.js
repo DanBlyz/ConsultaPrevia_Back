@@ -38,10 +38,6 @@ let ViajeService = class ViajeService {
                 filtro.nroFormulario = objetoDto.nroFormulario;
                 filtro.formularioPdf = objetoDto.formularioPdf;
                 const ViajeBD = await this.repositorioFactory.viajeRepositorio.obtenerObjetoPor(filtro);
-                if (ViajeBD) {
-                    errores.push('El número de documento detalle ya existe.');
-                    return false;
-                }
             }
             case 'modificar': {
                 if (!objetoDto) {

@@ -52,11 +52,6 @@ __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
-], InformeDto.prototype, "encargado", void 0);
-__decorate([
-    (0, classes_1.AutoMap)(),
-    (0, class_validator_1.IsString)(),
-    __metadata("design:type", String)
 ], InformeDto.prototype, "flujo", void 0);
 __decorate([
     (0, classes_1.AutoMap)(() => [sujeto_identificado_dto_1.SujetoIdentificadoDto]),
@@ -94,11 +89,6 @@ __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], InformeCreacionDto.prototype, "asunto", void 0);
-__decorate([
-    (0, classes_1.AutoMap)(),
-    (0, class_validator_1.IsString)(),
-    __metadata("design:type", String)
-], InformeCreacionDto.prototype, "encargado", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsString)(),
@@ -145,12 +135,6 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], InformeModificacionDto.prototype, "asunto", void 0);
-__decorate([
-    (0, classes_1.AutoMap)(),
-    (0, class_validator_1.IsString)(),
-    (0, class_validator_1.IsOptional)(),
-    __metadata("design:type", String)
-], InformeModificacionDto.prototype, "encargado", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsString)(),

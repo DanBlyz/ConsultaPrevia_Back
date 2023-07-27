@@ -52,9 +52,15 @@ export class SujetoIdentificadoRepository implements ISujetoIdentificadoReposito
       });
       criterioUtilizado = true;
     }
-    if (filtro.representante && filtro.representante !== '') {
-      consulta = consulta.andWhere('sujetoIdentificado.representante ILIKE :representante', {
-        representante: `%${filtro.representante}%`,
+    if (filtro.autoridad && filtro.autoridad !== '') {
+      consulta = consulta.andWhere('sujetoIdentificado.autoridad ILIKE :autoridad', {
+        autoridad: `%${filtro.autoridad}%`,
+      });
+      criterioUtilizado = true;
+    }
+    if (filtro.telefono && filtro.telefono !== 0) {
+      consulta = consulta.andWhere('sujetoIdentificado.telefono ILIKE :telefono', {
+        telefono: filtro.telefono,
       });
       criterioUtilizado = true;
     }
@@ -69,7 +75,7 @@ export class SujetoIdentificadoRepository implements ISujetoIdentificadoReposito
   async obtenerPorId(id: number): Promise<SujetoIdentificado> {
     let consulta = this.repositorio
       .createQueryBuilder('sujetoIdentificado')
-      //.leftJoinAndSelect('SujetoIdentificado.hojaRuta', 'hojaRuta')
+      .leftJoinAndSelect('sujetoIdentificado.informe', 'Informe')
       .andWhere('sujetoIdentificado.id = :id', { id });
     consulta = consulta.orderBy('sujetoIdentificado.id', 'DESC');
     const respuesta = await consulta.getOne();
@@ -88,7 +94,7 @@ export class SujetoIdentificadoRepository implements ISujetoIdentificadoReposito
     }
     let consulta = this.repositorio
       .createQueryBuilder('sujetoIdentificado')
-      //.leftJoinAndSelect('documento.hojaRuta', 'hojaRuta')
+      .leftJoinAndSelect('sujetoIdentificado.informe', 'Informe')
 
     consulta = this.evaluarCriterios(consulta, filtro, false, true);
     if (!consulta) {
@@ -111,7 +117,7 @@ export class SujetoIdentificadoRepository implements ISujetoIdentificadoReposito
   ): Promise<ListaPaginada<SujetoIdentificado>> {
     let consulta = this.repositorio
       .createQueryBuilder('sujetoIdentificado')
-      //.leftJoinAndSelect('tramite.hojaRuta', 'hojaRuta')
+      .leftJoinAndSelect('sujetoIdentificado.informe', 'Informe')
 
     consulta = this.evaluarCriterios(consulta, filtro, true, false);
     if (!consulta) {

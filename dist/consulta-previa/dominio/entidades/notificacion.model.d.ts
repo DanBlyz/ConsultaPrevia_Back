@@ -6,5 +6,10 @@ export declare class Notificacion {
     direccionDpto: string;
     notificacionPdf: string;
     flujo: string;
-    listaReunion?: Reunion[];
+    representanteMinero: boolean;
+    representanteComunidad: boolean;
+    sifde: boolean;
+    comunidad?: string;
+    nroReunion?: string;
+    reunion?: Reunion;
 }

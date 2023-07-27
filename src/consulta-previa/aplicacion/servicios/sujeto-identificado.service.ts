@@ -44,15 +44,16 @@ export class SujetoIdentificadoService implements ISujetoIdentificadoServicio {
         const filtro = new SujetoIdentificadoFiltro();
         filtro.fk_idInforme = objetoDto.fk_idInforme;
         filtro.comunidad = objetoDto.comunidad;
-        filtro.representante = objetoDto.representante;
+        filtro.autoridad = objetoDto.autoridad;
+        filtro.telefono = objetoDto.telefono;
         const sujetoIdentificadoBD =
           await this.repositorioFactory.sujetoIdentificadoRepositorio.obtenerObjetoPor(
             filtro,
           );
-        if (sujetoIdentificadoBD) {
+       /* if (sujetoIdentificadoBD) {
           errores.push('El número de documento detalle ya existe.');
           return false;
-        }
+        }*/
       }
       case 'modificar': {
         if (!objetoDto) {

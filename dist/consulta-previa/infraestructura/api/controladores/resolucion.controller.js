@@ -57,6 +57,15 @@ let ResolucionController = class ResolucionController {
         const path = (0, path_1.join)('..', 'ConsultaPrevia_Back/consulta-previa/resolucion', filename);
         return res.download(path);
     }
+    async uploadFile(file) {
+        console.log(file);
+        console.log(file.destination);
+        return { message: 'Archivo subido correctamente' };
+    }
+    async downloadFile(filename, res) {
+        const path = (0, path_1.join)('..', 'ConsultaPrevia_Back/consulta-previa/resolucion', filename);
+        return res.download(path);
+    }
 };
 __decorate([
     (0, common_1.Post)('buscar'),
@@ -101,6 +110,29 @@ __decorate([
             destination: './consulta-previa/resolucion',
             filename: (req, file, cb) => {
                 cb(null, ("resolucion-" + file.originalname));
+            },
+        }),
+    })),
+    __param(0, (0, common_2.UploadedFile)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", Promise)
+], ResolucionController.prototype, "uploadFile", null);
+__decorate([
+    (0, common_1.Get)('bajar-archivo/:filename'),
+    __param(0, (0, common_1.Param)('filename')),
+    __param(1, (0, common_3.Res)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String, Object]),
+    __metadata("design:returntype", Promise)
+], ResolucionController.prototype, "downloadFile", null);
+__decorate([
+    (0, common_1.Post)('subir-archivo'),
+    (0, common_2.UseInterceptors)((0, platform_express_1.FileInterceptor)('file', {
+        storage: (0, multer_1.diskStorage)({
+            destination: './consulta-previa/resolucion',
+            filename: (req, file, cb) => {
+                cb(null, (file.originalname));
             },
         }),
     })),

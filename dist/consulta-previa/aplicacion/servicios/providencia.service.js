@@ -37,7 +37,7 @@ let ProvidenciaService = class ProvidenciaService {
                 filtro.providenciaPdf = objetoDto.providenciaPdf;
                 const providenciaBD = await this.repositorioFactory.providenciaRepositorio.obtenerObjetoPor(filtro);
                 if (providenciaBD) {
-                    errores.push('El número de documento detalle ya existe.');
+                    errores.push('El correlativo de providencia ya existe.');
                     return false;
                 }
             }

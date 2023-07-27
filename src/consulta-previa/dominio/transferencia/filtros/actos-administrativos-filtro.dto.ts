@@ -15,6 +15,11 @@ export class ActoAdministrativoFiltroDto extends FiltroBaseDto {
   fk_idTramite?: number;
 
   @AutoMap()
+  @IsNumber()
+  @IsOptional()
+  fk_idResolucion?: number;
+
+  @AutoMap()
   @IsBoolean()
   @IsOptional()
   viajeRealizado?: boolean;
@@ -23,11 +28,6 @@ export class ActoAdministrativoFiltroDto extends FiltroBaseDto {
   @IsString()
   @IsOptional()
   flujo?: string;
-
-  @AutoMap()
-  @IsString()
-  @IsOptional()
-  encargado?: string;
 
   @AutoMap()
   @IsBoolean()

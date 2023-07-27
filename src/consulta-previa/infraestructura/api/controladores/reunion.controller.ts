@@ -31,6 +31,7 @@ import {
     ReunionDto,
     ReunionModificacionDto,
   } from '../../../dominio/transferencia';
+<<<<<<< HEAD
   import { UploadedFile, UseInterceptors } from '@nestjs/common';
   import { FileInterceptor } from '@nestjs/platform-express';
   import { diskStorage } from 'multer';
@@ -40,6 +41,14 @@ import {
   import { join } from 'path';
   import { Response } from 'express';
   
+=======
+  import { Res, UploadedFile, UseInterceptors } from '@nestjs/common';
+  import { FileInterceptor } from '@nestjs/platform-express';
+  import { diskStorage } from 'multer';
+  import { extname } from 'path';
+  import { join } from 'path';
+  import { Response } from 'express';
+>>>>>>> yery
   //@UseGuards(JwtAuthGuard)
   @Controller('reuniones')
   export class ReunionController {
@@ -106,8 +115,12 @@ import {
       storage: diskStorage({
         destination: './consulta-previa/reunion', // Directorio donde se guardarán los archivos
         filename: (req, file, cb) => {
+<<<<<<< HEAD
           
           cb(null, ("reunion-"+file.originalname));
+=======
+          cb(null, (file.originalname));
+>>>>>>> yery
         },
       }),
     }))
@@ -116,7 +129,11 @@ import {
       console.log(file.destination);
       return { message: 'Archivo subido correctamente' };
     }
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> yery
     @Get('bajar-archivo/:filename')
     async downloadFile(@Param('filename') filename: string, @Res() res: Response) {
       const path = join('..', 'ConsultaPrevia_Back/consulta-previa/reunion', filename);

@@ -38,11 +38,6 @@ __decorate([
 ], PagoCptDto.prototype, "flujo", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
-    (0, class_validator_1.IsString)(),
-    __metadata("design:type", String)
-], PagoCptDto.prototype, "encargado", void 0);
-__decorate([
-    (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsNumber)(),
     __metadata("design:type", Number)
 ], PagoCptDto.prototype, "diasViaje", void 0);
@@ -61,6 +56,11 @@ __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], PagoCptDto.prototype, "apm", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], PagoCptDto.prototype, "descripcion", void 0);
 exports.PagoCptDto = PagoCptDto;
 class PagoCptCreacionDto {
 }
@@ -82,11 +82,6 @@ __decorate([
 ], PagoCptCreacionDto.prototype, "flujo", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
-    (0, class_validator_1.IsString)(),
-    __metadata("design:type", String)
-], PagoCptCreacionDto.prototype, "encargado", void 0);
-__decorate([
-    (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsNumber)(),
     __metadata("design:type", Number)
 ], PagoCptCreacionDto.prototype, "diasViaje", void 0);
@@ -105,6 +100,11 @@ __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], PagoCptCreacionDto.prototype, "apm", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], PagoCptCreacionDto.prototype, "descripcion", void 0);
 exports.PagoCptCreacionDto = PagoCptCreacionDto;
 class PagoCptModificacionDto {
 }
@@ -120,12 +120,6 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], PagoCptModificacionDto.prototype, "flujo", void 0);
-__decorate([
-    (0, classes_1.AutoMap)(),
-    (0, class_validator_1.IsString)(),
-    (0, class_validator_1.IsOptional)(),
-    __metadata("design:type", String)
-], PagoCptModificacionDto.prototype, "encargado", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsNumber)(),
@@ -150,5 +144,11 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], PagoCptModificacionDto.prototype, "apm", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], PagoCptModificacionDto.prototype, "descripcion", void 0);
 exports.PagoCptModificacionDto = PagoCptModificacionDto;
 //# sourceMappingURL=pago-cpt.dto.js.map

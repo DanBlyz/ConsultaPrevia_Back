@@ -13,6 +13,7 @@ import { AuditoriaEntity } from './base/auditoria.entity';
 import { TramiteEntity } from './tramite.entity';
 import { PagoCptEntity } from './pago-cpt.entity';
 import { ViajeEntity } from './viaje.entity';
+import { ResolucionEntity } from './resolucion.entity';
 
 
 @Entity('actosadministrativos', { schema: 'consulta-previa' })
@@ -26,16 +27,16 @@ export class ActoAdministrativoEntity extends AuditoriaEntity{
   fk_idTramite: number;
 
   @AutoMap()
+  @Column({ name: 'fk_idresolucion' })
+  fk_idResolucion: number;
+
+  @AutoMap()
   @Column({ name: 'viajerealizado' ,default:false})
   viajeRealizado: boolean;
 
   @AutoMap()
   @Column({ name: 'flujo' })
   flujo: string;
-
-  @AutoMap()
-  @Column({ name: 'encargado' })
-  encargado: string;
 
   @AutoMap()
   @Column({ name: 'estado' })
@@ -45,6 +46,11 @@ export class ActoAdministrativoEntity extends AuditoriaEntity{
   @ManyToOne(() => TramiteEntity, (tramite) => tramite.listaActoAdministrativo)
   @JoinColumn({ name: 'fk_idtramite' })
   tramite: TramiteEntity;
+
+  @AutoMap(() => [ResolucionEntity])
+  @ManyToOne(() => ResolucionEntity, (resolucion) => resolucion.listaActoAdministrativo)
+  @JoinColumn({ name: 'fk_idresolucion' })
+  resolucion: ResolucionEntity;
 
   @AutoMap(() => [PagoCptEntity])
   @OneToOne(() => PagoCptEntity, (pagoCpt) => pagoCpt.actoAdministrativo)

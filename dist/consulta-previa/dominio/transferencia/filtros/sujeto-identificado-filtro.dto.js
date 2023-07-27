@@ -38,6 +38,12 @@ __decorate([
     (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
-], SujetoIdentificadoFiltroDto.prototype, "representante", void 0);
+], SujetoIdentificadoFiltroDto.prototype, "autoridad", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Number)
+], SujetoIdentificadoFiltroDto.prototype, "telefono", void 0);
 exports.SujetoIdentificadoFiltroDto = SujetoIdentificadoFiltroDto;
 //# sourceMappingURL=sujeto-identificado-filtro.dto.js.map

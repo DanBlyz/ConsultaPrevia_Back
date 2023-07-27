@@ -20,4 +20,19 @@ export class NotificacionFiltro {
   @AutoMap()
   flujo?: string;
 
+  @AutoMap()
+  representanteMinero?: boolean;
+
+  @AutoMap()
+  representanteComunidad?: boolean;
+
+  @AutoMap()
+  sifde?: boolean;
+
+  @AutoMap()
+  comunidad?: string;
+
+  @AutoMap()
+  nroReunion?: string;
+
 }

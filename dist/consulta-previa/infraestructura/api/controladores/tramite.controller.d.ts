@@ -8,6 +8,6 @@ export declare class TramiteController {
     buscar(filtroDto: TramiteFiltroDto): Promise<RespuestaListaDto<TramiteDto>>;
     obtenerPorId(id: number): Promise<RespuestaObjetoDto<TramiteDto>>;
     guardar(objetoDto: TramiteCreacionDto): Promise<RespuestaObjetoDto<TramiteDto>>;
-    modificar(id: number, objetoDto: TramiteModificacionDto): Promise<RespuestaObjetoDto<TramiteDto>>;
+    modificar(id: number, objetoDto: TramiteModificacionDto | any): Promise<RespuestaObjetoDto<TramiteDto>>;
     eliminar(id: number): Promise<import("../../../../comun/transferencia").RespuestaDto>;
 }

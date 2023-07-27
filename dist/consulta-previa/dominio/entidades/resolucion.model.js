@@ -48,6 +48,6 @@ __decorate([
 __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", String)
-], Resolucion.prototype, "asunto", void 0);
+], Resolucion.prototype, "referencia", void 0);
 exports.Resolucion = Resolucion;
 //# sourceMappingURL=resolucion.model.js.map

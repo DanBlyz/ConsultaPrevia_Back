@@ -44,9 +44,15 @@ let SujetoIdentificadoRepository = SujetoIdentificadoRepository_1 = class Sujeto
             });
             criterioUtilizado = true;
         }
-        if (filtro.representante && filtro.representante !== '') {
-            consulta = consulta.andWhere('sujetoIdentificado.representante ILIKE :representante', {
-                representante: `%${filtro.representante}%`,
+        if (filtro.autoridad && filtro.autoridad !== '') {
+            consulta = consulta.andWhere('sujetoIdentificado.autoridad ILIKE :autoridad', {
+                autoridad: `%${filtro.autoridad}%`,
+            });
+            criterioUtilizado = true;
+        }
+        if (filtro.telefono && filtro.telefono !== 0) {
+            consulta = consulta.andWhere('sujetoIdentificado.telefono ILIKE :telefono', {
+                telefono: filtro.telefono,
             });
             criterioUtilizado = true;
         }
@@ -60,6 +66,7 @@ let SujetoIdentificadoRepository = SujetoIdentificadoRepository_1 = class Sujeto
     async obtenerPorId(id) {
         let consulta = this.repositorio
             .createQueryBuilder('sujetoIdentificado')
+            .leftJoinAndSelect('sujetoIdentificado.informe', 'Informe')
             .andWhere('sujetoIdentificado.id = :id', { id });
         consulta = consulta.orderBy('sujetoIdentificado.id', 'DESC');
         const respuesta = await consulta.getOne();
@@ -72,7 +79,8 @@ let SujetoIdentificadoRepository = SujetoIdentificadoRepository_1 = class Sujeto
             return null;
         }
         let consulta = this.repositorio
-            .createQueryBuilder('sujetoIdentificado');
+            .createQueryBuilder('sujetoIdentificado')
+            .leftJoinAndSelect('sujetoIdentificado.informe', 'Informe');
         consulta = this.evaluarCriterios(consulta, filtro, false, true);
         if (!consulta) {
             return null;
@@ -85,7 +93,8 @@ let SujetoIdentificadoRepository = SujetoIdentificadoRepository_1 = class Sujeto
     }
     async obtenerPor(filtro, pagina, cantidad, ordenarPor = 'id', orden = 'DESC') {
         let consulta = this.repositorio
-            .createQueryBuilder('sujetoIdentificado');
+            .createQueryBuilder('sujetoIdentificado')
+            .leftJoinAndSelect('sujetoIdentificado.informe', 'Informe');
         consulta = this.evaluarCriterios(consulta, filtro, true, false);
         if (!consulta) {
             return null;

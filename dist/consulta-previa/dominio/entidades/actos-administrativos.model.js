@@ -14,6 +14,7 @@ const classes_1 = require("@automapper/classes");
 const tramite_model_1 = require("./tramite.model");
 const pago_cpt_model_1 = require("./pago-cpt.model");
 const viaje_model_1 = require("./viaje.model");
+const resolucion_model_1 = require("./resolucion.model");
 class ActoAdministrativo {
 }
 __decorate([
@@ -26,6 +27,10 @@ __decorate([
 ], ActoAdministrativo.prototype, "fk_idTramite", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
+    __metadata("design:type", Number)
+], ActoAdministrativo.prototype, "fk_idResolucion", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
     __metadata("design:type", Boolean)
 ], ActoAdministrativo.prototype, "viajeRealizado", void 0);
 __decorate([
@@ -35,15 +40,15 @@ __decorate([
 __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", String)
-], ActoAdministrativo.prototype, "encargado", void 0);
-__decorate([
-    (0, classes_1.AutoMap)(),
-    __metadata("design:type", String)
 ], ActoAdministrativo.prototype, "estado", void 0);
 __decorate([
     (0, classes_1.AutoMap)(() => [tramite_model_1.Tramite]),
     __metadata("design:type", tramite_model_1.Tramite)
 ], ActoAdministrativo.prototype, "tramite", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(() => [resolucion_model_1.Resolucion]),
+    __metadata("design:type", resolucion_model_1.Resolucion)
+], ActoAdministrativo.prototype, "resolucion", void 0);
 __decorate([
     (0, classes_1.AutoMap)(() => [pago_cpt_model_1.PagoCpt]),
     __metadata("design:type", pago_cpt_model_1.PagoCpt)

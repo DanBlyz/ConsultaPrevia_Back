@@ -45,19 +45,19 @@ export class PagoCptService implements IPagoCptServicio {
         filtro.fk_idActos = objetoDto.fk_idActos;
         filtro.pagoRealizado = objetoDto.pagoRealizado;
         filtro.flujo = objetoDto.flujo;
-        filtro.encargado = objetoDto.encargado;
         filtro.diasViaje = objetoDto.diasViaje;
         filtro.tipoViaje = objetoDto.tipoViaje;
         filtro.montoTotal = objetoDto.montoTotal;
         filtro.apm = objetoDto.apm;
+        filtro.descripcion = objetoDto.descripcion;
         const PagoCptBD =
           await this.repositorioFactory.pagoCptRepositorio.obtenerObjetoPor(
             filtro,
           );
-        if (PagoCptBD) {
+        /*if (PagoCptBD) {
           errores.push('El número de documento detalle ya existe.');
           return false;
-        }
+        }*/
       }
       case 'modificar': {
         if (!objetoDto) {

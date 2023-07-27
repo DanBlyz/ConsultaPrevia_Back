@@ -51,7 +51,7 @@ export class ProvidenciaService implements IProvidenciaServicio {
             filtro,
           );
         if (providenciaBD) {
-          errores.push('El número de documento detalle ya existe.');
+          errores.push('El correlativo de providencia ya existe.');
           return false;
         }
       }

@@ -49,12 +49,38 @@ __decorate([
     __metadata("design:type", String)
 ], NotificacionDto.prototype, "flujo", void 0);
 __decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsBoolean)(),
+    __metadata("design:type", Boolean)
+], NotificacionDto.prototype, "representanteMinero", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsBoolean)(),
+    __metadata("design:type", Boolean)
+], NotificacionDto.prototype, "representanteComunidad", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsBoolean)(),
+    __metadata("design:type", Boolean)
+], NotificacionDto.prototype, "sifde", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], NotificacionDto.prototype, "comunidad", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], NotificacionDto.prototype, "nroReunion", void 0);
+__decorate([
     (0, classes_1.AutoMap)(() => [reunion_dto_1.ReunionDto]),
-    (0, class_validator_1.IsArray)({ each: true }),
     (0, class_transformer_1.Type)(() => reunion_dto_1.ReunionDto),
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", Array)
-], NotificacionDto.prototype, "listaReunion", void 0);
+], NotificacionDto.prototype, "reunion", void 0);
 exports.NotificacionDto = NotificacionDto;
 class NotificacionCreacionDto {
 }
@@ -84,6 +110,33 @@ __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], NotificacionCreacionDto.prototype, "flujo", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsBoolean)(),
+    __metadata("design:type", Boolean)
+], NotificacionCreacionDto.prototype, "representanteMinero", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsBoolean)(),
+    __metadata("design:type", Boolean)
+], NotificacionCreacionDto.prototype, "representanteComunidad", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsBoolean)(),
+    __metadata("design:type", Boolean)
+], NotificacionCreacionDto.prototype, "sifde", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], NotificacionCreacionDto.prototype, "comunidad", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], NotificacionCreacionDto.prototype, "nroReunion", void 0);
 exports.NotificacionCreacionDto = NotificacionCreacionDto;
 class NotificacionModificacionDto {
 }
@@ -111,5 +164,35 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], NotificacionModificacionDto.prototype, "flujo", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsBoolean)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Boolean)
+], NotificacionModificacionDto.prototype, "representanteMinero", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsBoolean)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Boolean)
+], NotificacionModificacionDto.prototype, "representanteComunidad", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsBoolean)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Boolean)
+], NotificacionModificacionDto.prototype, "sifde", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], NotificacionModificacionDto.prototype, "comunidad", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], NotificacionModificacionDto.prototype, "nroReunion", void 0);
 exports.NotificacionModificacionDto = NotificacionModificacionDto;
 //# sourceMappingURL=notificacion.dto.js.map

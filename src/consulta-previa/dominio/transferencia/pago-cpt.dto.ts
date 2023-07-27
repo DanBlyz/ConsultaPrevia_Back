@@ -28,10 +28,6 @@ export class PagoCptDto {
   flujo: string;
 
   @AutoMap()
-  @IsString()
-  encargado: string;
-
-  @AutoMap()
   @IsNumber()
   diasViaje: number;
 
@@ -46,6 +42,10 @@ export class PagoCptDto {
   @AutoMap()
   @IsString()
   apm: string;
+
+  @AutoMap()
+  @IsString()
+  descripcion: string;
 
 }
 
@@ -65,10 +65,6 @@ export class PagoCptCreacionDto {
     flujo: string;
   
     @AutoMap()
-    @IsString()
-    encargado: string;
-  
-    @AutoMap()
     @IsNumber()
     diasViaje: number;
   
@@ -83,6 +79,10 @@ export class PagoCptCreacionDto {
     @AutoMap()
     @IsString()
     apm: string;
+
+    @AutoMap()
+    @IsString()
+    descripcion: string;
 }
 
 export class PagoCptModificacionDto {
@@ -96,11 +96,6 @@ export class PagoCptModificacionDto {
     @IsString()
     @IsOptional()
     flujo?: string;
-  
-    @AutoMap()
-    @IsString()
-    @IsOptional()
-    encargado?: string;
   
     @AutoMap()
     @IsNumber()
@@ -121,4 +116,9 @@ export class PagoCptModificacionDto {
     @IsString()
     @IsOptional()
     apm?: string;
+
+    @AutoMap()
+    @IsString()
+    @IsOptional()
+    descripcion?: string;
 }

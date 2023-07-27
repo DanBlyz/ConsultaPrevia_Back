@@ -99,11 +99,15 @@ export class TramiteRepository implements ITramiteRepositorio {
   async obtenerPorId(id: number): Promise<Tramite> {
     let consulta = this.repositorio
       .createQueryBuilder('tramite')
-      .leftJoinAndSelect('tramite.listaResolucion', 'tramiteResolucion')
-      .leftJoinAndSelect('tramite.listaProvidencia', 'tramiteProvidencia')
-      .leftJoinAndSelect('tramite.listaInforme', 'tramiteInforme')
-      .leftJoinAndSelect('tramite.listaNotificacion', 'tramiteNotificacion')
-      .leftJoinAndSelect('tramite.listaActoAdministrativo', 'tramiteActoAdministrativo')
+      .leftJoinAndSelect('tramite.listaResolucion', 'Resolucion')
+      .leftJoinAndSelect('tramite.listaProvidencia', 'Providencia')
+      .leftJoinAndSelect('tramite.listaInforme', 'Informe')
+      .leftJoinAndSelect('Informe.listaSujetoIdentificado', 'SujetoIdentificado')
+      .leftJoinAndSelect('tramite.listaNotificacion', 'Notificacion')
+      .leftJoinAndSelect('Notificacion.reunion', 'Reunion')
+      .leftJoinAndSelect('tramite.listaActoAdministrativo', 'ActoAdministrativo')
+      .leftJoinAndSelect('ActoAdministrativo.pagoCpt', 'PagoCpt')
+      .leftJoinAndSelect('ActoAdministrativo.viaje', 'Viaje')
       .andWhere('tramite.id = :id', { id });
     consulta = consulta.orderBy('tramite.id', 'DESC');
     const respuesta = await consulta.getOne();
@@ -122,11 +126,15 @@ export class TramiteRepository implements ITramiteRepositorio {
     }
     let consulta = this.repositorio
       .createQueryBuilder('tramite')
-      .leftJoinAndSelect('tramite.listaResolucion', 'tramiteResolucion')
-      .leftJoinAndSelect('tramite.listaProvidencia', 'tramiteProvidencia')
-      .leftJoinAndSelect('tramite.listaInforme', 'tramiteInforme')
-      .leftJoinAndSelect('tramite.listaNotificacion', 'tramiteNotificacion')
-      .leftJoinAndSelect('tramite.listaActoAdministrativo', 'tramiteActoAdministrativo')
+      .leftJoinAndSelect('tramite.listaResolucion', 'Resolucion')
+      .leftJoinAndSelect('tramite.listaProvidencia', 'Providencia')
+      .leftJoinAndSelect('tramite.listaInforme', 'Informe')
+      .leftJoinAndSelect('Informe.listaSujetoIdentificado', 'SujetoIdentificado')
+      .leftJoinAndSelect('tramite.listaNotificacion', 'Notificacion')
+      .leftJoinAndSelect('Notificacion.reunion', 'Reunion')
+      .leftJoinAndSelect('tramite.listaActoAdministrativo', 'ActoAdministrativo')
+      .leftJoinAndSelect('ActoAdministrativo.pagoCpt', 'PagoCpt')
+      .leftJoinAndSelect('ActoAdministrativo.viaje', 'Viaje')
 
     consulta = this.evaluarCriterios(consulta, filtro, false, true);
     if (!consulta) {
@@ -149,11 +157,15 @@ export class TramiteRepository implements ITramiteRepositorio {
   ): Promise<ListaPaginada<Tramite>> {
     let consulta = this.repositorio
       .createQueryBuilder('tramite')
-      .leftJoinAndSelect('tramite.listaResolucion', 'tramiteResolucion')
-      .leftJoinAndSelect('tramite.listaProvidencia', 'tramiteProvidencia')
-      .leftJoinAndSelect('tramite.listaInforme', 'tramiteInforme')
-      .leftJoinAndSelect('tramite.listaNotificacion', 'tramiteNotificacion')
-      .leftJoinAndSelect('tramite.listaActoAdministrativo', 'tramiteActoAdministrativo')
+      .leftJoinAndSelect('tramite.listaResolucion', 'Resolucion')
+      .leftJoinAndSelect('tramite.listaProvidencia', 'Providencia')
+      .leftJoinAndSelect('tramite.listaInforme', 'Informe')
+      .leftJoinAndSelect('Informe.listaSujetoIdentificado', 'SujetoIdentificado')
+      .leftJoinAndSelect('tramite.listaNotificacion', 'Notificacion')
+      .leftJoinAndSelect('Notificacion.reunion', 'Reunion')
+      .leftJoinAndSelect('tramite.listaActoAdministrativo', 'ActoAdministrativo')
+      .leftJoinAndSelect('ActoAdministrativo.pagoCpt', 'PagoCpt')
+      .leftJoinAndSelect('ActoAdministrativo.viaje', 'Viaje')
       
 
     consulta = this.evaluarCriterios(consulta, filtro, true, false);

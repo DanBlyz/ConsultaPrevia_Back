@@ -40,6 +40,30 @@ import { ReunionEntity } from './reunion.entity';
     @Column({ name: 'flujo' })
     flujo : string;
 
+    @AutoMap()
+    @Column({ name: 'representanteminero' })
+    representanteMinero : boolean;
+
+    @AutoMap()
+    @Column({ name: 'representantecomunidad' })
+    representanteComunidad : boolean;
+
+    @AutoMap()
+    @Column({ name: 'sifde' })
+    sifde : boolean;
+
+    @AutoMap()
+    @Column({ name: 'comunidad' })
+    comunidad : string;
+
+    @AutoMap()
+    @Column({ name: 'nroreunion' })
+    nroReunion : string;
+
+    @AutoMap(() => [ReunionEntity])
+    @OneToOne(() => ReunionEntity, (reunion) => reunion.notificacion)
+    reunion: ReunionEntity;
+
     @ManyToOne(() => TramiteEntity, (tramite) => tramite.listaNotificacion)
     @JoinColumn({ name: 'fk_idtramite' })
     tramite: TramiteEntity;
@@ -48,8 +72,6 @@ import { ReunionEntity } from './reunion.entity';
     @JoinColumn({ name: 'idnotificacion' })
     reunion: ReunionEntity;*/
 
-    @OneToOne(() => ReunionEntity, (reunion) => reunion.notificacion)
-    reunion: ReunionEntity;
   
   /*
     @OneToOne(() => ContenidoEntity, (contenido) => contenido.documento)

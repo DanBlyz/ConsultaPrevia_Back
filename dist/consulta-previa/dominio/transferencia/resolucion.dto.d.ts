@@ -7,7 +7,7 @@ export declare class ResolucionDto {
     actoAdministrativo: boolean;
     resolucionPdf: string;
     flujo: string;
-    asunto: string;
+    referencia: string;
 }
 export declare class ResolucionCreacionDto {
     fk_idTramite: number;
@@ -17,7 +17,7 @@ export declare class ResolucionCreacionDto {
     actoAdministrativo: boolean;
     resolucionPdf: string;
     flujo: string;
-    asunto: string;
+    referencia: string;
 }
 export declare class ResolucionModificacionDto {
     fk_idTramite?: number;
@@ -27,5 +27,5 @@ export declare class ResolucionModificacionDto {
     actoAdministrativo?: boolean;
     resolucionPdf?: string;
     flujo?: string;
-    asunto?: string;
+    referencia?: string;
 }

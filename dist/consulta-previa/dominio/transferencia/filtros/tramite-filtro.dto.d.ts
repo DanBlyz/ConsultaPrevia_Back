@@ -5,6 +5,7 @@ export declare class TramiteFiltroDto extends FiltroBaseDto {
     codigoUnico?: number;
     areaMinera?: string;
     clasificacion?: string;
+    nroCuadricula?: number;
     departamento?: string;
     provincia?: string;
     municipio?: string;

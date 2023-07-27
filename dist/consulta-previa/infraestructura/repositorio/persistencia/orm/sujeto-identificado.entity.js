@@ -33,10 +33,16 @@ __decorate([
 ], SujetoIdentificadoEntity.prototype, "comunidad", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
-    (0, typeorm_1.Column)({ name: 'representante' }),
+    (0, typeorm_1.Column)({ name: 'autoridad' }),
     __metadata("design:type", String)
-], SujetoIdentificadoEntity.prototype, "representante", void 0);
+], SujetoIdentificadoEntity.prototype, "autoridad", void 0);
 __decorate([
+    (0, classes_1.AutoMap)(),
+    (0, typeorm_1.Column)({ name: 'telefono' }),
+    __metadata("design:type", Number)
+], SujetoIdentificadoEntity.prototype, "telefono", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(() => [informe_entity_1.InformeEntity]),
     (0, typeorm_1.ManyToOne)(() => informe_entity_1.InformeEntity, (informe) => informe.listaSujetoIdentificado),
     (0, typeorm_1.JoinColumn)({ name: 'fk_idinforme' }),
     __metadata("design:type", informe_entity_1.InformeEntity)

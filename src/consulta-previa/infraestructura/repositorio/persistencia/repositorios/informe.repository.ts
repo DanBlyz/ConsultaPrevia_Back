@@ -71,12 +71,6 @@ export class InformeRepository implements IInformeRepositorio {
       });
       criterioUtilizado = true;
     }
-    if (filtro.encargado && filtro.encargado !== '') {
-      consulta = consulta.andWhere('informe.encargado ILIKE :encargado', {
-        encargado: `%${filtro.encargado}%`,
-      });
-      criterioUtilizado = true;
-    }
    
     if (obligatorio) {
       return criterioUtilizado ? consulta : null;

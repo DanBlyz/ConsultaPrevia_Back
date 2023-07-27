@@ -6,7 +6,6 @@ export declare class InformeDto {
     referencia: string;
     informePdf: string;
     asunto: string;
-    encargado: string;
     flujo: string;
     listaSujetoIdentificado?: SujetoIdentificadoDto[];
 }
@@ -16,7 +15,6 @@ export declare class InformeCreacionDto {
     referencia: string;
     informePdf: string;
     asunto: string;
-    encargado: string;
     flujo: string;
     listaSujetoIdentificado?: SujetoIdentificadoCreacionDto[];
 }
@@ -26,7 +24,6 @@ export declare class InformeModificacionDto {
     referencia?: string;
     informePdf?: string;
     asunto?: string;
-    encargado?: string;
     flujo?: string;
     listaSujetoIdentificado?: SujetoIdentificadoModificacionDto[];
 }

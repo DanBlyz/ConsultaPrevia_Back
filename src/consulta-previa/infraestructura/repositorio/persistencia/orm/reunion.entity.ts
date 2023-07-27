@@ -44,10 +44,6 @@ import { NotificacionEntity } from './notificacion.entity';
     actaReunionPdf: string;
 
     @AutoMap()
-    @Column({ name: 'encargado' })
-    encargado: string;
-
-    @AutoMap()
     @Column({ name: 'estado' })
     estado: string;
 

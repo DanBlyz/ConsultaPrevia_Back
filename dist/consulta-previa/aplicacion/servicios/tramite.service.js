@@ -40,7 +40,7 @@ let TramiteService = class TramiteService {
                 filtro.municipio = objetoDto.municipio;
                 const tramiteBD = await this.repositorioFactory.tramiteRepositorio.obtenerObjetoPor(filtro);
                 if (tramiteBD) {
-                    errores.push('El número de documento detalle ya existe.');
+                    errores.push('El correlativo de tramite ya existe.');
                     return false;
                 }
             }

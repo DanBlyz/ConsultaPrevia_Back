@@ -33,10 +33,6 @@ import { ViajeEntity } from './viaje.entity';
     flujo: string;
   
     @AutoMap()
-    @Column({ name: 'encargado' })
-    encargado: string;
-  
-    @AutoMap()
     @Column({ name: 'diasviaje' })
     diasViaje: number;
   
@@ -51,6 +47,11 @@ import { ViajeEntity } from './viaje.entity';
     @AutoMap()
     @Column({ name: 'apm' })
     apm: string;
+
+    @AutoMap()
+    @Column({ name: 'descripcion' })
+    descripcion: string;
+
 
     @OneToOne(() => ActoAdministrativoEntity, (actoAdministrativo) => actoAdministrativo.pagoCpt)
     @JoinColumn({ name: 'fk_idactos' })

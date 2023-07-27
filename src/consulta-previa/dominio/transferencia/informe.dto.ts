@@ -39,10 +39,6 @@ export class InformeDto {
 
   @AutoMap()
   @IsString()
-  encargado: string;
-
-  @AutoMap()
-  @IsString()
   flujo: string;
 
   @AutoMap(() => [SujetoIdentificadoDto])
@@ -75,10 +71,6 @@ export class InformeCreacionDto {
   @AutoMap()
   @IsString()
   asunto: string;
-
-  @AutoMap()
-  @IsString()
-  encargado: string;
 
   @AutoMap()
   @IsString()
@@ -117,11 +109,6 @@ export class InformeModificacionDto {
     @IsString()
     @IsOptional()
     asunto?: string;
-  
-    @AutoMap()
-    @IsString()
-    @IsOptional()
-    encargado?: string;
 
     @AutoMap()
     @IsString()

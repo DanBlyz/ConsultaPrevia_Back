@@ -42,10 +42,6 @@ export class ReunionDto {
 
   @AutoMap()
   @IsString()
-  encargado: string;
-
-  @AutoMap()
-  @IsString()
   estado: string;
 
   @AutoMap()
@@ -56,6 +52,8 @@ export class ReunionDto {
   @Type(() => NotificacionDto)
   @IsOptional()
   notificacion?: NotificacionDto[];
+
+  
 
 }
 
@@ -72,27 +70,28 @@ export class ReunionCreacionDto {
   
     @AutoMap()
     @IsBoolean()
-    acuerdo: boolean;
+    @IsOptional()
+    acuerdo?: boolean;
   
     @AutoMap()
     @IsString()
-    motivo: string;
+    @IsOptional()
+    motivo?: string;
   
     @AutoMap()
     @IsBoolean()
-    reunionRealizada: boolean;
+    @IsOptional()
+    reunionRealizada?: boolean;
   
     @AutoMap()
     @IsString()
-    actaReunionPdf: string;
-  
-    @AutoMap()
-    @IsString()
-    encargado: string;
+    @IsOptional()
+    actaReunionPdf?: string;
 
     @AutoMap()
     @IsString()
-    estado: string;
+    @IsOptional()
+    estado?: string;
 
     @AutoMap()
     @IsString()
@@ -131,11 +130,6 @@ export class ReunionModificacionDto {
     @IsString()
     @IsOptional()
     actaReunionPdf?: string;
-
-    @AutoMap()
-    @IsString()
-    @IsOptional()
-    encargado?: string;
 
     @AutoMap()
     @IsString()

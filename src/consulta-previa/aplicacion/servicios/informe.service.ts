@@ -48,13 +48,12 @@ export class InformeService implements IInformeServicio {
         filtro.referencia = objetoDto.referencia;
         filtro.informePdf = objetoDto.informePdf;
         filtro.asunto = objetoDto.asunto;
-        filtro.encargado = objetoDto.encargado;
         const informeBD =
           await this.repositorioFactory.informeRepositorio.obtenerObjetoPor(
             filtro,
           );
         if (informeBD) {
-          errores.push('El número de documento detalle ya existe.');
+          errores.push('El correlativo de Informe ya existe.');
           return false;
         }
       }
@@ -135,7 +134,8 @@ export class InformeService implements IInformeServicio {
           console.log(index);
           sujeto.fk_idInforme = informeId;
           sujeto.comunidad = objetoDto.listaSujetoIdentificado[index].comunidad;
-          sujeto.representante = objetoDto.listaSujetoIdentificado[index].representante;
+          sujeto.autoridad = objetoDto.listaSujetoIdentificado[index].autoridad;
+          sujeto.telefono = objetoDto.listaSujetoIdentificado[index].telefono;
   
             await this.repositorioFactory.sujetoIdentificadoRepositorio.guardar(
               sujeto,
@@ -164,7 +164,7 @@ export class InformeService implements IInformeServicio {
         resolucion.actoAdministrativo = false;
         resolucion.resolucionPdf = null;
         resolucion.flujo = 'Deliberacion';
-        resolucion.asunto = null;
+        resolucion.referencia = null;
         await this.repositorioFactory.resolucionRepositorio.guardar(
           resolucion,
           transaccion,
@@ -180,7 +180,7 @@ export class InformeService implements IInformeServicio {
           resolucion.actoAdministrativo = false;
           resolucion.resolucionPdf = null;
           resolucion.flujo = 'Mediacion';
-          resolucion.asunto = null;
+          resolucion.referencia = null;
           await this.repositorioFactory.resolucionRepositorio.guardar(
             resolucion,
             transaccion,

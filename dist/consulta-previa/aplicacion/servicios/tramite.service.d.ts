@@ -12,7 +12,7 @@ export declare class TramiteService implements ITramiteServicio {
     buscar(filtroDto: TramiteFiltroDto, pagina: number, cantidad: number, ordenarPor?: string, orden?: 'ASC' | 'DESC'): Promise<ListaPaginadaDto<TramiteDto>>;
     obtenerPorId(id: number): Promise<TramiteDto>;
     guardar(objetoDto: TramiteCreacionDto): Promise<RespuestaObjetoDto<TramiteDto>>;
-    modificar(id: number, objetoDto: TramiteModificacionDto): Promise<RespuestaObjetoDto<TramiteDto>>;
+    modificar(id: number, objetoDto: TramiteModificacionDto | any): Promise<RespuestaObjetoDto<TramiteDto>>;
     eliminar(id: number): Promise<RespuestaDto>;
 }
 export declare const TRAMITE_SERVICIO_PROVIDER: {

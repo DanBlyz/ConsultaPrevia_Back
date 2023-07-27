@@ -24,9 +24,6 @@ export class Reunion {
     actaReunionPdf: string;
 
     @AutoMap()
-    encargado: string;
-
-    @AutoMap()
     estado: string;
 
     @AutoMap()

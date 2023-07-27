@@ -12,6 +12,7 @@ import { TramiteDto } from './tramite.dto';
 import { Tramite } from '../entidades';
 import { PagoCptDto } from './pago-cpt.dto';
 import { ViajeDto } from './viaje.dto';
+import { ResolucionDto } from './resolucion.dto';
 
 export class ActoAdministrativoDto {
   @AutoMap()
@@ -25,6 +26,11 @@ export class ActoAdministrativoDto {
   fk_idTramite: number;
 
   @AutoMap()
+  @IsNumber()
+  @IsPositive()
+  fk_idResolucion: number;
+
+  @AutoMap()
   @IsBoolean()
   viajeRealizado: boolean;
 
@@ -34,16 +40,17 @@ export class ActoAdministrativoDto {
 
   @AutoMap()
   @IsString()
-  encargado: string;
-
-  @AutoMap()
-  @IsString()
   estado: string;
 
   @AutoMap(() => [TramiteDto])
   @Type(() => TramiteDto)
   @IsOptional()
   tramite?: TramiteDto[];
+
+  @AutoMap(() => [ResolucionDto])
+  @Type(() => ResolucionDto)
+  @IsOptional()
+  resolucion?: ResolucionDto[];
 
   @AutoMap(() => [PagoCptDto])
   @Type(() => PagoCptDto)
@@ -61,7 +68,14 @@ export class ActoAdministrativoCreacionDto {
     @AutoMap()
     @IsNumber()
     @IsPositive()
-    fk_idTramite: number;
+    @IsOptional()
+    fk_idTramite?: number;
+
+    @AutoMap()
+    @IsNumber()
+    @IsPositive()
+    @IsOptional()
+    fk_idResolucion?: number;
   
     @AutoMap()
     @IsBoolean()
@@ -70,10 +84,7 @@ export class ActoAdministrativoCreacionDto {
     @AutoMap()
     @IsString()
     flujo: string;
-  
-    @AutoMap()
-    @IsString()
-    encargado: string;
+
 }
 
 export class ActoAdministrativoModificacionDto {
@@ -84,6 +95,12 @@ export class ActoAdministrativoModificacionDto {
     fk_idTramite?: number;
   
     @AutoMap()
+    @IsNumber()
+    @IsPositive()
+    @IsOptional()
+    fk_idResolucion?: number;
+
+    @AutoMap()
     @IsBoolean()
     @IsOptional()
     viajeRealizado?: boolean;
@@ -92,11 +109,6 @@ export class ActoAdministrativoModificacionDto {
     @IsString()
     @IsOptional()
     flujo?: string;
-  
-    @AutoMap()
-    @IsString()
-    @IsOptional()
-    encargado?: string;
 
     @AutoMap()
     @IsString()

@@ -12,6 +12,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.SujetoIdentificadoModificacionDto = exports.SujetoIdentificadoCreacionDto = exports.SujetoIdentificadoDto = void 0;
 const classes_1 = require("@automapper/classes");
 const class_validator_1 = require("class-validator");
+const informe_dto_1 = require("./informe.dto");
+const class_transformer_1 = require("class-transformer");
 class SujetoIdentificadoDto {
 }
 __decorate([
@@ -32,9 +34,20 @@ __decorate([
 ], SujetoIdentificadoDto.prototype, "comunidad", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], SujetoIdentificadoDto.prototype, "autoridad", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsNumber)(),
     __metadata("design:type", Number)
-], SujetoIdentificadoDto.prototype, "representante", void 0);
+], SujetoIdentificadoDto.prototype, "telefono", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(() => [informe_dto_1.InformeDto]),
+    (0, class_transformer_1.Type)(() => informe_dto_1.InformeDto),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Array)
+], SujetoIdentificadoDto.prototype, "informe", void 0);
 exports.SujetoIdentificadoDto = SujetoIdentificadoDto;
 class SujetoIdentificadoCreacionDto {
 }
@@ -52,7 +65,12 @@ __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
-], SujetoIdentificadoCreacionDto.prototype, "representante", void 0);
+], SujetoIdentificadoCreacionDto.prototype, "autoridad", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsNumber)(),
+    __metadata("design:type", Number)
+], SujetoIdentificadoCreacionDto.prototype, "telefono", void 0);
 exports.SujetoIdentificadoCreacionDto = SujetoIdentificadoCreacionDto;
 class SujetoIdentificadoModificacionDto {
 }
@@ -67,6 +85,11 @@ __decorate([
     (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
-], SujetoIdentificadoModificacionDto.prototype, "representante", void 0);
+], SujetoIdentificadoModificacionDto.prototype, "autoridad", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsNumber)(),
+    __metadata("design:type", Number)
+], SujetoIdentificadoModificacionDto.prototype, "telefono", void 0);
 exports.SujetoIdentificadoModificacionDto = SujetoIdentificadoModificacionDto;
 //# sourceMappingURL=sujeto-identificado.dto.js.map
