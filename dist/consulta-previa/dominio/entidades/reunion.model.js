@@ -29,7 +29,11 @@ __decorate([
 __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", Boolean)
-], Reunion.prototype, "acuerdo", void 0);
+], Reunion.prototype, "conAcuerdo", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", Boolean)
+], Reunion.prototype, "sinAcuerdo", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", String)

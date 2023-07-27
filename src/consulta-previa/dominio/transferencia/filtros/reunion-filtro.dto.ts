@@ -22,7 +22,12 @@ export class ReunionFiltroDto extends FiltroBaseDto {
   @AutoMap()
   @IsBoolean()
   @IsOptional()
-  acuerdo?: boolean;
+  conAcuerdo?: boolean;
+
+  @AutoMap()
+  @IsBoolean()
+  @IsOptional()
+  sinAcuerdo?: boolean;
 
   @AutoMap()
   @IsString()

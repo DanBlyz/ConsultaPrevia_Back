@@ -37,7 +37,12 @@ __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsBoolean)(),
     __metadata("design:type", Boolean)
-], ReunionDto.prototype, "acuerdo", void 0);
+], ReunionDto.prototype, "conAcuerdo", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsBoolean)(),
+    __metadata("design:type", Boolean)
+], ReunionDto.prototype, "sinAcuerdo", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsString)(),
@@ -88,7 +93,13 @@ __decorate([
     (0, class_validator_1.IsBoolean)(),
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", Boolean)
-], ReunionCreacionDto.prototype, "acuerdo", void 0);
+], ReunionCreacionDto.prototype, "conAcuerdo", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsBoolean)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Boolean)
+], ReunionCreacionDto.prototype, "sinAcuerdo", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsString)(),
@@ -139,7 +150,13 @@ __decorate([
     (0, class_validator_1.IsBoolean)(),
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", Boolean)
-], ReunionModificacionDto.prototype, "acuerdo", void 0);
+], ReunionModificacionDto.prototype, "conAcuerdo", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsBoolean)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Boolean)
+], ReunionModificacionDto.prototype, "sinAcuerdo", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsString)(),

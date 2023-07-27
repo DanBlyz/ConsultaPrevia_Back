@@ -12,7 +12,10 @@ export class Reunion {
     nroReunion: string;
     
     @AutoMap()
-    acuerdo: boolean;
+    conAcuerdo: boolean;
+
+    @AutoMap()
+    sinAcuerdo: boolean;
   
     @AutoMap()
     motivo: string;

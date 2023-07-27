@@ -3,7 +3,8 @@ export declare class ReunionFiltroDto extends FiltroBaseDto {
     id?: number;
     fk_idNotificacion?: number;
     nroReunion?: string;
-    acuerdo?: boolean;
+    conAcuerdo?: boolean;
+    sinAcuerdo?: boolean;
     motivo?: string;
     reunionRealizada?: boolean;
     actaReunionPdf?: string;

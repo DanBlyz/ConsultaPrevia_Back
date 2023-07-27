@@ -137,7 +137,8 @@ export class NotificacionService implements INotificacionServicio {
             const reunion = new Reunion();
             reunion.fk_idNotificacion = NotificacionId;
             reunion.nroReunion = objeto.nroReunion;
-            reunion.acuerdo = false;
+            reunion.conAcuerdo = false;
+            reunion.sinAcuerdo = false;
             reunion.motivo = null;
             reunion.reunionRealizada = false;
             reunion.actaReunionPdf = null;

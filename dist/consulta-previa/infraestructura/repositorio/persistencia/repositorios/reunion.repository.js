@@ -56,6 +56,12 @@ let ReunionRepository = ReunionRepository_1 = class ReunionRepository {
             });
             criterioUtilizado = true;
         }
+        if (filtro.conAcuerdo && filtro.conAcuerdo !== null) {
+            consulta = consulta.andWhere('reunion.conAcuerdo = :conAcuerdo', {
+                conAcuerdo: filtro.conAcuerdo,
+            });
+            criterioUtilizado = true;
+        }
         if (obligatorio) {
             return criterioUtilizado ? consulta : null;
         }

@@ -28,9 +28,13 @@ import { NotificacionEntity } from './notificacion.entity';
     nroReunion: string;
   
     @AutoMap()
-    @Column({ name: 'acuerdo' ,default:false})
-    acuerdo: boolean;
+    @Column({ name: 'conacuerdo' ,default:false})
+    conAcuerdo: boolean;
   
+    @AutoMap()
+    @Column({ name: 'sinacuerdo' ,default:false})
+    sinAcuerdo: boolean;
+
     @AutoMap()
     @Column({ name: 'motivo' })
     motivo: string;

@@ -33,9 +33,14 @@ __decorate([
 ], ReunionEntity.prototype, "nroReunion", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
-    (0, typeorm_1.Column)({ name: 'acuerdo', default: false }),
+    (0, typeorm_1.Column)({ name: 'conacuerdo', default: false }),
     __metadata("design:type", Boolean)
-], ReunionEntity.prototype, "acuerdo", void 0);
+], ReunionEntity.prototype, "conAcuerdo", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, typeorm_1.Column)({ name: 'sinacuerdo', default: false }),
+    __metadata("design:type", Boolean)
+], ReunionEntity.prototype, "sinAcuerdo", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, typeorm_1.Column)({ name: 'motivo' }),

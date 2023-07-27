@@ -44,7 +44,8 @@ export class ReunionService implements IReunionServicio {
         const filtro = new ReunionFiltro();
         filtro.fk_idNotificacion = objetoDto.fk_idNotificacion;
         filtro.nroReunion = objetoDto.nroReunion;
-        filtro.acuerdo = objetoDto.acuerdo;
+        filtro.conAcuerdo = objetoDto.conAcuerdo;
+        filtro.sinAcuerdo = objetoDto.sinAcuerdo;
         filtro.motivo = objetoDto.motivo;
         filtro.reunionRealizada = objetoDto.reunionRealizada;
         filtro.actaReunionPdf = objetoDto.actaReunionPdf;

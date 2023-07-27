@@ -28,7 +28,11 @@ __decorate([
 __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", Boolean)
-], ReunionFiltro.prototype, "acuerdo", void 0);
+], ReunionFiltro.prototype, "conAcuerdo", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", Boolean)
+], ReunionFiltro.prototype, "sinAcuerdo", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", String)

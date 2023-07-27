@@ -26,7 +26,11 @@ export class ReunionDto {
 
   @AutoMap()
   @IsBoolean()
-  acuerdo: boolean;
+  conAcuerdo: boolean;
+
+  @AutoMap()
+  @IsBoolean()
+  sinAcuerdo: boolean;
 
   @AutoMap()
   @IsString()
@@ -71,7 +75,12 @@ export class ReunionCreacionDto {
     @AutoMap()
     @IsBoolean()
     @IsOptional()
-    acuerdo?: boolean;
+    conAcuerdo?: boolean;
+
+    @AutoMap()
+    @IsBoolean()
+    @IsOptional()
+    sinAcuerdo?: boolean;
   
     @AutoMap()
     @IsString()
@@ -114,7 +123,12 @@ export class ReunionModificacionDto {
     @AutoMap()
     @IsBoolean()
     @IsOptional()
-    acuerdo?: boolean;
+    conAcuerdo?: boolean;
+
+    @AutoMap()
+    @IsBoolean()
+    @IsOptional()
+    sinAcuerdo?: boolean;
 
     @AutoMap()
     @IsString()
