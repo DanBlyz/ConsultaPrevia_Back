@@ -65,12 +65,6 @@ export class ReunionRepository implements IReunionRepositorio {
       });
       criterioUtilizado = true;
     }
-    if (filtro.encargado && filtro.encargado !== '') {
-      consulta = consulta.andWhere('reunion.encargado ILIKE :encargado', {
-        encargado: `%${filtro.encargado}%`,
-      });
-      criterioUtilizado = true;
-    }
    
     if (obligatorio) {
       return criterioUtilizado ? consulta : null;

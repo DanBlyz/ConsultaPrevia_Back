@@ -44,10 +44,6 @@ __decorate([
 __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", String)
-], ReunionFiltro.prototype, "encargado", void 0);
-__decorate([
-    (0, classes_1.AutoMap)(),
-    __metadata("design:type", String)
 ], ReunionFiltro.prototype, "estado", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),

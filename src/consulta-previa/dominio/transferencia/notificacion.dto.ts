@@ -52,7 +52,12 @@ export class NotificacionDto {
   @AutoMap()
   @IsString()
   @IsOptional()
-  comunidad?: string
+  comunidad?: string;
+
+  @AutoMap()
+  @IsString()
+  @IsOptional()
+  nroReunion?: string;
 
   @AutoMap(() => [ReunionDto])
   @Type(() => ReunionDto)
@@ -100,6 +105,11 @@ export class NotificacionCreacionDto {
   @IsString()
   @IsOptional()
   comunidad?: string;
+
+  @AutoMap()
+  @IsString()
+  @IsOptional()
+  nroReunion?: string;
 }
 
 export class NotificacionModificacionDto {
@@ -143,6 +153,11 @@ export class NotificacionModificacionDto {
     @IsString()
     @IsOptional()
     comunidad?: string;
+
+    @AutoMap()
+    @IsString()
+    @IsOptional()
+    nroReunion?: string;
 
     
 }

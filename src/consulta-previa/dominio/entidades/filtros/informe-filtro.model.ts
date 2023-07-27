@@ -21,9 +21,6 @@ export class InformeFiltro {
   asunto?: string;
 
   @AutoMap()
-  encargado?: string;
-
-  @AutoMap()
   flujo?: string;
   
 }

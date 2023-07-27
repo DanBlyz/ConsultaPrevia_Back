@@ -75,5 +75,11 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], NotificacionFiltroDto.prototype, "comunidad", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], NotificacionFiltroDto.prototype, "nroReunion", void 0);
 exports.NotificacionFiltroDto = NotificacionFiltroDto;
 //# sourceMappingURL=notificacion-filtro.dto.js.map

@@ -68,6 +68,11 @@ __decorate([
     __metadata("design:type", String)
 ], NotificacionEntity.prototype, "comunidad", void 0);
 __decorate([
+    (0, classes_1.AutoMap)(),
+    (0, typeorm_1.Column)({ name: 'nroreunion' }),
+    __metadata("design:type", String)
+], NotificacionEntity.prototype, "nroReunion", void 0);
+__decorate([
     (0, classes_1.AutoMap)(() => [reunion_entity_1.ReunionEntity]),
     (0, typeorm_1.OneToOne)(() => reunion_entity_1.ReunionEntity, (reunion) => reunion.notificacion),
     __metadata("design:type", reunion_entity_1.ReunionEntity)

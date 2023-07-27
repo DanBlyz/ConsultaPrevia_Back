@@ -8,7 +8,6 @@ export declare class InformeEntity extends AuditoriaEntity {
     referencia: string;
     informePdf: string;
     asunto: string;
-    encargado: string;
     flujo: string;
     tramite: TramiteEntity;
     listaSujetoIdentificado: SujetoIdentificadoEntity[];

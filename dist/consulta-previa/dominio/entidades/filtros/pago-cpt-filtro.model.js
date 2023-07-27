@@ -31,10 +31,6 @@ __decorate([
 ], PagoCptFiltro.prototype, "flujo", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
-    __metadata("design:type", String)
-], PagoCptFiltro.prototype, "encargado", void 0);
-__decorate([
-    (0, classes_1.AutoMap)(),
     __metadata("design:type", Number)
 ], PagoCptFiltro.prototype, "diasViaje", void 0);
 __decorate([

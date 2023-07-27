@@ -32,4 +32,7 @@ export class NotificacionFiltro {
   @AutoMap()
   comunidad?: string;
 
+  @AutoMap()
+  nroReunion?: string;
+
 }

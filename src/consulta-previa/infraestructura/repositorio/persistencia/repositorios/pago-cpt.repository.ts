@@ -53,12 +53,6 @@ export class PagoCptRepository implements IPagoCptRepositorio {
       });
       criterioUtilizado = true;
     }
-    if (filtro.encargado && filtro.encargado !== '') {
-      consulta = consulta.andWhere('pagoCpt.encargado ILIKE :encargado', {
-        encargado: `%${filtro.encargado}%`,
-      });
-      criterioUtilizado = true;
-    }
     if (filtro.diasViaje && filtro.diasViaje !== 0) {
       consulta = consulta.andWhere('pagoCpt.diasViaje = :diasViaje', {
         diasViaje: filtro.diasViaje,

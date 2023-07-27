@@ -55,6 +55,10 @@ __decorate([
     __metadata("design:type", String)
 ], Notificacion.prototype, "comunidad", void 0);
 __decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", String)
+], Notificacion.prototype, "nroReunion", void 0);
+__decorate([
     (0, classes_1.AutoMap)(() => [reunion_model_1.Reunion]),
     __metadata("design:type", reunion_model_1.Reunion)
 ], Notificacion.prototype, "reunion", void 0);

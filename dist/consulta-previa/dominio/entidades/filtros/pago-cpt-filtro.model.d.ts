@@ -3,7 +3,6 @@ export declare class PagoCptFiltro {
     fk_idActos?: number;
     pagoRealizado?: boolean;
     flujo?: string;
-    encargado?: string;
     diasViaje?: number;
     tipoViaje?: string;
     montoTotal?: number;

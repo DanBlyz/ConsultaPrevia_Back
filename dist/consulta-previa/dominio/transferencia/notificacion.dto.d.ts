@@ -10,6 +10,7 @@ export declare class NotificacionDto {
     representanteComunidad: boolean;
     sifde: boolean;
     comunidad?: string;
+    nroReunion?: string;
     reunion?: ReunionDto[];
 }
 export declare class NotificacionCreacionDto {
@@ -22,6 +23,7 @@ export declare class NotificacionCreacionDto {
     representanteComunidad: boolean;
     sifde: boolean;
     comunidad?: string;
+    nroReunion?: string;
 }
 export declare class NotificacionModificacionDto {
     notificado?: string;
@@ -32,4 +34,5 @@ export declare class NotificacionModificacionDto {
     representanteComunidad?: boolean;
     sifde?: boolean;
     comunidad?: string;
+    nroReunion?: string;
 }

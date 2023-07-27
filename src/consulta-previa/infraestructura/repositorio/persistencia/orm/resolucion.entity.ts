@@ -10,7 +10,8 @@ import {
   import { AutoMap } from '@automapper/classes';
   
   import { AuditoriaEntity } from './base/auditoria.entity';
-import { TramiteEntity } from './tramite.entity';
+  import { TramiteEntity } from './tramite.entity';
+  import { ActoAdministrativoEntity } from './actos-administrativos.entity';
  
   
   @Entity('resolucion', { schema: 'consulta-previa' })
@@ -54,6 +55,13 @@ import { TramiteEntity } from './tramite.entity';
     @ManyToOne(() => TramiteEntity, (tramite) => tramite.listaResolucion)
     @JoinColumn({ name: 'fk_idtramite' })
     tramite: TramiteEntity;
+
+    @AutoMap(() => [ActoAdministrativoEntity])
+    @OneToMany(() => ActoAdministrativoEntity, (actoAdministrativo) => actoAdministrativo.resolucion)
+    @JoinColumn({ name: 'idresolucion' })
+    listaActoAdministrativo: ActoAdministrativoEntity[];
+
+    
   
   
   /*

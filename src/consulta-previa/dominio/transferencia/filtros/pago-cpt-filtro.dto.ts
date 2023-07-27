@@ -25,11 +25,6 @@ export class PagoCptFiltroDto extends FiltroBaseDto {
   flujo?: string;
 
   @AutoMap()
-  @IsString()
-  @IsOptional()
-  encargado?: string;
-
-  @AutoMap()
   @IsNumber()
   @IsOptional()
   diasViaje?: number;

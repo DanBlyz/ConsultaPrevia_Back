@@ -44,8 +44,6 @@ export class ActoAdministrativoService implements IActoAdministrativoServicio {
         const filtro = new ActoAdministrativoFiltro();
         filtro.fk_idTramite = objetoDto.fk_idTramite;
         filtro.viajeRealizado = objetoDto.viajeRealizado;
-        filtro.flujo = objetoDto.flujo;
-        filtro.encargado = objetoDto.encargado;
         const ActoAdministrativoBD =
           await this.repositorioFactory.actoAdministrativoRepositorio.obtenerObjetoPor(
             filtro,

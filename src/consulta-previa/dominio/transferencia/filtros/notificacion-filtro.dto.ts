@@ -53,4 +53,9 @@ export class NotificacionFiltroDto extends FiltroBaseDto {
   @IsString()
   @IsOptional()
   comunidad?: string;
+
+  @AutoMap()
+  @IsString()
+  @IsOptional()
+  nroReunion?: string;
 }

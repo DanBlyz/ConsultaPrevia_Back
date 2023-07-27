@@ -10,4 +10,5 @@ export declare class NotificacionFiltroDto extends FiltroBaseDto {
     representanteComunidad?: boolean;
     sifde?: boolean;
     comunidad?: string;
+    nroReunion?: string;
 }

@@ -32,6 +32,9 @@ export class Notificacion {
     @AutoMap()
     comunidad?: string;
 
+    @AutoMap()
+    nroReunion?: string;
+
     @AutoMap(() => [Reunion])
     reunion?: Reunion;
 

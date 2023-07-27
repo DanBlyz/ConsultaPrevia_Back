@@ -6,7 +6,6 @@ export declare class Informe {
     referencia: string;
     informePdf: string;
     asunto: string;
-    encargado: string;
     flujo: string;
     listaSujetoIdentificado?: SujetoIdentificado[];
 }

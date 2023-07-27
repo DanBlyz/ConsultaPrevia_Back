@@ -70,6 +70,12 @@ __decorate([
     __metadata("design:type", String)
 ], NotificacionDto.prototype, "comunidad", void 0);
 __decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], NotificacionDto.prototype, "nroReunion", void 0);
+__decorate([
     (0, classes_1.AutoMap)(() => [reunion_dto_1.ReunionDto]),
     (0, class_transformer_1.Type)(() => reunion_dto_1.ReunionDto),
     (0, class_validator_1.IsOptional)(),
@@ -125,6 +131,12 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], NotificacionCreacionDto.prototype, "comunidad", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], NotificacionCreacionDto.prototype, "nroReunion", void 0);
 exports.NotificacionCreacionDto = NotificacionCreacionDto;
 class NotificacionModificacionDto {
 }
@@ -176,5 +188,11 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], NotificacionModificacionDto.prototype, "comunidad", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], NotificacionModificacionDto.prototype, "nroReunion", void 0);
 exports.NotificacionModificacionDto = NotificacionModificacionDto;
 //# sourceMappingURL=notificacion.dto.js.map

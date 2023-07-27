@@ -166,33 +166,6 @@ export class ResolucionService implements IResolucionServicio {
         objeto,
         transaccion,
       );
-      
-        if(objeto.flujo === 'Deliberacion'){
-          const actoAdministrativo = new ActoAdministrativo();
-          actoAdministrativo.fk_idTramite = objeto.fk_idTramite;
-          actoAdministrativo.viajeRealizado = false;
-          actoAdministrativo.flujo = 'Deliberacion';
-          actoAdministrativo.encargado = null;
-          await this.repositorioFactory.actoAdministrativoRepositorio.guardar(
-            actoAdministrativo,
-            transaccion,
-          );
-        }
-        else{
-          if(objeto.flujo === 'Mediacion'){
-            const actoAdministrativo = new ActoAdministrativo();
-            actoAdministrativo.fk_idTramite = objeto.fk_idTramite;
-            actoAdministrativo.viajeRealizado = false;
-            actoAdministrativo.flujo = 'Mediacion';
-            actoAdministrativo.encargado = null;
-            await this.repositorioFactory.actoAdministrativoRepositorio.guardar(
-              actoAdministrativo,
-              transaccion,
-            );
-          }
-        }
-     
-      
       await this.repositorioFactory.confirmar(transaccion);
       return new RespuestaObjetoDto(
         TipoRespuesta.Exito,

@@ -53,5 +53,9 @@ __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", String)
 ], NotificacionFiltro.prototype, "comunidad", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", String)
+], NotificacionFiltro.prototype, "nroReunion", void 0);
 exports.NotificacionFiltro = NotificacionFiltro;
 //# sourceMappingURL=notificacion-filtro.model.js.map

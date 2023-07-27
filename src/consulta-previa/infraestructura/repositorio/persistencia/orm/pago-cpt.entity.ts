@@ -33,10 +33,6 @@ import { ViajeEntity } from './viaje.entity';
     flujo: string;
   
     @AutoMap()
-    @Column({ name: 'encargado' })
-    encargado: string;
-  
-    @AutoMap()
     @Column({ name: 'diasviaje' })
     diasViaje: number;
   

@@ -53,11 +53,6 @@ __decorate([
 ], ReunionEntity.prototype, "actaReunionPdf", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
-    (0, typeorm_1.Column)({ name: 'encargado' }),
-    __metadata("design:type", String)
-], ReunionEntity.prototype, "encargado", void 0);
-__decorate([
-    (0, classes_1.AutoMap)(),
     (0, typeorm_1.Column)({ name: 'estado' }),
     __metadata("design:type", String)
 ], ReunionEntity.prototype, "estado", void 0);

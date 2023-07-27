@@ -37,10 +37,5 @@ export class InformeFiltroDto extends FiltroBaseDto {
   @AutoMap()
   @IsString()
   @IsOptional()
-  encargado?: string;
-
-  @AutoMap()
-  @IsString()
-  @IsOptional()
   flujo?: string;
 }

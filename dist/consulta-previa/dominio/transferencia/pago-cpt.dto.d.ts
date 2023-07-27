@@ -3,7 +3,6 @@ export declare class PagoCptDto {
     fk_idActos: number;
     pagoRealizado: boolean;
     flujo: string;
-    encargado: string;
     diasViaje: number;
     tipoViaje: string;
     montoTotal: number;
@@ -14,7 +13,6 @@ export declare class PagoCptCreacionDto {
     fk_idActos: number;
     pagoRealizado: boolean;
     flujo: string;
-    encargado: string;
     diasViaje: number;
     tipoViaje: string;
     montoTotal: number;
@@ -24,7 +22,6 @@ export declare class PagoCptCreacionDto {
 export declare class PagoCptModificacionDto {
     pagoRealizado?: boolean;
     flujo?: string;
-    encargado?: string;
     diasViaje?: number;
     tipoViaje?: string;
     montoTotal?: number;

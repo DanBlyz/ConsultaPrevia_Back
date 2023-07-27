@@ -72,7 +72,6 @@ let NotificacionService = class NotificacionService {
                 actoAdministrativo.fk_idTramite = objeto.fk_idTramite;
                 actoAdministrativo.viajeRealizado = false;
                 actoAdministrativo.flujo = 'Identificacion';
-                actoAdministrativo.encargado = null;
                 await this.repositorioFactory.actoAdministrativoRepositorio.guardar(actoAdministrativo, transaccion);
             }
             else {
@@ -80,12 +79,11 @@ let NotificacionService = class NotificacionService {
                     if (objeto.flujo === 'Deliberacion' || objeto.flujo === 'Mediacion') {
                         const reunion = new entidades_1.Reunion();
                         reunion.fk_idNotificacion = NotificacionId;
-                        reunion.nroReunion = null;
+                        reunion.nroReunion = objeto.nroReunion;
                         reunion.acuerdo = false;
                         reunion.motivo = null;
                         reunion.reunionRealizada = false;
                         reunion.actaReunionPdf = null;
-                        reunion.encargado = null;
                         if (objeto.flujo === 'Deliberacion') {
                             reunion.flujo = 'Deliberacion';
                         }

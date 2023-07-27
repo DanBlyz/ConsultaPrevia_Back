@@ -38,11 +38,6 @@ __decorate([
 ], PagoCptEntity.prototype, "flujo", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
-    (0, typeorm_1.Column)({ name: 'encargado' }),
-    __metadata("design:type", String)
-], PagoCptEntity.prototype, "encargado", void 0);
-__decorate([
-    (0, classes_1.AutoMap)(),
     (0, typeorm_1.Column)({ name: 'diasviaje' }),
     __metadata("design:type", Number)
 ], PagoCptEntity.prototype, "diasViaje", void 0);

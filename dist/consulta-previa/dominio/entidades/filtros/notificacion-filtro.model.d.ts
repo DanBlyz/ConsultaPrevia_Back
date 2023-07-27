@@ -9,4 +9,5 @@ export declare class NotificacionFiltro {
     representanteComunidad?: boolean;
     sifde?: boolean;
     comunidad?: string;
+    nroReunion?: string;
 }

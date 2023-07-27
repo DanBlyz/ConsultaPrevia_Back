@@ -41,10 +41,6 @@ __decorate([
 __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", String)
-], Informe.prototype, "encargado", void 0);
-__decorate([
-    (0, classes_1.AutoMap)(),
-    __metadata("design:type", String)
 ], Informe.prototype, "flujo", void 0);
 __decorate([
     (0, classes_1.AutoMap)(() => [sujeto_identificado_model_1.SujetoIdentificado]),

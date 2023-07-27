@@ -33,8 +33,6 @@ let ActoAdministrativoService = class ActoAdministrativoService {
                 const filtro = new filtros_1.ActoAdministrativoFiltro();
                 filtro.fk_idTramite = objetoDto.fk_idTramite;
                 filtro.viajeRealizado = objetoDto.viajeRealizado;
-                filtro.flujo = objetoDto.flujo;
-                filtro.encargado = objetoDto.encargado;
                 const ActoAdministrativoBD = await this.repositorioFactory.actoAdministrativoRepositorio.obtenerObjetoPor(filtro);
                 if (ActoAdministrativoBD) {
                     errores.push('El número de documento detalle ya existe.');

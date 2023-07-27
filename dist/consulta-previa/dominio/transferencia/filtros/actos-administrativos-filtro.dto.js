@@ -29,6 +29,12 @@ __decorate([
 ], ActoAdministrativoFiltroDto.prototype, "fk_idTramite", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Number)
+], ActoAdministrativoFiltroDto.prototype, "fk_idResolucion", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsBoolean)(),
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", Boolean)
@@ -39,12 +45,6 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], ActoAdministrativoFiltroDto.prototype, "flujo", void 0);
-__decorate([
-    (0, classes_1.AutoMap)(),
-    (0, class_validator_1.IsString)(),
-    (0, class_validator_1.IsOptional)(),
-    __metadata("design:type", String)
-], ActoAdministrativoFiltroDto.prototype, "encargado", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsBoolean)(),

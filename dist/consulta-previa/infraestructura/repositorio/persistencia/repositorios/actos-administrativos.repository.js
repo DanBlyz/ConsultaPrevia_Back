@@ -44,12 +44,6 @@ let ActoAdministrativoRepository = ActoAdministrativoRepository_1 = class ActoAd
             });
             criterioUtilizado = true;
         }
-        if (filtro.encargado && filtro.encargado !== '') {
-            consulta = consulta.andWhere('ActoAdministrativo.encargado ILIKE :encargado', {
-                encargado: `%${filtro.encargado}%`,
-            });
-            criterioUtilizado = true;
-        }
         if (obligatorio) {
             return criterioUtilizado ? consulta : null;
         }
@@ -61,6 +55,7 @@ let ActoAdministrativoRepository = ActoAdministrativoRepository_1 = class ActoAd
         let consulta = this.repositorio
             .createQueryBuilder('ActoAdministrativo')
             .leftJoinAndSelect('ActoAdministrativo.tramite', 'tramite')
+            .leftJoinAndSelect('ActoAdministrativo.resolucion', 'resolucion')
             .leftJoinAndSelect('ActoAdministrativo.pagoCpt', 'pagoCpt')
             .leftJoinAndSelect('ActoAdministrativo.viaje', 'viaje')
             .andWhere('ActoAdministrativo.id = :id', { id });
@@ -77,6 +72,7 @@ let ActoAdministrativoRepository = ActoAdministrativoRepository_1 = class ActoAd
         let consulta = this.repositorio
             .createQueryBuilder('ActoAdministrativo')
             .leftJoinAndSelect('ActoAdministrativo.tramite', 'tramite')
+            .leftJoinAndSelect('ActoAdministrativo.resolucion', 'resolucion')
             .leftJoinAndSelect('ActoAdministrativo.pagoCpt', 'pagoCpt')
             .leftJoinAndSelect('ActoAdministrativo.viaje', 'viaje');
         consulta = this.evaluarCriterios(consulta, filtro, false, true);
@@ -93,6 +89,7 @@ let ActoAdministrativoRepository = ActoAdministrativoRepository_1 = class ActoAd
         let consulta = this.repositorio
             .createQueryBuilder('ActoAdministrativo')
             .leftJoinAndSelect('ActoAdministrativo.tramite', 'tramite')
+            .leftJoinAndSelect('ActoAdministrativo.resolucion', 'resolucion')
             .leftJoinAndSelect('ActoAdministrativo.pagoCpt', 'pagoCpt')
             .leftJoinAndSelect('ActoAdministrativo.viaje', 'viaje');
         consulta = this.evaluarCriterios(consulta, filtro, true, false);

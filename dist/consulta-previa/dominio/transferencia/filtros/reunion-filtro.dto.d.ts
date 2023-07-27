@@ -7,7 +7,6 @@ export declare class ReunionFiltroDto extends FiltroBaseDto {
     motivo?: string;
     reunionRealizada?: boolean;
     actaReunionPdf?: string;
-    encargado?: string;
     estado?: string;
     flujo?: string;
 }

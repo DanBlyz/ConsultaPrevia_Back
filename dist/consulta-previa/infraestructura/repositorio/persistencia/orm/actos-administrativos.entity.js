@@ -16,6 +16,7 @@ const auditoria_entity_1 = require("./base/auditoria.entity");
 const tramite_entity_1 = require("./tramite.entity");
 const pago_cpt_entity_1 = require("./pago-cpt.entity");
 const viaje_entity_1 = require("./viaje.entity");
+const resolucion_entity_1 = require("./resolucion.entity");
 let ActoAdministrativoEntity = class ActoAdministrativoEntity extends auditoria_entity_1.AuditoriaEntity {
 };
 __decorate([
@@ -30,6 +31,11 @@ __decorate([
 ], ActoAdministrativoEntity.prototype, "fk_idTramite", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
+    (0, typeorm_1.Column)({ name: 'fk_idresolucion' }),
+    __metadata("design:type", Number)
+], ActoAdministrativoEntity.prototype, "fk_idResolucion", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
     (0, typeorm_1.Column)({ name: 'viajerealizado', default: false }),
     __metadata("design:type", Boolean)
 ], ActoAdministrativoEntity.prototype, "viajeRealizado", void 0);
@@ -38,11 +44,6 @@ __decorate([
     (0, typeorm_1.Column)({ name: 'flujo' }),
     __metadata("design:type", String)
 ], ActoAdministrativoEntity.prototype, "flujo", void 0);
-__decorate([
-    (0, classes_1.AutoMap)(),
-    (0, typeorm_1.Column)({ name: 'encargado' }),
-    __metadata("design:type", String)
-], ActoAdministrativoEntity.prototype, "encargado", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, typeorm_1.Column)({ name: 'estado' }),
@@ -54,6 +55,12 @@ __decorate([
     (0, typeorm_1.JoinColumn)({ name: 'fk_idtramite' }),
     __metadata("design:type", tramite_entity_1.TramiteEntity)
 ], ActoAdministrativoEntity.prototype, "tramite", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(() => [resolucion_entity_1.ResolucionEntity]),
+    (0, typeorm_1.ManyToOne)(() => resolucion_entity_1.ResolucionEntity, (resolucion) => resolucion.listaActoAdministrativo),
+    (0, typeorm_1.JoinColumn)({ name: 'fk_idresolucion' }),
+    __metadata("design:type", resolucion_entity_1.ResolucionEntity)
+], ActoAdministrativoEntity.prototype, "resolucion", void 0);
 __decorate([
     (0, classes_1.AutoMap)(() => [pago_cpt_entity_1.PagoCptEntity]),
     (0, typeorm_1.OneToOne)(() => pago_cpt_entity_1.PagoCptEntity, (pagoCpt) => pagoCpt.actoAdministrativo),

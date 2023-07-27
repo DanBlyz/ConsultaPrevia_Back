@@ -19,9 +19,6 @@ export class Informe {
   
     @AutoMap()
     asunto: string;
-  
-    @AutoMap()
-    encargado: string;
 
     @AutoMap()
     flujo: string;

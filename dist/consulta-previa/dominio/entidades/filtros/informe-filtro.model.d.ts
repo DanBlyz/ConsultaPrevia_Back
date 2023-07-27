@@ -5,6 +5,5 @@ export declare class InformeFiltro {
     referencia?: string;
     informePdf?: string;
     asunto?: string;
-    encargado?: string;
     flujo?: string;
 }

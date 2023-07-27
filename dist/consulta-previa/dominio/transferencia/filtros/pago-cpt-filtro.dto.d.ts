@@ -4,7 +4,6 @@ export declare class PagoCptFiltroDto extends FiltroBaseDto {
     fk_idActos?: number;
     pagoRealizado?: boolean;
     flujo?: string;
-    encargado?: string;
     diasViaje?: number;
     tipoViaje?: string;
     montoTotal?: number;

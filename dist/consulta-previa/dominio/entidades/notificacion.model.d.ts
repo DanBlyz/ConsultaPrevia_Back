@@ -10,5 +10,6 @@ export declare class Notificacion {
     representanteComunidad: boolean;
     sifde: boolean;
     comunidad?: string;
+    nroReunion?: string;
     reunion?: Reunion;
 }

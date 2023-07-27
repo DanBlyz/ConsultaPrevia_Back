@@ -56,6 +56,10 @@ import { ReunionEntity } from './reunion.entity';
     @Column({ name: 'comunidad' })
     comunidad : string;
 
+    @AutoMap()
+    @Column({ name: 'nroreunion' })
+    nroReunion : string;
+
     @AutoMap(() => [ReunionEntity])
     @OneToOne(() => ReunionEntity, (reunion) => reunion.notificacion)
     reunion: ReunionEntity;

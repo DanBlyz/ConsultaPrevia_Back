@@ -39,10 +39,6 @@ import {
     @AutoMap()
     @Column({ name: 'asunto' })
     asunto: string;
-  
-    @AutoMap()
-    @Column({ name: 'encargado' })
-    encargado: string;
 
     @AutoMap()
     @Column({ name: 'flujo' })

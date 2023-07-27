@@ -38,11 +38,6 @@ __decorate([
 ], PagoCptDto.prototype, "flujo", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
-    (0, class_validator_1.IsString)(),
-    __metadata("design:type", String)
-], PagoCptDto.prototype, "encargado", void 0);
-__decorate([
-    (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsNumber)(),
     __metadata("design:type", Number)
 ], PagoCptDto.prototype, "diasViaje", void 0);
@@ -87,11 +82,6 @@ __decorate([
 ], PagoCptCreacionDto.prototype, "flujo", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
-    (0, class_validator_1.IsString)(),
-    __metadata("design:type", String)
-], PagoCptCreacionDto.prototype, "encargado", void 0);
-__decorate([
-    (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsNumber)(),
     __metadata("design:type", Number)
 ], PagoCptCreacionDto.prototype, "diasViaje", void 0);
@@ -130,12 +120,6 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], PagoCptModificacionDto.prototype, "flujo", void 0);
-__decorate([
-    (0, classes_1.AutoMap)(),
-    (0, class_validator_1.IsString)(),
-    (0, class_validator_1.IsOptional)(),
-    __metadata("design:type", String)
-], PagoCptModificacionDto.prototype, "encargado", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsNumber)(),

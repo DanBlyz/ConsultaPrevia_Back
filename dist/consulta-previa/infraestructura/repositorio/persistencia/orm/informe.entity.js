@@ -49,11 +49,6 @@ __decorate([
 ], InformeEntity.prototype, "asunto", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
-    (0, typeorm_1.Column)({ name: 'encargado' }),
-    __metadata("design:type", String)
-], InformeEntity.prototype, "encargado", void 0);
-__decorate([
-    (0, classes_1.AutoMap)(),
     (0, typeorm_1.Column)({ name: 'flujo' }),
     __metadata("design:type", String)
 ], InformeEntity.prototype, "flujo", void 0);
