@@ -65,6 +65,12 @@ export class NotificacionRepository implements INotificacionRepositorio {
       });
       criterioUtilizado = true;
     }
+    if (filtro.flujo && filtro.flujo !== '') {
+      consulta = consulta.andWhere('notificacion.flujo ILIKE :flujo', {
+        flujo: `%${filtro.flujo}%`,
+      });
+      criterioUtilizado = true;
+    }
    
     if (obligatorio) {
       return criterioUtilizado ? consulta : null;

@@ -49,6 +49,7 @@ export class TramiteService implements ITramiteServicio {
         filtro.departamento = objetoDto.departamento;
         filtro.provincia = objetoDto.provincia;
         filtro.municipio = objetoDto.municipio;
+        filtro.estado = objetoDto.estado;
         const tramiteBD =
           await this.repositorioFactory.tramiteRepositorio.obtenerObjetoPor(
             filtro,

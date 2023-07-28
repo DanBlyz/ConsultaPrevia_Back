@@ -29,4 +29,7 @@ export class TramiteFiltro {
   @AutoMap()
   municipio?: string;
 
+  @AutoMap()
+  estado?: string;
+
 }

@@ -48,6 +48,7 @@ export class InformeService implements IInformeServicio {
         filtro.referencia = objetoDto.referencia;
         filtro.informePdf = objetoDto.informePdf;
         filtro.asunto = objetoDto.asunto;
+        filtro.flujo = objetoDto.flujo;
         const informeBD =
           await this.repositorioFactory.informeRepositorio.obtenerObjetoPor(
             filtro,

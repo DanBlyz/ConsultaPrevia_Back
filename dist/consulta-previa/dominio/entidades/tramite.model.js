@@ -55,6 +55,10 @@ __decorate([
     __metadata("design:type", String)
 ], Tramite.prototype, "municipio", void 0);
 __decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", String)
+], Tramite.prototype, "estado", void 0);
+__decorate([
     (0, classes_1.AutoMap)(() => [resolucion_model_1.Resolucion]),
     __metadata("design:type", Array)
 ], Tramite.prototype, "listaResolucion", void 0);

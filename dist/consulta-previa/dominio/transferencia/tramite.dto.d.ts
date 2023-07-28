@@ -13,6 +13,7 @@ export declare class TramiteDto {
     departamento: string;
     provincia: string;
     municipio: string;
+    estado: string;
     listaResolucion?: ResolucionDto[];
     listaProvidencia?: ProvidenciaDto[];
     listaInforme?: InformeDto[];
@@ -28,6 +29,7 @@ export declare class TramiteCreacionDto {
     departamento: string;
     provincia: string;
     municipio: string;
+    estado: string;
 }
 export declare class TramiteModificacionDto {
     correlativo?: string;
@@ -38,6 +40,7 @@ export declare class TramiteModificacionDto {
     departamento?: string;
     provincia?: string;
     municipio?: string;
+    estado?: string;
     listaResolucion?: ResolucionModificacionDto[];
     listaProvidencia?: ProvidenciaModificacionDto[];
     listaNotificacion?: NotificacionModificacionDto[];

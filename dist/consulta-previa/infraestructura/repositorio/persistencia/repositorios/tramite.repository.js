@@ -80,6 +80,12 @@ let TramiteRepository = TramiteRepository_1 = class TramiteRepository {
             });
             criterioUtilizado = true;
         }
+        if (filtro.estado && filtro.estado !== '') {
+            consulta = consulta.andWhere('tramite.estado ILIKE :estado', {
+                estado: `%${filtro.estado}%`,
+            });
+            criterioUtilizado = true;
+        }
         if (obligatorio) {
             return criterioUtilizado ? consulta : null;
         }

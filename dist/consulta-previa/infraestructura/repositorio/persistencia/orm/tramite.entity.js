@@ -66,6 +66,11 @@ __decorate([
     __metadata("design:type", String)
 ], TramiteEntity.prototype, "municipio", void 0);
 __decorate([
+    (0, classes_1.AutoMap)(),
+    (0, typeorm_1.Column)({ name: 'estado' }),
+    __metadata("design:type", String)
+], TramiteEntity.prototype, "estado", void 0);
+__decorate([
     (0, classes_1.AutoMap)(() => [resolucion_entity_1.ResolucionEntity]),
     (0, typeorm_1.OneToMany)(() => resolucion_entity_1.ResolucionEntity, (resolucion) => resolucion.tramite),
     (0, typeorm_1.JoinColumn)({ name: 'idtramite' }),

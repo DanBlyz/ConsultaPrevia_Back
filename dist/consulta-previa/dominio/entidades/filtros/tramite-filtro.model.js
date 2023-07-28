@@ -49,5 +49,9 @@ __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", String)
 ], TramiteFiltro.prototype, "municipio", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", String)
+], TramiteFiltro.prototype, "estado", void 0);
 exports.TramiteFiltro = TramiteFiltro;
 //# sourceMappingURL=tramite-filtro.model.js.map

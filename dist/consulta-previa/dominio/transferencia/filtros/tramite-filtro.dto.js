@@ -69,5 +69,11 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], TramiteFiltroDto.prototype, "municipio", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], TramiteFiltroDto.prototype, "estado", void 0);
 exports.TramiteFiltroDto = TramiteFiltroDto;
 //# sourceMappingURL=tramite-filtro.dto.js.map

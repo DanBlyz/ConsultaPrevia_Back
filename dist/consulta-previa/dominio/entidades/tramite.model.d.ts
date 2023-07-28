@@ -13,6 +13,7 @@ export declare class Tramite {
     departamento: string;
     provincia: string;
     municipio: string;
+    estado: string;
     listaResolucion?: Resolucion[];
     listaProvidencia?: Providencia[];
     listaInforme?: Informe[];

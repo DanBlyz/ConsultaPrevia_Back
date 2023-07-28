@@ -14,6 +14,7 @@ export declare class TramiteEntity extends AuditoriaEntity {
     departamento: string;
     provincia: string;
     municipio: string;
+    estado: string;
     listaResolucion: ResolucionEntity[];
     listaProvidencia: ProvidenciaEntity[];
     listaInforme: InformeEntity[];

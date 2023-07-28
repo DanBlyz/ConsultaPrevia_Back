@@ -10,11 +10,11 @@ import {
   import { AutoMap } from '@automapper/classes';
   
   import { AuditoriaEntity } from './base/auditoria.entity';
-import { ResolucionEntity } from './resolucion.entity';
-import { ProvidenciaEntity } from './providencia.entity';
-import { InformeEntity } from './informe.entity';
-import { NotificacionEntity } from './notificacion.entity';
-import { ActoAdministrativoEntity } from './actos-administrativos.entity';
+  import { ResolucionEntity } from './resolucion.entity';
+  import { ProvidenciaEntity } from './providencia.entity';
+  import { InformeEntity } from './informe.entity';
+  import { NotificacionEntity } from './notificacion.entity';
+  import { ActoAdministrativoEntity } from './actos-administrativos.entity';
  
   
   @Entity('tramite', { schema: 'consulta-previa' })
@@ -54,6 +54,10 @@ import { ActoAdministrativoEntity } from './actos-administrativos.entity';
     @AutoMap()
     @Column({ name: 'municipio' })
     municipio: string;
+
+    @AutoMap()
+    @Column({ name: 'estado' })
+    estado: string;
 
     @AutoMap(() => [ResolucionEntity])
     @OneToMany(() => ResolucionEntity, (resolucion) => resolucion.tramite)

@@ -48,4 +48,9 @@ export class TramiteFiltroDto extends FiltroBaseDto {
   @IsString()
   @IsOptional()
   municipio?: string;
+  
+  @AutoMap()
+  @IsString()
+  @IsOptional()
+  estado?: string;
 }

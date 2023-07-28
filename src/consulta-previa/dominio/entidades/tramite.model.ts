@@ -33,6 +33,9 @@ export class Tramite {
   @AutoMap()
   municipio: string;
 
+  @AutoMap()
+  estado: string;
+
   @AutoMap(() => [Resolucion])
   listaResolucion?: Resolucion[];
 

@@ -71,6 +71,12 @@ export class InformeRepository implements IInformeRepositorio {
       });
       criterioUtilizado = true;
     }
+    if (filtro.flujo && filtro.flujo !== '') {
+      consulta = consulta.andWhere('informe.flujo ILIKE :flujo', {
+        flujo: `%${filtro.flujo}%`,
+      });
+      criterioUtilizado = true;
+    }
    
     if (obligatorio) {
       return criterioUtilizado ? consulta : null;

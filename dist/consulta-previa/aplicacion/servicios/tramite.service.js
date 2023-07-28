@@ -38,6 +38,7 @@ let TramiteService = class TramiteService {
                 filtro.departamento = objetoDto.departamento;
                 filtro.provincia = objetoDto.provincia;
                 filtro.municipio = objetoDto.municipio;
+                filtro.estado = objetoDto.estado;
                 const tramiteBD = await this.repositorioFactory.tramiteRepositorio.obtenerObjetoPor(filtro);
                 if (tramiteBD) {
                     errores.push('El correlativo de tramite ya existe.');

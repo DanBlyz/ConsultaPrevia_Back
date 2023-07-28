@@ -8,4 +8,5 @@ export declare class TramiteFiltro {
     departamento?: string;
     provincia?: string;
     municipio?: string;
+    estado?: string;
 }
