@@ -3,7 +3,6 @@ import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AutomapperModule } from '@automapper/nestjs';
 import { classes } from '@automapper/classes';
-
 import { ControlAccesosModule } from './control-accesos';
 import { PersonalModule } from './personal';
 import { ConsultaPreviaModule } from './consulta-previa';
