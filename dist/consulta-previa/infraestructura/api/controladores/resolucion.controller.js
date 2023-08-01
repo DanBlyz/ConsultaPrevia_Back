@@ -55,6 +55,7 @@ let ResolucionController = class ResolucionController {
     }
     async downloadFile(filename, res) {
         const path = (0, path_1.join)('..', 'ConsultaPrevia_Back/consulta-previa/resolucion', filename);
+        console.log(path);
         return res.download(path);
     }
 };
