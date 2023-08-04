@@ -61,6 +61,51 @@ __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], PagoCptDto.prototype, "descripcion", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], PagoCptDto.prototype, "estado", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsNumber)(),
+    __metadata("design:type", Number)
+], PagoCptDto.prototype, "transaccion", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsDateString)(),
+    __metadata("design:type", Date)
+], PagoCptDto.prototype, "fechaActual", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], PagoCptDto.prototype, "canal", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsNumber)(),
+    __metadata("design:type", Number)
+], PagoCptDto.prototype, "cpt", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsDateString)(),
+    __metadata("design:type", Date)
+], PagoCptDto.prototype, "fechaVigencia", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsDateString)(),
+    __metadata("design:type", Date)
+], PagoCptDto.prototype, "fechaValidez", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsDateString)(),
+    __metadata("design:type", Date)
+], PagoCptDto.prototype, "inicioVigencia", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], PagoCptDto.prototype, "tipoServicio", void 0);
 exports.PagoCptDto = PagoCptDto;
 class PagoCptCreacionDto {
 }
@@ -105,6 +150,61 @@ __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], PagoCptCreacionDto.prototype, "descripcion", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsIn)(['EN PROCESO', 'PAGADO']),
+    __metadata("design:type", String)
+], PagoCptCreacionDto.prototype, "estado", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Number)
+], PagoCptCreacionDto.prototype, "transaccion", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsDateString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Date)
+], PagoCptCreacionDto.prototype, "fechaActual", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsIn)(['UNINET', 'BANCO']),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], PagoCptCreacionDto.prototype, "canal", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Number)
+], PagoCptCreacionDto.prototype, "cpt", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsDateString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Date)
+], PagoCptCreacionDto.prototype, "fechaVigencia", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsDateString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Date)
+], PagoCptCreacionDto.prototype, "fechaValidez", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsDateString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Date)
+], PagoCptCreacionDto.prototype, "inicioVigencia", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], PagoCptCreacionDto.prototype, "tipoServicio", void 0);
 exports.PagoCptCreacionDto = PagoCptCreacionDto;
 class PagoCptModificacionDto {
 }
@@ -150,5 +250,59 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], PagoCptModificacionDto.prototype, "descripcion", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], PagoCptModificacionDto.prototype, "estado", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Number)
+], PagoCptModificacionDto.prototype, "transaccion", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsDateString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Date)
+], PagoCptModificacionDto.prototype, "fechaActual", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], PagoCptModificacionDto.prototype, "canal", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Number)
+], PagoCptModificacionDto.prototype, "cpt", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsDateString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Date)
+], PagoCptModificacionDto.prototype, "fechaVigencia", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsDateString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Date)
+], PagoCptModificacionDto.prototype, "fechaValidez", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsDateString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Date)
+], PagoCptModificacionDto.prototype, "inicioVigencia", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], PagoCptModificacionDto.prototype, "tipoServicio", void 0);
 exports.PagoCptModificacionDto = PagoCptModificacionDto;
 //# sourceMappingURL=pago-cpt.dto.js.map

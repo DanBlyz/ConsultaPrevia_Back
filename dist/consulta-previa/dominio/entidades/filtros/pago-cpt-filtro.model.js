@@ -49,5 +49,41 @@ __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", String)
 ], PagoCptFiltro.prototype, "descripcion", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", String)
+], PagoCptFiltro.prototype, "estado", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", Number)
+], PagoCptFiltro.prototype, "transaccion", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", Date)
+], PagoCptFiltro.prototype, "fechaActual", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", String)
+], PagoCptFiltro.prototype, "canal", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", Number)
+], PagoCptFiltro.prototype, "cpt", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", Date)
+], PagoCptFiltro.prototype, "fechaVigencia", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", Date)
+], PagoCptFiltro.prototype, "fechaValidez", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", Date)
+], PagoCptFiltro.prototype, "inicioVigencia", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", String)
+], PagoCptFiltro.prototype, "tipoServicio", void 0);
 exports.PagoCptFiltro = PagoCptFiltro;
 //# sourceMappingURL=pago-cpt-filtro.model.js.map

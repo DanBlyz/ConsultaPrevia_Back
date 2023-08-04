@@ -52,6 +52,44 @@ import { ViajeEntity } from './viaje.entity';
     @Column({ name: 'descripcion' })
     descripcion: string;
 
+    @AutoMap()
+    @Column({ name: 'estado' })
+    estado: string;
+
+    @AutoMap()
+    @Column({ name: 'transaccion' })
+    transaccion: number;
+
+    @AutoMap()
+    @Column({ name: 'fechaactual' })
+    fechaActual: Date;
+
+    @AutoMap()
+    @Column({ name: 'canal' })
+    canal: string;
+
+    @AutoMap()
+    @Column({ name: 'cpt' })
+    cpt: number;
+
+    @AutoMap()
+    @Column({ name: 'fechavigencia' })
+    fechaVigencia: Date;
+
+    @AutoMap()
+    @Column({ name: 'fechavalidez' })
+    fechaValidez: Date;
+
+    @AutoMap()
+    @Column({ name: 'iniciovigencia' })
+    inicioVigencia: Date;
+
+    @AutoMap()
+    @Column({ name: 'tiposervicio' })
+    tipoServicio: string;
+
+
+
 
     @OneToOne(() => ActoAdministrativoEntity, (actoAdministrativo) => actoAdministrativo.pagoCpt)
     @JoinColumn({ name: 'fk_idactos' })

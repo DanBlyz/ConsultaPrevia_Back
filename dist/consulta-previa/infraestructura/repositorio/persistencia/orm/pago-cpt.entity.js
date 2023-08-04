@@ -62,6 +62,51 @@ __decorate([
     __metadata("design:type", String)
 ], PagoCptEntity.prototype, "descripcion", void 0);
 __decorate([
+    (0, classes_1.AutoMap)(),
+    (0, typeorm_1.Column)({ name: 'estado' }),
+    __metadata("design:type", String)
+], PagoCptEntity.prototype, "estado", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, typeorm_1.Column)({ name: 'transaccion' }),
+    __metadata("design:type", Number)
+], PagoCptEntity.prototype, "transaccion", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, typeorm_1.Column)({ name: 'fechaactual' }),
+    __metadata("design:type", Date)
+], PagoCptEntity.prototype, "fechaActual", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, typeorm_1.Column)({ name: 'canal' }),
+    __metadata("design:type", String)
+], PagoCptEntity.prototype, "canal", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, typeorm_1.Column)({ name: 'cpt' }),
+    __metadata("design:type", Number)
+], PagoCptEntity.prototype, "cpt", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, typeorm_1.Column)({ name: 'fechavigencia' }),
+    __metadata("design:type", Date)
+], PagoCptEntity.prototype, "fechaVigencia", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, typeorm_1.Column)({ name: 'fechavalidez' }),
+    __metadata("design:type", Date)
+], PagoCptEntity.prototype, "fechaValidez", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, typeorm_1.Column)({ name: 'iniciovigencia' }),
+    __metadata("design:type", Date)
+], PagoCptEntity.prototype, "inicioVigencia", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, typeorm_1.Column)({ name: 'tiposervicio' }),
+    __metadata("design:type", String)
+], PagoCptEntity.prototype, "tipoServicio", void 0);
+__decorate([
     (0, typeorm_1.OneToOne)(() => actos_administrativos_entity_1.ActoAdministrativoEntity, (actoAdministrativo) => actoAdministrativo.pagoCpt),
     (0, typeorm_1.JoinColumn)({ name: 'fk_idactos' }),
     __metadata("design:type", actos_administrativos_entity_1.ActoAdministrativoEntity)

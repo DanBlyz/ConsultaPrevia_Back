@@ -8,6 +8,15 @@ export declare class PagoCptDto {
     montoTotal: number;
     apm: string;
     descripcion: string;
+    estado: string;
+    transaccion: number;
+    fechaActual: Date;
+    canal: string;
+    cpt: number;
+    fechaVigencia: Date;
+    fechaValidez: Date;
+    inicioVigencia: Date;
+    tipoServicio: string;
 }
 export declare class PagoCptCreacionDto {
     fk_idActos: number;
@@ -18,6 +27,15 @@ export declare class PagoCptCreacionDto {
     montoTotal: number;
     apm: string;
     descripcion: string;
+    estado: string;
+    transaccion?: number;
+    fechaActual?: Date;
+    canal?: string;
+    cpt?: number;
+    fechaVigencia?: Date;
+    fechaValidez?: Date;
+    inicioVigencia?: Date;
+    tipoServicio?: string;
 }
 export declare class PagoCptModificacionDto {
     pagoRealizado?: boolean;
@@ -27,4 +45,13 @@ export declare class PagoCptModificacionDto {
     montoTotal?: number;
     apm?: string;
     descripcion?: string;
+    estado?: string;
+    transaccion?: number;
+    fechaActual?: Date;
+    canal?: string;
+    cpt?: number;
+    fechaVigencia?: Date;
+    fechaValidez?: Date;
+    inicioVigencia?: Date;
+    tipoServicio?: string;
 }

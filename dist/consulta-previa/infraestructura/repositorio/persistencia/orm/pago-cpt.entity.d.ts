@@ -10,5 +10,14 @@ export declare class PagoCptEntity extends AuditoriaEntity {
     montoTotal: number;
     apm: string;
     descripcion: string;
+    estado: string;
+    transaccion: number;
+    fechaActual: Date;
+    canal: string;
+    cpt: number;
+    fechaVigencia: Date;
+    fechaValidez: Date;
+    inicioVigencia: Date;
+    tipoServicio: string;
     actoAdministrativo: ActoAdministrativoEntity;
 }

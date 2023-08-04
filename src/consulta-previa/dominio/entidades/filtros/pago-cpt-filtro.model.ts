@@ -29,5 +29,32 @@ export class PagoCptFiltro {
   @AutoMap()
   descripcion?: string;
 
+  @AutoMap()
+  estado?: string;
+
+  @AutoMap()
+  transaccion?: number;
+
+  @AutoMap()
+  fechaActual?: Date;
+
+  @AutoMap()
+  canal?: string;
+
+  @AutoMap()
+  cpt?: number;
+  
+  @AutoMap()
+  fechaVigencia?: Date;
+
+  @AutoMap()
+  fechaValidez?: Date;
+
+  @AutoMap()
+  inicioVigencia?: Date;
+
+  @AutoMap()
+  tipoServicio?: string;
+
 
 }

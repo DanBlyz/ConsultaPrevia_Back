@@ -49,5 +49,41 @@ __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", String)
 ], PagoCpt.prototype, "descripcion", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", String)
+], PagoCpt.prototype, "estado", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", Number)
+], PagoCpt.prototype, "transaccion", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", Date)
+], PagoCpt.prototype, "fechaActual", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", String)
+], PagoCpt.prototype, "canal", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", Number)
+], PagoCpt.prototype, "cpt", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", Date)
+], PagoCpt.prototype, "fechaVigencia", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", Date)
+], PagoCpt.prototype, "fechaValidez", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", Date)
+], PagoCpt.prototype, "inicioVigencia", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", String)
+], PagoCpt.prototype, "tipoServicio", void 0);
 exports.PagoCpt = PagoCpt;
 //# sourceMappingURL=pago-cpt.model.js.map

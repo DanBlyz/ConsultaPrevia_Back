@@ -1,11 +1,13 @@
 import { AutoMap } from '@automapper/classes';
 import {
   IsBoolean,
+  IsDateString,
   IsDecimal,
   IsNumber,
   IsOptional,
   IsPositive,
   IsString,
+  IsIn
 } from 'class-validator';
 
 export class PagoCptDto {
@@ -47,6 +49,41 @@ export class PagoCptDto {
   @IsString()
   descripcion: string;
 
+  @AutoMap()
+  @IsString()
+  estado: string;
+
+  @AutoMap()
+  @IsNumber()
+  transaccion: number;
+
+  @AutoMap()
+  @IsDateString()
+  fechaActual: Date;
+
+  @AutoMap()
+  @IsString()
+  canal: string;
+
+  @AutoMap()
+  @IsNumber()
+  cpt: number;
+
+  @AutoMap()
+  @IsDateString()
+  fechaVigencia: Date;
+
+  @AutoMap()
+  @IsDateString()
+  fechaValidez: Date;
+
+  @AutoMap()
+  @IsDateString()
+  inicioVigencia: Date;
+
+  @AutoMap()
+  @IsString()
+  tipoServicio: string;
 }
 
 export class PagoCptCreacionDto {
@@ -83,6 +120,52 @@ export class PagoCptCreacionDto {
     @AutoMap()
     @IsString()
     descripcion: string;
+
+    @AutoMap()
+    @IsString()
+    @IsIn(['EN PROCESO', 'PAGADO'])
+    estado: string;
+  
+    @AutoMap()
+    @IsNumber()
+    @IsOptional()
+    transaccion?: number;
+  
+    @AutoMap()
+    @IsDateString()
+    @IsOptional()
+    fechaActual?: Date;
+  
+    @AutoMap()
+    @IsString()
+    @IsIn(['UNINET', 'BANCO'])
+    @IsOptional()
+    canal?: string;
+  
+    @AutoMap()
+    @IsNumber()
+    @IsOptional()
+    cpt?: number;
+  
+    @AutoMap()
+    @IsDateString()
+    @IsOptional()
+    fechaVigencia?: Date;
+  
+    @AutoMap()
+    @IsDateString()
+    @IsOptional()
+    fechaValidez?: Date;
+  
+    @AutoMap()
+    @IsDateString()
+    @IsOptional()
+    inicioVigencia?: Date;
+  
+    @AutoMap()
+    @IsString()
+    @IsOptional()
+    tipoServicio?: string;
 }
 
 export class PagoCptModificacionDto {
@@ -121,4 +204,49 @@ export class PagoCptModificacionDto {
     @IsString()
     @IsOptional()
     descripcion?: string;
+
+    @AutoMap()
+    @IsString()
+    @IsOptional()
+    estado?: string;
+  
+    @AutoMap()
+    @IsNumber()
+    @IsOptional()
+    transaccion?: number;
+  
+    @AutoMap()
+    @IsDateString()
+    @IsOptional()
+    fechaActual?: Date;
+  
+    @AutoMap()
+    @IsString()
+    @IsOptional()
+    canal?: string;
+  
+    @AutoMap()
+    @IsNumber()
+    @IsOptional()
+    cpt?: number;
+  
+    @AutoMap()
+    @IsDateString()
+    @IsOptional()
+    fechaVigencia?: Date;
+  
+    @AutoMap()
+    @IsDateString()
+    @IsOptional()
+    fechaValidez?: Date;
+  
+    @AutoMap()
+    @IsDateString()
+    @IsOptional()
+    inicioVigencia?: Date;
+  
+    @AutoMap()
+    @IsString()
+    @IsOptional()
+    tipoServicio?: string;
 }

@@ -32,4 +32,6 @@ export class ReunionFiltro {
   @AutoMap()
   flujo?: string;
 
+  
+
 }
