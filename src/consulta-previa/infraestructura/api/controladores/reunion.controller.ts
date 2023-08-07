@@ -106,7 +106,7 @@ import {
       storage: diskStorage({
         destination: './consulta-previa/reunion', // Directorio donde se guardarán los archivos
         filename: (req, file, cb) => {
-          cb(null, ("reunion-"+file.originalname));
+          cb(null, (file.originalname));
         },
       }),
     }))
