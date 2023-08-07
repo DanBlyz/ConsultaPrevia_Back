@@ -20,23 +20,23 @@ import { TramiteEntity } from './tramite.entity';
     id: number;
 
     @AutoMap()
-    @Column({ name: 'fk_idtramite' })
+    @Column({ name: 'fk_idtramite',default:null })
     fk_idTramite: number;
   
     @AutoMap()
-    @Column({ name: 'correlativo' })
+    @Column({ name: 'correlativo',default:null })
     correlativo: string;
   
     @AutoMap()
-    @Column({ name: 'referencia' })
+    @Column({ name: 'referencia' ,default:null})
     referencia: string;
   
     @AutoMap()
-    @Column({ name: 'providenciapdf' })
+    @Column({ name: 'providenciapdf' ,default:null})
     providenciaPdf: string;
 
     @AutoMap()
-    @Column({ name: 'flujo' })
+    @Column({ name: 'flujo',default:null })
     flujo: string;
 
     @ManyToOne(() => TramiteEntity, (tramite) => tramite.listaProvidencia)

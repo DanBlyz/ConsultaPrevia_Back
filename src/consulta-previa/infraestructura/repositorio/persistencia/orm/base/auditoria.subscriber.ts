@@ -20,9 +20,9 @@ export class AuditoriaSubscriber
     connection.subscribers.push(this);
   }
 
-  listenTo() {
+  /*listenTo() {
     return AuditoriaEntity;
-  }
+  }*/
 
   beforeInsert(event: InsertEvent<AuditoriaEntity>): void {
     const { entity } = event;

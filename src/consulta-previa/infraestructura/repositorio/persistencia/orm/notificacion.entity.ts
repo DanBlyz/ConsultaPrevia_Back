@@ -21,43 +21,43 @@ import { ReunionEntity } from './reunion.entity';
     id: number;
 
     @AutoMap()
-    @Column({ name: 'fk_idtramite' })
+    @Column({ name: 'fk_idtramite',default:null })
     fk_idTramite: number;
   
     @AutoMap()
-    @Column({ name: 'notificado' })
+    @Column({ name: 'notificado' ,default:null})
     notificado: string;
   
     @AutoMap()
-    @Column({ name: 'direcciondpto' })
+    @Column({ name: 'direcciondpto' ,default:null})
     direccionDpto : string;
   
     @AutoMap()
-    @Column({ name: 'notificacionpdf' })
+    @Column({ name: 'notificacionpdf' ,default:null})
     notificacionPdf : string;
 
     @AutoMap()
-    @Column({ name: 'flujo' })
+    @Column({ name: 'flujo',default:null })
     flujo : string;
 
     @AutoMap()
-    @Column({ name: 'representanteminero' })
+    @Column({ name: 'representanteminero',default:null })
     representanteMinero : boolean;
 
     @AutoMap()
-    @Column({ name: 'representantecomunidad' })
+    @Column({ name: 'representantecomunidad' ,default:null})
     representanteComunidad : boolean;
 
     @AutoMap()
-    @Column({ name: 'sifde' })
+    @Column({ name: 'sifde' ,default:null})
     sifde : boolean;
 
     @AutoMap()
-    @Column({ name: 'comunidad' })
+    @Column({ name: 'comunidad',default:null })
     comunidad : string;
 
     @AutoMap()
-    @Column({ name: 'nroreunion' })
+    @Column({ name: 'nroreunion',default:null })
     nroReunion : string;
 
     @AutoMap(() => [ReunionEntity])

@@ -20,11 +20,11 @@ import { NotificacionEntity } from './notificacion.entity';
     id: number;
 
     @AutoMap()
-    @Column({ name: 'fk_idnotificacion' })
+    @Column({ name: 'fk_idnotificacion' ,default:null})
     fk_idNotificacion: number;
  
     @AutoMap()
-    @Column({ name: 'nroreunion' })
+    @Column({ name: 'nroreunion' ,default:null})
     nroReunion: string;
   
     @AutoMap()
@@ -36,7 +36,7 @@ import { NotificacionEntity } from './notificacion.entity';
     sinAcuerdo: boolean;
 
     @AutoMap()
-    @Column({ name: 'motivo' })
+    @Column({ name: 'motivo' ,default:null})
     motivo: string;
   
     @AutoMap()
@@ -44,15 +44,15 @@ import { NotificacionEntity } from './notificacion.entity';
     reunionRealizada: boolean;
   
     @AutoMap()
-    @Column({ name: 'actareunionpdf' })
+    @Column({ name: 'actareunionpdf',default:null })
     actaReunionPdf: string;
 
     @AutoMap()
-    @Column({ name: 'estado' })
+    @Column({ name: 'estado' ,default:null})
     estado: string;
 
     @AutoMap()
-    @Column({ name: 'flujo' })
+    @Column({ name: 'flujo' ,default:null})
     flujo: string;
 
     @AutoMap(() => [NotificacionEntity])

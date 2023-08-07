@@ -24,39 +24,39 @@ import {
     id: number;
   
     @AutoMap()
-    @Column({ name: 'correlativo' })
+    @Column({ name: 'correlativo',default:null })
     correlativo: string;
   
     @AutoMap()
-    @Column({ name: 'codigounico' })
+    @Column({ name: 'codigounico' ,default:0})
     codigoUnico: number;
   
     @AutoMap()
-    @Column({ name: 'areaminera' })
+    @Column({ name: 'areaminera',default:null })
     areaMinera: string;
   
     @AutoMap()
-    @Column({ name: 'clasificacion' })
+    @Column({ name: 'clasificacion',default:null })
     clasificacion: string;
 
     @AutoMap()
-    @Column({ name: 'nrocuadricula' })
+    @Column({ name: 'nrocuadricula' ,default:0})
     nroCuadricula: number;
   
     @AutoMap()
-    @Column({ name: 'departamento' })
+    @Column({ name: 'departamento',default:null })
     departamento: string;
   
     @AutoMap()
-    @Column({ name: 'provincia' })
+    @Column({ name: 'provincia' ,default:null})
     provincia: string;
 
     @AutoMap()
-    @Column({ name: 'municipio' })
+    @Column({ name: 'municipio' ,default:null})
     municipio: string;
 
     @AutoMap()
-    @Column({ name: 'estado' })
+    @Column({ name: 'estado',default:null })
     estado: string;
 
     @AutoMap(() => [ResolucionEntity])

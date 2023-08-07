@@ -20,19 +20,19 @@ import { InformeEntity } from './informe.entity';
     id: number;
   
     @AutoMap()
-    @Column({ name: 'fk_idinforme' })
+    @Column({ name: 'fk_idinforme' ,default:null})
     fk_idInforme: number;
   
     @AutoMap()
-    @Column({ name: 'comunidad' })
+    @Column({ name: 'comunidad' ,default:null})
     comunidad: string;
   
     @AutoMap()
-    @Column({ name: 'autoridad' })
+    @Column({ name: 'autoridad' ,default:null})
     autoridad: string;
 
     @AutoMap()
-    @Column({ name: 'telefono' })
+    @Column({ name: 'telefono' ,default:0})
     telefono: number;
 
     @AutoMap(() => [InformeEntity])

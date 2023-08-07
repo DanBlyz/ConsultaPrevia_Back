@@ -1,1 +1,0 @@
-{"version":3,"file":"identidad.js","sourceRoot":"","sources":["../../../src/comun/sesion/identidad.ts"],"names":[],"mappings":";;;AAAA,MAAa,SAAS;IASpB,gBAAuB,CAAC;IACjB,MAAM,CAAC,WAAW;QACvB,IAAI,CAAC,SAAS,CAAC,QAAQ,EAAE;YACvB,SAAS,CAAC,QAAQ,GAAG,IAAI,SAAS,EAAE,CAAC;SACtC;QACD,OAAO,SAAS,CAAC,QAAQ,CAAC;IAC5B,CAAC;CACF;AAhBD,8BAgBC"}

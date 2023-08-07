@@ -23,11 +23,11 @@ export class ActoAdministrativoEntity extends AuditoriaEntity{
   id: number;
 
   @AutoMap()
-  @Column({ name: 'fk_idtramite' })
+  @Column({ name: 'fk_idtramite' ,default:null})
   fk_idTramite: number;
 
   @AutoMap()
-  @Column({ name: 'fk_idresolucion' })
+  @Column({ name: 'fk_idresolucion' ,default:null})
   fk_idResolucion: number;
 
   @AutoMap()
@@ -35,11 +35,11 @@ export class ActoAdministrativoEntity extends AuditoriaEntity{
   viajeRealizado: boolean;
 
   @AutoMap()
-  @Column({ name: 'flujo' })
+  @Column({ name: 'flujo',default:null })
   flujo: string;
 
   @AutoMap()
-  @Column({ name: 'estado' })
+  @Column({ name: 'estado' ,default:null})
   estado: string;
 
   @AutoMap(() => [TramiteEntity])

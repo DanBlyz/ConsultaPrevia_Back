@@ -21,15 +21,15 @@ import {
     id: number;
 
     @AutoMap()
-    @Column({ name: 'fk_idtramite' })
+    @Column({ name: 'fk_idtramite' ,default:null})
     fk_idTramite: number;
   
     @AutoMap()
-    @Column({ name: 'informe' })
+    @Column({ name: 'informe' ,default:null})
     informe: string;
   
     @AutoMap()
-    @Column({ name: 'resolucion' })
+    @Column({ name: 'resolucion' ,default:null})
     resolucion: string;
   
     @AutoMap()
@@ -37,19 +37,19 @@ import {
     informeAprobado: boolean;
   
     @AutoMap()
-    @Column({ name: 'actosadministrativos' })
+    @Column({ name: 'actosadministrativos',default:false })
     actoAdministrativo: boolean;
   
     @AutoMap()
-    @Column({ name: 'resolucionpdf' })
+    @Column({ name: 'resolucionpdf' ,default:null})
     resolucionPdf: string;
 
     @AutoMap()
-    @Column({ name: 'flujo' })
+    @Column({ name: 'flujo',default:null })
     flujo: string;
 
     @AutoMap()
-    @Column({ name: 'referencia' })
+    @Column({ name: 'referencia' ,default: null})
     referencia: string;
 
     @ManyToOne(() => TramiteEntity, (tramite) => tramite.listaResolucion)

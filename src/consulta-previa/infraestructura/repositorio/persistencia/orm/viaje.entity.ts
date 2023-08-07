@@ -21,27 +21,27 @@ import {
     id: number;
 
     @AutoMap()
-    @Column({ name: 'fk_idactos' })
+    @Column({ name: 'fk_idactos' ,default:null})
     fk_idActos: number;
 
     @AutoMap()
-    @Column({ name: 'fechainicio' })
+    @Column({ name: 'fechainicio' ,default:null})
     fechaInicio: Date;
   
     @AutoMap()
-    @Column({ name: 'fechafin' })
+    @Column({ name: 'fechafin' ,default:null})
     fechaFin: Date;
   
     @AutoMap()
-    @Column({ name: 'descripcion' })
+    @Column({ name: 'descripcion',default:null })
     descripcion: string;
   
     @AutoMap()
-    @Column({ name: 'nroformulario' })
+    @Column({ name: 'nroformulario' ,default:null})
     nroFormulario: string;
   
     @AutoMap()
-    @Column({ name: 'formulariopdf' })
+    @Column({ name: 'formulariopdf',default:null })
     formularioPdf: string;
 
     @OneToOne(() => ActoAdministrativoEntity, (actoAdministrativo) => actoAdministrativo.viaje)

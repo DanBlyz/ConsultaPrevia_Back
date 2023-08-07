@@ -29,63 +29,63 @@ import { ViajeEntity } from './viaje.entity';
     pagoRealizado: boolean;
   
     @AutoMap()
-    @Column({ name: 'flujo' })
+    @Column({ name: 'flujo' ,default:null})
     flujo: string;
   
     @AutoMap()
-    @Column({ name: 'diasviaje' })
+    @Column({ name: 'diasviaje',default:null })
     diasViaje: number;
   
     @AutoMap()
-    @Column({ name: 'tipoviaje' })
+    @Column({ name: 'tipoviaje',default:null })
     tipoViaje: string;
 
     @AutoMap()
-    @Column({ name: 'montototal' })
+    @Column({ name: 'montototal',default:0 })
     montoTotal: number;
 
     @AutoMap()
-    @Column({ name: 'apm' })
+    @Column({ name: 'apm' ,default:null})
     apm: string;
 
     @AutoMap()
-    @Column({ name: 'descripcion' })
+    @Column({ name: 'descripcion',default:null })
     descripcion: string;
 
     @AutoMap()
-    @Column({ name: 'estado' })
+    @Column({ name: 'estado' ,default:null})
     estado: string;
 
     @AutoMap()
-    @Column({ name: 'transaccion' })
+    @Column({ name: 'transaccion' ,default:0})
     transaccion: number;
 
     @AutoMap()
-    @Column({ name: 'fechaactual' })
+    @Column({ name: 'fechaactual',default: () => 'NOW()' })
     fechaActual: Date;
 
     @AutoMap()
-    @Column({ name: 'canal' })
+    @Column({ name: 'canal',default:null })
     canal: string;
 
     @AutoMap()
-    @Column({ name: 'cpt' })
+    @Column({ name: 'cpt',default:0 })
     cpt: number;
 
     @AutoMap()
-    @Column({ name: 'fechavigencia' })
+    @Column({ name: 'fechavigencia',default:null })
     fechaVigencia: Date;
 
     @AutoMap()
-    @Column({ name: 'fechavalidez' })
+    @Column({ name: 'fechavalidez',default:null })
     fechaValidez: Date;
 
     @AutoMap()
-    @Column({ name: 'iniciovigencia' })
+    @Column({ name: 'iniciovigencia',default:null })
     inicioVigencia: Date;
 
     @AutoMap()
-    @Column({ name: 'tiposervicio' })
+    @Column({ name: 'tiposervicio',default:null })
     tipoServicio: string;
 
 

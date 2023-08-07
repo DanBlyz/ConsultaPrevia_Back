@@ -21,27 +21,27 @@ import {
     id: number;
 
     @AutoMap()
-    @Column({ name: 'fk_idtramite' })
+    @Column({ name: 'fk_idtramite' ,default:null})
     fk_idTramite: number;
   
     @AutoMap()
-    @Column({ name: 'correlativo' })
+    @Column({ name: 'correlativo',default:null })
     correlativo: string;
   
     @AutoMap()
-    @Column({ name: 'referencia' })
+    @Column({ name: 'referencia' ,default:null})
     referencia: string;
   
     @AutoMap()
-    @Column({ name: 'informepdf' })
+    @Column({ name: 'informepdf' ,default:null})
     informePdf: string;
   
     @AutoMap()
-    @Column({ name: 'asunto' })
+    @Column({ name: 'asunto' ,default:null})
     asunto: string;
 
     @AutoMap()
-    @Column({ name: 'flujo' })
+    @Column({ name: 'flujo' ,default:null})
     flujo: string;
     
     @ManyToOne(() => TramiteEntity, (tramite) => tramite.listaInforme)
