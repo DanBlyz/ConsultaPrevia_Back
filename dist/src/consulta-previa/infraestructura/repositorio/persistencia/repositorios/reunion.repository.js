@@ -22,7 +22,7 @@ const modelos_1 = require("../../../../../comun/modelos");
 const orm_1 = require("../orm");
 const entidades_1 = require("../../../../dominio/entidades");
 const __1 = require("../..");
-let ReunionRepository = exports.ReunionRepository = ReunionRepository_1 = class ReunionRepository {
+let ReunionRepository = ReunionRepository_1 = class ReunionRepository {
     constructor(conexion, mapper) {
         this.conexion = conexion;
         this.mapper = mapper;
@@ -155,12 +155,13 @@ let ReunionRepository = exports.ReunionRepository = ReunionRepository_1 = class 
         }
     }
 };
-exports.ReunionRepository = ReunionRepository = ReunionRepository_1 = __decorate([
+ReunionRepository = ReunionRepository_1 = __decorate([
     (0, common_1.Injectable)(),
     (0, typeorm_2.EntityRepository)(orm_1.ReunionEntity),
     __param(1, (0, nestjs_1.InjectMapper)()),
     __metadata("design:paramtypes", [typeorm_2.Connection, Object])
 ], ReunionRepository);
+exports.ReunionRepository = ReunionRepository;
 exports.REUNION_REPOSITORIO_PROVIDER = {
     provide: (0, typeorm_1.getRepositoryToken)(entidades_1.Reunion),
     useClass: ReunionRepository,

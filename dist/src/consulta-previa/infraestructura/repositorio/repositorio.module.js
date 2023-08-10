@@ -14,9 +14,9 @@ const dominio_1 = require("../../dominio");
 const cliente_1 = require("./cliente");
 const persistencia_1 = require("./persistencia");
 const _1 = require(".");
-let RepositorioModule = exports.RepositorioModule = class RepositorioModule {
+let RepositorioModule = class RepositorioModule {
 };
-exports.RepositorioModule = RepositorioModule = __decorate([
+RepositorioModule = __decorate([
     (0, common_1.Module)({
         imports: [
             axios_1.HttpModule,
@@ -29,4 +29,5 @@ exports.RepositorioModule = RepositorioModule = __decorate([
         providers: [_1.REPOSITORIO_FACTORY_PROVIDER],
     })
 ], RepositorioModule);
+exports.RepositorioModule = RepositorioModule;
 //# sourceMappingURL=repositorio.module.js.map

@@ -47,6 +47,7 @@ __decorate([
     __metadata("design:type", String)
 ], ProvidenciaEntity.prototype, "flujo", void 0);
 __decorate([
+    (0, classes_1.AutoMap)(() => [tramite_entity_1.TramiteEntity]),
     (0, typeorm_1.ManyToOne)(() => tramite_entity_1.TramiteEntity, (tramite) => tramite.listaProvidencia),
     (0, typeorm_1.JoinColumn)({ name: 'fk_idtramite' }),
     __metadata("design:type", tramite_entity_1.TramiteEntity)

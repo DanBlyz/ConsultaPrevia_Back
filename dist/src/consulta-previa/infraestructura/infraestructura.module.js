@@ -14,9 +14,9 @@ const dominio_1 = require("../dominio");
 const api_1 = require("./api");
 const mapeo_1 = require("./mapeo");
 const repositorio_1 = require("./repositorio");
-let InfraestructuraModule = exports.InfraestructuraModule = class InfraestructuraModule {
+let InfraestructuraModule = class InfraestructuraModule {
 };
-exports.InfraestructuraModule = InfraestructuraModule = __decorate([
+InfraestructuraModule = __decorate([
     (0, common_1.Module)({
         imports: [
             axios_1.HttpModule,
@@ -29,4 +29,5 @@ exports.InfraestructuraModule = InfraestructuraModule = __decorate([
         exports: [repositorio_1.RepositorioModule],
     })
 ], InfraestructuraModule);
+exports.InfraestructuraModule = InfraestructuraModule;
 //# sourceMappingURL=infraestructura.module.js.map

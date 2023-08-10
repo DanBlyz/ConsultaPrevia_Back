@@ -22,7 +22,7 @@ const modelos_1 = require("../../../../../comun/modelos");
 const orm_1 = require("../orm");
 const entidades_1 = require("../../../../dominio/entidades");
 const __1 = require("../..");
-let NotificacionRepository = exports.NotificacionRepository = NotificacionRepository_1 = class NotificacionRepository {
+let NotificacionRepository = NotificacionRepository_1 = class NotificacionRepository {
     constructor(conexion, mapper) {
         this.conexion = conexion;
         this.mapper = mapper;
@@ -152,12 +152,13 @@ let NotificacionRepository = exports.NotificacionRepository = NotificacionReposi
         }
     }
 };
-exports.NotificacionRepository = NotificacionRepository = NotificacionRepository_1 = __decorate([
+NotificacionRepository = NotificacionRepository_1 = __decorate([
     (0, common_1.Injectable)(),
     (0, typeorm_2.EntityRepository)(orm_1.NotificacionEntity),
     __param(1, (0, nestjs_1.InjectMapper)()),
     __metadata("design:paramtypes", [typeorm_2.Connection, Object])
 ], NotificacionRepository);
+exports.NotificacionRepository = NotificacionRepository;
 exports.NOTIFICACION_REPOSITORIO_PROVIDER = {
     provide: (0, typeorm_1.getRepositoryToken)(entidades_1.Notificacion),
     useClass: NotificacionRepository,

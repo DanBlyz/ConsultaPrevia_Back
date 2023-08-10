@@ -65,6 +65,20 @@ export class ProvidenciaRepository implements IProvidenciaRepositorio {
       });
       criterioUtilizado = true;
     }
+    /*if (filtro.tramite.correlativo && filtro.tramite.correlativo !== '') {
+      consulta = consulta.andWhere('providencia.tramite.correlativo ILIKE :tramiteCorrelativo', {
+        tramiteCorrelativo: `%${filtro.tramite.correlativo}%`,
+      });
+      criterioUtilizado = true;
+    }*/
+    if (filtro.tramite && filtro.tramite.correlativo !== '') {
+      consulta = consulta.andWhere('tramite.correlativo ILIKE :tramiteCorrelativo', {
+        tramiteCorrelativo: `%${filtro.tramite.correlativo}%`,
+      });
+      criterioUtilizado = true;
+    }
+
+    
    
     if (obligatorio) {
       return criterioUtilizado ? consulta : null;
@@ -76,7 +90,7 @@ export class ProvidenciaRepository implements IProvidenciaRepositorio {
   async obtenerPorId(id: number): Promise<Providencia> {
     let consulta = this.repositorio
       .createQueryBuilder('providencia')
-      //.leftJoinAndSelect('Providencia.hojaRuta', 'hojaRuta')
+      .leftJoinAndSelect('providencia.tramite', 'tramite')
       .andWhere('providencia.id = :id', { id });
     consulta = consulta.orderBy('providencia.id', 'DESC');
     const respuesta = await consulta.getOne();
@@ -95,7 +109,7 @@ export class ProvidenciaRepository implements IProvidenciaRepositorio {
     }
     let consulta = this.repositorio
       .createQueryBuilder('providencia')
-      //.leftJoinAndSelect('documento.hojaRuta', 'hojaRuta')
+      .leftJoinAndSelect('providencia.tramite', 'tramite')
 
     consulta = this.evaluarCriterios(consulta, filtro, false, true);
     if (!consulta) {
@@ -118,7 +132,7 @@ export class ProvidenciaRepository implements IProvidenciaRepositorio {
   ): Promise<ListaPaginada<Providencia>> {
     let consulta = this.repositorio
       .createQueryBuilder('providencia')
-      //.leftJoinAndSelect('Providencia.hojaRuta', 'hojaRuta')
+      .leftJoinAndSelect('providencia.tramite', 'tramite')
 
     consulta = this.evaluarCriterios(consulta, filtro, true, false);
     if (!consulta) {

@@ -1,4 +1,5 @@
 import { AutoMap } from '@automapper/classes';
+import { TramiteFiltro } from './tramite-filtro.model';
 
 export class ProvidenciaFiltro {
 
@@ -19,5 +20,8 @@ export class ProvidenciaFiltro {
 
   @AutoMap()
   flujo?: string;
+
+  @AutoMap()
+  tramite?: TramiteFiltro;
 
 }

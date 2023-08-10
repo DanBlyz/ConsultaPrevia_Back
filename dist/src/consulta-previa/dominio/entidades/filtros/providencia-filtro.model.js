@@ -11,9 +11,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ProvidenciaFiltro = void 0;
 const classes_1 = require("@automapper/classes");
+const tramite_filtro_model_1 = require("./tramite-filtro.model");
 class ProvidenciaFiltro {
 }
-exports.ProvidenciaFiltro = ProvidenciaFiltro;
 __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", Number)
@@ -38,4 +38,9 @@ __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", String)
 ], ProvidenciaFiltro.prototype, "flujo", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", tramite_filtro_model_1.TramiteFiltro)
+], ProvidenciaFiltro.prototype, "tramite", void 0);
+exports.ProvidenciaFiltro = ProvidenciaFiltro;
 //# sourceMappingURL=providencia-filtro.model.js.map

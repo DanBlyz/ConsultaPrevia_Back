@@ -1,3 +1,4 @@
+import { TramiteFiltro } from './tramite-filtro.model';
 export declare class ProvidenciaFiltro {
     id?: number;
     fk_idTramite?: number;
@@ -5,4 +6,5 @@ export declare class ProvidenciaFiltro {
     referencia?: string;
     providenciaPdf?: string;
     flujo?: string;
+    tramite?: TramiteFiltro;
 }

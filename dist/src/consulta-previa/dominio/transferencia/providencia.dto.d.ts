@@ -1,3 +1,4 @@
+import { TramiteDto } from './tramite.dto';
 export declare class ProvidenciaDto {
     id: number;
     fk_idTramite: number;
@@ -5,6 +6,7 @@ export declare class ProvidenciaDto {
     referencia: string;
     providenciaPdf: string;
     flujo: string;
+    tramite?: TramiteDto[];
 }
 export declare class ProvidenciaCreacionDto {
     fk_idTramite: number;

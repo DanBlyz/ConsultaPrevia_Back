@@ -1,4 +1,5 @@
 import { AutoMap } from '@automapper/classes';
+import { Tramite } from './tramite.model';
 
 export class Providencia {
     @AutoMap()
@@ -18,4 +19,7 @@ export class Providencia {
       
     @AutoMap()
     flujo: string;
+
+    @AutoMap(() => [Tramite])
+    tramite?: Tramite;
 }

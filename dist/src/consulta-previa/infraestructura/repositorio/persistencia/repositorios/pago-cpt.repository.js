@@ -22,7 +22,7 @@ const modelos_1 = require("../../../../../comun/modelos");
 const orm_1 = require("../orm");
 const entidades_1 = require("../../../../dominio/entidades");
 const __1 = require("../..");
-let PagoCptRepository = exports.PagoCptRepository = PagoCptRepository_1 = class PagoCptRepository {
+let PagoCptRepository = PagoCptRepository_1 = class PagoCptRepository {
     constructor(conexion, mapper) {
         this.conexion = conexion;
         this.mapper = mapper;
@@ -164,12 +164,13 @@ let PagoCptRepository = exports.PagoCptRepository = PagoCptRepository_1 = class 
         }
     }
 };
-exports.PagoCptRepository = PagoCptRepository = PagoCptRepository_1 = __decorate([
+PagoCptRepository = PagoCptRepository_1 = __decorate([
     (0, common_1.Injectable)(),
     (0, typeorm_2.EntityRepository)(orm_1.PagoCptEntity),
     __param(1, (0, nestjs_1.InjectMapper)()),
     __metadata("design:paramtypes", [typeorm_2.Connection, Object])
 ], PagoCptRepository);
+exports.PagoCptRepository = PagoCptRepository;
 exports.PAGO_CPT_REPOSITORIO_PROVIDER = {
     provide: (0, typeorm_1.getRepositoryToken)(entidades_1.PagoCpt),
     useClass: PagoCptRepository,

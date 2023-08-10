@@ -19,7 +19,7 @@ const common_1 = require("@nestjs/common");
 const typeorm_1 = require("typeorm");
 const infraestructura_1 = require("../../dominio/contratos/infraestructura");
 const repositorios_1 = require("./persistencia/repositorios");
-let RepositorioFactory = exports.RepositorioFactory = class RepositorioFactory {
+let RepositorioFactory = class RepositorioFactory {
     constructor(conexion, httpService, mapper) {
         this.conexion = conexion;
         this.httpService = httpService;
@@ -54,12 +54,13 @@ let RepositorioFactory = exports.RepositorioFactory = class RepositorioFactory {
         logger.error(error);
     }
 };
-exports.RepositorioFactory = RepositorioFactory = __decorate([
+RepositorioFactory = __decorate([
     (0, common_1.Injectable)(),
     __param(2, (0, nestjs_1.InjectMapper)()),
     __metadata("design:paramtypes", [typeorm_1.Connection,
         axios_1.HttpService, Object])
 ], RepositorioFactory);
+exports.RepositorioFactory = RepositorioFactory;
 exports.REPOSITORIO_FACTORY_PROVIDER = {
     provide: infraestructura_1.REPOSITORIO_FACTORY,
     useClass: RepositorioFactory,

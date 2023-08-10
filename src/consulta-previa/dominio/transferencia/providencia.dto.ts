@@ -6,6 +6,8 @@ import {
   IsPositive,
   IsString,
 } from 'class-validator';
+import { TramiteDto } from './tramite.dto';
+import { Type } from 'class-transformer';
 
 export class ProvidenciaDto {
     @AutoMap()
@@ -33,6 +35,11 @@ export class ProvidenciaDto {
     @AutoMap()
     @IsString()
     flujo: string;
+
+    @AutoMap(() => [TramiteDto])
+    @Type(() => TramiteDto)
+    @IsOptional()
+    tramite?: TramiteDto[];
 
 }
 

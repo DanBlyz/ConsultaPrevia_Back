@@ -22,7 +22,7 @@ const modelos_1 = require("../../../../../comun/modelos");
 const orm_1 = require("../orm");
 const entidades_1 = require("../../../../dominio/entidades");
 const __1 = require("../..");
-let SujetoIdentificadoRepository = exports.SujetoIdentificadoRepository = SujetoIdentificadoRepository_1 = class SujetoIdentificadoRepository {
+let SujetoIdentificadoRepository = SujetoIdentificadoRepository_1 = class SujetoIdentificadoRepository {
     constructor(conexion, mapper) {
         this.conexion = conexion;
         this.mapper = mapper;
@@ -149,12 +149,13 @@ let SujetoIdentificadoRepository = exports.SujetoIdentificadoRepository = Sujeto
         }
     }
 };
-exports.SujetoIdentificadoRepository = SujetoIdentificadoRepository = SujetoIdentificadoRepository_1 = __decorate([
+SujetoIdentificadoRepository = SujetoIdentificadoRepository_1 = __decorate([
     (0, common_1.Injectable)(),
     (0, typeorm_2.EntityRepository)(orm_1.SujetoIdentificadoEntity),
     __param(1, (0, nestjs_1.InjectMapper)()),
     __metadata("design:paramtypes", [typeorm_2.Connection, Object])
 ], SujetoIdentificadoRepository);
+exports.SujetoIdentificadoRepository = SujetoIdentificadoRepository;
 exports.SUJETO_IDENTIFICADO_REPOSITORIO_PROVIDER = {
     provide: (0, typeorm_1.getRepositoryToken)(entidades_1.SujetoIdentificado),
     useClass: SujetoIdentificadoRepository,

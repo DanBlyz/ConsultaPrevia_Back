@@ -22,7 +22,7 @@ const modelos_1 = require("../../../../../comun/modelos");
 const orm_1 = require("../orm");
 const entidades_1 = require("../../../../dominio/entidades");
 const __1 = require("../..");
-let ProvidenciaRepository = exports.ProvidenciaRepository = ProvidenciaRepository_1 = class ProvidenciaRepository {
+let ProvidenciaRepository = ProvidenciaRepository_1 = class ProvidenciaRepository {
     constructor(conexion, mapper) {
         this.conexion = conexion;
         this.mapper = mapper;
@@ -56,6 +56,12 @@ let ProvidenciaRepository = exports.ProvidenciaRepository = ProvidenciaRepositor
             });
             criterioUtilizado = true;
         }
+        if (filtro.tramite && filtro.tramite.correlativo !== '') {
+            consulta = consulta.andWhere('tramite.correlativo ILIKE :tramiteCorrelativo', {
+                tramiteCorrelativo: `%${filtro.tramite.correlativo}%`,
+            });
+            criterioUtilizado = true;
+        }
         if (obligatorio) {
             return criterioUtilizado ? consulta : null;
         }
@@ -66,6 +72,7 @@ let ProvidenciaRepository = exports.ProvidenciaRepository = ProvidenciaRepositor
     async obtenerPorId(id) {
         let consulta = this.repositorio
             .createQueryBuilder('providencia')
+            .leftJoinAndSelect('providencia.tramite', 'tramite')
             .andWhere('providencia.id = :id', { id });
         consulta = consulta.orderBy('providencia.id', 'DESC');
         const respuesta = await consulta.getOne();
@@ -78,7 +85,8 @@ let ProvidenciaRepository = exports.ProvidenciaRepository = ProvidenciaRepositor
             return null;
         }
         let consulta = this.repositorio
-            .createQueryBuilder('providencia');
+            .createQueryBuilder('providencia')
+            .leftJoinAndSelect('providencia.tramite', 'tramite');
         consulta = this.evaluarCriterios(consulta, filtro, false, true);
         if (!consulta) {
             return null;
@@ -91,7 +99,8 @@ let ProvidenciaRepository = exports.ProvidenciaRepository = ProvidenciaRepositor
     }
     async obtenerPor(filtro, pagina, cantidad, ordenarPor = 'id', orden = 'DESC') {
         let consulta = this.repositorio
-            .createQueryBuilder('providencia');
+            .createQueryBuilder('providencia')
+            .leftJoinAndSelect('providencia.tramite', 'tramite');
         consulta = this.evaluarCriterios(consulta, filtro, true, false);
         if (!consulta) {
             return null;
@@ -146,12 +155,13 @@ let ProvidenciaRepository = exports.ProvidenciaRepository = ProvidenciaRepositor
         }
     }
 };
-exports.ProvidenciaRepository = ProvidenciaRepository = ProvidenciaRepository_1 = __decorate([
+ProvidenciaRepository = ProvidenciaRepository_1 = __decorate([
     (0, common_1.Injectable)(),
     (0, typeorm_2.EntityRepository)(orm_1.ProvidenciaEntity),
     __param(1, (0, nestjs_1.InjectMapper)()),
     __metadata("design:paramtypes", [typeorm_2.Connection, Object])
 ], ProvidenciaRepository);
+exports.ProvidenciaRepository = ProvidenciaRepository;
 exports.PROVIDENCIA_REPOSITORIO_PROVIDER = {
     provide: (0, typeorm_1.getRepositoryToken)(entidades_1.Providencia),
     useClass: ProvidenciaRepository,

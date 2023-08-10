@@ -1,3 +1,4 @@
+import { Tramite } from './tramite.model';
 export declare class Providencia {
     id: number;
     fk_idTramite: number;
@@ -5,4 +6,5 @@ export declare class Providencia {
     referencia: string;
     providenciaPdf: string;
     flujo: string;
+    tramite?: Tramite;
 }
