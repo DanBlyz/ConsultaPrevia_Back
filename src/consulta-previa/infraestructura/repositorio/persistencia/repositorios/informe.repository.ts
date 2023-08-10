@@ -65,9 +65,9 @@ export class InformeRepository implements IInformeRepositorio {
       });
       criterioUtilizado = true;
     }
-    if (filtro.asunto && filtro.asunto !== '') {
-      consulta = consulta.andWhere('informe.asunto ILIKE :asunto', {
-        asunto: `%${filtro.asunto}%`,
+    if (filtro.tipoDocumento && filtro.tipoDocumento !== '') {
+      consulta = consulta.andWhere('informe.tipoDocumento ILIKE :tipoDocumento', {
+        tipoDocumento: `%${filtro.tipoDocumento}%`,
       });
       criterioUtilizado = true;
     }

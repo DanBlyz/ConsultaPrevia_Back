@@ -19,7 +19,7 @@ const common_1 = require("@nestjs/common");
 const entidades_1 = require("../../../dominio/entidades");
 const transferencia_1 = require("../../../dominio/transferencia");
 const orm_1 = require("../../repositorio/persistencia/orm");
-let ViajeProfile = exports.ViajeProfile = class ViajeProfile extends nestjs_1.AutomapperProfile {
+let ViajeProfile = class ViajeProfile extends nestjs_1.AutomapperProfile {
     constructor(mapper) {
         super(mapper);
     }
@@ -33,9 +33,10 @@ let ViajeProfile = exports.ViajeProfile = class ViajeProfile extends nestjs_1.Au
         };
     }
 };
-exports.ViajeProfile = ViajeProfile = __decorate([
+ViajeProfile = __decorate([
     (0, common_1.Injectable)(),
     __param(0, (0, nestjs_1.InjectMapper)()),
     __metadata("design:paramtypes", [Object])
 ], ViajeProfile);
+exports.ViajeProfile = ViajeProfile;
 //# sourceMappingURL=viaje.profile.js.map

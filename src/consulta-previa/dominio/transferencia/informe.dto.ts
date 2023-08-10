@@ -35,7 +35,7 @@ export class InformeDto {
 
   @AutoMap()
   @IsString()
-  asunto: string;
+  tipoDocumento: string;
 
   @AutoMap()
   @IsString()
@@ -70,7 +70,7 @@ export class InformeCreacionDto {
 
   @AutoMap()
   @IsString()
-  asunto: string;
+  tipoDocumento: string;
 
   @AutoMap()
   @IsString()
@@ -108,7 +108,7 @@ export class InformeModificacionDto {
     @AutoMap()
     @IsString()
     @IsOptional()
-    asunto?: string;
+    tipoDocumento?: string;
 
     @AutoMap()
     @IsString()

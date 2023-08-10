@@ -88,6 +88,10 @@ import { ViajeEntity } from './viaje.entity';
     @Column({ name: 'tiposervicio',default:null })
     tipoServicio: string;
 
+    @AutoMap()
+    @Column({ name: 'cptpdf',default:null })
+    cptPdf: string;
+
 
 
 

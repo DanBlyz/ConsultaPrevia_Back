@@ -16,7 +16,6 @@ const class_transformer_1 = require("class-transformer");
 const sujeto_identificado_dto_1 = require("./sujeto-identificado.dto");
 class InformeDto {
 }
-exports.InformeDto = InformeDto;
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsNumber)(),
@@ -48,7 +47,7 @@ __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
-], InformeDto.prototype, "asunto", void 0);
+], InformeDto.prototype, "tipoDocumento", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsString)(),
@@ -61,9 +60,9 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", Array)
 ], InformeDto.prototype, "listaSujetoIdentificado", void 0);
+exports.InformeDto = InformeDto;
 class InformeCreacionDto {
 }
-exports.InformeCreacionDto = InformeCreacionDto;
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsNumber)(),
@@ -89,7 +88,7 @@ __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
-], InformeCreacionDto.prototype, "asunto", void 0);
+], InformeCreacionDto.prototype, "tipoDocumento", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsString)(),
@@ -102,9 +101,9 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", Array)
 ], InformeCreacionDto.prototype, "listaSujetoIdentificado", void 0);
+exports.InformeCreacionDto = InformeCreacionDto;
 class InformeModificacionDto {
 }
-exports.InformeModificacionDto = InformeModificacionDto;
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsNumber)(),
@@ -135,7 +134,7 @@ __decorate([
     (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
-], InformeModificacionDto.prototype, "asunto", void 0);
+], InformeModificacionDto.prototype, "tipoDocumento", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsString)(),
@@ -149,4 +148,5 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", Array)
 ], InformeModificacionDto.prototype, "listaSujetoIdentificado", void 0);
+exports.InformeModificacionDto = InformeModificacionDto;
 //# sourceMappingURL=informe.dto.js.map

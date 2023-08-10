@@ -12,7 +12,7 @@ export class ResolucionFiltro {
   informe?: string;
   
   @AutoMap()
-  resolucion?: string;
+  correlativo?: string;
 
   @AutoMap()
   informeAprobado?: boolean;

@@ -19,7 +19,6 @@ const viaje_dto_1 = require("./viaje.dto");
 const resolucion_dto_1 = require("./resolucion.dto");
 class ActoAdministrativoDto {
 }
-exports.ActoAdministrativoDto = ActoAdministrativoDto;
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsNumber)(),
@@ -77,9 +76,9 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", Array)
 ], ActoAdministrativoDto.prototype, "viaje", void 0);
+exports.ActoAdministrativoDto = ActoAdministrativoDto;
 class ActoAdministrativoCreacionDto {
 }
-exports.ActoAdministrativoCreacionDto = ActoAdministrativoCreacionDto;
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsNumber)(),
@@ -104,9 +103,9 @@ __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], ActoAdministrativoCreacionDto.prototype, "flujo", void 0);
+exports.ActoAdministrativoCreacionDto = ActoAdministrativoCreacionDto;
 class ActoAdministrativoModificacionDto {
 }
-exports.ActoAdministrativoModificacionDto = ActoAdministrativoModificacionDto;
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsNumber)(),
@@ -140,4 +139,5 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], ActoAdministrativoModificacionDto.prototype, "estado", void 0);
+exports.ActoAdministrativoModificacionDto = ActoAdministrativoModificacionDto;
 //# sourceMappingURL=actos-administrativos.dto.js.map

@@ -25,7 +25,7 @@ export class ResolucionDto {
 
   @AutoMap()
   @IsString()
-  resolucion: string;
+  correlativo: string;
 
   @AutoMap()
   @IsBoolean()
@@ -62,7 +62,7 @@ export class ResolucionCreacionDto {
   
     @AutoMap()
     @IsString()
-    resolucion: string;
+    correlativo: string;
   
     @AutoMap()
     @IsBoolean()
@@ -101,7 +101,7 @@ export class ResolucionModificacionDto {
   @AutoMap()
   @IsString()
   @IsOptional()
-  resolucion?: string;
+  correlativo?: string;
 
   @AutoMap()
   @IsBoolean()

@@ -14,7 +14,6 @@ const classes_1 = require("@automapper/classes");
 const class_validator_1 = require("class-validator");
 class PagoCptDto {
 }
-exports.PagoCptDto = PagoCptDto;
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsNumber)(),
@@ -107,9 +106,14 @@ __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], PagoCptDto.prototype, "tipoServicio", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], PagoCptDto.prototype, "cptPdf", void 0);
+exports.PagoCptDto = PagoCptDto;
 class PagoCptCreacionDto {
 }
-exports.PagoCptCreacionDto = PagoCptCreacionDto;
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsNumber)(),
@@ -206,9 +210,15 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], PagoCptCreacionDto.prototype, "tipoServicio", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], PagoCptCreacionDto.prototype, "cptPdf", void 0);
+exports.PagoCptCreacionDto = PagoCptCreacionDto;
 class PagoCptModificacionDto {
 }
-exports.PagoCptModificacionDto = PagoCptModificacionDto;
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsBoolean)(),
@@ -305,4 +315,11 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], PagoCptModificacionDto.prototype, "tipoServicio", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], PagoCptModificacionDto.prototype, "cptPdf", void 0);
+exports.PagoCptModificacionDto = PagoCptModificacionDto;
 //# sourceMappingURL=pago-cpt.dto.js.map

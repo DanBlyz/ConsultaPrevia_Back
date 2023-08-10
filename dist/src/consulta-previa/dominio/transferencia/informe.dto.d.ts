@@ -5,7 +5,7 @@ export declare class InformeDto {
     correlativo: string;
     referencia: string;
     informePdf: string;
-    asunto: string;
+    tipoDocumento: string;
     flujo: string;
     listaSujetoIdentificado?: SujetoIdentificadoDto[];
 }
@@ -14,7 +14,7 @@ export declare class InformeCreacionDto {
     correlativo: string;
     referencia: string;
     informePdf: string;
-    asunto: string;
+    tipoDocumento: string;
     flujo: string;
     listaSujetoIdentificado?: SujetoIdentificadoCreacionDto[];
 }
@@ -23,7 +23,7 @@ export declare class InformeModificacionDto {
     correlativo?: string;
     referencia?: string;
     informePdf?: string;
-    asunto?: string;
+    tipoDocumento?: string;
     flujo?: string;
     listaSujetoIdentificado?: SujetoIdentificadoModificacionDto[];
 }

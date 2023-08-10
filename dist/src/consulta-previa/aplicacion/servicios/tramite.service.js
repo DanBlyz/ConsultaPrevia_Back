@@ -22,7 +22,7 @@ const entidades_1 = require("../../dominio/entidades");
 const filtros_1 = require("../../dominio/entidades/filtros");
 const transferencia_2 = require("../../dominio/transferencia");
 const filtros_2 = require("../../dominio/transferencia/filtros");
-let TramiteService = exports.TramiteService = class TramiteService {
+let TramiteService = class TramiteService {
     constructor(repositorioFactory, mapper) {
         this.repositorioFactory = repositorioFactory;
         this.mapper = mapper;
@@ -133,12 +133,13 @@ let TramiteService = exports.TramiteService = class TramiteService {
         }
     }
 };
-exports.TramiteService = TramiteService = __decorate([
+TramiteService = __decorate([
     (0, common_1.Injectable)(),
     __param(0, (0, common_1.Inject)(infraestructura_1.REPOSITORIO_FACTORY)),
     __param(1, (0, nestjs_1.InjectMapper)()),
     __metadata("design:paramtypes", [Object, Object])
 ], TramiteService);
+exports.TramiteService = TramiteService;
 exports.TRAMITE_SERVICIO_PROVIDER = {
     provide: servicios_1.TRAMITE_SERVICIO,
     useClass: TramiteService,

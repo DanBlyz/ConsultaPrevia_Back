@@ -15,7 +15,7 @@ const classes_1 = require("@automapper/classes");
 const auditoria_entity_1 = require("./base/auditoria.entity");
 const tramite_entity_1 = require("./tramite.entity");
 const reunion_entity_1 = require("./reunion.entity");
-let NotificacionEntity = exports.NotificacionEntity = class NotificacionEntity extends auditoria_entity_1.AuditoriaEntity {
+let NotificacionEntity = class NotificacionEntity extends auditoria_entity_1.AuditoriaEntity {
 };
 __decorate([
     (0, classes_1.AutoMap)(),
@@ -82,7 +82,8 @@ __decorate([
     (0, typeorm_1.JoinColumn)({ name: 'fk_idtramite' }),
     __metadata("design:type", tramite_entity_1.TramiteEntity)
 ], NotificacionEntity.prototype, "tramite", void 0);
-exports.NotificacionEntity = NotificacionEntity = __decorate([
+NotificacionEntity = __decorate([
     (0, typeorm_1.Entity)('notificacion', { schema: 'consulta-previa' })
 ], NotificacionEntity);
+exports.NotificacionEntity = NotificacionEntity;
 //# sourceMappingURL=notificacion.entity.js.map

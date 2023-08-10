@@ -22,7 +22,7 @@ const entidades_1 = require("../../dominio/entidades");
 const filtros_1 = require("../../dominio/entidades/filtros");
 const transferencia_2 = require("../../dominio/transferencia");
 const filtros_2 = require("../../dominio/transferencia/filtros");
-let ProvidenciaService = exports.ProvidenciaService = class ProvidenciaService {
+let ProvidenciaService = class ProvidenciaService {
     constructor(repositorioFactory, mapper) {
         this.repositorioFactory = repositorioFactory;
         this.mapper = mapper;
@@ -129,12 +129,13 @@ let ProvidenciaService = exports.ProvidenciaService = class ProvidenciaService {
         }
     }
 };
-exports.ProvidenciaService = ProvidenciaService = __decorate([
+ProvidenciaService = __decorate([
     (0, common_1.Injectable)(),
     __param(0, (0, common_1.Inject)(infraestructura_1.REPOSITORIO_FACTORY)),
     __param(1, (0, nestjs_1.InjectMapper)()),
     __metadata("design:paramtypes", [Object, Object])
 ], ProvidenciaService);
+exports.ProvidenciaService = ProvidenciaService;
 exports.PROVIDENCIA_SERVICIO_PROVIDER = {
     provide: servicios_1.PROVIDENCIA_SERVICIO,
     useClass: ProvidenciaService,

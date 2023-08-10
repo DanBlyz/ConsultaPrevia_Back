@@ -36,6 +36,9 @@ export class Tramite {
   @AutoMap()
   estado: string;
 
+  @AutoMap()
+  estadoAccion: string;
+
   @AutoMap(() => [Resolucion])
   listaResolucion?: Resolucion[];
 

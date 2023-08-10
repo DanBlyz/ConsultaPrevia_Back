@@ -2,7 +2,7 @@ export declare class ResolucionDto {
     id: number;
     fk_idTramite: number;
     informe: string;
-    resolucion: string;
+    correlativo: string;
     informeAprobado: boolean;
     actoAdministrativo: boolean;
     resolucionPdf: string;
@@ -12,7 +12,7 @@ export declare class ResolucionDto {
 export declare class ResolucionCreacionDto {
     fk_idTramite: number;
     informe: string;
-    resolucion: string;
+    correlativo: string;
     informeAprobado: boolean;
     actoAdministrativo: boolean;
     resolucionPdf: string;
@@ -22,7 +22,7 @@ export declare class ResolucionCreacionDto {
 export declare class ResolucionModificacionDto {
     fk_idTramite?: number;
     informe?: string;
-    resolucion?: string;
+    correlativo?: string;
     informeAprobado?: boolean;
     actoAdministrativo?: boolean;
     resolucionPdf?: string;

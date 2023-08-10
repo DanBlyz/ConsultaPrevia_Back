@@ -10,4 +10,5 @@ export declare class TramiteFiltroDto extends FiltroBaseDto {
     provincia?: string;
     municipio?: string;
     estado?: string;
+    estadoAccion?: string;
 }

@@ -23,7 +23,7 @@ const platform_express_1 = require("@nestjs/platform-express");
 const multer_1 = require("multer");
 const common_3 = require("@nestjs/common");
 const path_1 = require("path");
-let ProvidenciaController = exports.ProvidenciaController = class ProvidenciaController {
+let ProvidenciaController = class ProvidenciaController {
     constructor(servicioFactory) {
         this.servicioFactory = servicioFactory;
     }
@@ -117,9 +117,10 @@ __decorate([
     __metadata("design:paramtypes", [String, Object]),
     __metadata("design:returntype", Promise)
 ], ProvidenciaController.prototype, "downloadFile", null);
-exports.ProvidenciaController = ProvidenciaController = __decorate([
+ProvidenciaController = __decorate([
     (0, common_1.Controller)('providencias'),
     __param(0, (0, common_1.Inject)(aplicacion_1.SERVICIO_FACTORY)),
     __metadata("design:paramtypes", [Object])
 ], ProvidenciaController);
+exports.ProvidenciaController = ProvidenciaController;
 //# sourceMappingURL=providencia.controller.js.map

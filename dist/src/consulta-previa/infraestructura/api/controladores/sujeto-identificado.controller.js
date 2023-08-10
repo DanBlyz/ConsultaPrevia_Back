@@ -18,7 +18,7 @@ const transferencia_1 = require("../../../../comun/transferencia");
 const aplicacion_1 = require("../../../dominio/contratos/aplicacion");
 const filtros_1 = require("../../../dominio/transferencia/filtros");
 const transferencia_2 = require("../../../dominio/transferencia");
-let SujetoIdentificadoController = exports.SujetoIdentificadoController = class SujetoIdentificadoController {
+let SujetoIdentificadoController = class SujetoIdentificadoController {
     constructor(servicioFactory) {
         this.servicioFactory = servicioFactory;
     }
@@ -80,9 +80,10 @@ __decorate([
     __metadata("design:paramtypes", [Number]),
     __metadata("design:returntype", Promise)
 ], SujetoIdentificadoController.prototype, "eliminar", null);
-exports.SujetoIdentificadoController = SujetoIdentificadoController = __decorate([
+SujetoIdentificadoController = __decorate([
     (0, common_1.Controller)('sujetos-identificados'),
     __param(0, (0, common_1.Inject)(aplicacion_1.SERVICIO_FACTORY)),
     __metadata("design:paramtypes", [Object])
 ], SujetoIdentificadoController);
+exports.SujetoIdentificadoController = SujetoIdentificadoController;
 //# sourceMappingURL=sujeto-identificado.controller.js.map

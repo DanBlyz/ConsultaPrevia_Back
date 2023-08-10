@@ -15,7 +15,6 @@ const class_validator_1 = require("class-validator");
 const filtros_1 = require("../../../../comun/transferencia/filtros");
 class PagoCptFiltroDto extends filtros_1.FiltroBaseDto {
 }
-exports.PagoCptFiltroDto = PagoCptFiltroDto;
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsNumber)(),
@@ -124,4 +123,11 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], PagoCptFiltroDto.prototype, "tipoServicio", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], PagoCptFiltroDto.prototype, "cptPdf", void 0);
+exports.PagoCptFiltroDto = PagoCptFiltroDto;
 //# sourceMappingURL=pago-cpt-filtro.dto.js.map

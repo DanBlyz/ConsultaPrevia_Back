@@ -17,4 +17,5 @@ export declare class PagoCptFiltro {
     fechaValidez?: Date;
     inicioVigencia?: Date;
     tipoServicio?: string;
+    cptPdf?: string;
 }

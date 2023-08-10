@@ -22,7 +22,7 @@ const modelos_1 = require("../../../../../comun/modelos");
 const orm_1 = require("../orm");
 const entidades_1 = require("../../../../dominio/entidades");
 const __1 = require("../..");
-let InformeRepository = exports.InformeRepository = InformeRepository_1 = class InformeRepository {
+let InformeRepository = InformeRepository_1 = class InformeRepository {
     constructor(conexion, mapper) {
         this.conexion = conexion;
         this.mapper = mapper;
@@ -56,9 +56,9 @@ let InformeRepository = exports.InformeRepository = InformeRepository_1 = class 
             });
             criterioUtilizado = true;
         }
-        if (filtro.asunto && filtro.asunto !== '') {
-            consulta = consulta.andWhere('informe.asunto ILIKE :asunto', {
-                asunto: `%${filtro.asunto}%`,
+        if (filtro.tipoDocumento && filtro.tipoDocumento !== '') {
+            consulta = consulta.andWhere('informe.tipoDocumento ILIKE :tipoDocumento', {
+                tipoDocumento: `%${filtro.tipoDocumento}%`,
             });
             criterioUtilizado = true;
         }
@@ -161,12 +161,13 @@ let InformeRepository = exports.InformeRepository = InformeRepository_1 = class 
         }
     }
 };
-exports.InformeRepository = InformeRepository = InformeRepository_1 = __decorate([
+InformeRepository = InformeRepository_1 = __decorate([
     (0, common_1.Injectable)(),
     (0, typeorm_2.EntityRepository)(orm_1.InformeEntity),
     __param(1, (0, nestjs_1.InjectMapper)()),
     __metadata("design:paramtypes", [typeorm_2.Connection, Object])
 ], InformeRepository);
+exports.InformeRepository = InformeRepository;
 exports.INFORME_REPOSITORIO_PROVIDER = {
     provide: (0, typeorm_1.getRepositoryToken)(entidades_1.Informe),
     useClass: InformeRepository,

@@ -4,6 +4,6 @@ export declare class InformeFiltro {
     correlativo?: string;
     referencia?: string;
     informePdf?: string;
-    asunto?: string;
+    tipoDocumento?: string;
     flujo?: string;
 }

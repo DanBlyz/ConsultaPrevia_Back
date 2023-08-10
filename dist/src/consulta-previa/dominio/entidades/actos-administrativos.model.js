@@ -17,7 +17,6 @@ const viaje_model_1 = require("./viaje.model");
 const resolucion_model_1 = require("./resolucion.model");
 class ActoAdministrativo {
 }
-exports.ActoAdministrativo = ActoAdministrativo;
 __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", Number)
@@ -58,4 +57,5 @@ __decorate([
     (0, classes_1.AutoMap)(() => [viaje_model_1.Viaje]),
     __metadata("design:type", viaje_model_1.Viaje)
 ], ActoAdministrativo.prototype, "viaje", void 0);
+exports.ActoAdministrativo = ActoAdministrativo;
 //# sourceMappingURL=actos-administrativos.model.js.map

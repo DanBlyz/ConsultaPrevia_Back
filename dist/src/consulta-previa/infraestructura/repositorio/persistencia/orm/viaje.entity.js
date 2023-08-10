@@ -14,7 +14,7 @@ const typeorm_1 = require("typeorm");
 const classes_1 = require("@automapper/classes");
 const auditoria_entity_1 = require("./base/auditoria.entity");
 const actos_administrativos_entity_1 = require("./actos-administrativos.entity");
-let ViajeEntity = exports.ViajeEntity = class ViajeEntity extends auditoria_entity_1.AuditoriaEntity {
+let ViajeEntity = class ViajeEntity extends auditoria_entity_1.AuditoriaEntity {
 };
 __decorate([
     (0, classes_1.AutoMap)(),
@@ -56,7 +56,8 @@ __decorate([
     (0, typeorm_1.JoinColumn)({ name: 'fk_idactos' }),
     __metadata("design:type", actos_administrativos_entity_1.ActoAdministrativoEntity)
 ], ViajeEntity.prototype, "actoAdministrativo", void 0);
-exports.ViajeEntity = ViajeEntity = __decorate([
+ViajeEntity = __decorate([
     (0, typeorm_1.Entity)('viaje', { schema: 'consulta-previa' })
 ], ViajeEntity);
+exports.ViajeEntity = ViajeEntity;
 //# sourceMappingURL=viaje.entity.js.map

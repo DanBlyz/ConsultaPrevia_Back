@@ -56,6 +56,10 @@ export class TramiteDto {
   @IsString()
   estado: string;
 
+  @AutoMap()
+  @IsString()
+  estadoAccion: string;
+
   @AutoMap(() => [ResolucionDto])
   @IsArray({ each: true })
   @Type(() => ResolucionDto)
@@ -124,6 +128,10 @@ export class TramiteCreacionDto {
     @AutoMap()
     @IsString()
     estado: string;
+
+    @AutoMap()
+    @IsString()
+    estadoAccion: string;
 }
 
 export class TramiteModificacionDto {
@@ -171,6 +179,11 @@ export class TramiteModificacionDto {
     @IsString()
     @IsOptional()
     estado?: string;
+
+    @AutoMap()
+    @IsString()
+    @IsOptional()
+    estadoAccion?: string;
 
     @AutoMap()
     @IsArray({ each: true })

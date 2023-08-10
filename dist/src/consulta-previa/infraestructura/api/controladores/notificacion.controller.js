@@ -23,7 +23,7 @@ const platform_express_1 = require("@nestjs/platform-express");
 const multer_1 = require("multer");
 const common_3 = require("@nestjs/common");
 const path_1 = require("path");
-let NotificacionController = exports.NotificacionController = class NotificacionController {
+let NotificacionController = class NotificacionController {
     constructor(servicioFactory) {
         this.servicioFactory = servicioFactory;
     }
@@ -117,9 +117,10 @@ __decorate([
     __metadata("design:paramtypes", [String, Object]),
     __metadata("design:returntype", Promise)
 ], NotificacionController.prototype, "downloadFile", null);
-exports.NotificacionController = NotificacionController = __decorate([
+NotificacionController = __decorate([
     (0, common_1.Controller)('notificaciones'),
     __param(0, (0, common_1.Inject)(aplicacion_1.SERVICIO_FACTORY)),
     __metadata("design:paramtypes", [Object])
 ], NotificacionController);
+exports.NotificacionController = NotificacionController;
 //# sourceMappingURL=notificacion.controller.js.map

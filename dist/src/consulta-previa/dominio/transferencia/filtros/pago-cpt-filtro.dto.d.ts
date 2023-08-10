@@ -18,4 +18,5 @@ export declare class PagoCptFiltroDto extends FiltroBaseDto {
     fechaValidez?: Date;
     inicioVigencia?: Date;
     tipoServicio?: string;
+    cptPdf?: string;
 }

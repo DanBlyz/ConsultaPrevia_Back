@@ -14,7 +14,6 @@ const classes_1 = require("@automapper/classes");
 const sujeto_identificado_model_1 = require("./sujeto-identificado.model");
 class Informe {
 }
-exports.Informe = Informe;
 __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", Number)
@@ -38,7 +37,7 @@ __decorate([
 __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", String)
-], Informe.prototype, "asunto", void 0);
+], Informe.prototype, "tipoDocumento", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", String)
@@ -47,4 +46,5 @@ __decorate([
     (0, classes_1.AutoMap)(() => [sujeto_identificado_model_1.SujetoIdentificado]),
     __metadata("design:type", Array)
 ], Informe.prototype, "listaSujetoIdentificado", void 0);
+exports.Informe = Informe;
 //# sourceMappingURL=informe.model.js.map

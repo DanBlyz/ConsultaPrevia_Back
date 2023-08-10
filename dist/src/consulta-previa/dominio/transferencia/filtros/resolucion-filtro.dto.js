@@ -15,7 +15,6 @@ const class_validator_1 = require("class-validator");
 const filtros_1 = require("../../../../comun/transferencia/filtros");
 class ResolucionFiltroDto extends filtros_1.FiltroBaseDto {
 }
-exports.ResolucionFiltroDto = ResolucionFiltroDto;
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsNumber)(),
@@ -39,7 +38,7 @@ __decorate([
     (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
-], ResolucionFiltroDto.prototype, "resolucion", void 0);
+], ResolucionFiltroDto.prototype, "correlativo", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsBoolean)(),
@@ -70,4 +69,5 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], ResolucionFiltroDto.prototype, "referencia", void 0);
+exports.ResolucionFiltroDto = ResolucionFiltroDto;
 //# sourceMappingURL=resolucion-filtro.dto.js.map

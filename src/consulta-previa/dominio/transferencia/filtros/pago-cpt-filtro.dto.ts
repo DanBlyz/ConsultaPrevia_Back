@@ -94,4 +94,9 @@ export class PagoCptFiltroDto extends FiltroBaseDto {
   @IsOptional()
   tipoServicio?: string;
 
+  @AutoMap()
+  @IsString()
+  @IsOptional()
+  cptPdf?: string;
+
 }

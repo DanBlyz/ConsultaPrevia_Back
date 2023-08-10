@@ -17,4 +17,5 @@ export declare class PagoCpt {
     fechaValidez: Date;
     inicioVigencia: Date;
     tipoServicio: string;
+    cptPdf: string;
 }

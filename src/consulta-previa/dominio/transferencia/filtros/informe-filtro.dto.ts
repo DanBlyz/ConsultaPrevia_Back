@@ -32,7 +32,7 @@ export class InformeFiltroDto extends FiltroBaseDto {
   @AutoMap()
   @IsString()
   @IsOptional()
-  asunto?: string;
+  tipoDocumento?: string;
 
   @AutoMap()
   @IsString()

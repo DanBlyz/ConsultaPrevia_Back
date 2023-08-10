@@ -47,7 +47,7 @@ export class InformeService implements IInformeServicio {
         filtro.correlativo = objetoDto.correlativo;
         filtro.referencia = objetoDto.referencia;
         filtro.informePdf = objetoDto.informePdf;
-        filtro.asunto = objetoDto.asunto;
+        filtro.tipoDocumento = objetoDto.tipoDocumento;
         filtro.flujo = objetoDto.flujo;
         const informeBD =
           await this.repositorioFactory.informeRepositorio.obtenerObjetoPor(
@@ -160,7 +160,7 @@ export class InformeService implements IInformeServicio {
       if(objeto.flujo === 'Identificacion'){
         resolucion.fk_idTramite = objeto.fk_idTramite;
         resolucion.informe = objeto.correlativo;
-        resolucion.resolucion = null;
+        resolucion.correlativo = null;
         resolucion.informeAprobado = false;
         resolucion.actoAdministrativo = false;
         resolucion.resolucionPdf = null;
@@ -176,7 +176,7 @@ export class InformeService implements IInformeServicio {
         if(objeto.flujo === 'Deliberacion'){
           resolucion.fk_idTramite = objeto.fk_idTramite;
           resolucion.informe = objeto.correlativo;
-          resolucion.resolucion = null;
+          resolucion.correlativo = null;
           resolucion.informeAprobado = false;
           resolucion.actoAdministrativo = false;
           resolucion.resolucionPdf = null;

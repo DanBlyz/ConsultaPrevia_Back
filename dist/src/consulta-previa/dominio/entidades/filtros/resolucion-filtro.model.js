@@ -13,7 +13,6 @@ exports.ResolucionFiltro = void 0;
 const classes_1 = require("@automapper/classes");
 class ResolucionFiltro {
 }
-exports.ResolucionFiltro = ResolucionFiltro;
 __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", Number)
@@ -29,7 +28,7 @@ __decorate([
 __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", String)
-], ResolucionFiltro.prototype, "resolucion", void 0);
+], ResolucionFiltro.prototype, "correlativo", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", Boolean)
@@ -50,4 +49,5 @@ __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", String)
 ], ResolucionFiltro.prototype, "referencia", void 0);
+exports.ResolucionFiltro = ResolucionFiltro;
 //# sourceMappingURL=resolucion-filtro.model.js.map

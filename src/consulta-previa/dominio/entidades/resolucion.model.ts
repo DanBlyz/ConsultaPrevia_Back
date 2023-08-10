@@ -11,7 +11,7 @@ export class Resolucion {
     informe: string;
     
     @AutoMap()
-    resolucion: string;
+    correlativo: string;
   
     @AutoMap()
     informeAprobado : boolean;

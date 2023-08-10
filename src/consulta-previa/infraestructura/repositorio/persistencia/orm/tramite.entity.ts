@@ -59,6 +59,10 @@ import {
     @Column({ name: 'estado',default:null })
     estado: string;
 
+    @AutoMap()
+    @Column({ name: 'estadoaccion',default:null })
+    estadoAccion: string;
+
     @AutoMap(() => [ResolucionEntity])
     @OneToMany(() => ResolucionEntity, (resolucion) => resolucion.tramite)
     @JoinColumn({ name: 'idtramite' })

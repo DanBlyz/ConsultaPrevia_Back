@@ -84,6 +84,10 @@ export class PagoCptDto {
   @AutoMap()
   @IsString()
   tipoServicio: string;
+
+  @AutoMap()
+  @IsString()
+  cptPdf: string;
 }
 
 export class PagoCptCreacionDto {
@@ -166,6 +170,11 @@ export class PagoCptCreacionDto {
     @IsString()
     @IsOptional()
     tipoServicio?: string;
+
+    @AutoMap()
+    @IsString()
+    @IsOptional()
+    cptPdf?: string;
 }
 
 export class PagoCptModificacionDto {
@@ -249,4 +258,9 @@ export class PagoCptModificacionDto {
     @IsString()
     @IsOptional()
     tipoServicio?: string;
+
+    @AutoMap()
+    @IsString()
+    @IsOptional()
+    cptPdf?: string;
 }

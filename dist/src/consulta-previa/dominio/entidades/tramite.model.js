@@ -18,7 +18,6 @@ const notificacion_model_1 = require("./notificacion.model");
 const actos_administrativos_model_1 = require("./actos-administrativos.model");
 class Tramite {
 }
-exports.Tramite = Tramite;
 __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", Number)
@@ -60,6 +59,10 @@ __decorate([
     __metadata("design:type", String)
 ], Tramite.prototype, "estado", void 0);
 __decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", String)
+], Tramite.prototype, "estadoAccion", void 0);
+__decorate([
     (0, classes_1.AutoMap)(() => [resolucion_model_1.Resolucion]),
     __metadata("design:type", Array)
 ], Tramite.prototype, "listaResolucion", void 0);
@@ -79,4 +82,5 @@ __decorate([
     (0, classes_1.AutoMap)(() => [actos_administrativos_model_1.ActoAdministrativo]),
     __metadata("design:type", Array)
 ], Tramite.prototype, "listaActoAdministrativo", void 0);
+exports.Tramite = Tramite;
 //# sourceMappingURL=tramite.model.js.map

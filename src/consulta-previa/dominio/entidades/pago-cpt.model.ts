@@ -54,4 +54,7 @@ export class PagoCpt {
 
     @AutoMap()
     tipoServicio: string;
+
+    @AutoMap()
+    cptPdf: string;
 }

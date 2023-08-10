@@ -37,8 +37,8 @@ import {
     informePdf: string;
   
     @AutoMap()
-    @Column({ name: 'asunto' ,default:null})
-    asunto: string;
+    @Column({ name: 'tipodocumento' ,default:null})
+    tipoDocumento: string;
 
     @AutoMap()
     @Column({ name: 'flujo' ,default:null})

@@ -22,7 +22,7 @@ const entidades_1 = require("../../dominio/entidades");
 const filtros_1 = require("../../dominio/entidades/filtros");
 const transferencia_2 = require("../../dominio/transferencia");
 const filtros_2 = require("../../dominio/transferencia/filtros");
-let ViajeService = exports.ViajeService = class ViajeService {
+let ViajeService = class ViajeService {
     constructor(repositorioFactory, mapper) {
         this.repositorioFactory = repositorioFactory;
         this.mapper = mapper;
@@ -127,12 +127,13 @@ let ViajeService = exports.ViajeService = class ViajeService {
         }
     }
 };
-exports.ViajeService = ViajeService = __decorate([
+ViajeService = __decorate([
     (0, common_1.Injectable)(),
     __param(0, (0, common_1.Inject)(infraestructura_1.REPOSITORIO_FACTORY)),
     __param(1, (0, nestjs_1.InjectMapper)()),
     __metadata("design:paramtypes", [Object, Object])
 ], ViajeService);
+exports.ViajeService = ViajeService;
 exports.VIAJE_SERVICIO_PROVIDER = {
     provide: servicios_1.VIAJE_SERVICIO,
     useClass: ViajeService,

@@ -22,7 +22,7 @@ const modelos_1 = require("../../../../../comun/modelos");
 const orm_1 = require("../orm");
 const entidades_1 = require("../../../../dominio/entidades");
 const __1 = require("../..");
-let TramiteRepository = exports.TramiteRepository = TramiteRepository_1 = class TramiteRepository {
+let TramiteRepository = TramiteRepository_1 = class TramiteRepository {
     constructor(conexion, mapper) {
         this.conexion = conexion;
         this.mapper = mapper;
@@ -83,6 +83,12 @@ let TramiteRepository = exports.TramiteRepository = TramiteRepository_1 = class 
         if (filtro.estado && filtro.estado !== '') {
             consulta = consulta.andWhere('tramite.estado ILIKE :estado', {
                 estado: `%${filtro.estado}%`,
+            });
+            criterioUtilizado = true;
+        }
+        if (filtro.estadoAccion && filtro.estadoAccion !== '') {
+            consulta = consulta.andWhere('tramite.estadoAccion ILIKE :estadoAccion', {
+                estadoAccion: `%${filtro.estadoAccion}%`,
             });
             criterioUtilizado = true;
         }
@@ -203,12 +209,13 @@ let TramiteRepository = exports.TramiteRepository = TramiteRepository_1 = class 
         }
     }
 };
-exports.TramiteRepository = TramiteRepository = TramiteRepository_1 = __decorate([
+TramiteRepository = TramiteRepository_1 = __decorate([
     (0, common_1.Injectable)(),
     (0, typeorm_2.EntityRepository)(orm_1.TramiteEntity),
     __param(1, (0, nestjs_1.InjectMapper)()),
     __metadata("design:paramtypes", [typeorm_2.Connection, Object])
 ], TramiteRepository);
+exports.TramiteRepository = TramiteRepository;
 exports.TRAMITE_REPOSITORIO_PROVIDER = {
     provide: (0, typeorm_1.getRepositoryToken)(entidades_1.Tramite),
     useClass: TramiteRepository,

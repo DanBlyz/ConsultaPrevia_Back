@@ -29,8 +29,8 @@ import {
     informe: string;
   
     @AutoMap()
-    @Column({ name: 'resolucion' ,default:null})
-    resolucion: string;
+    @Column({ name: 'correlativo' ,default:null})
+    correlativo: string;
   
     @AutoMap()
     @Column({ name: 'informeaprobado' ,default:false})

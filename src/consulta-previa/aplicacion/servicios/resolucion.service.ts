@@ -43,7 +43,7 @@ export class ResolucionService implements IResolucionServicio {
       case 'guardar': {
         const filtro = new ResolucionFiltro();
         filtro.informe = objetoDto.informe;
-        filtro.resolucion = objetoDto.resolucion;
+        filtro.correlativo = objetoDto.correlativo;
         filtro.informeAprobado = objetoDto.informeAprobado;
         filtro.actoAdministrativo = objetoDto.actoAdministrativo;
         filtro.resolucionPdf = objetoDto.resolucionPdf;

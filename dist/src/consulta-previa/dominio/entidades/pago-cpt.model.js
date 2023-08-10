@@ -13,7 +13,6 @@ exports.PagoCpt = void 0;
 const classes_1 = require("@automapper/classes");
 class PagoCpt {
 }
-exports.PagoCpt = PagoCpt;
 __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", Number)
@@ -86,4 +85,9 @@ __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", String)
 ], PagoCpt.prototype, "tipoServicio", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", String)
+], PagoCpt.prototype, "cptPdf", void 0);
+exports.PagoCpt = PagoCpt;
 //# sourceMappingURL=pago-cpt.model.js.map

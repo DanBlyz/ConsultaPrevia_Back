@@ -14,7 +14,7 @@ const typeorm_1 = require("typeorm");
 const classes_1 = require("@automapper/classes");
 const auditoria_entity_1 = require("./base/auditoria.entity");
 const tramite_entity_1 = require("./tramite.entity");
-let ProvidenciaEntity = exports.ProvidenciaEntity = class ProvidenciaEntity extends auditoria_entity_1.AuditoriaEntity {
+let ProvidenciaEntity = class ProvidenciaEntity extends auditoria_entity_1.AuditoriaEntity {
 };
 __decorate([
     (0, classes_1.AutoMap)(),
@@ -51,7 +51,8 @@ __decorate([
     (0, typeorm_1.JoinColumn)({ name: 'fk_idtramite' }),
     __metadata("design:type", tramite_entity_1.TramiteEntity)
 ], ProvidenciaEntity.prototype, "tramite", void 0);
-exports.ProvidenciaEntity = ProvidenciaEntity = __decorate([
+ProvidenciaEntity = __decorate([
     (0, typeorm_1.Entity)('providencia', { schema: 'consulta-previa' })
 ], ProvidenciaEntity);
+exports.ProvidenciaEntity = ProvidenciaEntity;
 //# sourceMappingURL=providencia.entity.js.map

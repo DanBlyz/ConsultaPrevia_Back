@@ -10,9 +10,9 @@ exports.MapeoModule = void 0;
 const common_1 = require("@nestjs/common");
 const perfiles_1 = require("./perfiles");
 const filtros_1 = require("./perfiles/filtros");
-let MapeoModule = exports.MapeoModule = class MapeoModule {
+let MapeoModule = class MapeoModule {
 };
-exports.MapeoModule = MapeoModule = __decorate([
+MapeoModule = __decorate([
     (0, common_1.Module)({
         providers: [
             perfiles_1.TramiteProfile,
@@ -38,4 +38,5 @@ exports.MapeoModule = MapeoModule = __decorate([
         ],
     })
 ], MapeoModule);
+exports.MapeoModule = MapeoModule;
 //# sourceMappingURL=mapeo.module.js.map

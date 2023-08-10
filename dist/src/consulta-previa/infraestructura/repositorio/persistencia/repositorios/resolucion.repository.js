@@ -22,7 +22,7 @@ const modelos_1 = require("../../../../../comun/modelos");
 const orm_1 = require("../orm");
 const entidades_1 = require("../../../../dominio/entidades");
 const __1 = require("../..");
-let ResolucionRepository = exports.ResolucionRepository = ResolucionRepository_1 = class ResolucionRepository {
+let ResolucionRepository = ResolucionRepository_1 = class ResolucionRepository {
     constructor(conexion, mapper) {
         this.conexion = conexion;
         this.mapper = mapper;
@@ -44,9 +44,9 @@ let ResolucionRepository = exports.ResolucionRepository = ResolucionRepository_1
             });
             criterioUtilizado = true;
         }
-        if (filtro.resolucion && filtro.resolucion !== '') {
-            consulta = consulta.andWhere('resolucion.resolucion ILIKE :resolucion', {
-                resolucion: `%${filtro.resolucion}%`,
+        if (filtro.correlativo && filtro.correlativo !== '') {
+            consulta = consulta.andWhere('correlativo.correlativo ILIKE :correlativo', {
+                correlativo: `%${filtro.correlativo}%`,
             });
             criterioUtilizado = true;
         }
@@ -158,12 +158,13 @@ let ResolucionRepository = exports.ResolucionRepository = ResolucionRepository_1
         }
     }
 };
-exports.ResolucionRepository = ResolucionRepository = ResolucionRepository_1 = __decorate([
+ResolucionRepository = ResolucionRepository_1 = __decorate([
     (0, common_1.Injectable)(),
     (0, typeorm_2.EntityRepository)(orm_1.ResolucionEntity),
     __param(1, (0, nestjs_1.InjectMapper)()),
     __metadata("design:paramtypes", [typeorm_2.Connection, Object])
 ], ResolucionRepository);
+exports.ResolucionRepository = ResolucionRepository;
 exports.RESOLUCION_REPOSITORIO_PROVIDER = {
     provide: (0, typeorm_1.getRepositoryToken)(entidades_1.Resolucion),
     useClass: ResolucionRepository,

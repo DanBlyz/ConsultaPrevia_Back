@@ -13,7 +13,6 @@ exports.InformeFiltro = void 0;
 const classes_1 = require("@automapper/classes");
 class InformeFiltro {
 }
-exports.InformeFiltro = InformeFiltro;
 __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", Number)
@@ -37,9 +36,10 @@ __decorate([
 __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", String)
-], InformeFiltro.prototype, "asunto", void 0);
+], InformeFiltro.prototype, "tipoDocumento", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", String)
 ], InformeFiltro.prototype, "flujo", void 0);
+exports.InformeFiltro = InformeFiltro;
 //# sourceMappingURL=informe-filtro.model.js.map

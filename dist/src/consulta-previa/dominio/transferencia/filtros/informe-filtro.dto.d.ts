@@ -5,6 +5,6 @@ export declare class InformeFiltroDto extends FiltroBaseDto {
     correlativo?: string;
     referencia?: string;
     informePdf?: string;
-    asunto?: string;
+    tipoDocumento?: string;
     flujo?: string;
 }

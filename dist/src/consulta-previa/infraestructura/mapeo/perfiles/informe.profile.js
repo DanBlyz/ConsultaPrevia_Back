@@ -19,7 +19,7 @@ const common_1 = require("@nestjs/common");
 const entidades_1 = require("../../../dominio/entidades");
 const transferencia_1 = require("../../../dominio/transferencia");
 const orm_1 = require("../../repositorio/persistencia/orm");
-let InformeProfile = exports.InformeProfile = class InformeProfile extends nestjs_1.AutomapperProfile {
+let InformeProfile = class InformeProfile extends nestjs_1.AutomapperProfile {
     constructor(mapper) {
         super(mapper);
     }
@@ -33,9 +33,10 @@ let InformeProfile = exports.InformeProfile = class InformeProfile extends nestj
         };
     }
 };
-exports.InformeProfile = InformeProfile = __decorate([
+InformeProfile = __decorate([
     (0, common_1.Injectable)(),
     __param(0, (0, nestjs_1.InjectMapper)()),
     __metadata("design:paramtypes", [Object])
 ], InformeProfile);
+exports.InformeProfile = InformeProfile;
 //# sourceMappingURL=informe.profile.js.map

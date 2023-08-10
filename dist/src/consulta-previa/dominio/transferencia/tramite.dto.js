@@ -20,7 +20,6 @@ const notificacion_dto_1 = require("./notificacion.dto");
 const actos_administrativos_dto_1 = require("./actos-administrativos.dto");
 class TramiteDto {
 }
-exports.TramiteDto = TramiteDto;
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsNumber)(),
@@ -73,6 +72,11 @@ __decorate([
     __metadata("design:type", String)
 ], TramiteDto.prototype, "estado", void 0);
 __decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], TramiteDto.prototype, "estadoAccion", void 0);
+__decorate([
     (0, classes_1.AutoMap)(() => [resolucion_dto_1.ResolucionDto]),
     (0, class_validator_1.IsArray)({ each: true }),
     (0, class_transformer_1.Type)(() => resolucion_dto_1.ResolucionDto),
@@ -107,9 +111,9 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", Array)
 ], TramiteDto.prototype, "listaActoAdministrativo", void 0);
+exports.TramiteDto = TramiteDto;
 class TramiteCreacionDto {
 }
-exports.TramiteCreacionDto = TramiteCreacionDto;
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsString)(),
@@ -155,9 +159,14 @@ __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], TramiteCreacionDto.prototype, "estado", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], TramiteCreacionDto.prototype, "estadoAccion", void 0);
+exports.TramiteCreacionDto = TramiteCreacionDto;
 class TramiteModificacionDto {
 }
-exports.TramiteModificacionDto = TramiteModificacionDto;
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsString)(),
@@ -214,6 +223,12 @@ __decorate([
 ], TramiteModificacionDto.prototype, "estado", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], TramiteModificacionDto.prototype, "estadoAccion", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsArray)({ each: true }),
     (0, class_transformer_1.Type)(() => resolucion_dto_1.ResolucionDto),
     (0, class_validator_1.IsOptional)(),
@@ -240,4 +255,5 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", Array)
 ], TramiteModificacionDto.prototype, "listaActoAdministrativo", void 0);
+exports.TramiteModificacionDto = TramiteModificacionDto;
 //# sourceMappingURL=tramite.dto.js.map

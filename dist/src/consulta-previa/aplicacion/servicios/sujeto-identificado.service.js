@@ -22,7 +22,7 @@ const entidades_1 = require("../../dominio/entidades");
 const filtros_1 = require("../../dominio/entidades/filtros");
 const transferencia_2 = require("../../dominio/transferencia");
 const filtros_2 = require("../../dominio/transferencia/filtros");
-let SujetoIdentificadoService = exports.SujetoIdentificadoService = class SujetoIdentificadoService {
+let SujetoIdentificadoService = class SujetoIdentificadoService {
     constructor(repositorioFactory, mapper) {
         this.repositorioFactory = repositorioFactory;
         this.mapper = mapper;
@@ -125,12 +125,13 @@ let SujetoIdentificadoService = exports.SujetoIdentificadoService = class Sujeto
         }
     }
 };
-exports.SujetoIdentificadoService = SujetoIdentificadoService = __decorate([
+SujetoIdentificadoService = __decorate([
     (0, common_1.Injectable)(),
     __param(0, (0, common_1.Inject)(infraestructura_1.REPOSITORIO_FACTORY)),
     __param(1, (0, nestjs_1.InjectMapper)()),
     __metadata("design:paramtypes", [Object, Object])
 ], SujetoIdentificadoService);
+exports.SujetoIdentificadoService = SujetoIdentificadoService;
 exports.SUJETO_IDENTIFICADO_SERVICIO_PROVIDER = {
     provide: servicios_1.SUJETO_IDENTIFICADO_SERVICIO,
     useClass: SujetoIdentificadoService,

@@ -19,7 +19,7 @@ const common_1 = require("@nestjs/common");
 const entidades_1 = require("../../../dominio/entidades");
 const transferencia_1 = require("../../../dominio/transferencia");
 const orm_1 = require("../../repositorio/persistencia/orm");
-let NotificacionProfile = exports.NotificacionProfile = class NotificacionProfile extends nestjs_1.AutomapperProfile {
+let NotificacionProfile = class NotificacionProfile extends nestjs_1.AutomapperProfile {
     constructor(mapper) {
         super(mapper);
     }
@@ -33,9 +33,10 @@ let NotificacionProfile = exports.NotificacionProfile = class NotificacionProfil
         };
     }
 };
-exports.NotificacionProfile = NotificacionProfile = __decorate([
+NotificacionProfile = __decorate([
     (0, common_1.Injectable)(),
     __param(0, (0, nestjs_1.InjectMapper)()),
     __metadata("design:paramtypes", [Object])
 ], NotificacionProfile);
+exports.NotificacionProfile = NotificacionProfile;
 //# sourceMappingURL=notificacion.profile.js.map

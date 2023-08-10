@@ -5,7 +5,7 @@ export declare class Informe {
     correlativo: string;
     referencia: string;
     informePdf: string;
-    asunto: string;
+    tipoDocumento: string;
     flujo: string;
     listaSujetoIdentificado?: SujetoIdentificado[];
 }

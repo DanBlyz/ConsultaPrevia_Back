@@ -13,7 +13,6 @@ exports.TramiteFiltro = void 0;
 const classes_1 = require("@automapper/classes");
 class TramiteFiltro {
 }
-exports.TramiteFiltro = TramiteFiltro;
 __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", Number)
@@ -54,4 +53,9 @@ __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", String)
 ], TramiteFiltro.prototype, "estado", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", String)
+], TramiteFiltro.prototype, "estadoAccion", void 0);
+exports.TramiteFiltro = TramiteFiltro;
 //# sourceMappingURL=tramite-filtro.model.js.map

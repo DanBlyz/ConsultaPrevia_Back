@@ -18,7 +18,7 @@ export class Informe {
     informePdf: string;
   
     @AutoMap()
-    asunto: string;
+    tipoDocumento: string;
 
     @AutoMap()
     flujo: string;

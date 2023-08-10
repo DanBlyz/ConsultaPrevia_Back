@@ -12,9 +12,9 @@ const comun_1 = require("../../comun");
 const dominio_1 = require("../dominio");
 const infraestructura_1 = require("../infraestructura");
 const servicios_1 = require("./servicios");
-let AplicacionModule = exports.AplicacionModule = class AplicacionModule {
+let AplicacionModule = class AplicacionModule {
 };
-exports.AplicacionModule = AplicacionModule = __decorate([
+AplicacionModule = __decorate([
     (0, common_1.Module)({
         imports: [
             comun_1.ComunModule,
@@ -37,4 +37,5 @@ exports.AplicacionModule = AplicacionModule = __decorate([
         ],
     })
 ], AplicacionModule);
+exports.AplicacionModule = AplicacionModule;
 //# sourceMappingURL=aplicacion.module.js.map

@@ -14,7 +14,7 @@ const typeorm_1 = require("typeorm");
 const classes_1 = require("@automapper/classes");
 const auditoria_entity_1 = require("./base/auditoria.entity");
 const notificacion_entity_1 = require("./notificacion.entity");
-let ReunionEntity = exports.ReunionEntity = class ReunionEntity extends auditoria_entity_1.AuditoriaEntity {
+let ReunionEntity = class ReunionEntity extends auditoria_entity_1.AuditoriaEntity {
 };
 __decorate([
     (0, classes_1.AutoMap)(),
@@ -72,7 +72,8 @@ __decorate([
     (0, typeorm_1.JoinColumn)({ name: 'fk_idnotificacion' }),
     __metadata("design:type", notificacion_entity_1.NotificacionEntity)
 ], ReunionEntity.prototype, "notificacion", void 0);
-exports.ReunionEntity = ReunionEntity = __decorate([
+ReunionEntity = __decorate([
     (0, typeorm_1.Entity)('reunion', { schema: 'consulta-previa' })
 ], ReunionEntity);
+exports.ReunionEntity = ReunionEntity;
 //# sourceMappingURL=reunion.entity.js.map

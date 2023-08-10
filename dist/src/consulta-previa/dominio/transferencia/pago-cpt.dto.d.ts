@@ -17,6 +17,7 @@ export declare class PagoCptDto {
     fechaValidez: Date;
     inicioVigencia: Date;
     tipoServicio: string;
+    cptPdf: string;
 }
 export declare class PagoCptCreacionDto {
     fk_idActos: number;
@@ -36,6 +37,7 @@ export declare class PagoCptCreacionDto {
     fechaValidez?: Date;
     inicioVigencia?: Date;
     tipoServicio?: string;
+    cptPdf?: string;
 }
 export declare class PagoCptModificacionDto {
     pagoRealizado?: boolean;
@@ -54,4 +56,5 @@ export declare class PagoCptModificacionDto {
     fechaValidez?: Date;
     inicioVigencia?: Date;
     tipoServicio?: string;
+    cptPdf?: string;
 }

@@ -32,4 +32,7 @@ export class TramiteFiltro {
   @AutoMap()
   estado?: string;
 
+  @AutoMap()
+  estadoAccion?: string;
+
 }

@@ -16,7 +16,6 @@ const informe_dto_1 = require("./informe.dto");
 const class_transformer_1 = require("class-transformer");
 class SujetoIdentificadoDto {
 }
-exports.SujetoIdentificadoDto = SujetoIdentificadoDto;
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsNumber)(),
@@ -49,9 +48,9 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", Array)
 ], SujetoIdentificadoDto.prototype, "informe", void 0);
+exports.SujetoIdentificadoDto = SujetoIdentificadoDto;
 class SujetoIdentificadoCreacionDto {
 }
-exports.SujetoIdentificadoCreacionDto = SujetoIdentificadoCreacionDto;
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsNumber)(),
@@ -72,9 +71,9 @@ __decorate([
     (0, class_validator_1.IsNumber)(),
     __metadata("design:type", Number)
 ], SujetoIdentificadoCreacionDto.prototype, "telefono", void 0);
+exports.SujetoIdentificadoCreacionDto = SujetoIdentificadoCreacionDto;
 class SujetoIdentificadoModificacionDto {
 }
-exports.SujetoIdentificadoModificacionDto = SujetoIdentificadoModificacionDto;
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsString)(),
@@ -92,4 +91,5 @@ __decorate([
     (0, class_validator_1.IsNumber)(),
     __metadata("design:type", Number)
 ], SujetoIdentificadoModificacionDto.prototype, "telefono", void 0);
+exports.SujetoIdentificadoModificacionDto = SujetoIdentificadoModificacionDto;
 //# sourceMappingURL=sujeto-identificado.dto.js.map

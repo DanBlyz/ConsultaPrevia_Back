@@ -94,6 +94,12 @@ export class TramiteRepository implements ITramiteRepositorio {
       });
       criterioUtilizado = true;
     }
+    if (filtro.estadoAccion && filtro.estadoAccion !== '') {
+      consulta = consulta.andWhere('tramite.estadoAccion ILIKE :estadoAccion', {
+        estadoAccion: `%${filtro.estadoAccion}%`,
+      });
+      criterioUtilizado = true;
+    }
 
     if (obligatorio) {
       return criterioUtilizado ? consulta : null;

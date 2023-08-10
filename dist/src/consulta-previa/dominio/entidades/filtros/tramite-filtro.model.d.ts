@@ -9,4 +9,5 @@ export declare class TramiteFiltro {
     provincia?: string;
     municipio?: string;
     estado?: string;
+    estadoAccion?: string;
 }

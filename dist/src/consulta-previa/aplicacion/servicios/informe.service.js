@@ -22,7 +22,7 @@ const entidades_1 = require("../../dominio/entidades");
 const filtros_1 = require("../../dominio/entidades/filtros");
 const transferencia_2 = require("../../dominio/transferencia");
 const filtros_2 = require("../../dominio/transferencia/filtros");
-let InformeService = exports.InformeService = class InformeService {
+let InformeService = class InformeService {
     constructor(repositorioFactory, mapper) {
         this.repositorioFactory = repositorioFactory;
         this.mapper = mapper;
@@ -35,7 +35,7 @@ let InformeService = exports.InformeService = class InformeService {
                 filtro.correlativo = objetoDto.correlativo;
                 filtro.referencia = objetoDto.referencia;
                 filtro.informePdf = objetoDto.informePdf;
-                filtro.asunto = objetoDto.asunto;
+                filtro.tipoDocumento = objetoDto.tipoDocumento;
                 filtro.flujo = objetoDto.flujo;
                 const informeBD = await this.repositorioFactory.informeRepositorio.obtenerObjetoPor(filtro);
                 if (informeBD) {
@@ -90,7 +90,7 @@ let InformeService = exports.InformeService = class InformeService {
             if (objeto.flujo === 'Identificacion') {
                 resolucion.fk_idTramite = objeto.fk_idTramite;
                 resolucion.informe = objeto.correlativo;
-                resolucion.resolucion = null;
+                resolucion.correlativo = null;
                 resolucion.informeAprobado = false;
                 resolucion.actoAdministrativo = false;
                 resolucion.resolucionPdf = null;
@@ -102,7 +102,7 @@ let InformeService = exports.InformeService = class InformeService {
                 if (objeto.flujo === 'Deliberacion') {
                     resolucion.fk_idTramite = objeto.fk_idTramite;
                     resolucion.informe = objeto.correlativo;
-                    resolucion.resolucion = null;
+                    resolucion.correlativo = null;
                     resolucion.informeAprobado = false;
                     resolucion.actoAdministrativo = false;
                     resolucion.resolucionPdf = null;
@@ -168,12 +168,13 @@ let InformeService = exports.InformeService = class InformeService {
         }
     }
 };
-exports.InformeService = InformeService = __decorate([
+InformeService = __decorate([
     (0, common_1.Injectable)(),
     __param(0, (0, common_1.Inject)(infraestructura_1.REPOSITORIO_FACTORY)),
     __param(1, (0, nestjs_1.InjectMapper)()),
     __metadata("design:paramtypes", [Object, Object])
 ], InformeService);
+exports.InformeService = InformeService;
 exports.INFORME_SERVICIO_PROVIDER = {
     provide: servicios_1.INFORME_SERVICIO,
     useClass: InformeService,

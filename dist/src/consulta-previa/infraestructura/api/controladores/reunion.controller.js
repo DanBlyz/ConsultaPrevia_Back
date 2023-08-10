@@ -23,7 +23,7 @@ const platform_express_1 = require("@nestjs/platform-express");
 const multer_1 = require("multer");
 const common_3 = require("@nestjs/common");
 const path_1 = require("path");
-let ReunionController = exports.ReunionController = class ReunionController {
+let ReunionController = class ReunionController {
     constructor(servicioFactory) {
         this.servicioFactory = servicioFactory;
     }
@@ -100,7 +100,7 @@ __decorate([
         storage: (0, multer_1.diskStorage)({
             destination: './consulta-previa/reunion',
             filename: (req, file, cb) => {
-                cb(null, ("reunion-" + file.originalname));
+                cb(null, (file.originalname));
             },
         }),
     })),
@@ -117,9 +117,10 @@ __decorate([
     __metadata("design:paramtypes", [String, Object]),
     __metadata("design:returntype", Promise)
 ], ReunionController.prototype, "downloadFile", null);
-exports.ReunionController = ReunionController = __decorate([
+ReunionController = __decorate([
     (0, common_1.Controller)('reuniones'),
     __param(0, (0, common_1.Inject)(aplicacion_1.SERVICIO_FACTORY)),
     __metadata("design:paramtypes", [Object])
 ], ReunionController);
+exports.ReunionController = ReunionController;
 //# sourceMappingURL=reunion.controller.js.map

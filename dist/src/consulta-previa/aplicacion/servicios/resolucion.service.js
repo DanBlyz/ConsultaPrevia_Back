@@ -22,7 +22,7 @@ const entidades_1 = require("../../dominio/entidades");
 const filtros_1 = require("../../dominio/entidades/filtros");
 const transferencia_2 = require("../../dominio/transferencia");
 const filtros_2 = require("../../dominio/transferencia/filtros");
-let ResolucionService = exports.ResolucionService = class ResolucionService {
+let ResolucionService = class ResolucionService {
     constructor(repositorioFactory, mapper) {
         this.repositorioFactory = repositorioFactory;
         this.mapper = mapper;
@@ -32,7 +32,7 @@ let ResolucionService = exports.ResolucionService = class ResolucionService {
             case 'guardar': {
                 const filtro = new filtros_1.ResolucionFiltro();
                 filtro.informe = objetoDto.informe;
-                filtro.resolucion = objetoDto.resolucion;
+                filtro.correlativo = objetoDto.correlativo;
                 filtro.informeAprobado = objetoDto.informeAprobado;
                 filtro.actoAdministrativo = objetoDto.actoAdministrativo;
                 filtro.resolucionPdf = objetoDto.resolucionPdf;
@@ -130,12 +130,13 @@ let ResolucionService = exports.ResolucionService = class ResolucionService {
         }
     }
 };
-exports.ResolucionService = ResolucionService = __decorate([
+ResolucionService = __decorate([
     (0, common_1.Injectable)(),
     __param(0, (0, common_1.Inject)(infraestructura_1.REPOSITORIO_FACTORY)),
     __param(1, (0, nestjs_1.InjectMapper)()),
     __metadata("design:paramtypes", [Object, Object])
 ], ResolucionService);
+exports.ResolucionService = ResolucionService;
 exports.RESOLUCION_SERVICIO_PROVIDER = {
     provide: servicios_1.RESOLUCION_SERVICIO,
     useClass: ResolucionService,

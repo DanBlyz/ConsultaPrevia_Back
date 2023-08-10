@@ -14,7 +14,7 @@ const typeorm_1 = require("typeorm");
 const classes_1 = require("@automapper/classes");
 const auditoria_entity_1 = require("./base/auditoria.entity");
 const informe_entity_1 = require("./informe.entity");
-let SujetoIdentificadoEntity = exports.SujetoIdentificadoEntity = class SujetoIdentificadoEntity extends auditoria_entity_1.AuditoriaEntity {
+let SujetoIdentificadoEntity = class SujetoIdentificadoEntity extends auditoria_entity_1.AuditoriaEntity {
 };
 __decorate([
     (0, classes_1.AutoMap)(),
@@ -47,7 +47,8 @@ __decorate([
     (0, typeorm_1.JoinColumn)({ name: 'fk_idinforme' }),
     __metadata("design:type", informe_entity_1.InformeEntity)
 ], SujetoIdentificadoEntity.prototype, "informe", void 0);
-exports.SujetoIdentificadoEntity = SujetoIdentificadoEntity = __decorate([
+SujetoIdentificadoEntity = __decorate([
     (0, typeorm_1.Entity)('sujetoidentificado', { schema: 'consulta-previa' })
 ], SujetoIdentificadoEntity);
+exports.SujetoIdentificadoEntity = SujetoIdentificadoEntity;
 //# sourceMappingURL=sujeto-identificado.entity.js.map

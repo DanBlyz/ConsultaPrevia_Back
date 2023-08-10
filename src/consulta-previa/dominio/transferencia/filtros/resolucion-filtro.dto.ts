@@ -22,7 +22,7 @@ export class ResolucionFiltroDto extends FiltroBaseDto {
   @AutoMap()
   @IsString()
   @IsOptional()
-  resolucion?: string;
+  correlativo?: string;
 
   @AutoMap()
   @IsBoolean()

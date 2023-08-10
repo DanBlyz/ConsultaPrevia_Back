@@ -15,7 +15,7 @@ const classes_1 = require("@automapper/classes");
 const auditoria_entity_1 = require("./base/auditoria.entity");
 const tramite_entity_1 = require("./tramite.entity");
 const actos_administrativos_entity_1 = require("./actos-administrativos.entity");
-let ResolucionEntity = exports.ResolucionEntity = class ResolucionEntity extends auditoria_entity_1.AuditoriaEntity {
+let ResolucionEntity = class ResolucionEntity extends auditoria_entity_1.AuditoriaEntity {
 };
 __decorate([
     (0, classes_1.AutoMap)(),
@@ -34,9 +34,9 @@ __decorate([
 ], ResolucionEntity.prototype, "informe", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
-    (0, typeorm_1.Column)({ name: 'resolucion', default: null }),
+    (0, typeorm_1.Column)({ name: 'correlativo', default: null }),
     __metadata("design:type", String)
-], ResolucionEntity.prototype, "resolucion", void 0);
+], ResolucionEntity.prototype, "correlativo", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, typeorm_1.Column)({ name: 'informeaprobado', default: false }),
@@ -73,7 +73,8 @@ __decorate([
     (0, typeorm_1.JoinColumn)({ name: 'idresolucion' }),
     __metadata("design:type", Array)
 ], ResolucionEntity.prototype, "listaActoAdministrativo", void 0);
-exports.ResolucionEntity = ResolucionEntity = __decorate([
+ResolucionEntity = __decorate([
     (0, typeorm_1.Entity)('resolucion', { schema: 'consulta-previa' })
 ], ResolucionEntity);
+exports.ResolucionEntity = ResolucionEntity;
 //# sourceMappingURL=resolucion.entity.js.map

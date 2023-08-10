@@ -14,7 +14,6 @@ const classes_1 = require("@automapper/classes");
 const class_validator_1 = require("class-validator");
 class ResolucionDto {
 }
-exports.ResolucionDto = ResolucionDto;
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsNumber)(),
@@ -36,7 +35,7 @@ __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
-], ResolucionDto.prototype, "resolucion", void 0);
+], ResolucionDto.prototype, "correlativo", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsBoolean)(),
@@ -62,9 +61,9 @@ __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], ResolucionDto.prototype, "referencia", void 0);
+exports.ResolucionDto = ResolucionDto;
 class ResolucionCreacionDto {
 }
-exports.ResolucionCreacionDto = ResolucionCreacionDto;
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsNumber)(),
@@ -80,7 +79,7 @@ __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
-], ResolucionCreacionDto.prototype, "resolucion", void 0);
+], ResolucionCreacionDto.prototype, "correlativo", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsBoolean)(),
@@ -106,9 +105,9 @@ __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], ResolucionCreacionDto.prototype, "referencia", void 0);
+exports.ResolucionCreacionDto = ResolucionCreacionDto;
 class ResolucionModificacionDto {
 }
-exports.ResolucionModificacionDto = ResolucionModificacionDto;
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsNumber)(),
@@ -127,7 +126,7 @@ __decorate([
     (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
-], ResolucionModificacionDto.prototype, "resolucion", void 0);
+], ResolucionModificacionDto.prototype, "correlativo", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsBoolean)(),
@@ -158,4 +157,5 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], ResolucionModificacionDto.prototype, "referencia", void 0);
+exports.ResolucionModificacionDto = ResolucionModificacionDto;
 //# sourceMappingURL=resolucion.dto.js.map

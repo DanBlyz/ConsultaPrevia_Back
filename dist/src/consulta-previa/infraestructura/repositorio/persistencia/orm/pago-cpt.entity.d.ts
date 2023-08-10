@@ -19,5 +19,6 @@ export declare class PagoCptEntity extends AuditoriaEntity {
     fechaValidez: Date;
     inicioVigencia: Date;
     tipoServicio: string;
+    cptPdf: string;
     actoAdministrativo: ActoAdministrativoEntity;
 }

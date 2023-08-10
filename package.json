@@ -51,6 +51,7 @@
     "ldapts": "^4.1.0",
     "luxon": "^3.0.1",
     "multer": "^1.4.5-lts.1",
+    "numeral": "^2.0.6",
     "passport": "^0.6.0",
     "passport-headerapikey": "^1.2.2",
     "passport-jwt": "^4.0.0",

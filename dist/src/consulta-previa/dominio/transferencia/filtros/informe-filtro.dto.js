@@ -15,7 +15,6 @@ const class_validator_1 = require("class-validator");
 const filtros_1 = require("../../../../comun/transferencia/filtros");
 class InformeFiltroDto extends filtros_1.FiltroBaseDto {
 }
-exports.InformeFiltroDto = InformeFiltroDto;
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsNumber)(),
@@ -51,11 +50,12 @@ __decorate([
     (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
-], InformeFiltroDto.prototype, "asunto", void 0);
+], InformeFiltroDto.prototype, "tipoDocumento", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], InformeFiltroDto.prototype, "flujo", void 0);
+exports.InformeFiltroDto = InformeFiltroDto;
 //# sourceMappingURL=informe-filtro.dto.js.map

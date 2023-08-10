@@ -14,7 +14,7 @@ const typeorm_1 = require("typeorm");
 const classes_1 = require("@automapper/classes");
 const auditoria_entity_1 = require("./base/auditoria.entity");
 const actos_administrativos_entity_1 = require("./actos-administrativos.entity");
-let PagoCptEntity = exports.PagoCptEntity = class PagoCptEntity extends auditoria_entity_1.AuditoriaEntity {
+let PagoCptEntity = class PagoCptEntity extends auditoria_entity_1.AuditoriaEntity {
 };
 __decorate([
     (0, classes_1.AutoMap)(),
@@ -107,11 +107,17 @@ __decorate([
     __metadata("design:type", String)
 ], PagoCptEntity.prototype, "tipoServicio", void 0);
 __decorate([
+    (0, classes_1.AutoMap)(),
+    (0, typeorm_1.Column)({ name: 'cptpdf', default: null }),
+    __metadata("design:type", String)
+], PagoCptEntity.prototype, "cptPdf", void 0);
+__decorate([
     (0, typeorm_1.OneToOne)(() => actos_administrativos_entity_1.ActoAdministrativoEntity, (actoAdministrativo) => actoAdministrativo.pagoCpt),
     (0, typeorm_1.JoinColumn)({ name: 'fk_idactos' }),
     __metadata("design:type", actos_administrativos_entity_1.ActoAdministrativoEntity)
 ], PagoCptEntity.prototype, "actoAdministrativo", void 0);
-exports.PagoCptEntity = PagoCptEntity = __decorate([
+PagoCptEntity = __decorate([
     (0, typeorm_1.Entity)('pagocpt', { schema: 'consulta-previa' })
 ], PagoCptEntity);
+exports.PagoCptEntity = PagoCptEntity;
 //# sourceMappingURL=pago-cpt.entity.js.map

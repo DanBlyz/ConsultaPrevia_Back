@@ -17,7 +17,7 @@ const tramite_entity_1 = require("./tramite.entity");
 const pago_cpt_entity_1 = require("./pago-cpt.entity");
 const viaje_entity_1 = require("./viaje.entity");
 const resolucion_entity_1 = require("./resolucion.entity");
-let ActoAdministrativoEntity = exports.ActoAdministrativoEntity = class ActoAdministrativoEntity extends auditoria_entity_1.AuditoriaEntity {
+let ActoAdministrativoEntity = class ActoAdministrativoEntity extends auditoria_entity_1.AuditoriaEntity {
 };
 __decorate([
     (0, classes_1.AutoMap)(),
@@ -71,7 +71,8 @@ __decorate([
     (0, typeorm_1.OneToOne)(() => viaje_entity_1.ViajeEntity, (viaje) => viaje.actoAdministrativo),
     __metadata("design:type", viaje_entity_1.ViajeEntity)
 ], ActoAdministrativoEntity.prototype, "viaje", void 0);
-exports.ActoAdministrativoEntity = ActoAdministrativoEntity = __decorate([
+ActoAdministrativoEntity = __decorate([
     (0, typeorm_1.Entity)('actosadministrativos', { schema: 'consulta-previa' })
 ], ActoAdministrativoEntity);
+exports.ActoAdministrativoEntity = ActoAdministrativoEntity;
 //# sourceMappingURL=actos-administrativos.entity.js.map

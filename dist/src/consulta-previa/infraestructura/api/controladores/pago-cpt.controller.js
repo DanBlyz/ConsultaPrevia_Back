@@ -18,7 +18,7 @@ const transferencia_1 = require("../../../../comun/transferencia");
 const aplicacion_1 = require("../../../dominio/contratos/aplicacion");
 const filtros_1 = require("../../../dominio/transferencia/filtros");
 const transferencia_2 = require("../../../dominio/transferencia");
-let PagoCptController = exports.PagoCptController = class PagoCptController {
+let PagoCptController = class PagoCptController {
     constructor(servicioFactory) {
         this.servicioFactory = servicioFactory;
     }
@@ -80,9 +80,10 @@ __decorate([
     __metadata("design:paramtypes", [Number]),
     __metadata("design:returntype", Promise)
 ], PagoCptController.prototype, "eliminar", null);
-exports.PagoCptController = PagoCptController = __decorate([
+PagoCptController = __decorate([
     (0, common_1.Controller)('pagos'),
     __param(0, (0, common_1.Inject)(aplicacion_1.SERVICIO_FACTORY)),
     __metadata("design:paramtypes", [Object])
 ], PagoCptController);
+exports.PagoCptController = PagoCptController;
 //# sourceMappingURL=pago-cpt.controller.js.map

@@ -53,4 +53,9 @@ export class TramiteFiltroDto extends FiltroBaseDto {
   @IsString()
   @IsOptional()
   estado?: string;
+
+  @AutoMap()
+  @IsString()
+  @IsOptional()
+  estadoAccion?: string;
 }

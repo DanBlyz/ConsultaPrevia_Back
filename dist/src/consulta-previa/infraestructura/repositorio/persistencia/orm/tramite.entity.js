@@ -18,7 +18,7 @@ const providencia_entity_1 = require("./providencia.entity");
 const informe_entity_1 = require("./informe.entity");
 const notificacion_entity_1 = require("./notificacion.entity");
 const actos_administrativos_entity_1 = require("./actos-administrativos.entity");
-let TramiteEntity = exports.TramiteEntity = class TramiteEntity extends auditoria_entity_1.AuditoriaEntity {
+let TramiteEntity = class TramiteEntity extends auditoria_entity_1.AuditoriaEntity {
 };
 __decorate([
     (0, classes_1.AutoMap)(),
@@ -71,6 +71,11 @@ __decorate([
     __metadata("design:type", String)
 ], TramiteEntity.prototype, "estado", void 0);
 __decorate([
+    (0, classes_1.AutoMap)(),
+    (0, typeorm_1.Column)({ name: 'estadoaccion', default: null }),
+    __metadata("design:type", String)
+], TramiteEntity.prototype, "estadoAccion", void 0);
+__decorate([
     (0, classes_1.AutoMap)(() => [resolucion_entity_1.ResolucionEntity]),
     (0, typeorm_1.OneToMany)(() => resolucion_entity_1.ResolucionEntity, (resolucion) => resolucion.tramite),
     (0, typeorm_1.JoinColumn)({ name: 'idtramite' }),
@@ -100,7 +105,8 @@ __decorate([
     (0, typeorm_1.JoinColumn)({ name: 'idtramite' }),
     __metadata("design:type", Array)
 ], TramiteEntity.prototype, "listaActoAdministrativo", void 0);
-exports.TramiteEntity = TramiteEntity = __decorate([
+TramiteEntity = __decorate([
     (0, typeorm_1.Entity)('tramite', { schema: 'consulta-previa' })
 ], TramiteEntity);
+exports.TramiteEntity = TramiteEntity;
 //# sourceMappingURL=tramite.entity.js.map
