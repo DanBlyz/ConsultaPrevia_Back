@@ -8,3 +8,4 @@ export * from './actos-administrativos-servicio.interface';
 export * from './pago-cpt-servicio.interface';
 export * from './viaje-servicio.interface';
 export * from './providencia-servicio.interface';
+export * from './documento-servicio.interface';

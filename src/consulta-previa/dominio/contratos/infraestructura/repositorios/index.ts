@@ -12,3 +12,4 @@ export * from './actos-administrativos-repositorio.interface';
 export * from './pago-cpt-repositorio.interface';
 export * from './viaje-repositorio.interface';
 export * from './providencia-repositorio.interface';
+export * from './documento-repositorio.interface';

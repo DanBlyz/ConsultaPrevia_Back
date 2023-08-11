@@ -2,7 +2,7 @@ import { Mapper } from '@automapper/core';
 import { HttpService } from '@nestjs/axios';
 import { Connection, QueryRunner } from 'typeorm';
 import { IRepositorioFactory } from '../../dominio/contratos/infraestructura';
-import { ITramiteRepositorio, IInformeRepositorio, ISujetoIdentificadoRepositorio, INotificacionRepositorio, IReunionRepositorio, IResolucionRepositorio, IActoAdministrativoRepositorio, IPagoCptRepositorio, IViajeRepositorio, IProvidenciaRepositorio } from '../../dominio/contratos/infraestructura/repositorios';
+import { ITramiteRepositorio, IInformeRepositorio, ISujetoIdentificadoRepositorio, INotificacionRepositorio, IReunionRepositorio, IResolucionRepositorio, IActoAdministrativoRepositorio, IPagoCptRepositorio, IViajeRepositorio, IProvidenciaRepositorio, IDocumentoRepositorio } from '../../dominio/contratos/infraestructura/repositorios';
 export declare class RepositorioFactory implements IRepositorioFactory {
     private conexion;
     private httpService;
@@ -17,6 +17,7 @@ export declare class RepositorioFactory implements IRepositorioFactory {
     pagoCptRepositorio: IPagoCptRepositorio;
     viajeRepositorio: IViajeRepositorio;
     providenciaRepositorio: IProvidenciaRepositorio;
+    documentoRepositorio: IDocumentoRepositorio;
     constructor(conexion: Connection, httpService: HttpService, mapper: Mapper);
     iniciarTransaccion(): Promise<QueryRunner>;
     confirmar(transaccion: QueryRunner): Promise<void>;

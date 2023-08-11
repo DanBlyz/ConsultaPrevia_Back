@@ -1,4 +1,3 @@
-import { SujetoIdentificadoCreacionDto, SujetoIdentificadoDto, SujetoIdentificadoModificacionDto } from './sujeto-identificado.dto';
 import { TramiteDto } from './tramite.dto';
 export declare class InformeDto {
     id: number;
@@ -9,7 +8,6 @@ export declare class InformeDto {
     tipoDocumento: string;
     flujo: string;
     tramite?: TramiteDto[];
-    listaSujetoIdentificado?: SujetoIdentificadoDto[];
 }
 export declare class InformeCreacionDto {
     fk_idTramite: number;
@@ -18,7 +16,6 @@ export declare class InformeCreacionDto {
     informePdf: string;
     tipoDocumento: string;
     flujo: string;
-    listaSujetoIdentificado?: SujetoIdentificadoCreacionDto[];
 }
 export declare class InformeModificacionDto {
     fk_idTramite?: number;
@@ -27,5 +24,4 @@ export declare class InformeModificacionDto {
     informePdf?: string;
     tipoDocumento?: string;
     flujo?: string;
-    listaSujetoIdentificado?: SujetoIdentificadoModificacionDto[];
 }

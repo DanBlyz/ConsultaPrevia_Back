@@ -11,3 +11,4 @@ export * from './actos-administrativos.model';
 export * from './pago-cpt.model';
 export * from './viaje.model';
 export * from './providencia.model';
+export * from './documento.model';

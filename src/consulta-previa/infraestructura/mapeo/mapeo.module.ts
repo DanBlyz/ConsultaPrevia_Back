@@ -11,6 +11,7 @@ import {
   PagoCptProfile,
   ViajeProfile,
   ProvidenciaProfile,
+  DocumentoProfile
 } from './perfiles';
 import {
   TramiteFiltroProfile,
@@ -23,6 +24,7 @@ import {
   PagoCptFiltroProfile,
   ViajeFiltroProfile,
   ProvidenciaFiltroProfile,
+  DocumentoFiltroProfile
 } from './perfiles/filtros';
 
 @Module({
@@ -37,6 +39,7 @@ import {
     PagoCptProfile,
     ViajeProfile,
     ProvidenciaProfile,
+    DocumentoProfile,
 
     TramiteFiltroProfile,
     InformeFiltroProfile,
@@ -48,6 +51,7 @@ import {
     PagoCptFiltroProfile,
     ViajeFiltroProfile,
     ProvidenciaFiltroProfile,
+    DocumentoFiltroProfile
   ],
 })
 export class MapeoModule {}

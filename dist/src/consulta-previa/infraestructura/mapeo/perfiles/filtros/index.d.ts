@@ -8,3 +8,4 @@ export * from './actos-administrativos-filtro.profile';
 export * from './pago-cpt-filtro.profile';
 export * from './viaje-filtro.profile';
 export * from './providencia-filtro.profile';
+export * from './documento-filtro.profile';

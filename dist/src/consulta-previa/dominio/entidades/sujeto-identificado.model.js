@@ -21,7 +21,7 @@ __decorate([
 __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", Number)
-], SujetoIdentificado.prototype, "fk_idInforme", void 0);
+], SujetoIdentificado.prototype, "fk_idDocumento", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", String)

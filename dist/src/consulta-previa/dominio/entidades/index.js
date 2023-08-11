@@ -27,4 +27,5 @@ __exportStar(require("./actos-administrativos.model"), exports);
 __exportStar(require("./pago-cpt.model"), exports);
 __exportStar(require("./viaje.model"), exports);
 __exportStar(require("./providencia.model"), exports);
+__exportStar(require("./documento.model"), exports);
 //# sourceMappingURL=index.js.map

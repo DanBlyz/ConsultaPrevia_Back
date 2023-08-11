@@ -47,11 +47,11 @@ export class InformeDto {
   @IsOptional()
   tramite?: TramiteDto[];
 
-  @AutoMap(() => [SujetoIdentificadoDto])
+ /* @AutoMap(() => [SujetoIdentificadoDto])
   @IsArray({ each: true })
   @Type(() => SujetoIdentificadoDto)
   @IsOptional()
-  listaSujetoIdentificado?: SujetoIdentificadoDto[];
+  listaSujetoIdentificado?: SujetoIdentificadoDto[];*/
 
 }
 
@@ -82,11 +82,11 @@ export class InformeCreacionDto {
   @IsString()
   flujo: string;
 
-  @AutoMap()
+  /*@AutoMap()
   @IsArray({ each: true })
   @Type(() => SujetoIdentificadoDto)
   @IsOptional()
-  listaSujetoIdentificado?: SujetoIdentificadoCreacionDto[];
+  listaSujetoIdentificado?: SujetoIdentificadoCreacionDto[];*/
 }
 
 export class InformeModificacionDto {
@@ -121,9 +121,9 @@ export class InformeModificacionDto {
     @IsOptional()
     flujo?: string;
 
-    @AutoMap()
+    /*@AutoMap()
     @IsArray({ each: true })
     @Type(() => SujetoIdentificadoDto)
     @IsOptional()
-    listaSujetoIdentificado?: SujetoIdentificadoModificacionDto[];
+    listaSujetoIdentificado?: SujetoIdentificadoModificacionDto[];*/
 }

@@ -49,10 +49,10 @@ import {
     @JoinColumn({ name: 'fk_idtramite' })
     tramite: TramiteEntity;
 
-    @AutoMap(() => [SujetoIdentificadoEntity])
+    /*@AutoMap(() => [SujetoIdentificadoEntity])
     @OneToMany(() => SujetoIdentificadoEntity, (sujetoidentificado) => sujetoidentificado.informe)
-    @JoinColumn({ name: 'idtramite' })
-    listaSujetoIdentificado: SujetoIdentificadoEntity[];
+    @JoinColumn({ name: 'idinforme' })
+    listaSujetoIdentificado: SujetoIdentificadoEntity[];*/
 
   }
   

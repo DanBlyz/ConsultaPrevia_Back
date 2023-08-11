@@ -31,7 +31,7 @@ let SujetoIdentificadoService = class SujetoIdentificadoService {
         switch (operacion) {
             case 'guardar': {
                 const filtro = new filtros_1.SujetoIdentificadoFiltro();
-                filtro.fk_idInforme = objetoDto.fk_idInforme;
+                filtro.fk_idDocumento = objetoDto.fk_idDocumento;
                 filtro.comunidad = objetoDto.comunidad;
                 filtro.autoridad = objetoDto.autoridad;
                 filtro.telefono = objetoDto.telefono;

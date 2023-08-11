@@ -24,4 +24,5 @@ __exportStar(require("./actos-administrativos.repository"), exports);
 __exportStar(require("./pago-cpt.repository"), exports);
 __exportStar(require("./viaje.repository"), exports);
 __exportStar(require("./providencia.repository"), exports);
+__exportStar(require("./documento.repository"), exports);
 //# sourceMappingURL=index.js.map

@@ -14,7 +14,7 @@ const axios_1 = require("@nestjs/axios");
 const common_1 = require("@nestjs/common");
 const identidad_1 = require("../../../../../comun/sesion/identidad");
 const modelos_1 = require("../../../../../comun/modelos");
-let PersonaRepositorio = exports.PersonaRepositorio = class PersonaRepositorio {
+let PersonaRepositorio = class PersonaRepositorio {
     constructor(httpService) {
         this.httpService = httpService;
         this.identidad = identidad_1.Identidad.getInstance();
@@ -73,10 +73,11 @@ let PersonaRepositorio = exports.PersonaRepositorio = class PersonaRepositorio {
         });
     }
 };
-exports.PersonaRepositorio = PersonaRepositorio = __decorate([
+PersonaRepositorio = __decorate([
     (0, common_1.Injectable)(),
     __metadata("design:paramtypes", [axios_1.HttpService])
 ], PersonaRepositorio);
+exports.PersonaRepositorio = PersonaRepositorio;
 exports.PERSONA_REPOSITORIO_PROVIDER = {
     provide: 'PERSONA_REPOSITORIO',
     useClass: PersonaRepositorio,

@@ -9,3 +9,4 @@ export * from './actos-administrativos.profile';
 export * from './pago-cpt.profile';
 export * from './viaje.profile';
 export * from './providencia.profile';
+export * from './documento.profile';

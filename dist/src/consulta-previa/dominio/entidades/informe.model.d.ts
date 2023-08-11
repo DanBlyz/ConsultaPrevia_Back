@@ -1,4 +1,3 @@
-import { SujetoIdentificado } from './sujeto-identificado.model';
 import { Tramite } from './tramite.model';
 export declare class Informe {
     id: number;
@@ -9,5 +8,4 @@ export declare class Informe {
     tipoDocumento: string;
     flujo: string;
     tramite?: Tramite;
-    listaSujetoIdentificado?: SujetoIdentificado[];
 }

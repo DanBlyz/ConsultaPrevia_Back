@@ -13,7 +13,6 @@ exports.SujetoIdentificadoFiltro = void 0;
 const classes_1 = require("@automapper/classes");
 class SujetoIdentificadoFiltro {
 }
-exports.SujetoIdentificadoFiltro = SujetoIdentificadoFiltro;
 __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", Number)
@@ -21,7 +20,7 @@ __decorate([
 __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", Number)
-], SujetoIdentificadoFiltro.prototype, "fk_idInforme", void 0);
+], SujetoIdentificadoFiltro.prototype, "fk_idDocumento", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", String)
@@ -34,4 +33,5 @@ __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", Number)
 ], SujetoIdentificadoFiltro.prototype, "telefono", void 0);
+exports.SujetoIdentificadoFiltro = SujetoIdentificadoFiltro;
 //# sourceMappingURL=sujeto-identificado-filtro.model.js.map

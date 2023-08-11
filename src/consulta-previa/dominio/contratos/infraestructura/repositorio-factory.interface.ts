@@ -11,6 +11,7 @@ import {
   IPagoCptRepositorio,
   IViajeRepositorio,
   IProvidenciaRepositorio,
+  IDocumentoRepositorio
 } from './repositorios';
 
 export const REPOSITORIO_FACTORY = 'REPOSITORIO_FACTORY';
@@ -26,6 +27,7 @@ export interface IRepositorioFactory {
   pagoCptRepositorio: IPagoCptRepositorio;
   viajeRepositorio: IViajeRepositorio;
   providenciaRepositorio: IProvidenciaRepositorio;
+  documentoRepositorio: IDocumentoRepositorio;
 
   iniciarTransaccion(): Promise<QueryRunner>;
   confirmar(transaccion: QueryRunner): Promise<void>;

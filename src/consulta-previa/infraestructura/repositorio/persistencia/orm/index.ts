@@ -9,3 +9,4 @@ export * from './actos-administrativos.entity';
 export * from './pago-cpt.entity';
 export * from './viaje.entity';
 export * from './providencia.entity';
+export * from './documento.entity';

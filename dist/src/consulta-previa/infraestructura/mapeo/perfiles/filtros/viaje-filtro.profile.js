@@ -18,7 +18,7 @@ const core_1 = require("@automapper/core");
 const common_1 = require("@nestjs/common");
 const filtros_1 = require("../../../../dominio/entidades/filtros");
 const filtros_2 = require("../../../../dominio/transferencia/filtros");
-let ViajeFiltroProfile = exports.ViajeFiltroProfile = class ViajeFiltroProfile extends nestjs_1.AutomapperProfile {
+let ViajeFiltroProfile = class ViajeFiltroProfile extends nestjs_1.AutomapperProfile {
     constructor(mapper) {
         super(mapper);
     }
@@ -28,9 +28,10 @@ let ViajeFiltroProfile = exports.ViajeFiltroProfile = class ViajeFiltroProfile e
         };
     }
 };
-exports.ViajeFiltroProfile = ViajeFiltroProfile = __decorate([
+ViajeFiltroProfile = __decorate([
     (0, common_1.Injectable)(),
     __param(0, (0, nestjs_1.InjectMapper)()),
     __metadata("design:paramtypes", [Object])
 ], ViajeFiltroProfile);
+exports.ViajeFiltroProfile = ViajeFiltroProfile;
 //# sourceMappingURL=viaje-filtro.profile.js.map

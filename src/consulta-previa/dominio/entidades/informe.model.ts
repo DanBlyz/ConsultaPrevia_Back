@@ -27,6 +27,6 @@ export class Informe {
     @AutoMap(() => [Tramite])
     tramite?: Tramite;
 
-    @AutoMap(() => [SujetoIdentificado])
-    listaSujetoIdentificado?: SujetoIdentificado[];
+    /*@AutoMap(() => [SujetoIdentificado])
+    listaSujetoIdentificado?: SujetoIdentificado[];*/
 }

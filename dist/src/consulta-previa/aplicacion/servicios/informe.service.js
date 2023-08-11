@@ -76,16 +76,6 @@ let InformeService = class InformeService {
             const objeto = this.mapper.map(objetoDto, transferencia_2.InformeCreacionDto, entidades_1.Informe);
             const informeId = await this.repositorioFactory.informeRepositorio.guardar(objeto, transaccion);
             const sujeto = new entidades_1.SujetoIdentificado();
-            if (objetoDto.listaSujetoIdentificado && objetoDto.listaSujetoIdentificado.length > 0) {
-                for (let index = 0; index < objetoDto.listaSujetoIdentificado.length; index++) {
-                    console.log(index);
-                    sujeto.fk_idInforme = informeId;
-                    sujeto.comunidad = objetoDto.listaSujetoIdentificado[index].comunidad;
-                    sujeto.autoridad = objetoDto.listaSujetoIdentificado[index].autoridad;
-                    sujeto.telefono = objetoDto.listaSujetoIdentificado[index].telefono;
-                    await this.repositorioFactory.sujetoIdentificadoRepositorio.guardar(sujeto, transaccion);
-                }
-            }
             const resolucion = new entidades_1.Resolucion();
             if (objeto.flujo === 'Identificacion') {
                 resolucion.fk_idTramite = objeto.fk_idTramite;

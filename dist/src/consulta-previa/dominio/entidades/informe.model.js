@@ -11,7 +11,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Informe = void 0;
 const classes_1 = require("@automapper/classes");
-const sujeto_identificado_model_1 = require("./sujeto-identificado.model");
 const tramite_model_1 = require("./tramite.model");
 class Informe {
 }
@@ -47,9 +46,5 @@ __decorate([
     (0, classes_1.AutoMap)(() => [tramite_model_1.Tramite]),
     __metadata("design:type", tramite_model_1.Tramite)
 ], Informe.prototype, "tramite", void 0);
-__decorate([
-    (0, classes_1.AutoMap)(() => [sujeto_identificado_model_1.SujetoIdentificado]),
-    __metadata("design:type", Array)
-], Informe.prototype, "listaSujetoIdentificado", void 0);
 exports.Informe = Informe;
 //# sourceMappingURL=informe.model.js.map

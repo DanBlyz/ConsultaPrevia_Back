@@ -12,7 +12,7 @@ export class SujetoIdentificadoFiltroDto extends FiltroBaseDto {
   @AutoMap()
   @IsNumber()
   @IsOptional()
-  fk_idInforme?: number;
+  fk_idDocumento?: number;
 
   @AutoMap()
   @IsString()

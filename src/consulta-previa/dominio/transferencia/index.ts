@@ -9,3 +9,4 @@ export * from './actos-administrativos.dto';
 export * from './pago-cpt.dto';
 export * from './viaje.dto';
 export * from './providencia.dto';
+export * from './documento.dto';

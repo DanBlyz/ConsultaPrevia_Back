@@ -43,7 +43,8 @@ ApiModule = ApiModule_1 = __decorate([
             controladores_1.PagoCptController,
             controladores_1.ViajeController,
             controladores_1.ProvidenciaController,
-            controladores_1.FilesController
+            controladores_1.FilesController,
+            controladores_1.DocumentoController
         ],
     })
 ], ApiModule);

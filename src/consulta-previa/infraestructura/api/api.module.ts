@@ -18,7 +18,8 @@ import {
   PagoCptController,
   ViajeController,
   ProvidenciaController,
-  FilesController
+  FilesController,
+  DocumentoController
 } from './controladores';
 
 @Module({
@@ -46,7 +47,8 @@ import {
     PagoCptController,
     ViajeController,
     ProvidenciaController,
-    FilesController
+    FilesController,
+    DocumentoController
   ],
 })
 export class ApiModule {}

@@ -14,7 +14,6 @@ const typeorm_1 = require("typeorm");
 const classes_1 = require("@automapper/classes");
 const auditoria_entity_1 = require("./base/auditoria.entity");
 const tramite_entity_1 = require("./tramite.entity");
-const sujeto_identificado_entity_1 = require("./sujeto-identificado.entity");
 let InformeEntity = class InformeEntity extends auditoria_entity_1.AuditoriaEntity {
 };
 __decorate([
@@ -58,12 +57,6 @@ __decorate([
     (0, typeorm_1.JoinColumn)({ name: 'fk_idtramite' }),
     __metadata("design:type", tramite_entity_1.TramiteEntity)
 ], InformeEntity.prototype, "tramite", void 0);
-__decorate([
-    (0, classes_1.AutoMap)(() => [sujeto_identificado_entity_1.SujetoIdentificadoEntity]),
-    (0, typeorm_1.OneToMany)(() => sujeto_identificado_entity_1.SujetoIdentificadoEntity, (sujetoidentificado) => sujetoidentificado.informe),
-    (0, typeorm_1.JoinColumn)({ name: 'idtramite' }),
-    __metadata("design:type", Array)
-], InformeEntity.prototype, "listaSujetoIdentificado", void 0);
 InformeEntity = __decorate([
     (0, typeorm_1.Entity)('informe', { schema: 'consulta-previa' })
 ], InformeEntity);

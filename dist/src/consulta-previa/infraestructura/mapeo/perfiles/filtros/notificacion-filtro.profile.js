@@ -18,7 +18,7 @@ const core_1 = require("@automapper/core");
 const common_1 = require("@nestjs/common");
 const filtros_1 = require("../../../../dominio/entidades/filtros");
 const filtros_2 = require("../../../../dominio/transferencia/filtros");
-let NotificacionFiltroProfile = exports.NotificacionFiltroProfile = class NotificacionFiltroProfile extends nestjs_1.AutomapperProfile {
+let NotificacionFiltroProfile = class NotificacionFiltroProfile extends nestjs_1.AutomapperProfile {
     constructor(mapper) {
         super(mapper);
     }
@@ -28,9 +28,10 @@ let NotificacionFiltroProfile = exports.NotificacionFiltroProfile = class Notifi
         };
     }
 };
-exports.NotificacionFiltroProfile = NotificacionFiltroProfile = __decorate([
+NotificacionFiltroProfile = __decorate([
     (0, common_1.Injectable)(),
     __param(0, (0, nestjs_1.InjectMapper)()),
     __metadata("design:paramtypes", [Object])
 ], NotificacionFiltroProfile);
+exports.NotificacionFiltroProfile = NotificacionFiltroProfile;
 //# sourceMappingURL=notificacion-filtro.profile.js.map

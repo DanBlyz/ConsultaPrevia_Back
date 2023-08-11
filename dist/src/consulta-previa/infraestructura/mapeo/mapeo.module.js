@@ -25,6 +25,7 @@ MapeoModule = __decorate([
             perfiles_1.PagoCptProfile,
             perfiles_1.ViajeProfile,
             perfiles_1.ProvidenciaProfile,
+            perfiles_1.DocumentoProfile,
             filtros_1.TramiteFiltroProfile,
             filtros_1.InformeFiltroProfile,
             filtros_1.SujetoIdentificadoFiltroProfile,
@@ -35,6 +36,7 @@ MapeoModule = __decorate([
             filtros_1.PagoCptFiltroProfile,
             filtros_1.ViajeFiltroProfile,
             filtros_1.ProvidenciaFiltroProfile,
+            filtros_1.DocumentoFiltroProfile
         ],
     })
 ], MapeoModule);

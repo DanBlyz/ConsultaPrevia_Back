@@ -1,5 +1,5 @@
 import { QueryRunner } from 'typeorm';
-import { ITramiteRepositorio, IInformeRepositorio, ISujetoIdentificadoRepositorio, INotificacionRepositorio, IReunionRepositorio, IResolucionRepositorio, IActoAdministrativoRepositorio, IPagoCptRepositorio, IViajeRepositorio, IProvidenciaRepositorio } from './repositorios';
+import { ITramiteRepositorio, IInformeRepositorio, ISujetoIdentificadoRepositorio, INotificacionRepositorio, IReunionRepositorio, IResolucionRepositorio, IActoAdministrativoRepositorio, IPagoCptRepositorio, IViajeRepositorio, IProvidenciaRepositorio, IDocumentoRepositorio } from './repositorios';
 export declare const REPOSITORIO_FACTORY = "REPOSITORIO_FACTORY";
 export interface IRepositorioFactory {
     tramiteRepositorio: ITramiteRepositorio;
@@ -12,6 +12,7 @@ export interface IRepositorioFactory {
     pagoCptRepositorio: IPagoCptRepositorio;
     viajeRepositorio: IViajeRepositorio;
     providenciaRepositorio: IProvidenciaRepositorio;
+    documentoRepositorio: IDocumentoRepositorio;
     iniciarTransaccion(): Promise<QueryRunner>;
     confirmar(transaccion: QueryRunner): Promise<void>;
     revertir(transaccion: QueryRunner): Promise<void>;

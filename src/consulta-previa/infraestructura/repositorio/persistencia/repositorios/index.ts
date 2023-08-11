@@ -9,3 +9,4 @@ export * from './actos-administrativos.repository';
 export * from './pago-cpt.repository';
 export * from './viaje.repository';
 export * from './providencia.repository';
+export * from './documento.repository';

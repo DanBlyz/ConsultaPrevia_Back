@@ -19,6 +19,7 @@ import {
   IPagoCptRepositorio,
   IViajeRepositorio,
   IProvidenciaRepositorio,
+  IDocumentoRepositorio
 } from '../../dominio/contratos/infraestructura/repositorios';
 import {
   PersonaRepositorio,
@@ -36,6 +37,7 @@ import {
   PagoCptRepository,
   ViajeRepository,
   ProvidenciaRepository,
+  DocumentoRepository
 
 } from './persistencia/repositorios';
 
@@ -51,6 +53,7 @@ export class RepositorioFactory implements IRepositorioFactory {
   public pagoCptRepositorio: IPagoCptRepositorio;
   public viajeRepositorio: IViajeRepositorio;
   public providenciaRepositorio: IProvidenciaRepositorio;
+  public documentoRepositorio: IDocumentoRepositorio;
 
   constructor(
     private conexion: Connection,
@@ -94,6 +97,10 @@ export class RepositorioFactory implements IRepositorioFactory {
       this.mapper,
     );
     this.providenciaRepositorio = new ProvidenciaRepository(
+      this.conexion,
+      this.mapper,
+    );
+    this.documentoRepositorio = new DocumentoRepository(
       this.conexion,
       this.mapper,
     );

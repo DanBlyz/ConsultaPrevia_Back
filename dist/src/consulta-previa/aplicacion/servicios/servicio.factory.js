@@ -16,8 +16,8 @@ exports.SERVICIO_FACTORY_PROVIDER = exports.ServicioFactory = void 0;
 const common_1 = require("@nestjs/common");
 const aplicacion_1 = require("../../dominio/contratos/aplicacion");
 const servicios_1 = require("../../dominio/contratos/aplicacion/servicios");
-let ServicioFactory = exports.ServicioFactory = class ServicioFactory {
-    constructor(tramiteServicio, informeServicio, sujetoIdentificadoServicio, notificacionServicio, reunionServicio, resolucionServicio, ActoAdministrativoServicio, pagoCptServicio, viajeServicio, providenciaServicio) {
+let ServicioFactory = class ServicioFactory {
+    constructor(tramiteServicio, informeServicio, sujetoIdentificadoServicio, notificacionServicio, reunionServicio, resolucionServicio, ActoAdministrativoServicio, pagoCptServicio, viajeServicio, providenciaServicio, documentoServicio) {
         this.tramiteServicio = tramiteServicio;
         this.informeServicio = informeServicio;
         this.sujetoIdentificadoServicio = sujetoIdentificadoServicio;
@@ -28,9 +28,10 @@ let ServicioFactory = exports.ServicioFactory = class ServicioFactory {
         this.pagoCptServicio = pagoCptServicio;
         this.viajeServicio = viajeServicio;
         this.providenciaServicio = providenciaServicio;
+        this.documentoServicio = documentoServicio;
     }
 };
-exports.ServicioFactory = ServicioFactory = __decorate([
+ServicioFactory = __decorate([
     (0, common_1.Injectable)(),
     __param(0, (0, common_1.Inject)(servicios_1.TRAMITE_SERVICIO)),
     __param(1, (0, common_1.Inject)(servicios_1.INFORME_SERVICIO)),
@@ -42,8 +43,10 @@ exports.ServicioFactory = ServicioFactory = __decorate([
     __param(7, (0, common_1.Inject)(servicios_1.PAGO_CPT_SERVICIO)),
     __param(8, (0, common_1.Inject)(servicios_1.VIAJE_SERVICIO)),
     __param(9, (0, common_1.Inject)(servicios_1.PROVIDENCIA_SERVICIO)),
-    __metadata("design:paramtypes", [Object, Object, Object, Object, Object, Object, Object, Object, Object, Object])
+    __param(10, (0, common_1.Inject)(servicios_1.DOCUMENTO_SERVICIO)),
+    __metadata("design:paramtypes", [Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object])
 ], ServicioFactory);
+exports.ServicioFactory = ServicioFactory;
 exports.SERVICIO_FACTORY_PROVIDER = {
     provide: aplicacion_1.SERVICIO_FACTORY,
     useClass: ServicioFactory,

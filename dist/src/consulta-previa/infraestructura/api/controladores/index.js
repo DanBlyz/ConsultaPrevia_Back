@@ -25,5 +25,6 @@ __exportStar(require("./actos-administrativos.controller"), exports);
 __exportStar(require("./pago-cpt.controller"), exports);
 __exportStar(require("./viaje.controller"), exports);
 __exportStar(require("./providencia.controller"), exports);
+__exportStar(require("./documento.controller"), exports);
 __exportStar(require("./files.controller"), exports);
 //# sourceMappingURL=index.js.map

@@ -1,4 +1,4 @@
-import { ITramiteServicio, IInformeServicio, ISujetoIdentificadoServicio, INotificacionServicio, IReunionServicio, IResolucionServicio, IActoAdministrativoServicio, IPagoCptServicio, IViajeServicio, IProvidenciaServicio } from './servicios';
+import { ITramiteServicio, IInformeServicio, ISujetoIdentificadoServicio, INotificacionServicio, IReunionServicio, IResolucionServicio, IActoAdministrativoServicio, IPagoCptServicio, IViajeServicio, IProvidenciaServicio, IDocumentoServicio } from './servicios';
 export declare const SERVICIO_FACTORY = "SERVICIO_FACTORY";
 export interface IServicioFactory {
     tramiteServicio: ITramiteServicio;
@@ -11,4 +11,5 @@ export interface IServicioFactory {
     pagoCptServicio: IPagoCptServicio;
     viajeServicio: IViajeServicio;
     providenciaServicio: IProvidenciaServicio;
+    documentoServicio: IDocumentoServicio;
 }

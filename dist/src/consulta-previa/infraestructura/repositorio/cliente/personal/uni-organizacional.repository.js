@@ -15,7 +15,7 @@ const common_1 = require("@nestjs/common");
 const identidad_1 = require("../../../../../comun/sesion/identidad");
 const modelos_1 = require("../../../../../comun/modelos");
 const filtros_1 = require("../../../../dominio/transferencia/filtros");
-let UniOrganizacionalRepositorio = exports.UniOrganizacionalRepositorio = class UniOrganizacionalRepositorio {
+let UniOrganizacionalRepositorio = class UniOrganizacionalRepositorio {
     constructor(httpService) {
         this.httpService = httpService;
         this.identidad = identidad_1.Identidad.getInstance();
@@ -76,10 +76,11 @@ let UniOrganizacionalRepositorio = exports.UniOrganizacionalRepositorio = class 
         });
     }
 };
-exports.UniOrganizacionalRepositorio = UniOrganizacionalRepositorio = __decorate([
+UniOrganizacionalRepositorio = __decorate([
     (0, common_1.Injectable)(),
     __metadata("design:paramtypes", [axios_1.HttpService])
 ], UniOrganizacionalRepositorio);
+exports.UniOrganizacionalRepositorio = UniOrganizacionalRepositorio;
 exports.UNI_ORGANIZACIONAL_REPOSITORIO_PROVIDER = {
     provide: 'UNI_ORGANIZACIONAL_REPOSITORIO',
     useClass: UniOrganizacionalRepositorio,

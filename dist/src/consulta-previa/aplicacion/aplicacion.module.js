@@ -34,6 +34,7 @@ AplicacionModule = __decorate([
             servicios_1.PAGO_CPT_SERVICIO_PROVIDER,
             servicios_1.VIAJE_SERVICIO_PROVIDER,
             servicios_1.PROVIDENCIA_SERVICIO_PROVIDER,
+            servicios_1.DOCUMENTO_SERVICIO_PROVIDER
         ],
     })
 ], AplicacionModule);

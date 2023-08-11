@@ -9,7 +9,7 @@ export * from './actos-administrativos.service';
 export * from './pago-cpt.service';
 export * from './viaje.service';
 export * from './providencia.service';
-
+export * from './documento.service';
 
 
 

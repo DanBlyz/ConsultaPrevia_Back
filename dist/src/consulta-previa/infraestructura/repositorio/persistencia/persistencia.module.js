@@ -31,6 +31,7 @@ PersistenciaModule = __decorate([
                 orm_1.ResolucionEntity,
                 orm_1.PagoCptEntity,
                 orm_1.ViajeEntity,
+                orm_1.DocumentoEntity
             ]),
             comun_1.ComunModule,
             dominio_1.DominioModule,
@@ -45,6 +46,7 @@ PersistenciaModule = __decorate([
             repositorios_1.RESOLUCION_REPOSITORIO_PROVIDER,
             repositorios_1.PAGO_CPT_REPOSITORIO_PROVIDER,
             repositorios_1.VIAJE_REPOSITORIO_PROVIDER,
+            repositorios_1.DOCUMENTO_REPOSITORIO_PROVIDER,
             personal_1.PUESTO_REPOSITORIO_PROVIDER,
             personal_1.UNI_ORGANIZACIONAL_REPOSITORIO_PROVIDER,
         ],

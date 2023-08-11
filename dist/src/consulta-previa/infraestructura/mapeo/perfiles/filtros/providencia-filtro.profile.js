@@ -18,7 +18,7 @@ const core_1 = require("@automapper/core");
 const common_1 = require("@nestjs/common");
 const filtros_1 = require("../../../../dominio/entidades/filtros");
 const filtros_2 = require("../../../../dominio/transferencia/filtros");
-let ProvidenciaFiltroProfile = exports.ProvidenciaFiltroProfile = class ProvidenciaFiltroProfile extends nestjs_1.AutomapperProfile {
+let ProvidenciaFiltroProfile = class ProvidenciaFiltroProfile extends nestjs_1.AutomapperProfile {
     constructor(mapper) {
         super(mapper);
     }
@@ -28,9 +28,10 @@ let ProvidenciaFiltroProfile = exports.ProvidenciaFiltroProfile = class Providen
         };
     }
 };
-exports.ProvidenciaFiltroProfile = ProvidenciaFiltroProfile = __decorate([
+ProvidenciaFiltroProfile = __decorate([
     (0, common_1.Injectable)(),
     __param(0, (0, nestjs_1.InjectMapper)()),
     __metadata("design:paramtypes", [Object])
 ], ProvidenciaFiltroProfile);
+exports.ProvidenciaFiltroProfile = ProvidenciaFiltroProfile;
 //# sourceMappingURL=providencia-filtro.profile.js.map

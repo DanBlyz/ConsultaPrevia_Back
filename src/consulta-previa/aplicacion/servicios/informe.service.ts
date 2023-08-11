@@ -130,7 +130,7 @@ export class InformeService implements IInformeServicio {
         transaccion,
       );
       const sujeto =  new SujetoIdentificado();
-      if(objetoDto.listaSujetoIdentificado && objetoDto.listaSujetoIdentificado.length > 0){
+      /*if(objetoDto.listaSujetoIdentificado && objetoDto.listaSujetoIdentificado.length > 0){
         for (let index = 0; index < objetoDto.listaSujetoIdentificado.length; index++) {
           console.log(index);
           sujeto.fk_idInforme = informeId;
@@ -144,7 +144,7 @@ export class InformeService implements IInformeServicio {
             );
           
         }
-      }
+      }*/
      /* if (objeto.listaSujetoIdentificado && objeto.listaSujetoIdentificado.length > 0) {
         objeto.listaSujetoIdentificado.forEach(async (sujetoIdentificado) => {
           sujetoIdentificado.fk_idInforme = informeId;

@@ -1,14 +1,14 @@
 import { InformeDto } from './informe.dto';
 export declare class SujetoIdentificadoDto {
     id: number;
-    fk_idInforme: number;
+    fk_idDocumento: number;
     comunidad: string;
     autoridad: string;
     telefono: number;
     informe?: InformeDto[];
 }
 export declare class SujetoIdentificadoCreacionDto {
-    fk_idInforme: number;
+    fk_idDocumento: number;
     comunidad: string;
     autoridad: string;
     telefono: number;

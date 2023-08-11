@@ -42,7 +42,7 @@ export class SujetoIdentificadoService implements ISujetoIdentificadoServicio {
     switch (operacion) {
       case 'guardar': {
         const filtro = new SujetoIdentificadoFiltro();
-        filtro.fk_idInforme = objetoDto.fk_idInforme;
+        filtro.fk_idDocumento = objetoDto.fk_idDocumento;
         filtro.comunidad = objetoDto.comunidad;
         filtro.autoridad = objetoDto.autoridad;
         filtro.telefono = objetoDto.telefono;

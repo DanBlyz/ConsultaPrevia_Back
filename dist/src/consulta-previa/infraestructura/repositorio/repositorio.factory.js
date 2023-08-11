@@ -34,6 +34,7 @@ let RepositorioFactory = class RepositorioFactory {
         this.pagoCptRepositorio = new repositorios_1.PagoCptRepository(this.conexion, this.mapper);
         this.viajeRepositorio = new repositorios_1.ViajeRepository(this.conexion, this.mapper);
         this.providenciaRepositorio = new repositorios_1.ProvidenciaRepository(this.conexion, this.mapper);
+        this.documentoRepositorio = new repositorios_1.DocumentoRepository(this.conexion, this.mapper);
     }
     async iniciarTransaccion() {
         const transaccion = this.conexion.createQueryRunner();

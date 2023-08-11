@@ -18,7 +18,7 @@ const core_1 = require("@automapper/core");
 const common_1 = require("@nestjs/common");
 const filtros_1 = require("../../../../dominio/entidades/filtros");
 const filtros_2 = require("../../../../dominio/transferencia/filtros");
-let ActoAdministrativoFiltroProfile = exports.ActoAdministrativoFiltroProfile = class ActoAdministrativoFiltroProfile extends nestjs_1.AutomapperProfile {
+let ActoAdministrativoFiltroProfile = class ActoAdministrativoFiltroProfile extends nestjs_1.AutomapperProfile {
     constructor(mapper) {
         super(mapper);
     }
@@ -28,9 +28,10 @@ let ActoAdministrativoFiltroProfile = exports.ActoAdministrativoFiltroProfile = 
         };
     }
 };
-exports.ActoAdministrativoFiltroProfile = ActoAdministrativoFiltroProfile = __decorate([
+ActoAdministrativoFiltroProfile = __decorate([
     (0, common_1.Injectable)(),
     __param(0, (0, nestjs_1.InjectMapper)()),
     __metadata("design:paramtypes", [Object])
 ], ActoAdministrativoFiltroProfile);
+exports.ActoAdministrativoFiltroProfile = ActoAdministrativoFiltroProfile;
 //# sourceMappingURL=actos-administrativos-filtro.profile.js.map

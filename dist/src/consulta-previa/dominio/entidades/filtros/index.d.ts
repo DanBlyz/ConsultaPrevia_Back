@@ -11,3 +11,4 @@ export * from './actos-administrativos-filtro.model';
 export * from './pago-cpt-filtro.model';
 export * from './viaje-filtro.model';
 export * from './providencia-filtro.model';
+export * from './documento-filtro.model';

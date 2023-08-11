@@ -11,3 +11,4 @@ export * from './actos-administrativos-filtro.dto';
 export * from './pago-cpt-filtro.dto';
 export * from './viaje-filtro.dto';
 export * from './providencia-filtro.dto';
+export * from './documento-filtro.dto';

@@ -6,7 +6,7 @@ export class SujetoIdentificadoFiltro {
   id?: number;
 
   @AutoMap()
-  fk_idInforme?: number;
+  fk_idDocumento?: number;
 
   @AutoMap()
   comunidad?: string;

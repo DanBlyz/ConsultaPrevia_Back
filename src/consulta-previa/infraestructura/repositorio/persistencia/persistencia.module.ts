@@ -16,6 +16,7 @@ import {
   ResolucionEntity,
   PagoCptEntity,
   ViajeEntity,
+  DocumentoEntity
 } from './orm';
 import {
   TRAMITE_REPOSITORIO_PROVIDER,
@@ -26,6 +27,7 @@ import {
   RESOLUCION_REPOSITORIO_PROVIDER,
   PAGO_CPT_REPOSITORIO_PROVIDER,
   VIAJE_REPOSITORIO_PROVIDER,
+  DOCUMENTO_REPOSITORIO_PROVIDER
 } from './repositorios';
 import {
   PUESTO_REPOSITORIO_PROVIDER,
@@ -44,6 +46,7 @@ import {
       ResolucionEntity,
       PagoCptEntity,
       ViajeEntity,
+      DocumentoEntity
       
     ]),
     ComunModule,
@@ -59,6 +62,7 @@ import {
     RESOLUCION_REPOSITORIO_PROVIDER,
     PAGO_CPT_REPOSITORIO_PROVIDER,
     VIAJE_REPOSITORIO_PROVIDER,
+    DOCUMENTO_REPOSITORIO_PROVIDER,
 
     PUESTO_REPOSITORIO_PROVIDER,
     UNI_ORGANIZACIONAL_REPOSITORIO_PROVIDER,

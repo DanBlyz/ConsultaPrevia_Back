@@ -11,6 +11,7 @@ import {
   
   import { AuditoriaEntity } from './base/auditoria.entity';
 import { InformeEntity } from './informe.entity';
+import { DocumentoEntity } from './documento.entity';
  
   
   @Entity('sujetoidentificado', { schema: 'consulta-previa' })
@@ -20,8 +21,8 @@ import { InformeEntity } from './informe.entity';
     id: number;
   
     @AutoMap()
-    @Column({ name: 'fk_idinforme' ,default:null})
-    fk_idInforme: number;
+    @Column({ name: 'fk_iddocumento' ,default:null})
+    fk_idDocumento: number;
   
     @AutoMap()
     @Column({ name: 'comunidad' ,default:null})
@@ -35,10 +36,15 @@ import { InformeEntity } from './informe.entity';
     @Column({ name: 'telefono' ,default:0})
     telefono: number;
 
-    @AutoMap(() => [InformeEntity])
+    /*@AutoMap(() => [InformeEntity])
     @ManyToOne(() => InformeEntity, (informe) => informe.listaSujetoIdentificado)
     @JoinColumn({ name: 'fk_idinforme' })
-    informe: InformeEntity;
+    informe: InformeEntity;*/
+
+    @AutoMap(() => [DocumentoEntity])
+    @ManyToOne(() => DocumentoEntity, (documento) => documento.listaSujetoIdentificado)
+    @JoinColumn({ name: 'fk_iddocumento' })
+    documento: DocumentoEntity;
   
   /*
     @OneToOne(() => ContenidoEntity, (contenido) => contenido.documento)

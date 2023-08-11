@@ -15,6 +15,7 @@ import {
   IPagoCptServicio,
   IViajeServicio,
   IProvidenciaServicio,
+  IDocumentoServicio
 } from '../../dominio/contratos/aplicacion/servicios';
 import {
   TRAMITE_SERVICIO,
@@ -27,6 +28,7 @@ import {
   PAGO_CPT_SERVICIO,
   VIAJE_SERVICIO,
   PROVIDENCIA_SERVICIO,
+  DOCUMENTO_SERVICIO
 } from '../../dominio/contratos/aplicacion/servicios';
 
 @Injectable()
@@ -42,6 +44,7 @@ export class ServicioFactory implements IServicioFactory {
     @Inject(PAGO_CPT_SERVICIO) public pagoCptServicio: IPagoCptServicio,
     @Inject(VIAJE_SERVICIO) public viajeServicio: IViajeServicio,
     @Inject(PROVIDENCIA_SERVICIO) public providenciaServicio: IProvidenciaServicio,
+    @Inject(DOCUMENTO_SERVICIO) public documentoServicio: IDocumentoServicio,
 
   ) {}
 }

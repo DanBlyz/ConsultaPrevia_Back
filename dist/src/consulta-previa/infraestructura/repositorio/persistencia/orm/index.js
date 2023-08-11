@@ -24,4 +24,5 @@ __exportStar(require("./actos-administrativos.entity"), exports);
 __exportStar(require("./pago-cpt.entity"), exports);
 __exportStar(require("./viaje.entity"), exports);
 __exportStar(require("./providencia.entity"), exports);
+__exportStar(require("./documento.entity"), exports);
 //# sourceMappingURL=index.js.map

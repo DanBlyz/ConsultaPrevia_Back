@@ -15,7 +15,6 @@ const class_validator_1 = require("class-validator");
 const filtros_1 = require("../../../../comun/transferencia/filtros");
 class SujetoIdentificadoFiltroDto extends filtros_1.FiltroBaseDto {
 }
-exports.SujetoIdentificadoFiltroDto = SujetoIdentificadoFiltroDto;
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsNumber)(),
@@ -27,7 +26,7 @@ __decorate([
     (0, class_validator_1.IsNumber)(),
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", Number)
-], SujetoIdentificadoFiltroDto.prototype, "fk_idInforme", void 0);
+], SujetoIdentificadoFiltroDto.prototype, "fk_idDocumento", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsString)(),
@@ -46,4 +45,5 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", Number)
 ], SujetoIdentificadoFiltroDto.prototype, "telefono", void 0);
+exports.SujetoIdentificadoFiltroDto = SujetoIdentificadoFiltroDto;
 //# sourceMappingURL=sujeto-identificado-filtro.dto.js.map

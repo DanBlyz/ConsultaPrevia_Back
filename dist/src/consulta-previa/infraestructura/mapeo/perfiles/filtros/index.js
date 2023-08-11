@@ -24,4 +24,5 @@ __exportStar(require("./actos-administrativos-filtro.profile"), exports);
 __exportStar(require("./pago-cpt-filtro.profile"), exports);
 __exportStar(require("./viaje-filtro.profile"), exports);
 __exportStar(require("./providencia-filtro.profile"), exports);
+__exportStar(require("./documento-filtro.profile"), exports);
 //# sourceMappingURL=index.js.map

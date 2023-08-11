@@ -13,7 +13,7 @@ exports.SujetoIdentificadoEntity = void 0;
 const typeorm_1 = require("typeorm");
 const classes_1 = require("@automapper/classes");
 const auditoria_entity_1 = require("./base/auditoria.entity");
-const informe_entity_1 = require("./informe.entity");
+const documento_entity_1 = require("./documento.entity");
 let SujetoIdentificadoEntity = class SujetoIdentificadoEntity extends auditoria_entity_1.AuditoriaEntity {
 };
 __decorate([
@@ -23,9 +23,9 @@ __decorate([
 ], SujetoIdentificadoEntity.prototype, "id", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
-    (0, typeorm_1.Column)({ name: 'fk_idinforme', default: null }),
+    (0, typeorm_1.Column)({ name: 'fk_iddocumento', default: null }),
     __metadata("design:type", Number)
-], SujetoIdentificadoEntity.prototype, "fk_idInforme", void 0);
+], SujetoIdentificadoEntity.prototype, "fk_idDocumento", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, typeorm_1.Column)({ name: 'comunidad', default: null }),
@@ -42,11 +42,11 @@ __decorate([
     __metadata("design:type", Number)
 ], SujetoIdentificadoEntity.prototype, "telefono", void 0);
 __decorate([
-    (0, classes_1.AutoMap)(() => [informe_entity_1.InformeEntity]),
-    (0, typeorm_1.ManyToOne)(() => informe_entity_1.InformeEntity, (informe) => informe.listaSujetoIdentificado),
-    (0, typeorm_1.JoinColumn)({ name: 'fk_idinforme' }),
-    __metadata("design:type", informe_entity_1.InformeEntity)
-], SujetoIdentificadoEntity.prototype, "informe", void 0);
+    (0, classes_1.AutoMap)(() => [documento_entity_1.DocumentoEntity]),
+    (0, typeorm_1.ManyToOne)(() => documento_entity_1.DocumentoEntity, (documento) => documento.listaSujetoIdentificado),
+    (0, typeorm_1.JoinColumn)({ name: 'fk_iddocumento' }),
+    __metadata("design:type", documento_entity_1.DocumentoEntity)
+], SujetoIdentificadoEntity.prototype, "documento", void 0);
 SujetoIdentificadoEntity = __decorate([
     (0, typeorm_1.Entity)('sujetoidentificado', { schema: 'consulta-previa' })
 ], SujetoIdentificadoEntity);

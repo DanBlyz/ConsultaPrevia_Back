@@ -9,6 +9,7 @@ import {
   IPagoCptServicio,
   IViajeServicio,
   IProvidenciaServicio,
+  IDocumentoServicio
   
 } from './servicios';
 
@@ -25,5 +26,6 @@ export interface IServicioFactory {
   pagoCptServicio : IPagoCptServicio;
   viajeServicio : IViajeServicio;
   providenciaServicio : IProvidenciaServicio;
+  documentoServicio : IDocumentoServicio;
 
 }

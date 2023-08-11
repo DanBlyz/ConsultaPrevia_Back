@@ -24,4 +24,5 @@ __exportStar(require("./actos-administrativos.dto"), exports);
 __exportStar(require("./pago-cpt.dto"), exports);
 __exportStar(require("./viaje.dto"), exports);
 __exportStar(require("./providencia.dto"), exports);
+__exportStar(require("./documento.dto"), exports);
 //# sourceMappingURL=index.js.map
