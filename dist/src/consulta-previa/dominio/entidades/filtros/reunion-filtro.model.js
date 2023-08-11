@@ -11,9 +11,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ReunionFiltro = void 0;
 const classes_1 = require("@automapper/classes");
+const notificacion_filtro_model_1 = require("./notificacion-filtro.model");
 class ReunionFiltro {
 }
-exports.ReunionFiltro = ReunionFiltro;
 __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", Number)
@@ -54,4 +54,9 @@ __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", String)
 ], ReunionFiltro.prototype, "flujo", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", notificacion_filtro_model_1.NotificacionFiltro)
+], ReunionFiltro.prototype, "notificacion", void 0);
+exports.ReunionFiltro = ReunionFiltro;
 //# sourceMappingURL=reunion-filtro.model.js.map

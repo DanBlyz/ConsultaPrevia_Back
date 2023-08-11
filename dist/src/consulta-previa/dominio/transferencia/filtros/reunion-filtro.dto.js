@@ -13,9 +13,10 @@ exports.ReunionFiltroDto = void 0;
 const classes_1 = require("@automapper/classes");
 const class_validator_1 = require("class-validator");
 const filtros_1 = require("../../../../comun/transferencia/filtros");
+const notificacion_filtro_dto_1 = require("./notificacion-filtro.dto");
+const class_transformer_1 = require("class-transformer");
 class ReunionFiltroDto extends filtros_1.FiltroBaseDto {
 }
-exports.ReunionFiltroDto = ReunionFiltroDto;
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsNumber)(),
@@ -76,4 +77,11 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], ReunionFiltroDto.prototype, "flujo", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(() => [notificacion_filtro_dto_1.NotificacionFiltroDto]),
+    (0, class_transformer_1.Type)(() => notificacion_filtro_dto_1.NotificacionFiltroDto),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Array)
+], ReunionFiltroDto.prototype, "notificacion", void 0);
+exports.ReunionFiltroDto = ReunionFiltroDto;
 //# sourceMappingURL=reunion-filtro.dto.js.map

@@ -62,6 +62,12 @@ let ReunionRepository = ReunionRepository_1 = class ReunionRepository {
             });
             criterioUtilizado = true;
         }
+        if (filtro.notificacion && filtro.notificacion.tramite.correlativo !== '') {
+            consulta = consulta.andWhere('tramite.correlativo ILIKE :tramiteCorrelativo', {
+                tramiteCorrelativo: `%${filtro.notificacion.tramite.correlativo}%`,
+            });
+            criterioUtilizado = true;
+        }
         if (obligatorio) {
             return criterioUtilizado ? consulta : null;
         }

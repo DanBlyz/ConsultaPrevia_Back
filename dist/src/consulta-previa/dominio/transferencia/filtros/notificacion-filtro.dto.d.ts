@@ -1,4 +1,5 @@
 import { FiltroBaseDto } from '../../../../comun/transferencia/filtros';
+import { TramiteFiltroDto } from './tramite-filtro.dto';
 export declare class NotificacionFiltroDto extends FiltroBaseDto {
     id?: number;
     fk_idTramite?: number;
@@ -11,4 +12,5 @@ export declare class NotificacionFiltroDto extends FiltroBaseDto {
     sifde?: boolean;
     comunidad?: string;
     nroReunion?: string;
+    tramite?: TramiteFiltroDto[];
 }

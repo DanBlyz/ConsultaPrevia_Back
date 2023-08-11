@@ -1,4 +1,5 @@
 import { AutoMap } from '@automapper/classes';
+import { TramiteFiltro } from './tramite-filtro.model';
 
 export class NotificacionFiltro {
 
@@ -34,5 +35,8 @@ export class NotificacionFiltro {
 
   @AutoMap()
   nroReunion?: string;
+
+  @AutoMap()
+  tramite?: TramiteFiltro;
 
 }

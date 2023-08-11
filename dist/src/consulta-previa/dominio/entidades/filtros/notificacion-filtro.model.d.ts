@@ -1,3 +1,4 @@
+import { TramiteFiltro } from './tramite-filtro.model';
 export declare class NotificacionFiltro {
     id?: number;
     fk_idTramite?: number;
@@ -10,4 +11,5 @@ export declare class NotificacionFiltro {
     sifde?: boolean;
     comunidad?: string;
     nroReunion?: string;
+    tramite?: TramiteFiltro;
 }

@@ -13,9 +13,10 @@ exports.NotificacionFiltroDto = void 0;
 const classes_1 = require("@automapper/classes");
 const class_validator_1 = require("class-validator");
 const filtros_1 = require("../../../../comun/transferencia/filtros");
+const tramite_filtro_dto_1 = require("./tramite-filtro.dto");
+const class_transformer_1 = require("class-transformer");
 class NotificacionFiltroDto extends filtros_1.FiltroBaseDto {
 }
-exports.NotificacionFiltroDto = NotificacionFiltroDto;
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsNumber)(),
@@ -82,4 +83,11 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], NotificacionFiltroDto.prototype, "nroReunion", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(() => [tramite_filtro_dto_1.TramiteFiltroDto]),
+    (0, class_transformer_1.Type)(() => tramite_filtro_dto_1.TramiteFiltroDto),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Array)
+], NotificacionFiltroDto.prototype, "tramite", void 0);
+exports.NotificacionFiltroDto = NotificacionFiltroDto;
 //# sourceMappingURL=notificacion-filtro.dto.js.map
