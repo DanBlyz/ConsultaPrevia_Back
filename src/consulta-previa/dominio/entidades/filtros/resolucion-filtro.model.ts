@@ -1,4 +1,5 @@
 import { AutoMap } from '@automapper/classes';
+import { TramiteFiltro } from './tramite-filtro.model';
 
 export class ResolucionFiltro {
 
@@ -28,4 +29,8 @@ export class ResolucionFiltro {
 
   @AutoMap()
   referencia?: string;
+
+  @AutoMap()
+  tramite?: TramiteFiltro;
+
 }

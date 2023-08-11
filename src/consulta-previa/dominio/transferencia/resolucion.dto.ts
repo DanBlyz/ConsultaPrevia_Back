@@ -7,7 +7,8 @@ import {
   IsString,
   isBoolean,
 } from 'class-validator';
-
+import { TramiteDto } from './tramite.dto';
+import { Type } from 'class-transformer';
 export class ResolucionDto {
   @AutoMap()
   @IsNumber()
@@ -46,6 +47,11 @@ export class ResolucionDto {
   @AutoMap()
   @IsString()
   referencia: string;
+
+  @AutoMap(() => [TramiteDto])
+  @Type(() => TramiteDto)
+  @IsOptional()
+  tramite?: TramiteDto[];
 
 }
 

@@ -1,3 +1,4 @@
+import { TramiteFiltro } from './tramite-filtro.model';
 export declare class ActoAdministrativoFiltro {
     id?: number;
     fk_idTramite?: number;
@@ -5,4 +6,5 @@ export declare class ActoAdministrativoFiltro {
     viajeRealizado?: boolean;
     flujo?: string;
     estado?: string;
+    tramite?: TramiteFiltro;
 }

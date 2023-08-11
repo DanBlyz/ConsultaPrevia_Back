@@ -1,4 +1,5 @@
 import { AutoMap } from '@automapper/classes';
+import { TramiteFiltro } from './tramite-filtro.model';
 
 export class InformeFiltro {
 
@@ -22,5 +23,8 @@ export class InformeFiltro {
 
   @AutoMap()
   flujo?: string;
+
+  @AutoMap()
+  tramite?: TramiteFiltro;
   
 }

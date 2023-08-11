@@ -9,6 +9,7 @@ import {
 } from 'class-validator';
 import { ReunionDto } from './reunion.dto';
 import { Type } from 'class-transformer';
+import { TramiteDto } from './tramite.dto';
 
 export class NotificacionDto {
   @AutoMap()
@@ -63,6 +64,11 @@ export class NotificacionDto {
   @Type(() => ReunionDto)
   @IsOptional()
   reunion?: ReunionDto[];
+
+  @AutoMap(() => [TramiteDto])
+  @Type(() => TramiteDto)
+  @IsOptional()
+  tramite?: TramiteDto[];
 
 }
 

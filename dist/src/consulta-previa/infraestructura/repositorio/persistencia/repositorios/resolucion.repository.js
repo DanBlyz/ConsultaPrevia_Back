@@ -68,6 +68,12 @@ let ResolucionRepository = ResolucionRepository_1 = class ResolucionRepository {
             });
             criterioUtilizado = true;
         }
+        if (filtro.tramite && filtro.tramite.correlativo !== '') {
+            consulta = consulta.andWhere('tramite.correlativo ILIKE :tramiteCorrelativo', {
+                tramiteCorrelativo: `%${filtro.tramite.correlativo}%`,
+            });
+            criterioUtilizado = true;
+        }
         if (obligatorio) {
             return criterioUtilizado ? consulta : null;
         }
@@ -78,6 +84,7 @@ let ResolucionRepository = ResolucionRepository_1 = class ResolucionRepository {
     async obtenerPorId(id) {
         let consulta = this.repositorio
             .createQueryBuilder('resolucion')
+            .leftJoinAndSelect('resolucion.tramite', 'tramite')
             .andWhere('resolucion.id = :id', { id });
         consulta = consulta.orderBy('resolucion.id', 'DESC');
         const respuesta = await consulta.getOne();
@@ -90,7 +97,8 @@ let ResolucionRepository = ResolucionRepository_1 = class ResolucionRepository {
             return null;
         }
         let consulta = this.repositorio
-            .createQueryBuilder('resolucion');
+            .createQueryBuilder('resolucion')
+            .leftJoinAndSelect('resolucion.tramite', 'tramite');
         consulta = this.evaluarCriterios(consulta, filtro, false, true);
         if (!consulta) {
             return null;
@@ -103,7 +111,8 @@ let ResolucionRepository = ResolucionRepository_1 = class ResolucionRepository {
     }
     async obtenerPor(filtro, pagina, cantidad, ordenarPor = 'id', orden = 'DESC') {
         let consulta = this.repositorio
-            .createQueryBuilder('resolucion');
+            .createQueryBuilder('resolucion')
+            .leftJoinAndSelect('resolucion.tramite', 'tramite');
         consulta = this.evaluarCriterios(consulta, filtro, true, false);
         if (!consulta) {
             return null;

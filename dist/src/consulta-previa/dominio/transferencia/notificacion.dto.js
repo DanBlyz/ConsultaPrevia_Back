@@ -14,9 +14,9 @@ const classes_1 = require("@automapper/classes");
 const class_validator_1 = require("class-validator");
 const reunion_dto_1 = require("./reunion.dto");
 const class_transformer_1 = require("class-transformer");
+const tramite_dto_1 = require("./tramite.dto");
 class NotificacionDto {
 }
-exports.NotificacionDto = NotificacionDto;
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsNumber)(),
@@ -82,9 +82,15 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", Array)
 ], NotificacionDto.prototype, "reunion", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(() => [tramite_dto_1.TramiteDto]),
+    (0, class_transformer_1.Type)(() => tramite_dto_1.TramiteDto),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Array)
+], NotificacionDto.prototype, "tramite", void 0);
+exports.NotificacionDto = NotificacionDto;
 class NotificacionCreacionDto {
 }
-exports.NotificacionCreacionDto = NotificacionCreacionDto;
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsNumber)(),
@@ -138,9 +144,9 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], NotificacionCreacionDto.prototype, "nroReunion", void 0);
+exports.NotificacionCreacionDto = NotificacionCreacionDto;
 class NotificacionModificacionDto {
 }
-exports.NotificacionModificacionDto = NotificacionModificacionDto;
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsString)(),
@@ -195,4 +201,5 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], NotificacionModificacionDto.prototype, "nroReunion", void 0);
+exports.NotificacionModificacionDto = NotificacionModificacionDto;
 //# sourceMappingURL=notificacion.dto.js.map

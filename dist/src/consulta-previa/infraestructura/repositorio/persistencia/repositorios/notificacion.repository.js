@@ -72,6 +72,7 @@ let NotificacionRepository = NotificacionRepository_1 = class NotificacionReposi
     async obtenerPorId(id) {
         let consulta = this.repositorio
             .createQueryBuilder('notificacion')
+            .leftJoinAndSelect('notificacion.tramite', 'tramite')
             .andWhere('notificacion.id = :id', { id });
         consulta = consulta.orderBy('notificacion.id', 'DESC');
         const respuesta = await consulta.getOne();
@@ -84,7 +85,8 @@ let NotificacionRepository = NotificacionRepository_1 = class NotificacionReposi
             return null;
         }
         let consulta = this.repositorio
-            .createQueryBuilder('notificacion');
+            .createQueryBuilder('notificacion')
+            .leftJoinAndSelect('notificacion.tramite', 'tramite');
         consulta = this.evaluarCriterios(consulta, filtro, false, true);
         if (!consulta) {
             return null;
@@ -97,7 +99,8 @@ let NotificacionRepository = NotificacionRepository_1 = class NotificacionReposi
     }
     async obtenerPor(filtro, pagina, cantidad, ordenarPor = 'id', orden = 'DESC') {
         let consulta = this.repositorio
-            .createQueryBuilder('notificacion');
+            .createQueryBuilder('notificacion')
+            .leftJoinAndSelect('notificacion.tramite', 'tramite');
         consulta = this.evaluarCriterios(consulta, filtro, true, false);
         if (!consulta) {
             return null;

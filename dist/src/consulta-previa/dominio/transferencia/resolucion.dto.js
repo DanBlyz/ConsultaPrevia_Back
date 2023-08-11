@@ -12,6 +12,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ResolucionModificacionDto = exports.ResolucionCreacionDto = exports.ResolucionDto = void 0;
 const classes_1 = require("@automapper/classes");
 const class_validator_1 = require("class-validator");
+const tramite_dto_1 = require("./tramite.dto");
+const class_transformer_1 = require("class-transformer");
 class ResolucionDto {
 }
 __decorate([
@@ -61,6 +63,12 @@ __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], ResolucionDto.prototype, "referencia", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(() => [tramite_dto_1.TramiteDto]),
+    (0, class_transformer_1.Type)(() => tramite_dto_1.TramiteDto),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Array)
+], ResolucionDto.prototype, "tramite", void 0);
 exports.ResolucionDto = ResolucionDto;
 class ResolucionCreacionDto {
 }

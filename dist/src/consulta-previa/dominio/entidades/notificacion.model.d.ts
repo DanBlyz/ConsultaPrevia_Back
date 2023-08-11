@@ -1,4 +1,5 @@
 import { Reunion } from './reunion.model';
+import { Tramite } from './tramite.model';
 export declare class Notificacion {
     id: number;
     fk_idTramite: number;
@@ -11,5 +12,6 @@ export declare class Notificacion {
     sifde: boolean;
     comunidad?: string;
     nroReunion?: string;
+    tramite?: Tramite;
     reunion?: Reunion;
 }

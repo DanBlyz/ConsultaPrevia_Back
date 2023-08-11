@@ -16,7 +16,6 @@ const class_transformer_1 = require("class-transformer");
 const notificacion_dto_1 = require("./notificacion.dto");
 class ReunionDto {
 }
-exports.ReunionDto = ReunionDto;
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsNumber)(),
@@ -75,9 +74,9 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", Array)
 ], ReunionDto.prototype, "notificacion", void 0);
+exports.ReunionDto = ReunionDto;
 class ReunionCreacionDto {
 }
-exports.ReunionCreacionDto = ReunionCreacionDto;
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsNumber)(),
@@ -130,9 +129,9 @@ __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], ReunionCreacionDto.prototype, "flujo", void 0);
+exports.ReunionCreacionDto = ReunionCreacionDto;
 class ReunionModificacionDto {
 }
-exports.ReunionModificacionDto = ReunionModificacionDto;
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsNumber)(),
@@ -194,4 +193,5 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", Array)
 ], ReunionModificacionDto.prototype, "notificacion", void 0);
+exports.ReunionModificacionDto = ReunionModificacionDto;
 //# sourceMappingURL=reunion.dto.js.map

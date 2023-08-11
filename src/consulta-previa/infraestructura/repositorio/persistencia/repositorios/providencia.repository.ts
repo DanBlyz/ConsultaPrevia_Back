@@ -65,12 +65,6 @@ export class ProvidenciaRepository implements IProvidenciaRepositorio {
       });
       criterioUtilizado = true;
     }
-    /*if (filtro.tramite.correlativo && filtro.tramite.correlativo !== '') {
-      consulta = consulta.andWhere('providencia.tramite.correlativo ILIKE :tramiteCorrelativo', {
-        tramiteCorrelativo: `%${filtro.tramite.correlativo}%`,
-      });
-      criterioUtilizado = true;
-    }*/
     if (filtro.tramite && filtro.tramite.correlativo !== '') {
       consulta = consulta.andWhere('tramite.correlativo ILIKE :tramiteCorrelativo', {
         tramiteCorrelativo: `%${filtro.tramite.correlativo}%`,

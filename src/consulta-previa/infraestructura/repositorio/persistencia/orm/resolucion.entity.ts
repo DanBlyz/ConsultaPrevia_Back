@@ -52,6 +52,7 @@ import {
     @Column({ name: 'referencia' ,default: null})
     referencia: string;
 
+    @AutoMap(() => [TramiteEntity])
     @ManyToOne(() => TramiteEntity, (tramite) => tramite.listaResolucion)
     @JoinColumn({ name: 'fk_idtramite' })
     tramite: TramiteEntity;

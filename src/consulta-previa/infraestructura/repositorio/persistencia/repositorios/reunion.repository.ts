@@ -83,6 +83,7 @@ export class ReunionRepository implements IReunionRepositorio {
     let consulta = this.repositorio
       .createQueryBuilder('reunion')
       .leftJoinAndSelect('reunion.notificacion', 'notificacion')
+      .leftJoinAndSelect('notificacion.tramite', 'tramite')
       .andWhere('reunion.id = :id', { id });
     consulta = consulta.orderBy('reunion.id', 'DESC');
     const respuesta = await consulta.getOne();
@@ -102,6 +103,7 @@ export class ReunionRepository implements IReunionRepositorio {
     let consulta = this.repositorio
       .createQueryBuilder('reunion')
       .leftJoinAndSelect('reunion.notificacion', 'notificacion')
+      .leftJoinAndSelect('notificacion.tramite', 'tramite')
 
     consulta = this.evaluarCriterios(consulta, filtro, false, true);
     if (!consulta) {
@@ -125,6 +127,7 @@ export class ReunionRepository implements IReunionRepositorio {
     let consulta = this.repositorio
       .createQueryBuilder('reunion')
       .leftJoinAndSelect('reunion.notificacion', 'notificacion')
+      .leftJoinAndSelect('notificacion.tramite', 'tramite')
 
     consulta = this.evaluarCriterios(consulta, filtro, true, false);
     if (!consulta) {

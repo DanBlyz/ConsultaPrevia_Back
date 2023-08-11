@@ -2,6 +2,8 @@ import { AutoMap } from '@automapper/classes';
 import { IsString, IsOptional, IsNumber } from 'class-validator';
 
 import { FiltroBaseDto } from '../../../../comun/transferencia/filtros';
+import { TramiteFiltroDto } from './tramite-filtro.dto';
+import { Type } from 'class-transformer';
 
 export class InformeFiltroDto extends FiltroBaseDto {
   @AutoMap()
@@ -38,4 +40,9 @@ export class InformeFiltroDto extends FiltroBaseDto {
   @IsString()
   @IsOptional()
   flujo?: string;
+
+  @AutoMap(() => [TramiteFiltroDto])
+  @Type(() => TramiteFiltroDto)
+  @IsOptional()
+  tramite?: TramiteFiltroDto[];
 }

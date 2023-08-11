@@ -12,9 +12,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Notificacion = void 0;
 const classes_1 = require("@automapper/classes");
 const reunion_model_1 = require("./reunion.model");
+const tramite_model_1 = require("./tramite.model");
 class Notificacion {
 }
-exports.Notificacion = Notificacion;
 __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", Number)
@@ -60,7 +60,12 @@ __decorate([
     __metadata("design:type", String)
 ], Notificacion.prototype, "nroReunion", void 0);
 __decorate([
+    (0, classes_1.AutoMap)(() => [tramite_model_1.Tramite]),
+    __metadata("design:type", tramite_model_1.Tramite)
+], Notificacion.prototype, "tramite", void 0);
+__decorate([
     (0, classes_1.AutoMap)(() => [reunion_model_1.Reunion]),
     __metadata("design:type", reunion_model_1.Reunion)
 ], Notificacion.prototype, "reunion", void 0);
+exports.Notificacion = Notificacion;
 //# sourceMappingURL=notificacion.model.js.map

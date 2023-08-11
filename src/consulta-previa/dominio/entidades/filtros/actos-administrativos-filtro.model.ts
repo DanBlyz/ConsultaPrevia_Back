@@ -1,5 +1,5 @@
 import { AutoMap } from '@automapper/classes';
-
+import { TramiteFiltro } from './tramite-filtro.model';
 export class ActoAdministrativoFiltro {
 
   @AutoMap()
@@ -19,5 +19,8 @@ export class ActoAdministrativoFiltro {
 
   @AutoMap()
   estado?: string;
+
+  @AutoMap()
+  tramite?: TramiteFiltro;
 
 }

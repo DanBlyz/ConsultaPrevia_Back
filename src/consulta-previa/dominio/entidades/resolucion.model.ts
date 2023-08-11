@@ -1,4 +1,5 @@
 import { AutoMap } from '@automapper/classes';
+import { Tramite } from './tramite.model';
 
 export class Resolucion {
     @AutoMap()
@@ -27,4 +28,7 @@ export class Resolucion {
 
     @AutoMap()
     referencia : string;
+
+    @AutoMap(() => [Tramite])
+    tramite?: Tramite;
 }

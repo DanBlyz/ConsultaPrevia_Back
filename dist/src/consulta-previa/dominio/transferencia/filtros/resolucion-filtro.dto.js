@@ -13,6 +13,8 @@ exports.ResolucionFiltroDto = void 0;
 const classes_1 = require("@automapper/classes");
 const class_validator_1 = require("class-validator");
 const filtros_1 = require("../../../../comun/transferencia/filtros");
+const tramite_filtro_dto_1 = require("./tramite-filtro.dto");
+const class_transformer_1 = require("class-transformer");
 class ResolucionFiltroDto extends filtros_1.FiltroBaseDto {
 }
 __decorate([
@@ -69,5 +71,11 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], ResolucionFiltroDto.prototype, "referencia", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(() => [tramite_filtro_dto_1.TramiteFiltroDto]),
+    (0, class_transformer_1.Type)(() => tramite_filtro_dto_1.TramiteFiltroDto),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Array)
+], ResolucionFiltroDto.prototype, "tramite", void 0);
 exports.ResolucionFiltroDto = ResolucionFiltroDto;
 //# sourceMappingURL=resolucion-filtro.dto.js.map

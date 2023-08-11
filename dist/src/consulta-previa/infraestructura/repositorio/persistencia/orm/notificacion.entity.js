@@ -78,6 +78,7 @@ __decorate([
     __metadata("design:type", reunion_entity_1.ReunionEntity)
 ], NotificacionEntity.prototype, "reunion", void 0);
 __decorate([
+    (0, classes_1.AutoMap)(() => [tramite_entity_1.TramiteEntity]),
     (0, typeorm_1.ManyToOne)(() => tramite_entity_1.TramiteEntity, (tramite) => tramite.listaNotificacion),
     (0, typeorm_1.JoinColumn)({ name: 'fk_idtramite' }),
     __metadata("design:type", tramite_entity_1.TramiteEntity)

@@ -77,6 +77,12 @@ export class ResolucionRepository implements IResolucionRepositorio {
       });
       criterioUtilizado = true;
     }
+    if (filtro.tramite && filtro.tramite.correlativo !== '') {
+      consulta = consulta.andWhere('tramite.correlativo ILIKE :tramiteCorrelativo', {
+        tramiteCorrelativo: `%${filtro.tramite.correlativo}%`,
+      });
+      criterioUtilizado = true;
+    }
     if (obligatorio) {
       return criterioUtilizado ? consulta : null;
     } else {
@@ -87,7 +93,7 @@ export class ResolucionRepository implements IResolucionRepositorio {
   async obtenerPorId(id: number): Promise<Resolucion> {
     let consulta = this.repositorio
       .createQueryBuilder('resolucion')
-      //.leftJoinAndSelect('Resolucion.hojaRuta', 'hojaRuta')
+      .leftJoinAndSelect('resolucion.tramite', 'tramite')
       .andWhere('resolucion.id = :id', { id });
     consulta = consulta.orderBy('resolucion.id', 'DESC');
     const respuesta = await consulta.getOne();
@@ -106,7 +112,7 @@ export class ResolucionRepository implements IResolucionRepositorio {
     }
     let consulta = this.repositorio
       .createQueryBuilder('resolucion')
-      //.leftJoinAndSelect('documento.hojaRuta', 'hojaRuta')
+      .leftJoinAndSelect('resolucion.tramite', 'tramite')
 
     consulta = this.evaluarCriterios(consulta, filtro, false, true);
     if (!consulta) {
@@ -129,7 +135,7 @@ export class ResolucionRepository implements IResolucionRepositorio {
   ): Promise<ListaPaginada<Resolucion>> {
     let consulta = this.repositorio
       .createQueryBuilder('resolucion')
-      //.leftJoinAndSelect('Resolucion.hojaRuta', 'hojaRuta')
+      .leftJoinAndSelect('resolucion.tramite', 'tramite')
 
     consulta = this.evaluarCriterios(consulta, filtro, true, false);
     if (!consulta) {

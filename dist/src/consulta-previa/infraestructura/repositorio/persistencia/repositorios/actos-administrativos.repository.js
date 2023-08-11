@@ -44,6 +44,12 @@ let ActoAdministrativoRepository = ActoAdministrativoRepository_1 = class ActoAd
             });
             criterioUtilizado = true;
         }
+        if (filtro.tramite && filtro.tramite.correlativo !== '') {
+            consulta = consulta.andWhere('tramite.correlativo ILIKE :tramiteCorrelativo', {
+                tramiteCorrelativo: `%${filtro.tramite.correlativo}%`,
+            });
+            criterioUtilizado = true;
+        }
         if (obligatorio) {
             return criterioUtilizado ? consulta : null;
         }

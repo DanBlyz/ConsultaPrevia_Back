@@ -1,5 +1,6 @@
 import { AutoMap } from '@automapper/classes';
 import { Reunion } from './reunion.model';
+import { Tramite } from './tramite.model';
 
 export class Notificacion {
     @AutoMap()
@@ -34,6 +35,9 @@ export class Notificacion {
 
     @AutoMap()
     nroReunion?: string;
+
+    @AutoMap(() => [Tramite])
+    tramite?: Tramite;
 
     @AutoMap(() => [Reunion])
     reunion?: Reunion;

@@ -1,4 +1,5 @@
 import { FiltroBaseDto } from '../../../../comun/transferencia/filtros';
+import { TramiteFiltroDto } from './tramite-filtro.dto';
 export declare class ResolucionFiltroDto extends FiltroBaseDto {
     id?: number;
     fk_idTramite?: number;
@@ -9,4 +10,5 @@ export declare class ResolucionFiltroDto extends FiltroBaseDto {
     resolucionPdf?: string;
     flujo?: string;
     referencia?: string;
+    tramite?: TramiteFiltroDto[];
 }

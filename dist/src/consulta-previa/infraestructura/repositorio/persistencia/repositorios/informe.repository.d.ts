@@ -14,7 +14,7 @@ export declare class InformeRepository implements IInformeRepositorio {
     obtenerObjetoPor(filtro: InformeFiltro, ordenarPor?: string, orden?: 'ASC' | 'DESC'): Promise<Informe>;
     obtenerPor(filtro: InformeFiltro, pagina: number, cantidad: number, ordenarPor?: string, orden?: 'ASC' | 'DESC'): Promise<ListaPaginada<Informe>>;
     guardar(objeto: Informe, transaccion: QueryRunner): Promise<number>;
-    modificar(id: number, objeto: Partial<Informe>, transaccion: QueryRunner): Promise<boolean>;
+    modificar(id: number, objeto: Partial<Informe> | any, transaccion: QueryRunner): Promise<boolean>;
     eliminar(id: number, transaccion: QueryRunner, borradoFisico?: boolean): Promise<boolean>;
 }
 export declare const INFORME_REPOSITORIO_PROVIDER: {

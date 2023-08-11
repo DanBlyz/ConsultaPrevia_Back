@@ -14,7 +14,6 @@ const classes_1 = require("@automapper/classes");
 const notificacion_model_1 = require("./notificacion.model");
 class Reunion {
 }
-exports.Reunion = Reunion;
 __decorate([
     (0, classes_1.AutoMap)(),
     __metadata("design:type", Number)
@@ -59,4 +58,5 @@ __decorate([
     (0, classes_1.AutoMap)(() => [notificacion_model_1.Notificacion]),
     __metadata("design:type", notificacion_model_1.Notificacion)
 ], Reunion.prototype, "notificacion", void 0);
+exports.Reunion = Reunion;
 //# sourceMappingURL=reunion.model.js.map

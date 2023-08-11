@@ -1,4 +1,5 @@
 import { SujetoIdentificado } from './sujeto-identificado.model';
+import { Tramite } from './tramite.model';
 export declare class Informe {
     id: number;
     fk_idTramite: number;
@@ -7,5 +8,6 @@ export declare class Informe {
     informePdf: string;
     tipoDocumento: string;
     flujo: string;
+    tramite?: Tramite;
     listaSujetoIdentificado?: SujetoIdentificado[];
 }

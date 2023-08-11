@@ -33,7 +33,7 @@ export class ActoAdministrativoRepository implements IActoAdministrativoReposito
 
   private evaluarCriterios(
     consulta: SelectQueryBuilder<ActoAdministrativoEntity>,
-    filtro: ActoAdministrativoFiltro,
+    filtro: ActoAdministrativoFiltro ,
     nulo: boolean,
     obligatorio: boolean,
   ): SelectQueryBuilder<ActoAdministrativoEntity> {
@@ -50,6 +50,12 @@ export class ActoAdministrativoRepository implements IActoAdministrativoReposito
     if (filtro.flujo && filtro.flujo !== '') {
       consulta = consulta.andWhere('ActoAdministrativo.flujo ILIKE :flujo', {
         flujo: `%${filtro.flujo}%`,
+      });
+      criterioUtilizado = true;
+    }
+    if (filtro.tramite && filtro.tramite.correlativo !== '') {
+      consulta = consulta.andWhere('tramite.correlativo ILIKE :tramiteCorrelativo', {
+        tramiteCorrelativo: `%${filtro.tramite.correlativo}%`,
       });
       criterioUtilizado = true;
     }
@@ -143,7 +149,7 @@ export class ActoAdministrativoRepository implements IActoAdministrativoReposito
 
   async modificar(
     id: number,
-    objeto: Partial<ActoAdministrativo>,
+    objeto: Partial<ActoAdministrativo> ,
     transaccion: QueryRunner,
   ): Promise<boolean> {
     const objetoEntity = await transaccion.manager.preload(ActoAdministrativoEntity, {

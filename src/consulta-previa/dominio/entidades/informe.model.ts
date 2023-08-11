@@ -1,5 +1,6 @@
 import { AutoMap } from '@automapper/classes';
 import { SujetoIdentificado } from './sujeto-identificado.model';
+import { Tramite } from './tramite.model';
 
 export class Informe {
     @AutoMap()
@@ -22,6 +23,9 @@ export class Informe {
 
     @AutoMap()
     flujo: string;
+
+    @AutoMap(() => [Tramite])
+    tramite?: Tramite;
 
     @AutoMap(() => [SujetoIdentificado])
     listaSujetoIdentificado?: SujetoIdentificado[];

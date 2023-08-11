@@ -64,6 +64,7 @@ import { ReunionEntity } from './reunion.entity';
     @OneToOne(() => ReunionEntity, (reunion) => reunion.notificacion)
     reunion: ReunionEntity;
 
+    @AutoMap(() => [TramiteEntity])
     @ManyToOne(() => TramiteEntity, (tramite) => tramite.listaNotificacion)
     @JoinColumn({ name: 'fk_idtramite' })
     tramite: TramiteEntity;

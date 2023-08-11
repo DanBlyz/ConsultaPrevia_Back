@@ -68,6 +68,12 @@ let InformeRepository = InformeRepository_1 = class InformeRepository {
             });
             criterioUtilizado = true;
         }
+        if (filtro.tramite && filtro.tramite.correlativo !== '') {
+            consulta = consulta.andWhere('tramite.correlativo ILIKE :tramiteCorrelativo', {
+                tramiteCorrelativo: `%${filtro.tramite.correlativo}%`,
+            });
+            criterioUtilizado = true;
+        }
         if (obligatorio) {
             return criterioUtilizado ? consulta : null;
         }
@@ -78,6 +84,7 @@ let InformeRepository = InformeRepository_1 = class InformeRepository {
     async obtenerPorId(id) {
         let consulta = this.repositorio
             .createQueryBuilder('informe')
+            .leftJoinAndSelect('informe.tramite', 'tramite')
             .leftJoinAndSelect('informe.listaSujetoIdentificado', 'informeSujetoIdentificado')
             .andWhere('informe.id = :id', { id });
         consulta = consulta.orderBy('informe.id', 'DESC');
@@ -92,6 +99,7 @@ let InformeRepository = InformeRepository_1 = class InformeRepository {
         }
         let consulta = this.repositorio
             .createQueryBuilder('informe')
+            .leftJoinAndSelect('informe.tramite', 'tramite')
             .leftJoinAndSelect('informe.listaSujetoIdentificado', 'informeSujetoIdentificado');
         consulta = this.evaluarCriterios(consulta, filtro, false, true);
         if (!consulta) {
@@ -106,6 +114,7 @@ let InformeRepository = InformeRepository_1 = class InformeRepository {
     async obtenerPor(filtro, pagina, cantidad, ordenarPor = 'id', orden = 'DESC') {
         let consulta = this.repositorio
             .createQueryBuilder('informe')
+            .leftJoinAndSelect('informe.tramite', 'tramite')
             .leftJoinAndSelect('informe.listaSujetoIdentificado', 'informeSujetoIdentificado');
         consulta = this.evaluarCriterios(consulta, filtro, true, false);
         if (!consulta) {

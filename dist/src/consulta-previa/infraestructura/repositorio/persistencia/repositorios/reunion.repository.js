@@ -73,6 +73,7 @@ let ReunionRepository = ReunionRepository_1 = class ReunionRepository {
         let consulta = this.repositorio
             .createQueryBuilder('reunion')
             .leftJoinAndSelect('reunion.notificacion', 'notificacion')
+            .leftJoinAndSelect('notificacion.tramite', 'tramite')
             .andWhere('reunion.id = :id', { id });
         consulta = consulta.orderBy('reunion.id', 'DESC');
         const respuesta = await consulta.getOne();
@@ -86,7 +87,8 @@ let ReunionRepository = ReunionRepository_1 = class ReunionRepository {
         }
         let consulta = this.repositorio
             .createQueryBuilder('reunion')
-            .leftJoinAndSelect('reunion.notificacion', 'notificacion');
+            .leftJoinAndSelect('reunion.notificacion', 'notificacion')
+            .leftJoinAndSelect('notificacion.tramite', 'tramite');
         consulta = this.evaluarCriterios(consulta, filtro, false, true);
         if (!consulta) {
             return null;
@@ -100,7 +102,8 @@ let ReunionRepository = ReunionRepository_1 = class ReunionRepository {
     async obtenerPor(filtro, pagina, cantidad, ordenarPor = 'id', orden = 'DESC') {
         let consulta = this.repositorio
             .createQueryBuilder('reunion')
-            .leftJoinAndSelect('reunion.notificacion', 'notificacion');
+            .leftJoinAndSelect('reunion.notificacion', 'notificacion')
+            .leftJoinAndSelect('notificacion.tramite', 'tramite');
         consulta = this.evaluarCriterios(consulta, filtro, true, false);
         if (!consulta) {
             return null;

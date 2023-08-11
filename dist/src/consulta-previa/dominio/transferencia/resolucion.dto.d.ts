@@ -1,3 +1,4 @@
+import { TramiteDto } from './tramite.dto';
 export declare class ResolucionDto {
     id: number;
     fk_idTramite: number;
@@ -8,6 +9,7 @@ export declare class ResolucionDto {
     resolucionPdf: string;
     flujo: string;
     referencia: string;
+    tramite?: TramiteDto[];
 }
 export declare class ResolucionCreacionDto {
     fk_idTramite: number;

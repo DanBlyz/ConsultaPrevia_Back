@@ -1,4 +1,5 @@
 import { ReunionDto } from './reunion.dto';
+import { TramiteDto } from './tramite.dto';
 export declare class NotificacionDto {
     id: number;
     fk_idTramite: number;
@@ -12,6 +13,7 @@ export declare class NotificacionDto {
     comunidad?: string;
     nroReunion?: string;
     reunion?: ReunionDto[];
+    tramite?: TramiteDto[];
 }
 export declare class NotificacionCreacionDto {
     fk_idTramite: number;

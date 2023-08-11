@@ -82,7 +82,7 @@ export class NotificacionRepository implements INotificacionRepositorio {
   async obtenerPorId(id: number): Promise<Notificacion> {
     let consulta = this.repositorio
       .createQueryBuilder('notificacion')
-     // .leftJoinAndSelect('notificacion.listaReunion', 'notificacionReunion')
+      .leftJoinAndSelect('notificacion.tramite', 'tramite')
       .andWhere('notificacion.id = :id', { id });
     consulta = consulta.orderBy('notificacion.id', 'DESC');
     const respuesta = await consulta.getOne();
@@ -101,7 +101,7 @@ export class NotificacionRepository implements INotificacionRepositorio {
     }
     let consulta = this.repositorio
       .createQueryBuilder('notificacion')
-    //  .leftJoinAndSelect('notificacion.listaReunion', 'notificacionReunion')
+      .leftJoinAndSelect('notificacion.tramite', 'tramite')
 
     consulta = this.evaluarCriterios(consulta, filtro, false, true);
     if (!consulta) {
@@ -124,7 +124,7 @@ export class NotificacionRepository implements INotificacionRepositorio {
   ): Promise<ListaPaginada<Notificacion>> {
     let consulta = this.repositorio
       .createQueryBuilder('notificacion')
-      //.leftJoinAndSelect('Notificacion.hojaRuta', 'hojaRuta')
+      .leftJoinAndSelect('notificacion.tramite', 'tramite')
 
     consulta = this.evaluarCriterios(consulta, filtro, true, false);
     if (!consulta) {

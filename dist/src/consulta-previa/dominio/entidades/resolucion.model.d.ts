@@ -1,3 +1,4 @@
+import { Tramite } from './tramite.model';
 export declare class Resolucion {
     id: number;
     fk_idTramite: number;
@@ -8,4 +9,5 @@ export declare class Resolucion {
     resolucionPdf: string;
     flujo: string;
     referencia: string;
+    tramite?: Tramite;
 }

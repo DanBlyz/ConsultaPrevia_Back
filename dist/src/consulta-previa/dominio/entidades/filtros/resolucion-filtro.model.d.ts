@@ -1,3 +1,4 @@
+import { TramiteFiltro } from './tramite-filtro.model';
 export declare class ResolucionFiltro {
     id?: number;
     fk_idTramite?: number;
@@ -8,4 +9,5 @@ export declare class ResolucionFiltro {
     resolucionPdf?: string;
     flujo?: string;
     referencia?: string;
+    tramite?: TramiteFiltro;
 }

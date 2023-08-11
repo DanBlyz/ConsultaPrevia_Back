@@ -33,7 +33,7 @@ export class InformeRepository implements IInformeRepositorio {
 
   private evaluarCriterios(
     consulta: SelectQueryBuilder<InformeEntity>,
-    filtro: InformeFiltro,
+    filtro: InformeFiltro ,
     nulo: boolean,
     obligatorio: boolean,
   ): SelectQueryBuilder<InformeEntity> {
@@ -77,6 +77,12 @@ export class InformeRepository implements IInformeRepositorio {
       });
       criterioUtilizado = true;
     }
+    if (filtro.tramite && filtro.tramite.correlativo !== '') {
+      consulta = consulta.andWhere('tramite.correlativo ILIKE :tramiteCorrelativo', {
+        tramiteCorrelativo: `%${filtro.tramite.correlativo}%`,
+      });
+      criterioUtilizado = true;
+    }
    
     if (obligatorio) {
       return criterioUtilizado ? consulta : null;
@@ -88,6 +94,7 @@ export class InformeRepository implements IInformeRepositorio {
   async obtenerPorId(id: number): Promise<Informe> {
     let consulta = this.repositorio
       .createQueryBuilder('informe')
+      .leftJoinAndSelect('informe.tramite', 'tramite')
       .leftJoinAndSelect('informe.listaSujetoIdentificado', 'informeSujetoIdentificado')
       .andWhere('informe.id = :id', { id });
     consulta = consulta.orderBy('informe.id', 'DESC');
@@ -107,6 +114,7 @@ export class InformeRepository implements IInformeRepositorio {
     }
     let consulta = this.repositorio
       .createQueryBuilder('informe')
+      .leftJoinAndSelect('informe.tramite', 'tramite')
       .leftJoinAndSelect('informe.listaSujetoIdentificado', 'informeSujetoIdentificado')
 
     consulta = this.evaluarCriterios(consulta, filtro, false, true);
@@ -130,6 +138,7 @@ export class InformeRepository implements IInformeRepositorio {
   ): Promise<ListaPaginada<Informe>> {
     let consulta = this.repositorio
       .createQueryBuilder('informe')
+      .leftJoinAndSelect('informe.tramite', 'tramite')
       .leftJoinAndSelect('informe.listaSujetoIdentificado', 'informeSujetoIdentificado')
 
     consulta = this.evaluarCriterios(consulta, filtro, true, false);
@@ -159,7 +168,7 @@ export class InformeRepository implements IInformeRepositorio {
 
   async modificar(
     id: number,
-    objeto: Partial<Informe>,
+    objeto: Partial<Informe> | any,
     transaccion: QueryRunner,
   ): Promise<boolean> {
     const objetoEntity = await transaccion.manager.preload(InformeEntity, {
