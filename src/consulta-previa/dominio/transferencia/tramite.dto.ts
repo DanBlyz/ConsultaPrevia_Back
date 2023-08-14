@@ -13,6 +13,7 @@ import { ProvidenciaDto, ProvidenciaModificacionDto } from './providencia.dto';
 import { InformeDto } from './informe.dto';
 import { NotificacionDto, NotificacionModificacionDto } from './notificacion.dto';
 import { ActoAdministrativoDto, ActoAdministrativoModificacionDto } from './actos-administrativos.dto';
+import { DocumentoDto } from './documento.dto';
 
 export class TramiteDto {
   @AutoMap()
@@ -72,11 +73,11 @@ export class TramiteDto {
   @IsOptional()
   listaProvidencia?: ProvidenciaDto[];
 
-  @AutoMap(() => [InformeDto])
+  @AutoMap(() => [DocumentoDto])
   @IsArray({ each: true })
-  @Type(() => InformeDto)
+  @Type(() => DocumentoDto)
   @IsOptional()
-  listaInforme?: InformeDto[];
+  listaDocumento?: DocumentoDto[];
 
   @AutoMap(() => [NotificacionDto])
   @IsArray({ each: true })

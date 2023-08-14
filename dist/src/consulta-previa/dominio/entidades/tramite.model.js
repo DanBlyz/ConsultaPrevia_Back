@@ -13,9 +13,9 @@ exports.Tramite = void 0;
 const classes_1 = require("@automapper/classes");
 const resolucion_model_1 = require("./resolucion.model");
 const providencia_model_1 = require("./providencia.model");
-const informe_model_1 = require("./informe.model");
 const notificacion_model_1 = require("./notificacion.model");
 const actos_administrativos_model_1 = require("./actos-administrativos.model");
+const documento_model_1 = require("./documento.model");
 class Tramite {
 }
 __decorate([
@@ -71,9 +71,9 @@ __decorate([
     __metadata("design:type", Array)
 ], Tramite.prototype, "listaProvidencia", void 0);
 __decorate([
-    (0, classes_1.AutoMap)(() => [informe_model_1.Informe]),
+    (0, classes_1.AutoMap)(() => [documento_model_1.Documento]),
     __metadata("design:type", Array)
-], Tramite.prototype, "listaInforme", void 0);
+], Tramite.prototype, "listaDocumento", void 0);
 __decorate([
     (0, classes_1.AutoMap)(() => [notificacion_model_1.Notificacion]),
     __metadata("design:type", Array)

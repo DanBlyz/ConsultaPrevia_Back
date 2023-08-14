@@ -75,7 +75,7 @@ export class SujetoIdentificadoRepository implements ISujetoIdentificadoReposito
   async obtenerPorId(id: number): Promise<SujetoIdentificado> {
     let consulta = this.repositorio
       .createQueryBuilder('sujetoIdentificado')
-      .leftJoinAndSelect('sujetoIdentificado.informe', 'Informe')
+      .leftJoinAndSelect('sujetoIdentificado.documento', 'Documento')
       .andWhere('sujetoIdentificado.id = :id', { id });
     consulta = consulta.orderBy('sujetoIdentificado.id', 'DESC');
     const respuesta = await consulta.getOne();
@@ -94,7 +94,7 @@ export class SujetoIdentificadoRepository implements ISujetoIdentificadoReposito
     }
     let consulta = this.repositorio
       .createQueryBuilder('sujetoIdentificado')
-      .leftJoinAndSelect('sujetoIdentificado.informe', 'Informe')
+      .leftJoinAndSelect('sujetoIdentificado.documento', 'Documento')
 
     consulta = this.evaluarCriterios(consulta, filtro, false, true);
     if (!consulta) {
@@ -117,7 +117,7 @@ export class SujetoIdentificadoRepository implements ISujetoIdentificadoReposito
   ): Promise<ListaPaginada<SujetoIdentificado>> {
     let consulta = this.repositorio
       .createQueryBuilder('sujetoIdentificado')
-      .leftJoinAndSelect('sujetoIdentificado.informe', 'Informe')
+      .leftJoinAndSelect('sujetoIdentificado.documento', 'Documento')
 
     consulta = this.evaluarCriterios(consulta, filtro, true, false);
     if (!consulta) {

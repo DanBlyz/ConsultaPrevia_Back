@@ -4,6 +4,7 @@ import { Providencia } from './providencia.model';
 import { Informe } from './informe.model';
 import { Notificacion } from './notificacion.model';
 import { ActoAdministrativo } from './actos-administrativos.model';
+import { Documento } from './documento.model';
 
 export class Tramite {
   @AutoMap()
@@ -45,8 +46,8 @@ export class Tramite {
   @AutoMap(() => [Providencia])
   listaProvidencia?: Providencia[];
 
-  @AutoMap(() => [Informe])
-  listaInforme?: Informe[];
+  @AutoMap(() => [Documento])
+  listaDocumento?: Documento[];
 
   @AutoMap(() => [Notificacion])
   listaNotificacion?: Notificacion[];

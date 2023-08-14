@@ -75,7 +75,6 @@ let DocumentoService = class DocumentoService {
             const sujeto = new entidades_1.SujetoIdentificado();
             if (objetoDto.listaSujetoIdentificado && objetoDto.listaSujetoIdentificado.length > 0) {
                 for (let index = 0; index < objetoDto.listaSujetoIdentificado.length; index++) {
-                    console.log(index);
                     sujeto.fk_idDocumento = documentoId;
                     sujeto.comunidad = objetoDto.listaSujetoIdentificado[index].comunidad;
                     sujeto.autoridad = objetoDto.listaSujetoIdentificado[index].autoridad;
@@ -96,7 +95,7 @@ let DocumentoService = class DocumentoService {
                 await this.repositorioFactory.resolucionRepositorio.guardar(resolucion, transaccion);
             }
             else {
-                if (objeto.flujo === 'Deliberacion' && objeto.tipoDocumento === 'Nota Interna') {
+                if (objeto.flujo === 'Deliberacion' && objeto.tipoDocumento !== 'Auto') {
                     resolucion.fk_idTramite = objeto.fk_idTramite;
                     resolucion.informe = objeto.correlativo;
                     resolucion.correlativo = null;

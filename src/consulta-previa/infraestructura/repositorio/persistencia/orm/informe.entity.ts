@@ -44,10 +44,10 @@ import {
     @Column({ name: 'flujo' ,default:null})
     flujo: string;
 
-    @AutoMap(() => [TramiteEntity])
+    /*@AutoMap(() => [TramiteEntity])
     @ManyToOne(() => TramiteEntity, (tramite) => tramite.listaInforme)
     @JoinColumn({ name: 'fk_idtramite' })
-    tramite: TramiteEntity;
+    tramite: TramiteEntity;*/
 
     /*@AutoMap(() => [SujetoIdentificadoEntity])
     @OneToMany(() => SujetoIdentificadoEntity, (sujetoidentificado) => sujetoidentificado.informe)

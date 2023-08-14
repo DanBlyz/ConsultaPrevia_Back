@@ -1,8 +1,8 @@
 import { Resolucion } from './resolucion.model';
 import { Providencia } from './providencia.model';
-import { Informe } from './informe.model';
 import { Notificacion } from './notificacion.model';
 import { ActoAdministrativo } from './actos-administrativos.model';
+import { Documento } from './documento.model';
 export declare class Tramite {
     id: number;
     correlativo: string;
@@ -17,7 +17,7 @@ export declare class Tramite {
     estadoAccion: string;
     listaResolucion?: Resolucion[];
     listaProvidencia?: Providencia[];
-    listaInforme?: Informe[];
+    listaDocumento?: Documento[];
     listaNotificacion?: Notificacion[];
     listaActoAdministrativo?: ActoAdministrativo[];
 }

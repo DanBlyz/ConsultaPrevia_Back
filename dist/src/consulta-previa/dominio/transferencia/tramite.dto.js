@@ -15,9 +15,9 @@ const class_validator_1 = require("class-validator");
 const resolucion_dto_1 = require("./resolucion.dto");
 const class_transformer_1 = require("class-transformer");
 const providencia_dto_1 = require("./providencia.dto");
-const informe_dto_1 = require("./informe.dto");
 const notificacion_dto_1 = require("./notificacion.dto");
 const actos_administrativos_dto_1 = require("./actos-administrativos.dto");
+const documento_dto_1 = require("./documento.dto");
 class TramiteDto {
 }
 __decorate([
@@ -91,12 +91,12 @@ __decorate([
     __metadata("design:type", Array)
 ], TramiteDto.prototype, "listaProvidencia", void 0);
 __decorate([
-    (0, classes_1.AutoMap)(() => [informe_dto_1.InformeDto]),
+    (0, classes_1.AutoMap)(() => [documento_dto_1.DocumentoDto]),
     (0, class_validator_1.IsArray)({ each: true }),
-    (0, class_transformer_1.Type)(() => informe_dto_1.InformeDto),
+    (0, class_transformer_1.Type)(() => documento_dto_1.DocumentoDto),
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", Array)
-], TramiteDto.prototype, "listaInforme", void 0);
+], TramiteDto.prototype, "listaDocumento", void 0);
 __decorate([
     (0, classes_1.AutoMap)(() => [notificacion_dto_1.NotificacionDto]),
     (0, class_validator_1.IsArray)({ each: true }),

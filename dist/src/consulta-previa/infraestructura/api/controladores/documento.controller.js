@@ -100,7 +100,7 @@ __decorate([
         storage: (0, multer_1.diskStorage)({
             destination: './consulta-previa/documento',
             filename: (req, file, cb) => {
-                cb(null, ("documento-" + file.originalname));
+                cb(null, (file.originalname));
             },
         }),
     })),

@@ -12,8 +12,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.SujetoIdentificadoModificacionDto = exports.SujetoIdentificadoCreacionDto = exports.SujetoIdentificadoDto = void 0;
 const classes_1 = require("@automapper/classes");
 const class_validator_1 = require("class-validator");
-const informe_dto_1 = require("./informe.dto");
 const class_transformer_1 = require("class-transformer");
+const documento_dto_1 = require("./documento.dto");
 class SujetoIdentificadoDto {
 }
 __decorate([
@@ -43,11 +43,11 @@ __decorate([
     __metadata("design:type", Number)
 ], SujetoIdentificadoDto.prototype, "telefono", void 0);
 __decorate([
-    (0, classes_1.AutoMap)(() => [informe_dto_1.InformeDto]),
-    (0, class_transformer_1.Type)(() => informe_dto_1.InformeDto),
+    (0, classes_1.AutoMap)(() => [documento_dto_1.DocumentoDto]),
+    (0, class_transformer_1.Type)(() => documento_dto_1.DocumentoDto),
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", Array)
-], SujetoIdentificadoDto.prototype, "informe", void 0);
+], SujetoIdentificadoDto.prototype, "documento", void 0);
 exports.SujetoIdentificadoDto = SujetoIdentificadoDto;
 class SujetoIdentificadoCreacionDto {
 }

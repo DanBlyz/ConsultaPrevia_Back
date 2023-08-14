@@ -94,8 +94,8 @@ export class InformeRepository implements IInformeRepositorio {
   async obtenerPorId(id: number): Promise<Informe> {
     let consulta = this.repositorio
       .createQueryBuilder('informe')
-      .leftJoinAndSelect('informe.tramite', 'tramite')
-      .leftJoinAndSelect('informe.listaSujetoIdentificado', 'informeSujetoIdentificado')
+      //.leftJoinAndSelect('informe.tramite', 'tramite')
+    //.leftJoinAndSelect('informe.listaSujetoIdentificado', 'informeSujetoIdentificado')
       .andWhere('informe.id = :id', { id });
     consulta = consulta.orderBy('informe.id', 'DESC');
     const respuesta = await consulta.getOne();
@@ -114,8 +114,8 @@ export class InformeRepository implements IInformeRepositorio {
     }
     let consulta = this.repositorio
       .createQueryBuilder('informe')
-      .leftJoinAndSelect('informe.tramite', 'tramite')
-      .leftJoinAndSelect('informe.listaSujetoIdentificado', 'informeSujetoIdentificado')
+     // .leftJoinAndSelect('informe.tramite', 'tramite')
+      //.leftJoinAndSelect('informe.listaSujetoIdentificado', 'informeSujetoIdentificado')
 
     consulta = this.evaluarCriterios(consulta, filtro, false, true);
     if (!consulta) {
@@ -138,8 +138,8 @@ export class InformeRepository implements IInformeRepositorio {
   ): Promise<ListaPaginada<Informe>> {
     let consulta = this.repositorio
       .createQueryBuilder('informe')
-      .leftJoinAndSelect('informe.tramite', 'tramite')
-      .leftJoinAndSelect('informe.listaSujetoIdentificado', 'informeSujetoIdentificado')
+      //.leftJoinAndSelect('informe.tramite', 'tramite')
+      //.leftJoinAndSelect('informe.listaSujetoIdentificado', 'informeSujetoIdentificado')
 
     consulta = this.evaluarCriterios(consulta, filtro, true, false);
     if (!consulta) {

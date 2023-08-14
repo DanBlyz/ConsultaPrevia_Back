@@ -127,7 +127,6 @@ export class DocumentoService implements IDocumentoServicio {
       const sujeto =  new SujetoIdentificado();
       if(objetoDto.listaSujetoIdentificado && objetoDto.listaSujetoIdentificado.length > 0){
         for (let index = 0; index < objetoDto.listaSujetoIdentificado.length; index++) {
-          console.log(index);
           sujeto.fk_idDocumento = documentoId;
           sujeto.comunidad = objetoDto.listaSujetoIdentificado[index].comunidad;
           sujeto.autoridad = objetoDto.listaSujetoIdentificado[index].autoridad;
@@ -157,7 +156,7 @@ export class DocumentoService implements IDocumentoServicio {
 
       }
       else{
-        if(objeto.flujo === 'Deliberacion' && objeto.tipoDocumento === 'Nota Interna'){
+        if(objeto.flujo === 'Deliberacion' && objeto.tipoDocumento !== 'Auto'){
           resolucion.fk_idTramite = objeto.fk_idTramite;
           resolucion.informe = objeto.correlativo;
           resolucion.correlativo = null;

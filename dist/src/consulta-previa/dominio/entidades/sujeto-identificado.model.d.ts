@@ -1,9 +1,9 @@
-import { Informe } from './informe.model';
+import { Documento } from './documento.model';
 export declare class SujetoIdentificado {
     id: number;
     fk_idDocumento: number;
     comunidad: string;
     autoridad: string;
     telefono: number;
-    informe?: Informe;
+    documento?: Documento;
 }

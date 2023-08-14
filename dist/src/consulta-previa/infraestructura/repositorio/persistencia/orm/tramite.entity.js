@@ -15,9 +15,9 @@ const classes_1 = require("@automapper/classes");
 const auditoria_entity_1 = require("./base/auditoria.entity");
 const resolucion_entity_1 = require("./resolucion.entity");
 const providencia_entity_1 = require("./providencia.entity");
-const informe_entity_1 = require("./informe.entity");
 const notificacion_entity_1 = require("./notificacion.entity");
 const actos_administrativos_entity_1 = require("./actos-administrativos.entity");
+const documento_entity_1 = require("./documento.entity");
 let TramiteEntity = class TramiteEntity extends auditoria_entity_1.AuditoriaEntity {
 };
 __decorate([
@@ -88,11 +88,11 @@ __decorate([
     __metadata("design:type", Array)
 ], TramiteEntity.prototype, "listaProvidencia", void 0);
 __decorate([
-    (0, classes_1.AutoMap)(() => [informe_entity_1.InformeEntity]),
-    (0, typeorm_1.OneToMany)(() => informe_entity_1.InformeEntity, (informe) => informe.tramite),
+    (0, classes_1.AutoMap)(() => [documento_entity_1.DocumentoEntity]),
+    (0, typeorm_1.OneToMany)(() => documento_entity_1.DocumentoEntity, (documento) => documento.tramite),
     (0, typeorm_1.JoinColumn)({ name: 'idtramite' }),
     __metadata("design:type", Array)
-], TramiteEntity.prototype, "listaInforme", void 0);
+], TramiteEntity.prototype, "listaDocumento", void 0);
 __decorate([
     (0, classes_1.AutoMap)(() => [notificacion_entity_1.NotificacionEntity]),
     (0, typeorm_1.OneToMany)(() => notificacion_entity_1.NotificacionEntity, (notificacion) => notificacion.tramite),

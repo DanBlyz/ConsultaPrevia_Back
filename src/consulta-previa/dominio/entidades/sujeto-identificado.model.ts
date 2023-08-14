@@ -1,5 +1,5 @@
 import { AutoMap } from '@automapper/classes';
-import { Informe } from './informe.model';
+import { Documento } from './documento.model';
 
 export class SujetoIdentificado {
 
@@ -18,6 +18,6 @@ export class SujetoIdentificado {
   @AutoMap()
   telefono: number;
 
-  @AutoMap(() => [Informe])
-  informe?: Informe;
+  @AutoMap(() => [Documento])
+  documento?: Documento;
 }

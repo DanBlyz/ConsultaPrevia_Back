@@ -1,8 +1,8 @@
 import { ResolucionDto, ResolucionModificacionDto } from './resolucion.dto';
 import { ProvidenciaDto, ProvidenciaModificacionDto } from './providencia.dto';
-import { InformeDto } from './informe.dto';
 import { NotificacionDto, NotificacionModificacionDto } from './notificacion.dto';
 import { ActoAdministrativoDto, ActoAdministrativoModificacionDto } from './actos-administrativos.dto';
+import { DocumentoDto } from './documento.dto';
 export declare class TramiteDto {
     id: number;
     correlativo: string;
@@ -17,7 +17,7 @@ export declare class TramiteDto {
     estadoAccion: string;
     listaResolucion?: ResolucionDto[];
     listaProvidencia?: ProvidenciaDto[];
-    listaInforme?: InformeDto[];
+    listaDocumento?: DocumentoDto[];
     listaNotificacion?: NotificacionDto[];
     listaActoAdministrativo?: ActoAdministrativoDto[];
 }

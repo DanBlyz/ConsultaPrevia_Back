@@ -1,11 +1,11 @@
-import { InformeDto } from './informe.dto';
+import { DocumentoDto } from './documento.dto';
 export declare class SujetoIdentificadoDto {
     id: number;
     fk_idDocumento: number;
     comunidad: string;
     autoridad: string;
     telefono: number;
-    informe?: InformeDto[];
+    documento?: DocumentoDto[];
 }
 export declare class SujetoIdentificadoCreacionDto {
     fk_idDocumento: number;

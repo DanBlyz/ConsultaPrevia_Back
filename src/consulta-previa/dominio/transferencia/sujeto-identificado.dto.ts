@@ -9,6 +9,7 @@ import {
 } from 'class-validator';
 import { InformeDto } from './informe.dto';
 import { Type } from 'class-transformer';
+import { DocumentoDto } from './documento.dto';
 
 export class SujetoIdentificadoDto {
   @AutoMap()
@@ -32,10 +33,10 @@ export class SujetoIdentificadoDto {
   @IsNumber()
   telefono: number;
 
-  @AutoMap(() => [InformeDto])
-  @Type(() => InformeDto)
+  @AutoMap(() => [DocumentoDto])
+  @Type(() => DocumentoDto)
   @IsOptional()
-  informe?: InformeDto[];
+  documento?: DocumentoDto[];
 
 }
 

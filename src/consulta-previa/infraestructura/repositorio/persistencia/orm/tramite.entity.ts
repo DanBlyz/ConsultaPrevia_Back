@@ -15,6 +15,7 @@ import {
   import { InformeEntity } from './informe.entity';
   import { NotificacionEntity } from './notificacion.entity';
   import { ActoAdministrativoEntity } from './actos-administrativos.entity';
+import { DocumentoEntity } from './documento.entity';
  
   
   @Entity('tramite', { schema: 'consulta-previa' })
@@ -73,10 +74,10 @@ import {
     @JoinColumn({ name: 'idtramite' })
     listaProvidencia: ProvidenciaEntity[];
 
-    @AutoMap(() => [InformeEntity])
-    @OneToMany(() => InformeEntity, (informe) => informe.tramite)
+    @AutoMap(() => [DocumentoEntity])
+    @OneToMany(() => DocumentoEntity, (documento) => documento.tramite)
     @JoinColumn({ name: 'idtramite' })
-    listaInforme: InformeEntity[];
+    listaDocumento: DocumentoEntity[];
 
     @AutoMap(() => [NotificacionEntity])
     @OneToMany(() => NotificacionEntity, (notificacion) => notificacion.tramite)

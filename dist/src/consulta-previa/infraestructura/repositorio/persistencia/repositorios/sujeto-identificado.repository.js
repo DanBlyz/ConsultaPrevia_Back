@@ -66,7 +66,7 @@ let SujetoIdentificadoRepository = SujetoIdentificadoRepository_1 = class Sujeto
     async obtenerPorId(id) {
         let consulta = this.repositorio
             .createQueryBuilder('sujetoIdentificado')
-            .leftJoinAndSelect('sujetoIdentificado.informe', 'Informe')
+            .leftJoinAndSelect('sujetoIdentificado.documento', 'Documento')
             .andWhere('sujetoIdentificado.id = :id', { id });
         consulta = consulta.orderBy('sujetoIdentificado.id', 'DESC');
         const respuesta = await consulta.getOne();
@@ -80,7 +80,7 @@ let SujetoIdentificadoRepository = SujetoIdentificadoRepository_1 = class Sujeto
         }
         let consulta = this.repositorio
             .createQueryBuilder('sujetoIdentificado')
-            .leftJoinAndSelect('sujetoIdentificado.informe', 'Informe');
+            .leftJoinAndSelect('sujetoIdentificado.documento', 'Documento');
         consulta = this.evaluarCriterios(consulta, filtro, false, true);
         if (!consulta) {
             return null;
@@ -94,7 +94,7 @@ let SujetoIdentificadoRepository = SujetoIdentificadoRepository_1 = class Sujeto
     async obtenerPor(filtro, pagina, cantidad, ordenarPor = 'id', orden = 'DESC') {
         let consulta = this.repositorio
             .createQueryBuilder('sujetoIdentificado')
-            .leftJoinAndSelect('sujetoIdentificado.informe', 'Informe');
+            .leftJoinAndSelect('sujetoIdentificado.documento', 'Documento');
         consulta = this.evaluarCriterios(consulta, filtro, true, false);
         if (!consulta) {
             return null;
