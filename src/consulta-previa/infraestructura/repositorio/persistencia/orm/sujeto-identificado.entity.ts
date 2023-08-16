@@ -35,6 +35,10 @@ import { DocumentoEntity } from './documento.entity';
     @AutoMap()
     @Column({ name: 'telefono' ,default:0})
     telefono: number;
+    
+    @AutoMap()
+    @Column({ name: 'estado' ,default:0})
+    estado: string;
 
     /*@AutoMap(() => [InformeEntity])
     @ManyToOne(() => InformeEntity, (informe) => informe.listaSujetoIdentificado)

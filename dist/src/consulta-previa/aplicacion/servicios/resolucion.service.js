@@ -72,6 +72,7 @@ let ResolucionService = class ResolucionService {
         const transaccion = await this.repositorioFactory.iniciarTransaccion();
         try {
             const objeto = this.mapper.map(objetoDto, transferencia_2.ResolucionCreacionDto, entidades_1.Resolucion);
+            console.log(objetoDto + "eeyeyeryerye");
             await this.repositorioFactory.resolucionRepositorio.guardar(objeto, transaccion);
             await this.repositorioFactory.confirmar(transaccion);
             return new transferencia_1.RespuestaObjetoDto(transferencia_1.TipoRespuesta.Exito, 'El registro se ha guardado con éxito.', this.mapper.map(objeto, entidades_1.Resolucion, transferencia_2.ResolucionDto));

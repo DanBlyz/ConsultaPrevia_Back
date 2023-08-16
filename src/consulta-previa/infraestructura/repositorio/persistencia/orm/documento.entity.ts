@@ -44,6 +44,10 @@ import { SujetoIdentificadoEntity } from './sujeto-identificado.entity';
     @Column({ name: 'flujo',default:null })
     flujo: string;
 
+    @AutoMap()
+    @Column({ name: 'estado',default:null })
+    estado: string;
+
     @AutoMap(() => [TramiteEntity])
     @ManyToOne(() => TramiteEntity, (tramite) => tramite.listaDocumento)
     @JoinColumn({ name: 'fk_idtramite' })

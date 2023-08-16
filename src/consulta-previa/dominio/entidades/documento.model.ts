@@ -24,6 +24,9 @@ export class Documento {
     @AutoMap()
     flujo: string;
 
+    @AutoMap()
+    estado: string;
+
     @AutoMap(() => [Tramite])
     tramite?: Tramite;
 

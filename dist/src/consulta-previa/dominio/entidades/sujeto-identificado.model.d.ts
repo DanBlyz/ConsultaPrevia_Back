@@ -5,5 +5,6 @@ export declare class SujetoIdentificado {
     comunidad: string;
     autoridad: string;
     telefono: number;
+    estado: string;
     documento?: Documento;
 }

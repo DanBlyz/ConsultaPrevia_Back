@@ -6,5 +6,6 @@ export declare class SujetoIdentificadoEntity extends AuditoriaEntity {
     comunidad: string;
     autoridad: string;
     telefono: number;
+    estado: string;
     documento: DocumentoEntity;
 }

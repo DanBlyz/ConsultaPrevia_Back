@@ -9,6 +9,7 @@ export declare class DocumentoEntity extends AuditoriaEntity {
     documentoPdf: string;
     tipoDocumento: string;
     flujo: string;
+    estado: string;
     tramite: TramiteEntity;
     listaSujetoIdentificado: SujetoIdentificadoEntity[];
 }

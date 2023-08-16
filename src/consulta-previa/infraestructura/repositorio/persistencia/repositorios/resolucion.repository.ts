@@ -54,7 +54,7 @@ export class ResolucionRepository implements IResolucionRepositorio {
       criterioUtilizado = true;
     }
     if (filtro.correlativo && filtro.correlativo !== '') {
-      consulta = consulta.andWhere('correlativo.correlativo ILIKE :correlativo', {
+      consulta = consulta.andWhere('resolucion.correlativo ILIKE :correlativo', {
         correlativo: `%${filtro.correlativo}%`,
       });
       criterioUtilizado = true;
@@ -77,12 +77,19 @@ export class ResolucionRepository implements IResolucionRepositorio {
       });
       criterioUtilizado = true;
     }
+      if (filtro.flujo && filtro.flujo !== '') {
+      consulta = consulta.andWhere('resolucion.flujo ILIKE :flujo', {
+        flujo: `%${filtro.flujo}%`,
+      });
+      criterioUtilizado = true;
+    }
     if (filtro.tramite && filtro.tramite.correlativo !== '') {
       consulta = consulta.andWhere('tramite.correlativo ILIKE :tramiteCorrelativo', {
         tramiteCorrelativo: `%${filtro.tramite.correlativo}%`,
       });
       criterioUtilizado = true;
     }
+
     if (obligatorio) {
       return criterioUtilizado ? consulta : null;
     } else {

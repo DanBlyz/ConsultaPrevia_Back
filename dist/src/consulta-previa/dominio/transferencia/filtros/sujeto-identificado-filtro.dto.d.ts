@@ -5,4 +5,5 @@ export declare class SujetoIdentificadoFiltroDto extends FiltroBaseDto {
     comunidad?: string;
     autoridad?: string;
     telefono?: number;
+    estado?: string;
 }

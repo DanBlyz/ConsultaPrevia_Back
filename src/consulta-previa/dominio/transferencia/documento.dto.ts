@@ -42,6 +42,10 @@ export class DocumentoDto {
     @IsString()
     flujo: string;
 
+    @AutoMap()
+    @IsString()
+    estado: string;
+
     @AutoMap(() => [TramiteDto])
     @Type(() => TramiteDto)
     @IsOptional()
@@ -83,6 +87,11 @@ export class DocumentoCreacionDto {
     flujo: string;
 
     @AutoMap()
+    @IsString()
+    @IsOptional()
+    estado?: string;
+
+    @AutoMap()
     @IsArray({ each: true })
     @Type(() => SujetoIdentificadoDto)
     @IsOptional()
@@ -116,5 +125,10 @@ export class DocumentoModificacionDto {
     @IsString()
     @IsOptional()
     flujo?: string;
+
+    @AutoMap()
+    @IsString()
+    @IsOptional()
+    estado?: string;
 
 }

@@ -29,4 +29,9 @@ export class SujetoIdentificadoFiltroDto extends FiltroBaseDto {
   @IsOptional()
   telefono?: number;
 
+  @AutoMap()
+  @IsString()
+  @IsOptional()
+  estado?: string;
+
 }

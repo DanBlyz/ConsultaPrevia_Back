@@ -45,7 +45,7 @@ let ResolucionRepository = ResolucionRepository_1 = class ResolucionRepository {
             criterioUtilizado = true;
         }
         if (filtro.correlativo && filtro.correlativo !== '') {
-            consulta = consulta.andWhere('correlativo.correlativo ILIKE :correlativo', {
+            consulta = consulta.andWhere('resolucion.correlativo ILIKE :correlativo', {
                 correlativo: `%${filtro.correlativo}%`,
             });
             criterioUtilizado = true;
@@ -59,6 +59,12 @@ let ResolucionRepository = ResolucionRepository_1 = class ResolucionRepository {
         if (filtro.referencia && filtro.referencia !== '') {
             consulta = consulta.andWhere('resolucion.referencia ILIKE :referencia', {
                 referencia: `%${filtro.referencia}%`,
+            });
+            criterioUtilizado = true;
+        }
+        if (filtro.flujo && filtro.flujo !== '') {
+            consulta = consulta.andWhere('resolucion.flujo ILIKE :flujo', {
+                flujo: `%${filtro.flujo}%`,
             });
             criterioUtilizado = true;
         }

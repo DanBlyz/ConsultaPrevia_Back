@@ -71,6 +71,12 @@ export class ReunionRepository implements IReunionRepositorio {
       });
       criterioUtilizado = true;
     }
+    if (filtro.estado && filtro.estado !== '') {
+      consulta = consulta.andWhere('reunion.estado ILIKE :estado', {
+        estado: `%${filtro.estado}%`,
+      });
+      criterioUtilizado = true;
+    }
     if (filtro.notificacion && filtro.notificacion.tramite.correlativo !== '') {
       consulta = consulta.andWhere('tramite.correlativo ILIKE :tramiteCorrelativo', {
         tramiteCorrelativo: `%${filtro.notificacion.tramite.correlativo}%`,

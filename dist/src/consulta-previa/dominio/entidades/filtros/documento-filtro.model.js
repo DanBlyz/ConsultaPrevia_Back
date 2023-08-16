@@ -44,6 +44,10 @@ __decorate([
 ], DocumentoFiltro.prototype, "flujo", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
+    __metadata("design:type", String)
+], DocumentoFiltro.prototype, "estado", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
     __metadata("design:type", tramite_filtro_model_1.TramiteFiltro)
 ], DocumentoFiltro.prototype, "tramite", void 0);
 exports.DocumentoFiltro = DocumentoFiltro;

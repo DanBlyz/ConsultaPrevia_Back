@@ -25,6 +25,9 @@ export class DocumentoFiltro {
   flujo?: string;
 
   @AutoMap()
+  estado?: string;
+
+  @AutoMap()
   tramite?: TramiteFiltro;
 
 }

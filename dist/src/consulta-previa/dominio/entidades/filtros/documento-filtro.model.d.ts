@@ -7,5 +7,6 @@ export declare class DocumentoFiltro {
     documentoPdf?: string;
     tipoDocumento?: string;
     flujo?: string;
+    estado?: string;
     tramite?: TramiteFiltro;
 }

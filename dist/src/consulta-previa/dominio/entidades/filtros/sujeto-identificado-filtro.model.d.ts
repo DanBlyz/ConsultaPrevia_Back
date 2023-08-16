@@ -4,4 +4,5 @@ export declare class SujetoIdentificadoFiltro {
     comunidad?: string;
     autoridad?: string;
     telefono?: number;
+    estado?: string;
 }

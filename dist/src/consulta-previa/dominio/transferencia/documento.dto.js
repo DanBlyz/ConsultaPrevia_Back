@@ -55,6 +55,11 @@ __decorate([
     __metadata("design:type", String)
 ], DocumentoDto.prototype, "flujo", void 0);
 __decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], DocumentoDto.prototype, "estado", void 0);
+__decorate([
     (0, classes_1.AutoMap)(() => [tramite_dto_1.TramiteDto]),
     (0, class_transformer_1.Type)(() => tramite_dto_1.TramiteDto),
     (0, class_validator_1.IsOptional)(),
@@ -103,6 +108,12 @@ __decorate([
 ], DocumentoCreacionDto.prototype, "flujo", void 0);
 __decorate([
     (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], DocumentoCreacionDto.prototype, "estado", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsArray)({ each: true }),
     (0, class_transformer_1.Type)(() => sujeto_identificado_dto_1.SujetoIdentificadoDto),
     (0, class_validator_1.IsOptional)(),
@@ -141,5 +152,11 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], DocumentoModificacionDto.prototype, "flujo", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], DocumentoModificacionDto.prototype, "estado", void 0);
 exports.DocumentoModificacionDto = DocumentoModificacionDto;
 //# sourceMappingURL=documento.dto.js.map

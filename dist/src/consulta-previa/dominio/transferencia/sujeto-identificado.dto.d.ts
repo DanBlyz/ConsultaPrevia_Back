@@ -5,6 +5,7 @@ export declare class SujetoIdentificadoDto {
     comunidad: string;
     autoridad: string;
     telefono: number;
+    estado: string;
     documento?: DocumentoDto[];
 }
 export declare class SujetoIdentificadoCreacionDto {
@@ -12,9 +13,11 @@ export declare class SujetoIdentificadoCreacionDto {
     comunidad: string;
     autoridad: string;
     telefono: number;
+    estado?: string;
 }
 export declare class SujetoIdentificadoModificacionDto {
     comunidad?: string;
     autoridad?: string;
     telefono?: number;
+    estado?: string;
 }

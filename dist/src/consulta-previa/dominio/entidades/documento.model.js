@@ -44,6 +44,10 @@ __decorate([
     __metadata("design:type", String)
 ], Documento.prototype, "flujo", void 0);
 __decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", String)
+], Documento.prototype, "estado", void 0);
+__decorate([
     (0, classes_1.AutoMap)(() => [tramite_model_1.Tramite]),
     __metadata("design:type", tramite_model_1.Tramite)
 ], Documento.prototype, "tramite", void 0);

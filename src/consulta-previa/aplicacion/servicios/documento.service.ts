@@ -156,7 +156,7 @@ export class DocumentoService implements IDocumentoServicio {
 
       }
       else{
-        if(objeto.flujo === 'Deliberacion' && objeto.tipoDocumento !== 'Auto'){
+        if(objeto.flujo === 'Deliberacion' && (objeto.tipoDocumento === 'Providencia' || objeto.tipoDocumento === 'Nota Interna' || objeto.tipoDocumento === 'Nota Externa' )){
           resolucion.fk_idTramite = objeto.fk_idTramite;
           resolucion.informe = objeto.correlativo;
           resolucion.correlativo = null;

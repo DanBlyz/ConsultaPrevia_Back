@@ -68,6 +68,12 @@ let DocumentoRepository = DocumentoRepository_1 = class DocumentoRepository {
             });
             criterioUtilizado = true;
         }
+        if (filtro.estado && filtro.estado !== '') {
+            consulta = consulta.andWhere('documento.estado ILIKE :estado', {
+                estado: `%${filtro.estado}%`,
+            });
+            criterioUtilizado = true;
+        }
         if (filtro.tramite && filtro.tramite.correlativo !== '') {
             consulta = consulta.andWhere('tramite.correlativo ILIKE :tramiteCorrelativo', {
                 tramiteCorrelativo: `%${filtro.tramite.correlativo}%`,

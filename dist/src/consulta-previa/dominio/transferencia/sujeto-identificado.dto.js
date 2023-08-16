@@ -43,6 +43,11 @@ __decorate([
     __metadata("design:type", Number)
 ], SujetoIdentificadoDto.prototype, "telefono", void 0);
 __decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], SujetoIdentificadoDto.prototype, "estado", void 0);
+__decorate([
     (0, classes_1.AutoMap)(() => [documento_dto_1.DocumentoDto]),
     (0, class_transformer_1.Type)(() => documento_dto_1.DocumentoDto),
     (0, class_validator_1.IsOptional)(),
@@ -71,6 +76,12 @@ __decorate([
     (0, class_validator_1.IsNumber)(),
     __metadata("design:type", Number)
 ], SujetoIdentificadoCreacionDto.prototype, "telefono", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], SujetoIdentificadoCreacionDto.prototype, "estado", void 0);
 exports.SujetoIdentificadoCreacionDto = SujetoIdentificadoCreacionDto;
 class SujetoIdentificadoModificacionDto {
 }
@@ -89,7 +100,14 @@ __decorate([
 __decorate([
     (0, classes_1.AutoMap)(),
     (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.IsOptional)(),
     __metadata("design:type", Number)
 ], SujetoIdentificadoModificacionDto.prototype, "telefono", void 0);
+__decorate([
+    (0, classes_1.AutoMap)(),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], SujetoIdentificadoModificacionDto.prototype, "estado", void 0);
 exports.SujetoIdentificadoModificacionDto = SujetoIdentificadoModificacionDto;
 //# sourceMappingURL=sujeto-identificado.dto.js.map

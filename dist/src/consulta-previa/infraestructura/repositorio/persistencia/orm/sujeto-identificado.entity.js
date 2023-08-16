@@ -42,6 +42,11 @@ __decorate([
     __metadata("design:type", Number)
 ], SujetoIdentificadoEntity.prototype, "telefono", void 0);
 __decorate([
+    (0, classes_1.AutoMap)(),
+    (0, typeorm_1.Column)({ name: 'estado', default: 0 }),
+    __metadata("design:type", String)
+], SujetoIdentificadoEntity.prototype, "estado", void 0);
+__decorate([
     (0, classes_1.AutoMap)(() => [documento_entity_1.DocumentoEntity]),
     (0, typeorm_1.ManyToOne)(() => documento_entity_1.DocumentoEntity, (documento) => documento.listaSujetoIdentificado),
     (0, typeorm_1.JoinColumn)({ name: 'fk_iddocumento' }),

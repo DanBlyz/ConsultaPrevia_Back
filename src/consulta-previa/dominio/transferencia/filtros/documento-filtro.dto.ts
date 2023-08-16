@@ -41,6 +41,11 @@ export class DocumentoFiltroDto extends FiltroBaseDto {
   @IsOptional()
   flujo?: string;
 
+  @AutoMap()
+  @IsString()
+  @IsOptional()
+  estado?: string;
+
   @AutoMap(() => [TramiteFiltroDto])
   @Type(() => TramiteFiltroDto)
   @IsOptional()

@@ -8,5 +8,6 @@ export declare class DocumentoFiltroDto extends FiltroBaseDto {
     documentoPdf?: string;
     tipoDocumento?: string;
     flujo?: string;
+    estado?: string;
     tramite?: TramiteFiltroDto[];
 }

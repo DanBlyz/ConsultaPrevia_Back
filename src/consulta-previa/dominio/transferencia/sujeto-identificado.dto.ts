@@ -33,6 +33,10 @@ export class SujetoIdentificadoDto {
   @IsNumber()
   telefono: number;
 
+  @AutoMap()
+  @IsString()
+  estado: string;
+
   @AutoMap(() => [DocumentoDto])
   @Type(() => DocumentoDto)
   @IsOptional()
@@ -56,7 +60,12 @@ export class SujetoIdentificadoCreacionDto {
 
     @AutoMap()
     @IsNumber()
-    telefono: number
+    telefono: number;
+
+    @AutoMap()
+    @IsString()
+    @IsOptional()
+    estado?: string;
   
 }
 
@@ -73,6 +82,12 @@ export class SujetoIdentificadoModificacionDto {
 
     @AutoMap()
     @IsNumber()
+    @IsOptional()
     telefono?: number
+
+    @AutoMap()
+    @IsString()
+    @IsOptional()
+    estado?: string;
 
 }

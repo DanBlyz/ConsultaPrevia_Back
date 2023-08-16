@@ -17,4 +17,7 @@ export class SujetoIdentificadoFiltro {
   @AutoMap()
   telefono?: number;
 
+  @AutoMap()
+  estado?: string;
+
 }

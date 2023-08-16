@@ -8,6 +8,7 @@ export declare class Documento {
     documentoPdf: string;
     tipoDocumento: string;
     flujo: string;
+    estado: string;
     tramite?: Tramite;
     listaSujetoIdentificado?: SujetoIdentificado[];
 }

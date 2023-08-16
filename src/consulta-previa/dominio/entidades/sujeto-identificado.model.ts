@@ -18,6 +18,9 @@ export class SujetoIdentificado {
   @AutoMap()
   telefono: number;
 
+  @AutoMap()
+  estado: string;
+
   @AutoMap(() => [Documento])
   documento?: Documento;
 }

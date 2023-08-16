@@ -121,6 +121,7 @@ export class ResolucionService implements IResolucionServicio {
         ResolucionCreacionDto,
         Resolucion,
       );
+      console.log(objetoDto+ "eeyeyeryerye");
       await this.repositorioFactory.resolucionRepositorio.guardar(
         objeto,
         transaccion,

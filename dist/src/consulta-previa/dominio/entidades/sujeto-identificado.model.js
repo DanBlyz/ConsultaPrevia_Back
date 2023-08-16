@@ -35,6 +35,10 @@ __decorate([
     __metadata("design:type", Number)
 ], SujetoIdentificado.prototype, "telefono", void 0);
 __decorate([
+    (0, classes_1.AutoMap)(),
+    __metadata("design:type", String)
+], SujetoIdentificado.prototype, "estado", void 0);
+__decorate([
     (0, classes_1.AutoMap)(() => [documento_model_1.Documento]),
     __metadata("design:type", documento_model_1.Documento)
 ], SujetoIdentificado.prototype, "documento", void 0);

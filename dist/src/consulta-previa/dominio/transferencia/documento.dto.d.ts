@@ -8,6 +8,7 @@ export declare class DocumentoDto {
     documentoPdf: string;
     tipoDocumento: string;
     flujo: string;
+    estado: string;
     tramite?: TramiteDto[];
     listaSujetoIdentificado?: SujetoIdentificadoDto[];
 }
@@ -18,6 +19,7 @@ export declare class DocumentoCreacionDto {
     documentoPdf: string;
     tipoDocumento: string;
     flujo: string;
+    estado?: string;
     listaSujetoIdentificado?: SujetoIdentificadoCreacionDto[];
 }
 export declare class DocumentoModificacionDto {
@@ -26,4 +28,5 @@ export declare class DocumentoModificacionDto {
     documentoPdf?: string;
     tipoDocumento?: string;
     flujo?: string;
+    estado?: string;
 }
